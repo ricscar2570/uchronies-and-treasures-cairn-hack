@@ -11,7 +11,7 @@ nav_order: 5
 
 ## Why the Economy Is Unsustainable
 
-The $100/week deficit at Recruit tier is not a balance error. It is the single most important number in the game. Without it, corruption is a free choice (why not?). With it, corruption is a survival mechanism (I have to). The difference between "I chose to be corrupt" and "the system forced me to choose" is the entire moral weight of the game. We validated this with Monte Carlo simulation: at $800 pay and $900 expenses, 92% of PCs accept Zhou's first offer by session 4. At $1,000 pay (balanced budget), only 31% do. The deficit IS the game.
+The $100/week deficit at Recruit tier is not a balance error. It is the single most important number in the game. Without it, corruption is a free choice (why not?). With it, corruption is a survival mechanism (I have to). The difference between "I chose to be corrupt" and "the system forced me to choose" is the entire moral weight of the game. 
 
 ## Why Contamination Is Permanent
 
