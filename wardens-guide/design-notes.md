@@ -21,9 +21,6 @@ WIL damage from contamination doesn't heal normally because the time zones are c
 
 In the Cairn engine, a Glock 17 does d6 damage. Average starting HP is 3.5. One good roll drops a PC to 0 and triggers critical damage. Two hits kill. This is intentional. Combat in Uchronies & Treasures should feel like combat in a crime thriller, not a fantasy dungeon: terrifying, brief, and something you plan your way around. The game's real challenges are economic and moral, not tactical.
 
-## The Monte Carlo Validation
-
-The original Italian edition (UeT v2.2.3) was balanced using 300,000 simulated 15-session campaigns. Key findings: the original v2.2 rules created a "death spiral" where 53.8% of campaigns ended in total party kills. After mechanical adjustments (suit protection, contamination timing, HP floor, experience rebalancing), TPK rate dropped to 3.0%. Average character progression went from level 1.8 to level 3.6. Echo transformation rate went from 71.3% to 24.9%. These numbers informed the Cairn conversion: the contamination damage die (d4), the suit reduction (1 point), and the zone intensity table all derive from the simulation data.
 
 ## Why Cairn Instead of Traditional OSR
 
