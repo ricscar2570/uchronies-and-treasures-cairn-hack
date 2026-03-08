@@ -1,0 +1,28 @@
+title: "Uchronies & Treasures"
+description: "A Cairn hack of temporal heists and financial desperation"
+permalink: pretty
+remote_theme: pmarsceill/just-the-docs
+color_scheme: dark
+encoding: UTF-8
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+include:
+  - js
+
+logo: "/img/logo.svg"
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: "Based on <a href=\"https://cairnrpg.com\">Cairn</a> by Yochai Gal. Text licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC-BY-SA 4.0.</a>"
+last_edit_timestamp: true
+last_edit_time_format: "%b %e %Y at %I:%M %p"
+
+aux_links:
+  "GitHub":
+    - "https://github.com/riccardosgaringi/uchronies-and-treasures"
+  "itch.io":
+    - "#"
+
+aux_links_new_tab: true

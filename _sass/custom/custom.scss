@@ -1,0 +1,337 @@
+/* ═══════════════════════════════════════════════
+   UCHRONIES & TREASURES - "Division Dossier" Light
+   Aged parchment, crimson stamps, amber accents
+   ═══════════════════════════════════════════════ */
+
+:root {
+  --bg-paper:      #f5f0e8;    /* warm aged parchment */
+  --bg-surface:    #ece5d8;    /* slightly darker surface */
+  --bg-elevated:   #e3daca;    /* blockquotes, details */
+  --bg-table-even: #eee8db;    /* table striping */
+
+  --text-primary:  #2c2417;    /* dark warm ink */
+  --text-muted:    #6b5d4a;    /* faded ink */
+  --heading-color: #1a1208;    /* near-black headings */
+
+  --crimson:       #8B1A1A;    /* Division crimson */
+  --crimson-light: #a82828;    /* hover crimson */
+  --amber:         #996515;    /* temporal amber (dark enough on light bg) */
+  --amber-hover:   #7a5010;    /* amber hover */
+  --teal:          #1a6e5c;    /* contamination teal */
+  --corruption:    #5e2d6e;    /* Zhou purple */
+
+  --border:        #d0c4aa;    /* parchment border */
+  --border-strong: #b8a880;    /* strong border */
+
+  --sidebar-bg:    #2a2218;    /* dark sidebar contrast */
+  --sidebar-text:  #c8bda6;    /* sidebar text */
+  --sidebar-active:#d4a853;    /* sidebar active amber */
+}
+
+/* --- Fonts --- */
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/fonts/static/Alegreya-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/fonts/static/Alegreya-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/fonts/static/Alegreya-Italic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/fonts/static/Alegreya-SemiBold.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+
+/* --- Base --- */
+body {
+  font-family: 'Alegreya', Georgia, 'Times New Roman', serif;
+  background-color: var(--bg-paper);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alegreya', Georgia, serif;
+  color: var(--heading-color);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--crimson);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--crimson);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.2em;
+  margin-top: 2em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--heading-color);
+  margin-top: 1.5em;
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* --- Links --- */
+a {
+  color: var(--amber);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--amber-hover);
+  text-decoration: underline;
+}
+a:visited {
+  color: var(--amber-hover);
+}
+
+/* --- Blockquotes (Classified Briefing) --- */
+blockquote {
+  background: var(--bg-elevated);
+  border-left: 3px solid var(--crimson);
+  border-radius: 0 4px 4px 0;
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+  color: var(--text-primary);
+  font-style: normal;
+  position: relative;
+}
+
+blockquote::before {
+  content: "CLASSIFIED";
+  position: absolute;
+  top: -0.6em;
+  left: 1em;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--crimson);
+  background: var(--bg-paper);
+  padding: 0 0.5em;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+blockquote strong:first-child { color: var(--crimson); }
+
+/* --- Tables (Ledger Style) --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95em;
+  border: 1px solid var(--border-strong);
+}
+
+thead {
+  display: table-header-group;
+  background: var(--crimson);
+  color: #fff;
+}
+
+th {
+  padding: 0.5em 0.7em;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--crimson-light);
+}
+
+td {
+  padding: 0.4em 0.7em;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:nth-child(even) td { background-color: var(--bg-table-even); }
+tr:nth-child(odd) td { background-color: var(--bg-paper); }
+tr:hover td { background-color: var(--bg-elevated); }
+
+/* --- Code (Comms Terminal) --- */
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background: var(--bg-elevated);
+  color: var(--teal);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 1em;
+  overflow-x: auto;
+}
+pre code { background: none; padding: 0; border: none; }
+
+/* --- HR (Temporal Divider) --- */
+hr {
+  border: none;
+  height: 1px;
+  margin: 2em 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--crimson) 20%,
+    var(--amber) 50%,
+    var(--crimson) 80%,
+    transparent
+  );
+}
+
+/* --- Lists --- */
+ul, ol { padding-left: 1.5em; }
+li { margin-bottom: 0.3em; }
+li strong { color: var(--heading-color); }
+
+/* --- Sidebar (Dark Contrast) --- */
+.side-bar {
+  background-color: var(--sidebar-bg) !important;
+  border-right: 1px solid #3a3025;
+}
+
+.side-bar .site-title {
+  color: var(--crimson-light) !important;
+  font-family: 'Alegreya', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.side-bar .site-nav,
+.side-bar .nav-list,
+.side-bar .nav-list-item,
+.side-bar .nav-list-link {
+  font-size: 1.1rem;
+  font-family: 'Alegreya', Georgia, serif;
+}
+
+.nav-list-link {
+  color: var(--sidebar-text) !important;
+  transition: color 0.2s ease;
+}
+.nav-list-link:hover,
+.nav-list-link.active {
+  color: var(--sidebar-active) !important;
+}
+
+/* --- Main Content --- */
+.main-content-wrap {
+  background-color: var(--bg-paper) !important;
+}
+
+.main-content {
+  max-width: 50em;
+  color: var(--text-primary);
+}
+
+/* --- Search --- */
+.search-input {
+  background-color: #fff;
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+}
+
+/* --- Footer --- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85em;
+}
+
+/* --- Buttons --- */
+button {
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elevated);
+  color: var(--heading-color);
+  cursor: pointer;
+  padding: 0.3em 0.8em;
+  border-radius: 3px;
+  font-family: 'Alegreya', Georgia, serif;
+  transition: background 0.2s ease;
+}
+button:hover { background: var(--bg-surface); border-color: var(--amber); }
+button:focus { outline: 2px solid var(--amber); }
+
+/* --- Images --- */
+img { max-width: 100%; height: auto; border-radius: 4px; }
+
+/* --- Details/Summary (TOC) --- */
+details {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.8em 1em;
+  margin-bottom: 1.5em;
+}
+details summary {
+  cursor: pointer;
+  color: var(--crimson);
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+details[open] summary {
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5em;
+}
+
+/* --- Temporal Flicker on H1 --- */
+@keyframes temporal-flicker {
+  0%, 95%, 100% { opacity: 1; }
+  96% { opacity: 0.7; transform: translateX(1px); }
+  97% { opacity: 1; transform: translateX(-1px); }
+  98% { opacity: 0.85; }
+}
+.main-content h1:first-of-type {
+  animation: temporal-flicker 8s infinite;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  body { font-size: 1.1rem; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+}
+
+/* --- Print --- */
+@media print {
+  body { background: white; color: black; }
+  h1, h2, h3 { color: black; }
+  h2 { color: var(--crimson); }
+  a { color: black; text-decoration: underline; }
+  blockquote { border-left-color: #333; background: #f5f5f5; }
+  blockquote::before { display: none; }
+  .side-bar { display: none; }
+}
