@@ -20,4 +20,4 @@ The game uses the [Cairn](https://cairnrpg.com) engine by Yochai Gal. Character 
 
 The full text is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Based on [Cairn](https://cairnrpg.com) by Yochai Gal (CC-BY-SA 4.0) and [Ucronie e Tesori](https://github.com/riccardosgaringi/uchronies-and-treasures) by Riccardo Sgaringi (CC BY 4.0).
 
-Design by Riccardo Sgaringi. 
+Design, writing and simulation by Riccardo Sgaringi. Balanced with 300,000 Monte Carlo simulated campaigns.

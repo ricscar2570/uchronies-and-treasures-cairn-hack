@@ -35,13 +35,43 @@ Loyalty and Corruption are two independent trackers, scale 0-10. They are **not*
   Value  Status           Consequences
   ------ ---------------- -----------------------------------------------
   0      Clean            Zhou doesn't know your name.
-  1-3    Dabbling         First offers arrive. Small favors, small costs.
-  4-6    Entangled        Regular customer. Refusing has consequences.
-  7-8    Deep In          Automatic weekly offers. Side jobs expected.
-  9-10   Zhou's Property  Zhou provides everything. You are not free.
+  1-2    Dabbling         First offers arrive. Small favors, small costs.
+  3      Asset            Zhou shifts from offers to requests. See below.
+  4      Entangled        Regular customer. Refusing has consequences.
+  5      Watched          The Division suspects. See below.
+  6      Deep In          Automatic weekly offers. Side jobs expected.
+  7      Leveraged        Zhou has something on you. See below.
+  8      Committed        Zhou provides everything. Extraction is difficult.
+  9-10   Zhou's Property  You are not free. Division arrest order imminent.
   -----------------------------------------------------------------------
 
-### Instability
+### Corruption Threshold: 3
+
+At Corruption 3, Zhou considers the agent a confirmed asset. The dynamic shifts.
+
+**Zhou stops making offers and starts making requests.** The first request is small: surveil a location for one night, carry a sealed package across town, confirm a name. Pay is $300. The framing is professional. But refusal has a cost: Zhou "withholds" $500 in payments from previous transactions for "administrative processing." The money may or may not be returned.
+
+> This is the mechanical moment where the agent realizes the relationship has changed. They are no longer a client. They are a resource.
+
+### Corruption Threshold: 5
+
+At Corruption 5, the Division has enough to act on suspicion, not enough to act on evidence.
+
+**A second agent appears on every Division mission.** The Warden controls this NPC. They are professional, competent, and say little. The agent does not know with certainty whether this person reports to Hayes. They might be a standard field partner. They might be an informant. Every grey action in the field is now a gamble.
+
+> The Warden should play this ambiguity honestly. Sometimes the second agent is just a second agent. Sometimes they report back. Players should not be able to reliably determine which. The uncertainty is the mechanic.
+
+**This threshold stacks with the Raines threshold.** An agent who has completed five missions for Raines and reaches Corruption 5 has both the surveillance agent and the heightened mission difficulty from Hayes's reassignment. The pressure compounds.
+
+### Corruption Threshold: 7
+
+At Corruption 7, Zhou has documentation.
+
+**Zhou possesses something: a recording, a document, a witness who will testify.** She does not use it immediately. She uses the fact that she has it. Each time the agent attempts to refuse a job from Zhou, the Warden rolls d6. On a 1-2, Zhou makes the threat explicit in that conversation. The agent must make a **WIL save**. On a failure, they are **Deprived** for one week from stress (cannot recover HP or attributes until they complete a full week of rest outside active zones).
+
+> Zhou's leverage is not a death sentence. It is a slow ratchet. Each refusal risks activating it. The agent can still refuse. They just cannot refuse without cost.
+
+### The Corruption Scale### Instability
 
 When **|Loyalty - Corruption| is 2 or less**, you enter **INSTABILITY**.
 

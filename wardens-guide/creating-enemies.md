@@ -67,6 +67,34 @@ Use this template for any NPC or enemy:
 
 **Temporal Rift.** Not a creature. WIL save to resist. Failure: teleported d6 rooms in a random direction. Success: you see through the rift to the destination and can choose to cross or not.
 
+## Key NPCs
+
+These are not enemies in the traditional sense. They are recurring figures whose goals intersect with the party. Use the stat blocks only if things escalate to violence, which should be rare.
+
+### Raines
+
+**Victor Raines.** 6 HP, 1 Armor, 10 STR, 12 DEX, 14 WIL, concealed pistol (d6). Former Division analyst. Now independent. Not hostile by default.
+
+**Who he is.** Raines worked intelligence for the Division for eleven years before a dispute over artifact classification ended his contract. He now brokers temporal artifacts for private clients: collectors, foreign research institutes, and at least one government that is not the United States. He is not Zhou. He does not deal in leverage or blackmail. He deals in information and artifacts, and he pays well.
+
+**What he wants.** Artifacts recovered from temporal zones. Operational intelligence about Division activities. Introductions to other agents who might be willing to work outside the Division structure.
+
+**His offer.** Raines pays 40% more than the Division for completed missions, but offers no guaranteed base pay. If a mission fails, the payment is zero, with no $150 guaranteed floor.
+
+| Mission Outcome | Division | Raines |
+|---|---|---|
+| Full success | $500-700 | $800-1,100 |
+| Partial success | $350 | $400 |
+| Failure | $150 guaranteed | $0 |
+
+**The hidden cost.** Every mission completed for Raines costs -1 Loyalty with the Division. After three missions for Raines, Hayes knows. He says nothing. But from that point forward, missions assigned to that agent become harder: Red zones instead of Orange, secondary objectives with steeper penalties, less favorable timing windows. Hayes does not confront agents directly. He reassigns them to the difficult work and waits.
+
+**Making contact.** Raines does not approach agents directly at first. He leaves a message through a mutual contact, a journalist, or a former colleague. The first conversation is always in a public place, always framed as a professional inquiry, never as a recruitment pitch. He lets the agent do the math.
+
+**Stat block (if combat).** Raines will not fight unless cornered. If cornered, he attempts to disengage (DEX save). If he fails, he shoots once and runs. He does not pursue. He values his life more than any single deal.
+
+---
+
 ## The Quick Conversion Rule
 
 Adapt any modern or sci-fi enemy you find elsewhere:

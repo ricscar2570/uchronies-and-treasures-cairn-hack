@@ -121,6 +121,35 @@ A good dilemma has: **two options, both costly, both defensible, with permanent 
 - **Punishing every choice:** If players always get screwed regardless, they stop caring. Fix: let good choices have good consequences (with costs).
 - **Moralizing:** Don't lecture players on their choices. The system tracks Loyalty and Corruption. Let the numbers speak.
 
+## Managing the Raines Relationship
+
+When one or more agents begin working for Raines, the Warden takes on an additional tracking responsibility: the Division's slow, silent response.
+
+### The Three-Mission Threshold
+
+After an agent completes their third mission for Raines, Hayes knows. The Warden does not announce this. Hayes does not call the agent in for a conversation. The change is visible only through mission assignments.
+
+**Starting with the fourth week after the threshold is crossed:**
+
+- Missions assigned to the agent shift from Orange zones to Red zones by default.
+- Secondary objectives become harder: extraction under time pressure, no civilian casualties in hostile environments, artifact recovery from contested locations.
+- Timing windows tighten: mission windows drop from 72 hours to 48 hours without explanation.
+- Hayes's tone in briefings becomes neutral where it was previously collegial. He still provides all necessary information. He stops making small talk.
+
+### What Hayes Knows and What He Does Not Know
+
+Hayes knows an agent is working outside the Division. He does not necessarily know it is Raines specifically. He does not act on incomplete information. He reassigns, applies pressure, and waits to see if the agent corrects course.
+
+**If the agent reaches five missions for Raines**, Hayes files a formal surveillance request. From this point, one additional NPC agent is present on every Division mission (see Corruption 5 rules in the Loyalty and Corruption section). The two systems stack: an agent with high Corruption and five Raines missions has both the surveillance agent and the heightened mission difficulty simultaneously.
+
+### The Raines Dilemma in Practice
+
+Present the player with the math explicitly at session start when the threshold approaches:
+
+> "You have completed two missions for Raines. The third will push you past the point where Hayes starts adjusting your assignments. Do you take the mission?"
+
+This is not a spoiler. It is information the character would reasonably calculate. The player should make this choice with full knowledge of the cost.
+
 ## Managing PC Death
 
 ### At the Table

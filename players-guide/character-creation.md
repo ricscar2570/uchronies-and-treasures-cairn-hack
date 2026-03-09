@@ -11,6 +11,8 @@ nav_order: 2
 > **Target time: 15 minutes.**
 > You don't build an optimal character after 2 hours of analysis. You generate a desperate person ready to play immediately.
 
+> **A note on the learning curve.** Uchronies & Treasures has six trackers per character. It is not a minimal-rules game: it is a game with few resolution mechanics and many narrative variables to keep in balance. Character creation takes 15 minutes. Feeling comfortable with all the trackers takes two sessions. This is normal and by design: each tracker becomes interesting at the moment it starts to bite.
+
 ### Overview (7 Steps)
 
 1. **Roll Ability Scores** (1 minute)

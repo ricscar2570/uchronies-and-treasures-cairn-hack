@@ -48,13 +48,15 @@ You can have at most **5 different Quirks**. When you would gain a sixth, you be
 
 #### 4. Speed
 
-**From blank page to play: 30 minutes total.**
+**Ready to play in 30 minutes. Comfortable with the system in two sessions.**
 
 - **Character creation:** 15 minutes (roll 3d6 three times, pick a background, done)
 - **Rules explanation:** 10 minutes (d20 under attribute for saves, roll damage directly, track your money)
 - **Start playing:** 5 minutes (the Warden reads the opening scene)
 
-The game doesn't reward system mastery. It rewards *decisions under pressure*.
+The game has six trackers per character and a weekly accounting rhythm. This is not a minimal-rules game: it is a game with few resolution mechanics and many narrative variables to keep in balance. The trackers become interesting precisely when they start to bite. Two sessions is enough to internalize them.
+
+**The game rewards decisions under pressure, not system mastery. But the system is worth knowing.**
 
 #### 5. The Curiosity Machine
 
