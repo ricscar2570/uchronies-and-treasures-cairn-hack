@@ -87,7 +87,7 @@ These are not enemies in the traditional sense. They are recurring figures whose
 | Partial success | $350 | $400 |
 | Failure | $150 guaranteed | $0 |
 
-**The hidden cost.** Every mission completed for Raines costs -1 Loyalty with the Division. After three missions for Raines, Hayes knows. He says nothing. But from that point forward, missions assigned to that agent become harder: Red zones instead of Orange, secondary objectives with steeper penalties, less favorable timing windows. Hayes does not confront agents directly. He reassigns them to the difficult work and waits.
+**The hidden cost.** Every mission completed for Raines costs -1 Loyalty with the Division every 2 missions (not every single mission, but the erosion is steady and visible). Additionally, working for Raines accumulates **+1 Corruption every 2 missions**: operating outside the Division's oversight, selling artifacts to private buyers, and providing intelligence to foreign clients are morally compromising acts regardless of legality. After three missions for Raines, Hayes knows.
 
 **Making contact.** Raines does not approach agents directly at first. He leaves a message through a mutual contact, a journalist, or a former colleague. The first conversation is always in a public place, always framed as a professional inquiry, never as a recruitment pitch. He lets the agent do the math.
 

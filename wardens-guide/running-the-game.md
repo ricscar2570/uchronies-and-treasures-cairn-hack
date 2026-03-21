@@ -129,6 +129,8 @@ When one or more agents begin working for Raines, the Warden takes on an additio
 
 After an agent completes their third mission for Raines, Hayes knows. The Warden does not announce this. Hayes does not call the agent in for a conversation. The change is visible only through mission assignments.
 
+Each Raines mission costs **-1 Loyalty every 2 missions** and **+1 Corruption every 2 missions**. The Loyalty erosion reflects institutional distance from the Division. The Corruption reflects the moral cost of operating in a grey market: selling artifacts to private collectors, providing intelligence to foreign clients, bypassing Division oversight. These are not neutral acts.
+
 **Starting with the fourth week after the threshold is crossed:**
 
 - Missions assigned to the agent shift from Orange zones to Red zones by default.

@@ -20,9 +20,9 @@ nav_order: 1
   **Veteran**       $1,800/week     Finally breathing. But debts remain.
   -----------------------------------------------------------------------
 
-**Mission bonuses:** Guaranteed base: +$150 per completed mission (not subject to deductions). Successful completion: +$200 (subject to deductions). Secondary objective: +$100 each (subject to deductions). No civilian casualties: +$150 (subject to deductions). Artifact recovery: +$300-$1,000 (varies, subject to deductions).
+**Mission bonuses:** Guaranteed base: +$50 per completed mission (not subject to deductions). Successful completion: +$200 (subject to deductions). Secondary objective: +$100 each (subject to deductions). No civilian casualties: +$150 (subject to deductions). Artifact recovery: +$300-$1,000 (varies, subject to deductions).
 
-> Bonuses (except the guaranteed $150) are subject to "administrative deductions." A $500 bonus becomes $350 after deductions. This fuels resentment toward the Division.
+> Bonuses (except the guaranteed $50) are subject to "administrative deductions." A $500 bonus becomes $350 after deductions. This fuels resentment toward the Division.
 
 ### Mandatory Weekly Expenses
 
@@ -35,7 +35,7 @@ nav_order: 1
   **TOTAL**                  **$900**
   -----------------------------------------------------------------------
 
-**Guaranteed deficit at Recruit tier: -$100 per week.**
+**Guaranteed deficit at Recruit tier: -$50 per week** (pay $800 + guaranteed bonus $50 - expenses $900 = -$50). Miss the mission success bonus and the deficit doubles.
 
 ### Weekly Cash Flow by Tier
 
@@ -65,9 +65,9 @@ Madame Zhou's currency is **certificates** (1 certificate = approximately $1,000
 
 > **4-week example:**
 >
-> **Week 1:** Pay $800, expenses $900, bonus $150. Balance: +$50. Debt: -$450.
-> **Week 2:** Yellow Zone mission. Bonus $150 + $200 (after deductions: $140). Balance: +$190. Debt: -$260.
-> **Week 3:** Mission fails. Only guaranteed $150. Broken phone: -$50. Balance: $0. Debt: -$260.
+> **Week 1:** Pay $800, expenses $900, bonus $50. Balance: -$50. Debt: -$550.
+> **Week 2:** Yellow Zone mission. Bonus $50 + $200 (after deductions: $140). Balance: +$90. Debt: -$460.
+> **Week 3:** Mission fails. Only guaranteed $50. Broken phone: -$50. Balance: -$100. Debt: -$560.
 > **Week 4:** Zhou offers $2,000 for "a small piece of information." Rent is due. Medicine runs out in 3 days. What do you do?
 
 ### What Happens When You Don't Pay
@@ -85,7 +85,7 @@ Madame Zhou's currency is **certificates** (1 certificate = approximately $1,000
   --------------------- ----------------- -------------- --------------------
   Security guard        $100-200/week     Low            None
   Manual labor          $80-150/week      Low            None
-  Division consulting   $300-400/week     None           None (Loyalty 5+)
+  Division consulting   $150-250/week     None           None (Loyalty 5+)
   Temporal info market  $200-600/info     WIL save       None (direct)
   Gambling              -$200 to +$400    Medium         +1 after 3 wins
   Street fighting       $200-500/fight    High (d6 STR)  None
@@ -93,7 +93,7 @@ Madame Zhou's currency is **certificates** (1 certificate = approximately $1,000
   Info sale to Zhou     $500-2,000        Very high      +2 Corruption
   -----------------------------------------------------------------------
 
-**Division Consulting (Loyalty 5+ only).** The agent uses their background expertise as a consultant for other Division teams. Pay: $300-400 per week. Cost: 2 full days of downtime. During those 2 days, no other side gigs, missions, or significant actions are possible. This is work: it requires presence and focus. Not available to agents under active surveillance. Requires Loyalty 5 or higher to access; if Loyalty drops below 5 while consulting, the contract is suspended without pay for that week.
+**Division Consulting (Loyalty 5+ only).** The agent uses their background expertise as a consultant for other Division teams. Pay: $150-250 per week. Cost: 2 full days of downtime. During those 2 days, no other side gigs, missions, or significant actions are possible. This is work: it requires presence and focus. Not available to agents under active surveillance. Requires Loyalty 5 or higher to access; if Loyalty drops below 5 while consulting, the contract is suspended without pay for that week.
 
 > **Design note.** Division Consulting is intentionally narrow. At Recruit tier it does not eliminate the deficit (base $800 + $350 consulting - $900 expenses = $250 surplus). It makes the honest path survivable, not comfortable. It costs time that cannot be spent on missions or other income. The choice between consulting and a Raines mission is a real choice.
 
