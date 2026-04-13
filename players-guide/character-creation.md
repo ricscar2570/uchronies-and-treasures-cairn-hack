@@ -87,16 +87,22 @@ All agents begin with:
 
 | Ex-Military | Failed Academic | Reformed Criminal |
 |---|---|---|
-| Combat knife (d6, 1 slot) | 3 rare books (bulky) | Lockpick set (1 slot) |
-| Compass (0 slots) | Magnifying lens (0 slots) | 1 criminal contact (name and number) |
-| Zippo lighter (0 slots) | Half-filled notebook (0 slots) | Burner phone (0 slots) |
+| Combat knife | 3 rare books | Lockpick set |
+| (d6, 1 slot) | (bulky) | (1 slot) |
+| Compass | Magnifying lens | 1 criminal contact |
+| (0 slots) | (0 slots) | (name and number) |
+| Zippo lighter | Half-filled | Burner phone |
+| (0 slots) | notebook (0 slots) | (0 slots) |
 
 
 | Corrupt Cop | Disbarred Medic | Con Artist |
 |---|---|---|
-| Fake detective badge (0 slots) | Field med kit (5 uses, d4 STR, 1 slot) | 3 fake IDs 1 slot) |
-| Handcuffs (1 slot) | Morphine, 3 vials (1 slot) | $500 extra cash (0 slots) |
-| Pepper spray (d4, 0 slots) | Surgical scalpel (d6, 0 slots) | Fake Rolex looks real, 0 slots) |
+| Fake detective | Field med kit | 3 fake IDs |
+| badge (0 slots) | (5 uses, d4 STR, 1 slot) | 1 slot) |
+| Handcuffs | Morphine, 3 vials | $500 extra cash |
+| (1 slot) | (1 slot) | (0 slots) |
+| Pepper spray | Surgical scalpel | Fake Rolex |
+| (d4, 0 slots) | (d6, 0 slots) | looks real, 0 slots) |
 
 
 ### Inventory
@@ -120,4 +126,50 @@ Record these on your character sheet:
 | **Certificates** | 0 | Black market currency. 1 certificate = ~$1,000. |
 | **Debt** | -$500 | The Division advances training, equipment, housing costs. Welcome to debt. |
 | **Temporal Quirks** | 0 | Permanent mutations from contamination. Limit: 5. At 6, you become an echo. |
-| **Tier** **Cr | tical:** Ant | -re --|---|---|---| 1 2 3 4 5 ---- | Athletic Face | (d10)** |  |  | ---- 1 2 3 4 5 ---- | --- Spee | h (d10)** |  |  | ---- 1 2 3 4 5 ---- | --- Vice | (d10)** |  |  | ---- 1 2 3 4 5 ---- | --- Virt | e (d10)** |  |  | ---- 1 2 3 4 5 ---- | --- # 6. | Narrative De | ail swer | briefly (1-2 | sen Why | id you join | he D What | debt or prob | em One | erson you ca | e ab **Yo | r character | heet | Recruit | ction medic Brawny Gaunt La -------- Bony B -------- Blunt -------- Gambli -------- Cautio |  | | nces each): vision?** E | | eps you des | ut (alive o | | is complete | | Your standing. Affects pay only. Recruit ($800/wk), Agent ($1,200/wk), Veteran ($1,800/wk). ky Wiry ------------ | 6 7 8 9 10 ---- oken nose Chiseled Exhausted Pale ----- umbling Clipped Droning Flat ---------- g Drinking Drugs Lying Violence ------- s Courageous Disciplined Honest Humble |
+| **Tier** | Recruit | Your standing. Affects pay only. Recruit ($800/wk), Agent ($1,200/wk), Veteran ($1,800/wk). |
+
+
+> **Critical:** Anti-rejection medicine ($250/week) is not optional. Missing a dose makes you **Deprived** (cannot recover HP or attributes) and your WIL degrades by 1 per week.
+
+### 5. Traits
+
+Roll on each table to flesh out your character.
+
+**Physique (d10)**
+
+| 1 | Athletic | 6 | Scrawny |
+|---|---|---|---|
+| Face | (d10)** |  |  |
+
+  1    Bony         6    Weathered
+  2    Broken nose  7    Rat-like
+  3    Chiseled     8    Sharp
+  4    Exhausted    9    Square
+  5    Pale         10   Sunken eyes
+|  |  |  |  |
+|---|---|---|---|
+| 1 | Blunt | 6 | Gravelly |
+| 2 | Mumbling | 7 | Precise |
+| 3 | Clipped | 8 | Raspy |
+| 4 | Droning | 9 | Stuttering |
+| 5 | Flat | 10 | Whispery |
+
+
+**Vice (d10)**
+
+| 1 | Gambling | 6 | Paranoia |
+|---|---|---|---|
+| Virt | e (d10)** |  |  |
+
+  1    Cautious     6    Loyal
+  2    Courageous   7    Patient
+  3    Disciplined  8    Merciful
+  4    Honest       9    Resourceful
+  5    Humble       10   Stoic
+| # 6. | Narrative De | ails |  |
+|---|---|---|---|
+| swer | briefly (1-2 | sent | nces each): |
+| Why | id you join | he D | vision?** Examples: "I owed money to the wrong people." "My brother died in a temporal zone." "I was unemployed for 8 months." |
+| What | debt or prob | em k | eps you desperate?** Examples: "I owe $15,000 to a loan shark." "Three months behind on rent, I have a daughter." "My mother's medicine costs $300 a week." |
+| One | erson you ca | e ab | ut (alive or dead)?** Examples: "My ex-wife Sarah." "My mentor Martinez, dead 2 years." "Nobody. I burned every bridge." |
+| **Yo | r character | heet | is complete.** A background that defines who you were. Attributes that define what you can do. Gear that (maybe) will keep you alive. Trackers that will show who you become. |

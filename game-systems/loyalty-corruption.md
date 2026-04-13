@@ -21,14 +21,26 @@ Loyalty and Corruption are two independent trackers, scale 0-10. They are **not*
 
 | Value | Status | Consequences |
 |---|---|---|
-| 0-1 2-3 4-6 7-8 9-10 | Traitor Suspect Neutral Trusted Division Hero | Division hunting you. Shoot-on-sight. Constant surveillance. Colleagues avoid you. Standard agent. No special treatment. Better missions (+$200). Priority Division medics (3 days Pay +50%. Military-grade equipment free. |
+| 0-1 | Traitor | Division hunting you. Shoot-on-sight. |
+| 2-3 | Suspect | Constant surveillance. Colleagues avoid you. |
+| 4-6 | Neutral | Standard agent. No special treatment. |
+| 7-8 | Trusted | Better missions (+$200). Priority Division medics (3 days instead of 1 week). |
+| 9-10 | Division Hero | Pay +50%. Military-grade equipment free. |
 
 
 ### The Corruption Scale
 
 | Value | Status | Consequences |
 |---|---|---|
-| 0 1-2 3 4 5 6 7 8 9-10 | Clean Dabbling Asset Entangled Watched Deep In Leveraged Committed Zhou's Property | Zhou doesn't know your name. First offers arrive. Small favors, small costs. Zhou shifts from offers to requests. See below. Regular customer. Refusing has consequences. The Division suspects. See below. Automatic weekly offers. Side jobs expected. Zhou has something on you. See below. Zhou provides everything. Extraction is difficult. You are not free. Division arrest order imminent. |
+| 0 | Clean | Zhou doesn't know your name. |
+| 1-2 | Dabbling | First offers arrive. Small favors, small costs. |
+| 3 | Asset | Zhou shifts from offers to requests. See below. |
+| 4 | Entangled | Regular customer. Refusing has consequences. |
+| 5 | Watched | The Division suspects. See below. |
+| 6 | Deep In | Automatic weekly offers. Side jobs expected. |
+| 7 | Leveraged | Zhou has something on you. See below. |
+| 8 | Committed | Zhou provides everything. Extraction is difficult. |
+| 9-10 | Zhou's Property | You are not free. Division arrest order imminent. |
 
 
 ### Corruption Threshold: 3
