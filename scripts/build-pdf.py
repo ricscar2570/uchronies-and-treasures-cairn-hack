@@ -260,12 +260,19 @@ def make_cover_pdf():
     c = cv.Canvas(buf, pagesize=A5)
     mm_pt = 72/25.4
 
-    # Background
-    c.setFillColor(NAVY); c.rect(0,0,PW,PH,fill=1,stroke=0)
-    # Top band
-    c.setFillColor(CRIMSON); c.rect(0, PH-34*mm_pt, PW, 34*mm_pt, fill=1, stroke=0)
-    # Bottom band
-    c.setFillColor(CRIMSON); c.rect(0, 0, PW, 20*mm_pt, fill=1, stroke=0)
+    # Background: cover image stretched to full A5 page
+    import os as _os
+    _cover_path = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), "img", "cover.png")
+    if _os.path.exists(_cover_path):
+        c.drawImage(_cover_path, 0, 0, PW, PH, preserveAspectRatio=False, mask="auto")
+    else:
+        c.setFillColor(NAVY); c.rect(0,0,PW,PH,fill=1,stroke=0)
+    # Dark overlay on top band for readability
+    from reportlab.lib.colors import Color as _Color
+    _overlay = _Color(0, 0, 0, alpha=0.62)
+    c.setFillColor(_overlay); c.rect(0, PH-34*mm_pt, PW, 34*mm_pt, fill=1, stroke=0)
+    # Dark overlay on bottom band
+    c.setFillColor(_overlay); c.rect(0, 0, PW, 20*mm_pt, fill=1, stroke=0)
     # Separator lines
     c.setStrokeColor(GOLD); c.setLineWidth(0.8)
     c.line(14*mm_pt, PH-34*mm_pt, PW-12*mm_pt, PH-34*mm_pt)
