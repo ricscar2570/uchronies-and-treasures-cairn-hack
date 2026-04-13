@@ -12,13 +12,10 @@ nav_order: 1
 
 ### Division Base Pay
 
-  -----------------------------------------------------------------------
-  Tier              Weekly Pay      Notes
-  ----------------- --------------- -------------------------------------
-  **Recruit**       $800/week       The bare minimum. You start here.
-  **Agent**         $1,200/week     Confirmed agent. Slightly better.
-  **Veteran**       $1,800/week     Finally breathing. But debts remain.
-  -----------------------------------------------------------------------
+| Tier | Weekly Pay | Notes |
+|---|---|---|
+| **Recruit** **Agent** **Veteran** | $800/week $1,200/week $1,800/week | The bare minimum. You start here. Confirmed agent. Slightly better. Finally breathing. But debts remain. |
+
 
 **Mission bonuses:** Guaranteed base: +$50 per completed mission (not subject to deductions). Successful completion: +$200 (subject to deductions). Secondary objective: +$100 each (subject to deductions). No civilian casualties: +$150 (subject to deductions). Artifact recovery: +$300-$1,000 (varies, subject to deductions).
 
@@ -26,26 +23,19 @@ nav_order: 1
 
 ### Mandatory Weekly Expenses
 
-  -----------------------------------------------------------------------
-  Expense                    Cost/Week   What happens if you skip
-  -------------------------- ----------- --------------------------------
-  **Rent**                   $500        Eviction in 4 weeks
-  **Food & necessities**     $150        Deprived, can't recover HP
-  **Anti-rejection medicine** $250       Deprived, WIL degrades 1/week
-  **TOTAL**                  **$900**
-  -----------------------------------------------------------------------
+| Expense | Cost/Week | What happens if you skip |
+|---|---|---|
+| **Rent** **Food & necessities** **Anti-rejection medicine* **TOTAL** | $500 $150 $250 **$900** | Eviction in 4 weeks Deprived, can't recover HP Deprived, WIL degrades 1/week |
+
 
 **Guaranteed deficit at Recruit tier: -$50 per week** (pay $800 + guaranteed bonus $50 - expenses $900 = -$50). Miss the mission success bonus and the deficit doubles.
 
 ### Weekly Cash Flow by Tier
 
-  -----------------------------------------------------------------------
-  Tier       Pay     Expenses  Balance     After 10 weeks
-  ---------- ------- --------- ----------- ----------------------------
-  Recruit    $800    $900      **-$100**   -$1,000 (desperate)
-  Agent      $1,200  $900      **+$300**   Paying off Recruit debts
-  Veteran    $1,800  $900      **+$900**   Comfortable (damage is done)
-  -----------------------------------------------------------------------
+| Tier | Pay | Expenses | Balance | After 10 weeks |
+|---|---|---|---|---|
+| Recruit Agent Veteran | $800 $1,200 $1,800 | $900 $900 $900 | **-$100** **+$300** **+$900** | -$1,000 (desperate) Paying off Recruit debts Comfortable (damage is done) |
+
 
 > At Agent and Veteran tiers, expenses may rise to $1,100-$1,300 due to lifestyle inflation, Quirk-related medical costs, and Zhou's "voluntary" payments for past favors.
 
@@ -80,18 +70,10 @@ Madame Zhou's currency is **certificates** (1 certificate = approximately $1,000
 
 ### Side Gigs
 
-  -----------------------------------------------------------------------
-  Side Gig              Pay               Risk           Corruption
-  --------------------- ----------------- -------------- --------------------
-  Security guard        $100-200/week     Low            None
-  Manual labor          $80-150/week      Low            None
-  Division consulting   $150-250/week     None           None (Loyalty 5+)
-  Temporal info market  $200-600/info     WIL save       None (direct)
-  Gambling              -$200 to +$400    Medium         +1 after 3 wins
-  Street fighting       $200-500/fight    High (d6 STR)  None
-  Drug courier          $300-600/run      High           +1 Corruption
-  Info sale to Zhou     $500-2,000        Very high      +2 Corruption
-  -----------------------------------------------------------------------
+| Side Gig | Pay | Risk | Corruption |
+|---|---|---|---|
+| Security guard Manual labor Division consulting Temporal info market Gambling Street fighting Drug courier Info sale to Zhou | $100-200/week $80-150/week $150-250/week $200-600/info -$200 to +$400 $200-500/fight $300-600/run $500-2,000 | Low Low None WIL save Medium High (d6 STR) High Very high | None None None (Loyalty 5+) None (direct) +1 after 3 wins None +1 Corruption +2 Corruption |
+
 
 **Division Consulting (Loyalty 5+ only).** The agent uses their background expertise as a consultant for other Division teams. Pay: $150-250 per week. Cost: 2 full days of downtime. During those 2 days, no other side gigs, missions, or significant actions are possible. This is work: it requires presence and focus. Not available to agents under active surveillance. Requires Loyalty 5 or higher to access; if Loyalty drops below 5 while consulting, the contract is suspended without pay for that week.
 

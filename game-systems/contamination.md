@@ -40,23 +40,14 @@ If you already have that Quirk, **reroll** until you get a new one. If you alrea
 
 ### Zone Intensity
 
-  -----------------------------------------------------------------------
-  Zone Type             Check Frequency    Damage Die   Example
-  --------------------- ------------------ ------------ -----------------
-  Stable (green)        No checks          None         Division HQ,
-                                                        Vegas Strip
+| Zone Type | Check Frequency | Damage Die | Example |
+|---|---|---|---|
+| Stable (green) | No checks | None | Division HQ, Vegas Strip |
+| Low (yellow) | Every 8 hours | d4 | Outskirts, buffer zones |
+| Standard (orange) | Every 6 hours | d4 | Most mission areas |
+| High (red) | Every 3 hours | d4 | Deep zones, Oculus sites |
+| Critical (black) | Every hour | d6 | Oculus core, temporal rifts |
 
-  Low (yellow)          Every 8 hours      d4           Outskirts, buffer
-                                                        zones
-
-  Standard (orange)     Every 6 hours      d4           Most mission areas
-
-  High (red)            Every 3 hours      d4           Deep zones, Oculus
-                                                        sites
-
-  Critical (black)      Every hour         d6           Oculus core,
-                                                        temporal rifts
-  -----------------------------------------------------------------------
 
 ### Temporal Echoes
 

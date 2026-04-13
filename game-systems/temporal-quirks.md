@@ -14,9 +14,10 @@ nav_order: 3
 
 When you take WIL damage from contamination, roll d12. If you already have that Quirk, reroll until you get a new one.
 
-  ---- -------------------------------- --------------------------------
-  d12  Quirk Name                       Effect Summary
-  ---- -------------------------------- --------------------------------
+| | | |
+|---|---|---|
+| d12 | Quirk Name | Effect Summary |
+
   1    Accelerated Aging                Age 1d10 years instantly
   2    Memories of Unlived Lives        Paralyzing flashbacks, always
                                         lose initiative
@@ -39,124 +40,71 @@ When you take WIL damage from contamination, roll d12. If you already have that 
                                         present; enhanced investigation
   12   Spontaneous Rewind              Occasionally rewind 1d6 seconds;
                                         limited undo (1/session)
-  ---- -------------------------------- --------------------------------
-
-### Quirk Descriptions
-
-#### [1] Accelerated Aging
-*You age 1d10 years instantly. The body jumps forward in time.*
-
-No immediate attribute penalty. At 60+ years total: -1 STR, -1 DEX. At 70+: -2 STR, -2 DEX. At 80+: mandatory retirement or imminent death.
-
-*At the table: documents don't match your face, relationships collapse.*
-
----
-
-#### [2] Memories of Unlived Lives
-*Your mind fills with memories from alternate timelines.*
-
-You always **lose initiative** (automatically fail DEX save in combat round 1). Once per session: "I remember this from another life" - the Warden gives a clue or temporary competence (1 scene). On important dilemmas: WIL save or freeze for 1 round.
-
-*At the table: paralyzing flashbacks, identity confusion, constant nightmares.*
-
----
-
-#### [3] Vision of Future Deaths
-*You see the future dead versions of living people overlaid on their faces.*
-
-**+1 Armor** permanently (you see attacks before they land). **All social interactions are impaired** (people see death in your eyes). Once per session: "I know how you die" - the Warden reveals approximately how an NPC will die.
-
-*At the table: children cry, animals flee, every conversation is a memento mori.*
-
-> **Design note:** In the original UeT this Quirk gave CHA -4. Since Cairn's WIL covers both social and contamination saves, we use narrative impairment for social interactions instead of an attribute penalty. This preserves the social cost without creating a contamination death spiral.
-
----
-
-#### [4] Partial Phase Shift
-*One body part (roll d6: 1-2 arm, 3-4 leg, 5 torso, 6 head) becomes translucent and semi-intangible.*
-
-The phased part passes through walls and solid objects (WIL save to control). You cannot hold objects with it. Arm: attacks with that hand are impaired. Head: all social interactions impaired. Torso: add 1 permanent Fatigue.
-
-*At the table: visibly mutated, impossible to hide.*
-
----
-
-#### [5] Vocal Echo
-*Your voice overlaps in 3 time streams: 1 second before, now, 1 second after.*
-
-Verbal stealth impossible (cannot whisper). Enhanced intimidation against anyone hearing you for the first time. Once per session: "Speaking into the past" - someone hears your words 10 seconds early.
-
-*At the table: phone calls impossible, recorders corrupt.*
-
----
-
-#### [6] Inverse Scars
-*Wounds you haven't yet received appear on your body.*
-
-No HP penalty. When hit where a scar matches: STR save, success means half damage. Each week: roll d6, on a 1 a scar "realizes" (d6 spontaneous STR damage).
-
-*At the table: mosaic of impossible wounds, anxious waiting.*
-
----
-
-#### [7] Cursed Prescience
-*You see 10 seconds into the future, constantly. You know what will happen but cannot change it.*
-
-Always win initiative (automatic DEX save success). Never surprised. In combat: describe what the enemy does next round (Warden confirms or denies). Curse: when you fail a critical damage save, describe having seen it coming.
-
-*At the table: answer before questions, watch deaths approach helplessly.*
-
----
-
-#### [8] Delayed Shadow
-*Your shadow moves 3 seconds behind your body.*
-
-Stealth is impaired when in light. Once per session: leave shadow as decoy, fools enemies for 1 round. In total darkness: no effect. No other mechanical penalty.
-
-*At the table: photos and video show your shadow in the wrong place.*
-
----
-
-#### [9] Personal Loop
-*Every 10 minutes, you involuntarily repeat the same 6 words.*
-
-The loop can ruin stealth operations. Benefit: perfect timer (always know when 10 minutes pass). Roll d6 or choose with Warden for the 6 words.
-
-*At the table: serious conversations interrupted. Some NPCs think the words are prophecies.*
-
----
-
-#### [10] Temporal Fragmentation
-*You occasionally vanish from reality for 1d6 seconds.*
-
-Every hour (game time): roll d6, on a 1 vanish for 1d6 seconds (1 round). In combat: lose turn, but enemies can't target you. Ongoing actions fail if you vanish. +1 Armor permanently (slightly "out of focus").
-
-*At the table: can't drive, intimate relationships impossible.*
-
----
-
-#### [11] Eyes of the Past
-*You see past events overlaid on the present: 10, 50, 100 years ago.*
-
-Enhanced investigation in any location (see invisible clues). Impaired perception of the present. Always lose initiative in unfamiliar locations. Once per session: concentrate 10 min + WIL save to visually rewind a location up to 1 week.
-
-*At the table: every place crowded with temporal ghosts.*
-
----
-
-#### [12] Spontaneous Rewind
-*You occasionally rewind 1d6 seconds, repeating actions.*
-
-Every hour: roll d6, on a 1 you rewind. In combat: lose turn, but can change action in the second iteration. Once per session: voluntary rewind to undo a mistake (max 6 seconds). Others don't remember the first loop.
-
-*At the table: constant deja vu, allies learn to wait for the loop to end.*
-
----
-
-### Removing Quirks
-
-**Method 1: Experimental temporal surgery.** Cost: $50,000 (50 certificates). Takes 3 weeks. WIL save. Success: removed. Failure: gain new Quirk instead. Either way: +2 Corruption.
-
-**Method 2: Division protocol.** Free if Loyalty 8+. Takes 1 month. WIL save with advantage (roll twice, take better). Success: removed. Failure: desk duty or forced leave.
-
-**Method 3: Acceptance.** Free. The Quirk stays. The Warden may reduce social penalties if you roleplay the acceptance well.
+| | | |
+|---|---|---|
+| # Qu | rk Descriptions |  |
+| ## [ | ] Accelerated Aging |  |
+| ou a | e 1d10 years instantly. The body | jumps forward in time.* |
+| imm | diate attribute penalty. At 60+ | ears total: -1 STR, -1 DEX. At 70+: -2 STR |
+| t th | table: documents don't match yo | r face, relationships collapse.* |
+| - |  |  |
+| ## [ | ] Memories of Unlived Lives |  |
+| our | ind fills with memories from alt | rnate timelines.* |
+| u al | ays **lose initiative** (automat | cally fail DEX save in combat round 1). On |
+| t th | table: paralyzing flashbacks, i | entity confusion, constant nightmares.* |
+| - |  |  |
+| ## [ | ] Vision of Future Deaths |  |
+| ou s | e the future dead versions of li | ing people overlaid on their faces.* |
+| +1 A | mor** permanently (you see attac | s before they land). **All social interact |
+| t th | table: children cry, animals fl | e, every conversation is a memento mori.* |
+| **De | ign note:** In the original UeT | his Quirk gave CHA -4. Since Cairn's WIL c |
+| - |  |  |
+| ## [ | ] Partial Phase Shift |  |
+| ne b | dy part (roll d6: 1-2 arm, 3-4 l | g, 5 torso, 6 head) becomes translucent an |
+| e ph | sed part passes through walls an | solid objects (WIL save to control). You |
+| t th | table: visibly mutated, impossi | le to hide.* |
+| - |  |  |
+| ## [ | ] Vocal Echo |  |
+| our | oice overlaps in 3 time streams: | 1 second before, now, 1 second after.* |
+| rbal | stealth impossible (cannot whisp | r). Enhanced intimidation against anyone h |
+| t th | table: phone calls impossible, | ecorders corrupt.* |
+| - |  |  |
+| ## [ | ] Inverse Scars |  |
+| ound | you haven't yet received appear | on your body.* |
+| HP | enalty. When hit where a scar ma | ches: STR save, success means half damage. |
+| t th | table: mosaic of impossible wou | ds, anxious waiting.* |
+| - |  |  |
+| ## [ | ] Cursed Prescience |  |
+| ou s | e 10 seconds into the future, co | stantly. You know what will happen but can |
+| ways | win initiative (automatic DEX sa | e success). Never surprised. In combat: de |
+| t th | table: answer before questions, | watch deaths approach helplessly.* |
+| - |  |  |
+| ## [ | ] Delayed Shadow |  |
+| our | hadow moves 3 seconds behind you | body.* |
+| ealt | is impaired when in light. Once | per session: leave shadow as decoy, fools |
+| t th | table: photos and video show yo | r shadow in the wrong place.* |
+| - |  |  |
+| ## [ | ] Personal Loop |  |
+| very | 10 minutes, you involuntarily re | eat the same 6 words.* |
+| e lo | p can ruin stealth operations. B | nefit: perfect timer (always know when 10 |
+| t th | table: serious conversations in | errupted. Some NPCs think the words are pr |
+| - |  |  |
+| ## [ | 0] Temporal Fragmentation |  |
+| ou o | casionally vanish from reality f | r 1d6 seconds.* |
+| ery | our (game time): roll d6, on a 1 | vanish for 1d6 seconds (1 round). In comba |
+| t th | table: can't drive, intimate re | ationships impossible.* |
+| - |  |  |
+| ## [ | 1] Eyes of the Past |  |
+| ou s | e past events overlaid on the pr | sent: 10, 50, 100 years ago.* |
+| hanc | d investigation in any location | see invisible clues). Impaired perception |
+| t th | table: every place crowded with | temporal ghosts.* |
+| - |  |  |
+| ## [ | 2] Spontaneous Rewind |  |
+| ou o | casionally rewind 1d6 seconds, r | peating actions.* |
+| ery | our: roll d6, on a 1 you rewind. | In combat: lose turn, but can change actio |
+| t th | table: constant deja vu, allies | learn to wait for the loop to end.* |
+| - |  |  |
+| # Re | oving Quirks |  |
+| Meth | d 1: Experimental temporal surge | y.** Cost: $50,000 (50 certificates). Take |
+| Meth | d 2: Division protocol.** Free i | Loyalty 8+. Takes 1 month. WIL save with |
+| Meth | d 3: Acceptance.** Free. The Qui | k stays. The Warden may reduce social pena |

@@ -5,7 +5,7 @@ nav_order: 1
 ---
 
 <div style="text-align: center; margin-bottom: 2rem;">
-  <img src="/img/cover.png" alt="Uchronies & Treasures cover" style="max-width: 420px; width: 100%; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.7);">
+  <img src="{{ '/img/cover.png' | relative_url }}" alt="Uchronies & Treasures cover" style="max-width: 420px; width: 100%; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.7);">
 </div>
 
 # Uchronies & Treasures

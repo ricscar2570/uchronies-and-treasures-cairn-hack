@@ -40,28 +40,23 @@ Temporal contamination and certain Quirk effects can also cause Fatigue.
 
 Before calculating damage to HP, subtract the target's **Armor** value from the damage roll. No one can have more than **3 Armor** total, regardless of how many pieces of protection they wear.
 
-  -----------------------------------------------------------------------
-  Protection                    Armor   Cost           Notes
-  ----------------------------- ------- -------------- ------------------
-  Light tactical vest           1       Division issue Standard issue
-  (kevlar II)
+| Protection | Armor | Cost | Notes |
+|---|---|---|---|
+| Light tactical vest (kevlar II) | 1 | Division issue | Standard issue |
+| Ballistic vest | 2 | $1,500 | Black market, bulky |
+| Heavy tactical armor | 3 | $3,000 | Zhou only, bulky |
+| Helmet | +1 | $200 | Stacks with vest (max 3 total) |
 
-  Ballistic vest                2       $1,500         Black market, bulky
-
-  Heavy tactical armor          3       $3,000         Zhou only, bulky
-
-  Helmet                        +1      $200           Stacks with vest
-                                                       (max 3 total)
-  -----------------------------------------------------------------------
 
 ### Reactions
 
 When the PCs encounter an NPC whose reaction is not obvious, the Warden rolls **2d6**:
 
-  ---- --------- ----- ------- ---- ------------ ---- ---------
-  2    Hostile   3-5   Wary    6-8  Cautious     9-11 Cooperative
-  12   Helpful
-  ---- --------- ----- ------- ---- ------------ ---- ---------
+| | | | | | | | |
+|---|---|---|---|---|---|---|---|
+| 2 | Hostile | 3-5 | Wary | 6-8 | Cautious | 9-11 | Cooperative |
+| 12 | Helpful |  |  |  |  |  |  |
+
 
 ### Morale
 
@@ -123,44 +118,34 @@ If **STR** reaches 0: **death**. If **DEX** reaches 0: **paralysis**. If **WIL**
 
 When damage reduces HP to **exactly 0**, the character is marked. Roll on the Scars table based on **total damage taken**:
 
-  ---- -----------------------------------------------------------------
-  1    **Lasting Scar.** Roll d6: 1 Neck, 2 Hands, 3 Eye, 4 Chest,
-       5 Legs, 6 Ear. Roll d6. If higher than max HP, take new result.
+| | |
+|---|---|
+| 1 | **Lasting Scar.** Roll d6: 1 Neck, 2 Hands, 3 Eye, 4 Chest, |
+|  | 5 Legs, 6 Ear. Roll d6. If higher than max HP, take new result. |
+| 2 | **Rattling Blow.** Disoriented and shaken. Roll d6. If higher |
+|  | than max HP, take new result. |
+| 3 | **Winded.** Sent flying. Deprived until you rest a few hours. |
+|  | Then roll d6, add to max HP. |
+| 4 | **Broken Limb.** Roll d6: 1-2 Leg, 3-4 Arm, 5 Rib, 6 Skull. |
+|  | Once mended, roll 2d6. If higher than max HP, take new result. |
+| 5 | **Infected.** Gross infection. When you recover, roll 2d6. |
+|  | If higher than max HP, take new result. |
+| 6 | **Head Wound.** Roll d6: 1-2 STR, 3-4 DEX, 5-6 WIL. Roll 3d6. |
+|  | If higher than current ability, take new result. |
+| 7 | **Hamstrung.** Can barely move without help. After recovery, |
+|  | roll 3d6. If higher than max DEX, take new result. |
+| 8 | **Deafened.** Cannot hear until extraordinary aid. Make WIL save. |
+|  | Pass: increase max WIL by d4. |
+| 9 | **Concussed.** Part of your psyche knocked loose. Roll 3d6. |
+|  | If higher than max WIL, take new result. |
+| 10 | **Dismembered.** An appendage torn off or crippled. Warden |
+|  | decides which. Make WIL save. Pass: increase max WIL by d6. |
+| 11 | **Mortal Wound.** Deprived and out of action. Die in one hour |
+|  | unless healed. On recovery, roll 2d6 as new max HP. |
+| 12 | **Doomed.** You survived, barely. If your next critical damage |
+|  | save fails, you die horribly. Pass: roll 3d6. If higher than |
+|  | max HP, take new result. |
 
-  2    **Rattling Blow.** Disoriented and shaken. Roll d6. If higher
-       than max HP, take new result.
-
-  3    **Winded.** Sent flying. Deprived until you rest a few hours.
-       Then roll d6, add to max HP.
-
-  4    **Broken Limb.** Roll d6: 1-2 Leg, 3-4 Arm, 5 Rib, 6 Skull.
-       Once mended, roll 2d6. If higher than max HP, take new result.
-
-  5    **Infected.** Gross infection. When you recover, roll 2d6.
-       If higher than max HP, take new result.
-
-  6    **Head Wound.** Roll d6: 1-2 STR, 3-4 DEX, 5-6 WIL. Roll 3d6.
-       If higher than current ability, take new result.
-
-  7    **Hamstrung.** Can barely move without help. After recovery,
-       roll 3d6. If higher than max DEX, take new result.
-
-  8    **Deafened.** Cannot hear until extraordinary aid. Make WIL save.
-       Pass: increase max WIL by d4.
-
-  9    **Concussed.** Part of your psyche knocked loose. Roll 3d6.
-       If higher than max WIL, take new result.
-
-  10   **Dismembered.** An appendage torn off or crippled. Warden
-       decides which. Make WIL save. Pass: increase max WIL by d6.
-
-  11   **Mortal Wound.** Deprived and out of action. Die in one hour
-       unless healed. On recovery, roll 2d6 as new max HP.
-
-  12   **Doomed.** You survived, barely. If your next critical damage
-       save fails, you die horribly. Pass: roll 3d6. If higher than
-       max HP, take new result.
-  ---- -----------------------------------------------------------------
 
 ### Detachments
 
@@ -182,35 +167,20 @@ The Warden and the player decide how: a Division replacement arriving with the n
 
 ## Weapons
 
-  -----------------------------------------------------------------------
-  Weapon                    Damage   Cost      Notes
-  ------------------------- -------- --------- ---------------------------
-  Knife, baton, brass       d6       $50       Concealable
-  knuckles
+| Weapon | Damage | Cost | Notes |
+|---|---|---|---|
+| Knife, baton, brass knuckles | d6 | $50 | Concealable |
+| Glock 17 (pistol) | d6 | Standard issue | 1 slot |
+| Revolver | d6 | $300 | Reliable, loud |
+| Shotgun | d8 | $500 | Bulky, devastating close |
+| Submachine gun | d6 | $800 | Blast (close range), bulky |
+| Assault rifle | d8 | $1,500 | Bulky, black market only |
+| Sniper rifle | d10 | $2,500 | Bulky, enhanced at range, impaired close |
+| Molotov cocktail | d6 | $10 | Blast, fire, one use |
+| Frag grenade | d8 | $200 | Blast, one use |
+| Stun grenade | 0 | $150 | DEX save or lose next turn |
+| Taser | d4 | $100 | STR save or incapacitated |
+| Unarmed | d4 | Free | Always available |
 
-  Glock 17 (pistol)         d6       Standard  1 slot
-                                     issue
-
-  Revolver                  d6       $300      Reliable, loud
-
-  Shotgun                   d8       $500      Bulky, devastating close
-
-  Submachine gun            d6       $800      Blast (close range), bulky
-
-  Assault rifle             d8       $1,500    Bulky, black market only
-
-  Sniper rifle              d10      $2,500    Bulky, enhanced at range,
-                                               impaired close
-
-  Molotov cocktail          d6       $10       Blast, fire, one use
-
-  Frag grenade              d8       $200      Blast, one use
-
-  Stun grenade              0        $150      DEX save or lose next turn
-
-  Taser                     d4       $100      STR save or incapacitated
-
-  Unarmed                   d4       Free      Always available
-  -----------------------------------------------------------------------
 
 > **Ammunition:** Don't track individual bullets. After any intense firefight, roll a **d6 usage die**. On a **1**, you're out entirely. On a **2**, you're running low and need to resupply ($50 per reload).
