@@ -11,7 +11,7 @@ nav_order: 5
 
 ## Why the Economy Is Unsustainable
 
-The $100/week deficit at Recruit tier is not a balance error. It is the single most important number in the game. Without it, corruption is a free choice (why not?). With it, corruption is a survival mechanism (I have to). The difference between "I chose to be corrupt" and "the system forced me to choose" is the entire moral weight of the game. We validated this with Monte Carlo simulation: at $800 pay and $900 expenses, 92% of PCs accept Zhou's first offer by session 4. At $1,000 pay (balanced budget), only 31% do. The deficit IS the game.
+The $100/week deficit at Recruit tier is not a balance error. It is the single most important number in the game. Without it, corruption is a free choice (why not?). With it, corruption is a survival mechanism (I have to). The difference between "I chose to be corrupt" and "the system forced me to choose" is the entire moral weight of the game. The deficit is what makes the dilemma real rather than decorative. We confirmed that the pressure works as intended with simulation, but the specific figures live in the Monte Carlo Transparency appendix rather than here, because they are evidence *for the designer*, not a prophecy about your table. The point of the system is that the choice stays yours. The deficit just makes sure it costs something.
 
 ## Why Contamination Is Permanent
 
@@ -23,7 +23,7 @@ In the Cairn engine, a Glock 17 does d6 damage. Average starting HP is 3.5. One 
 
 ## The Monte Carlo Validation
 
-The original Italian edition (UeT v2.2.3) was balanced using 300,000 simulated 15-session campaigns. Key findings: the original v2.2 rules created a "death spiral" where 53.8% of campaigns ended in total party kills. After mechanical adjustments (suit protection, contamination timing, HP floor, experience rebalancing), TPK rate dropped to 3.0%. Average character progression went from level 1.8 to level 3.6. Echo transformation rate went from 71.3% to 24.9%. These numbers informed the Cairn conversion: the contamination damage die (d4), the suit reduction (1 point), and the zone intensity table all derive from the simulation data.
+The original Italian edition (UeT v2.2.3) was balanced using 300,000 simulated 15-session campaigns. The headline result: the early rules produced a runaway "death spiral," and a small set of mechanical adjustments (suit protection, contamination timing, an HP floor, experience rebalancing, and the rule that contamination damage cannot exceed half current WIL) brought the campaign back from near-certain collapse to a survivable but genuinely lethal baseline. The contamination damage die (d4), the suit reduction (1 point), and the zone intensity table all derive from that data. The full before/after numbers, the method, and the re-validation of the Cairn-edition changes are collected in the **Monte Carlo Transparency** appendix, kept separate so the analysis is auditable rather than buried in commentary.
 
 ## Why Cairn Instead of Traditional OSR
 

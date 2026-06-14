@@ -34,7 +34,7 @@ The economic system is calibrated to be *unsustainable*. This is not a design fl
 
 Base pay: $800 per week. Mandatory expenses: rent $500, food and necessities $150, anti-rejection medicine $250. Total expenses: $900 per week. **Guaranteed deficit: -$100 per week.**
 
-You cannot win playing honestly. After 10 weeks, you've accumulated a deficit of -$1,000. Eviction is imminent. Medicines run out. You're starving. Madame Zhou offers $5,000 for a "small piece of information" about the Division. What do you do?
+Honest play keeps you breathing but never ahead. With no completed mission you lose $100 a week; complete one and the bonus narrows the gap to about $50, never to zero. You start $500 in debt, the balance accrues 5% interest a week, and after ten weeks of honest work you are well past -$1,500. Eviction is imminent. Medicines run out. You're starving. Madame Zhou offers $5,000 for a "small piece of information" about the Division. What do you do?
 
 **The game gently pushes you toward corruption.** Not by force. With math.
 

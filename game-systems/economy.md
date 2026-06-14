@@ -10,6 +10,8 @@ nav_order: 1
 
 > The economic system is designed to be **unsustainable**. This is not a bug. It is the beating heart of the game. The Division pays you *just enough* to survive. But life costs more. And when you're desperate, Zhou is waiting.
 
+> **The Core Math (the one number to remember).** At Recruit tier, a week with **no mission** loses you **$100** (pay $800 minus mandatory expenses $900). That is the floor. **Completing a mission** adds the guaranteed +$50, narrowing the worst case to **-$50/week**. The +$50 is not automatic: it requires actually running a mission, success or failure. Success and objective bonuses can lift a strong week into the black, but they are variable, shaved by "administrative deductions," and never compound into a structural surplus at Recruit tier. You start **-$500** in debt, and that balance accrues **5% interest per week**. The honest path keeps you breathing. It does not get you out.
+
 ### Division Base Pay
 
 | Tier | Weekly Pay | Notes |
@@ -33,15 +35,18 @@ nav_order: 1
 | **TOTAL** | **$900** |  |
 
 
-**Guaranteed deficit at Recruit tier: -$50 per week** (pay $800 + guaranteed bonus $50 - expenses $900 = -$50). Miss the mission success bonus and the deficit doubles.
+**Deficit at Recruit tier:** with **no mission**, you lose **-$100/week** (pay $800 - expenses $900). This is the floor. **Run a mission** and the guaranteed +$50 narrows it to **-$50/week**. The guaranteed bonus is not automatic: it requires undertaking a mission (even a failed one). Skip missions and you sit at the full -$100 floor.
 
 ### Weekly Cash Flow by Tier
 
 | Tier | Pay | Expenses | Balance | After 10 weeks |
 |---|---|---|---|---|
-| Recruit | $800 | $900 | **-$100** | -$1,000 (desperate) |
+| Recruit | $800 | $900 | **-$100** | -$1,000 from deficits alone; past -$1,500 with starting debt and interest |
 | Agent | $1,200 | $900 | **+$300** | Paying off Recruit debts |
 | Veteran | $1,800 | $900 | **+$900** | Comfortable (damage is done) |
+
+
+> The Recruit row shows the **no-mission floor** (-$100/week). Running a mission each week improves it to -$50; the occasional successful mission can push a single week positive. Even so, with the -$500 starting debt and 5%/week interest, ten weeks at Recruit tier leaves you well past **-$1,500** owed. The deficit is structural, not bad luck.
 
 
 > At Agent and Veteran tiers, expenses may rise to $1,100-$1,300 due to lifestyle inflation, Quirk-related medical costs, and Zhou's "voluntary" payments for past favors.
@@ -82,7 +87,7 @@ Madame Zhou's currency is **certificates** (1 certificate = approximately $1,000
 | Security guard | $100-200/week | Low | None |
 | Manual labor | $80-150/week | Low | None |
 | Division consulting | $150-250/week | None | None (Loyalty 5+) |
-| Temporal info market | $200-600/info | WIL save | None (direct) |
+| Temporal info market | $200-600 first sale/wk | WIL save | None direct (Exposure clock) |
 | Gambling | -$200 to +$400 | Medium | +1 after 3 wins |
 | Street fighting | $200-500/fight | High (d6 STR) | None |
 | Drug courier | $300-600/run | High | +1 Corruption |
@@ -91,13 +96,17 @@ Madame Zhou's currency is **certificates** (1 certificate = approximately $1,000
 
 **Division Consulting (Loyalty 5+ only).** The agent uses their background expertise as a consultant for other Division teams. Pay: $150-250 per week. Cost: 2 full days of downtime. During those 2 days, no other side gigs, missions, or significant actions are possible. This is work: it requires presence and focus. Not available to agents under active surveillance. Requires Loyalty 5 or higher to access; if Loyalty drops below 5 while consulting, the contract is suspended without pay for that week.
 
-> **Design note.** Division Consulting is intentionally narrow. At Recruit tier it does not eliminate the deficit (base $800 + $350 consulting - $900 expenses = $250 surplus). It makes the honest path survivable, not comfortable. It costs time that cannot be spent on missions or other income. The choice between consulting and a Raines mission is a real choice.
+> **Design note (the honest ceiling).** Division Consulting is intentionally narrow. A consulting week at Recruit tier reaches break-even at best: base $800 + $200 consulting (mid-range) - $900 expenses = +$100 *before* the 5% interest on your existing debt and the weekly unexpected-cost roll (which averages over $100). Net those in and even your best honest week trends to zero or slightly negative. Consulting also burns the two days you would have spent on a mission, so you forgo that income too. The honest path is survivable, never comfortable, and it never produces the structural surplus needed to clear the debt. The choice between consulting and a Raines mission is a real choice.
 
-**Temporal Information Market.** Researchers, archivists, and journalists pay for information about temporal zones: anomaly locations, echo behavior, relic descriptions, zone boundary shifts. Pay: $200-600 per piece of information sold, depending on quality and exclusivity.
+**Temporal Information Market.** Researchers, archivists, and journalists pay for information about temporal zones: anomaly locations, echo behavior, relic descriptions, zone boundary shifts. Pay: $200-600 for the first piece of information sold in a week, depending on quality and exclusivity.
 
-*Mechanic:* After each sale, make a **WIL save**. On a failure, the information reaches the Division through a third party. Result: **-2 Loyalty** (the Division does not appreciate agents monetizing operational intelligence). On a success, the sale goes undetected. There is no Corruption cost, but there is no safety either. Every sale is a roll.
+*Mechanic:* After each sale, make a **WIL save**. On a failure, the information reaches the Division through a third party. Result: **-2 Loyalty** (the Division does not appreciate agents monetizing operational intelligence). On a success, the sale goes undetected. There is no direct Corruption cost, but there is no safety either. Every sale is a roll.
 
-> Agents with high WIL can exploit this consistently. Agents with degraded WIL (from contamination) find it increasingly dangerous. The two systems interact.
+*Saturation:* The market is small. Each **additional** sale in the same week pays half the previous one (round down to the nearest $50): first $200-600, second roughly half, third half again. You cannot flood the buyers indefinitely; the price collapses.
+
+*Exposure clock:* Keep a running **Exposure** tally, +1 for every info sale you ever make (it does not reset between weeks). The buyers are a thin community, and most of it is Zhou-adjacent. When Exposure reaches **6**, the next buyer is one of Zhou's fronts: the sale pays as normal but costs **+1 Corruption** and Zhou now has a name and a pattern. At **10**, Zhou makes contact directly, regardless of your debt. The clean income was never as clean as it looked. It was a slow on-ramp.
+
+> High WIL lets you sell more safely, but it does not stop Exposure from climbing or the per-week price from collapsing. The honest information trade keeps you alive for a while. It does not keep you clean forever, and it does not get you ahead.
 
 **Gambling (modified).** The pay range has been reduced from the original -$500/+$1,000 to **-$200/+$400**. The original range made gambling a high-variance lottery rather than a real economic decision.
 

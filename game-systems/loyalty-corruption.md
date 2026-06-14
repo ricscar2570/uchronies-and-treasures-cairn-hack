@@ -69,7 +69,7 @@ At Corruption 7, Zhou has documentation.
 
 > Zhou's leverage is not a death sentence. It is a slow ratchet. Each refusal risks activating it. The agent can still refuse. They just cannot refuse without cost.
 
-### The Corruption Scale### Instability
+### Instability
 
 When **|Loyalty - Corruption| is 2 or less**, you enter **INSTABILITY**.
 

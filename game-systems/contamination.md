@@ -16,7 +16,7 @@ Every 6 hours you spend in a temporal zone, you must make a **WIL save** to resi
 
 **When:** Every 6 hours of exposure to a temporal zone (varies by zone intensity).
 
-**How:** Roll d20. If the result is **equal to or under** your current WIL, you resist. If you fail, you take contamination damage.
+**How:** Roll d20. If the result is **equal to or under** your **effective WIL**, you resist. If you fail, you take contamination damage. Your **effective WIL** is your current WIL **minus the number of Temporal Quirks you carry** (see The Cost of Accumulation). A clean agent saves against full WIL; an agent with four Quirks saves at WIL minus 4.
 
 **Contamination damage:** On a failed save, roll the zone's damage die for WIL damage (see Zone Intensity table). The temporal protection suit reduces damage by 1 (minimum 1). A heavy containment suit (black market, $2,000, bulky) reduces by 2. **Damage cannot exceed half your current WIL, rounded up.** This prevents the death spiral from accelerating uncontrollably: as your WIL drops, each individual hit hurts less.
 

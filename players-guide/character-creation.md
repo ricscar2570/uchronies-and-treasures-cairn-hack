@@ -58,7 +58,6 @@ In Cairn, backgrounds don't grant mechanical skills. Instead, they inform what y
 | 5 | **Disbarred Medic** | You had a medical license. A mistake took it away. The Division doesn't ask for references. They ask for competence. |
 | 6 | **Con Artist** | You sold air, false promises, worthless investments. Good with words, better with lies. |
 
-
 ### Starting Gear
 
 All agents begin with:
@@ -85,25 +84,14 @@ All agents begin with:
 
 **Plus your background package:**
 
-| Ex-Military | Failed Academic | Reformed Criminal |
-|---|---|---|
-| Combat knife | 3 rare books | Lockpick set |
-| (d6, 1 slot) | (bulky) | (1 slot) |
-| Compass | Magnifying lens | 1 criminal contact |
-| (0 slots) | (0 slots) | (name and number) |
-| Zippo lighter | Half-filled | Burner phone |
-| (0 slots) | notebook (0 slots) | (0 slots) |
-
-
-| Corrupt Cop | Disbarred Medic | Con Artist |
-|---|---|---|
-| Fake detective | Field med kit | 3 fake IDs |
-| badge (0 slots) | (5 uses, d4 STR, 1 slot) | 1 slot) |
-| Handcuffs | Morphine, 3 vials | $500 extra cash |
-| (1 slot) | (1 slot) | (0 slots) |
-| Pepper spray | Surgical scalpel | Fake Rolex |
-| (d4, 0 slots) | (d6, 0 slots) | looks real, 0 slots) |
-
+| Background | Items |
+|---|---|
+| **Ex-Military** | Combat knife (d6, 1 slot); compass (0 slots); Zippo lighter (0 slots) |
+| **Failed Academic** | 3 rare books (bulky); magnifying lens (0 slots); half-filled notebook (0 slots) |
+| **Reformed Criminal** | Lockpick set (1 slot); 1 criminal contact (name and number); burner phone (0 slots) |
+| **Corrupt Cop** | Fake detective badge (0 slots); handcuffs (1 slot); pepper spray (d4, 0 slots) |
+| **Disbarred Medic** | Field med kit (5 uses, d4 STR, 1 slot); morphine, 3 vials (1 slot); surgical scalpel (d6, 0 slots) |
+| **Con Artist** | 3 fake IDs (1 slot); $500 extra cash (0 slots); fake Rolex (looks real, 0 slots) |
 
 ### Inventory
 
@@ -128,48 +116,31 @@ Record these on your character sheet:
 | **Temporal Quirks** | 0 | Permanent mutations from contamination. Limit: 5. At 6, you become an echo. |
 | **Tier** | Recruit | Your standing. Affects pay only. Recruit ($800/wk), Agent ($1,200/wk), Veteran ($1,800/wk). |
 
-
 > **Critical:** Anti-rejection medicine ($250/week) is not optional. Missing a dose makes you **Deprived** (cannot recover HP or attributes) and your WIL degrades by 1 per week.
 
 ### 5. Traits
 
-Roll on each table to flesh out your character.
+Roll on each table (d10) to flesh out your character.
 
-**Physique (d10)**
+| d10 | Physique | Face | Voice | Vice | Virtue |
+|---|---|---|---|---|---|
+| 1 | Athletic | Bony | Blunt | Gambling | Cautious |
+| 2 | Brawny | Broken nose | Mumbling | Drinking | Courageous |
+| 3 | Gaunt | Chiseled | Clipped | Drugs | Disciplined |
+| 4 | Lanky | Exhausted | Droning | Lying | Honest |
+| 5 | Wiry | Pale | Flat | Violence | Humble |
+| 6 | Scrawny | Weathered | Gravelly | Paranoia | Loyal |
+| 7 | Short | Rat-like | Precise | Rage | Patient |
+| 8 | Scarred | Sharp | Raspy | Vanity | Merciful |
+| 9 | Stocky | Square | Stuttering | Greed | Resourceful |
+| 10 | Towering | Sunken eyes | Whispery | Lust | Stoic |
 
-| 1 | Athletic | 6 | Scrawny |
-|---|---|---|---|
-| Face | (d10)** |  |  |
+### 6. Narrative Details
 
-  1    Bony         6    Weathered
-  2    Broken nose  7    Rat-like
-  3    Chiseled     8    Sharp
-  4    Exhausted    9    Square
-  5    Pale         10   Sunken eyes
-|  |  |  |  |
-|---|---|---|---|
-| 1 | Blunt | 6 | Gravelly |
-| 2 | Mumbling | 7 | Precise |
-| 3 | Clipped | 8 | Raspy |
-| 4 | Droning | 9 | Stuttering |
-| 5 | Flat | 10 | Whispery |
+Answer each briefly (1-2 sentences):
 
+- **Why did you join the Division?** Examples: "I owed money to the wrong people." "My brother died in a temporal zone." "I was unemployed for 8 months."
+- **What debt or problem keeps you desperate?** Examples: "I owe $15,000 to a loan shark." "Three months behind on rent, I have a daughter." "My mother's medicine costs $300 a week."
+- **One person you care about (alive or dead)?** Examples: "My ex-wife Sarah." "My mentor Martinez, dead 2 years." "Nobody. I burned every bridge."
 
-**Vice (d10)**
-
-| 1 | Gambling | 6 | Paranoia |
-|---|---|---|---|
-| Virt | e (d10)** |  |  |
-
-  1    Cautious     6    Loyal
-  2    Courageous   7    Patient
-  3    Disciplined  8    Merciful
-  4    Honest       9    Resourceful
-  5    Humble       10   Stoic
-| # 6. | Narrative De | ails |  |
-|---|---|---|---|
-| swer | briefly (1-2 | sent | nces each): |
-| Why | id you join | he D | vision?** Examples: "I owed money to the wrong people." "My brother died in a temporal zone." "I was unemployed for 8 months." |
-| What | debt or prob | em k | eps you desperate?** Examples: "I owe $15,000 to a loan shark." "Three months behind on rent, I have a daughter." "My mother's medicine costs $300 a week." |
-| One | erson you ca | e ab | ut (alive or dead)?** Examples: "My ex-wife Sarah." "My mentor Martinez, dead 2 years." "Nobody. I burned every bridge." |
-| **Yo | r character | heet | is complete.** A background that defines who you were. Attributes that define what you can do. Gear that (maybe) will keep you alive. Trackers that will show who you become. |
+> **Your character sheet is complete.** A background that defines who you were. Attributes that define what you can do. Gear that (maybe) will keep you alive. Trackers that will show who you become.

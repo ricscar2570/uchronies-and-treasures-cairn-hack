@@ -99,6 +99,8 @@ Elevators don't work. Stairs function but every 5 floors there's a "temporal int
 >
 > The woman spots you. 'Shit. Division.' She raises her rifle."
 
+> **Warden, read the room before anyone rolls initiative.** This is the failure state, not the set-piece. Three armed veterans behind cover, in a building two hours from collapse, against PCs who average 3-4 HP. A straight firefight here is how this one-shot ends in a wipe, and the players should be able to feel that before they commit. Telegraph it: have a merc thumb the safety off and say they have no reason to die over this if the agents don't; let the floor lurch and dust rain from the ceiling on the word "collapse"; remind the table on the radio that the clock just dropped from eight hours to two. The intended resolution is a deal or a trick. Combat is what happens when those fail.
+
 ### Zhou's Mercenaries
 
 **Anya "Viper" Volkov** (leader) - 8 HP, 2 Armor, 10 STR, 14 DEX, 12 WIL, sniper rifle (d10), knife (d6). Critical damage: target is pinned down (must use next action to find cover).
@@ -109,11 +111,25 @@ Elevators don't work. Stairs function but every 5 floors there's a "temporal int
 
 ### Player Options
 
-**Option 1: Direct combat.** Difficulty: high. Mercenaries are veterans with cover. If PCs win: recover fragment, +1 Loyalty. Zhou is angry (possible future vendetta). If PCs lose: mercenaries flee with fragment, -2 Loyalty, Hayes furious.
+The fragment is on the table and the building is dying. There are three ways out. Two of them are intended.
 
-**Option 2: Negotiate.** Anya is pragmatic, not ideological. Possible deals: "50/50 split" (cut the fragment, risky but possible, +1 Corruption). "We let you go, we report it was already gone" (they flee, you lie to Hayes, +2 Corruption, -1 Loyalty if discovered). "Work together for Zhou" (future black market access, +2 Corruption). WIL save to persuade.
+**Path A: Negotiate (intended).** Anya is pragmatic, not ideological, and she can do the math on the collapse clock as well as the PCs can. A successful **WIL save** opens a deal:
 
-**Option 3: Deception.** "The Division has surrounded the building" (WIL save, difficulty). "Zhou sent us too, we're backup" (WIL save, very hard). "Steal the fragment while they're distracted" (DEX save + coordinated teamwork).
+- "50/50 split" (cut the fragment, risky but possible): +1 Corruption, both sides walk with half.
+- "We let you go, we report it was already gone" (they flee, you lie to Hayes): +2 Corruption, -1 Loyalty if discovered.
+- "Work together for Zhou" (future black market access): +2 Corruption.
+
+A clean, fast negotiation that gets the PCs out before phase 3 collapse also earns each PC **+50 XP** (resolving the climax without a shot fired is the hard mode, and the game rewards it).
+
+**Path B: Deception or theft (intended).** Beat them with the fiction instead of bullets:
+
+- "The Division has surrounded the building" (WIL save, hard).
+- "Zhou sent us too, we're backup" (WIL save, very hard).
+- Palm the fragment while they're distracted (DEX save + coordinated teamwork). On success, the PCs are on the stairs with the prize before the mercs realize the table is empty.
+
+A successful theft or bluff that recovers the fragment without combat earns **+1 Loyalty** and **+50 XP**, and leaves Zhou guessing rather than vengeful.
+
+**Path C: Direct combat (the failure state).** If the deal collapses and the trick falls flat, the guns come out. Difficulty: high. The mercenaries are veterans with cover and better weapons; the collapse clock is still running while PCs bleed. If the PCs somehow win: recover the fragment, +1 Loyalty, but Zhou marks them for a vendetta and the time spent fighting may cost a contamination check or a civilian. If the PCs lose: the mercenaries flee with the fragment, -2 Loyalty, Hayes furious. This is the outcome the scene is built to make the players *avoid*, not aspire to.
 
 ### The Complication: Collapse Accelerates
 

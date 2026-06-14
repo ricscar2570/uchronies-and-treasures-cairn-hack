@@ -10,6 +10,16 @@ nav_order: 3
 
 > Temporal Quirks are permanent mutations caused by exposure to temporal contamination. They are not "powers." They are **biological scars**: your body and mind breaking under the weight of too many overlapping timelines. **Limit: 5 different Quirks.** At the 6th, you become an echo.
 
+### The Cost of Accumulation
+
+Every Quirk you carry makes you more permeable to time. **For each Quirk you have, your contamination save target drops by 1.** You save against your current WIL **minus the number of Quirks you carry**. With three Quirks and WIL 11, you save as if you had WIL 8.
+
+This is the dominant, inevitable cost, and it applies to *every* Quirk, including the ones that look like gifts. A Quirk that grants +1 Armor or free initiative still makes the next contamination check harder, which means the next Quirk arrives sooner. There is no net-positive Quirk. There is only the slope, and the rate at which you are sliding down it.
+
+> **Design note.** Several Quirks (Vision of Future Deaths, Cursed Prescience, Temporal Fragmentation) hand you a real mechanical advantage. The accumulation penalty is what keeps them frightening: the more of these "useful" mutations you collect, the faster the saves fail, and the closer the echo gets. You are not building a character. You are spending one.
+
+> **Warden dial.** The accumulation penalty is the most lethal knob in the game. Subsystem simulation (see the Monte Carlo Transparency appendix) puts the full uncapped rule near a 36% echo rate over a 15-session campaign, against a documented baseline near 25%. If your table wants the slow horror without the higher body count, **cap the penalty at -3** (it stops growing past your third Quirk): this keeps every Quirk costly while holding the echo rate closer to the "rare but real" target. The authoritative figure for your exact pacing requires a full-campaign run; treat these as direction, not gospel.
+
 ### The Quirk Table (roll d12)
 
 When you take WIL damage from contamination, roll d12. If you already have that Quirk, reroll until you get a new one.

@@ -1,5 +1,5 @@
 """
-Uchronies & Treasures — Complete KDP Manual
+Uchronies & Treasures: Complete KDP Manual
 A5 two-column, premium layout
 All content from repository, edited and formatted
 """
@@ -19,7 +19,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import re
 
-# Font path — Linux default. On macOS change to your Liberation fonts directory.
+# Font path (Linux default). On macOS change to your Liberation fonts directory.
 # Install on Ubuntu/Debian: sudo apt install fonts-liberation
 BASE = "/usr/share/fonts/truetype/liberation/"
 import os as _os
@@ -408,7 +408,7 @@ def story():
     note("Example choices: *deliver the fragment to the Division* (loyal, poor, +1 Loyalty). *Sell it to Zhou* (rich, +2 Corruption, fired if caught). *Keep it* (+5 Corruption, everyone hunts you). All valid. All costly."),
     sp(2),
     h3("2. Economic Pressure"),
-    p("**Corruption is not a moral choice. It is a mathematical necessity.** The economic system is calibrated to be *unsustainable*. Base pay: $800/week. Mandatory expenses: $900/week. After 10 weeks without cutting corners, you have accumulated a deficit of $1,000. Zhou offers $5,000 for a small piece of information. What do you do?"),
+    p("**Corruption is not a moral choice. It is a mathematical necessity.** The economic system is calibrated to be *unsustainable*. Base pay: $800/week. Mandatory expenses: $900/week. A week with no completed mission leaves you $100 in the red; complete a mission and the bonus narrows the gap to about $50, never closes it. Honest work tops out at break-even on your best week. After 10 weeks the debt, with interest, is well past $1,500. Zhou offers $5,000 for a small piece of information. What do you do?"),
     sp(1),
     p("The game pushes you toward corruption. Not by force. With math."),
     sp(2),
@@ -718,11 +718,11 @@ def story():
        ["**TOTAL**","**$900**",""]],
       [CW*0.40, CW*0.22, CW*0.38]),
     sp(2),
-    p("**Guaranteed deficit at Recruit tier: -$50 per week** (pay $800 + guaranteed $50 bonus - expenses $900 = -$50). Miss the mission success bonus and the deficit doubles."),
+    p("**The floor at Recruit tier is -$100 per week** (pay $800 - expenses $900, no mission). Complete a mission and the success bonus narrows the gap to about **-$50** (pay $800 + ~$50 net bonus - expenses $900). The bonus is not automatic: it requires a completed mission. There is no honest week that ends in the black."),
     sp(3),
     h2("Weekly Cash Flow by Tier"),
     T(["Tier","Pay","Expenses","Balance","After 10 Weeks"],
-      [["Recruit","$800","$900","**-$100**","-$1,000 (desperate)"],
+      [["Recruit","$800","$900","**-$100**","past -$1,500 (desperate)"],
        ["Agent","$1,200","$900","**+$300**","Paying off Recruit debts"],
        ["Veteran","$1,800","$900","**+$900**","Comfortable (damage is done)"]],
       [CW*0.20, CW*0.15, CW*0.18, CW*0.18, CW*0.29]),
@@ -752,7 +752,7 @@ def story():
       [["Security guard","$100-200/week","Low","None"],
        ["Manual labor","$80-150/week","Low","None"],
        ["Division Consulting","$150-250/week","None","None (Loyalty 5+)"],
-       ["Temporal info market","$200-600/info","WIL save","None direct"],
+       ["Temporal info market","$200-600 first sale/wk","Saturation","None direct (Exposure clock)"],
        ["Gambling","-$200 to +$400","Medium","+1 after 3 wins"],
        ["Street fighting","$200-500/fight","High (d6 STR)","None"],
        ["Drug courier","$300-600/run","High","+1 Corruption"],
@@ -761,7 +761,7 @@ def story():
     sp(2),
     fullnote("**Division Consulting (Loyalty 5+ only):** Pay $150-250/week. Costs 2 full days of downtime. During those days, no other actions are possible. Consulting replaces mission performance bonuses for that week. Makes the honest path survivable, not comfortable."),
     sp(2),
-    fullnote("**Temporal Information Market:** Researchers and journalists pay for intelligence on temporal zones. After each sale, make a WIL save. On failure: the information reaches the Division (-2 Loyalty). No Corruption cost, no safety."),
+    fullnote("**Temporal Information Market:** Researchers and journalists pay for intelligence on temporal zones. The first sale in a week pays full; each additional sale that week pays half the previous (round down to $50). After each sale, advance the **Exposure clock** by 1 (it never resets). At Exposure 6, the next buyer is a Zhou front: the sale still pays, but it costs +1 Corruption. At Exposure 10, Zhou makes contact directly. No Corruption cost up front, but the clock guarantees the honest market eventually walks you to her door."),
     sp(2),
     fullnote("**Gambling:** Three consecutive weeks of wins trigger +1 Corruption (compulsive behavior, visible to NPCs). The Corruption reflects deteriorating self-control."),
     sp(3),
@@ -873,6 +873,8 @@ def story():
     note("Example: Jin has WIL 13. He fails in an Orange Zone. Rolls d4: 3. Suit absorbs 1. Net damage: 2. WIL drops to 11. At WIL 2, the cap means he can never take more than 1 damage per check."),
     sp(2),
     p("This creates a gradual decline, not a sudden crash. The spiral is real but it decelerates. Characters degrade over sessions, not in a single bad run."),
+    sp(2),
+    p("**The cost of accumulation.** You roll the contamination save against your **effective WIL**: current WIL minus the number of Quirks you already carry. Every Quirk makes the next save harder. There is no Quirk that pays for itself: even the ones that grant a battlefield edge still lower the threshold that keeps you human. The more the zones have already changed you, the faster they finish the job. (Warden dial: if the uncapped penalty bites too hard at your table, cap it at -3.)"),
     sp(3),
     h2("Quirk Acquisition"),
     p("When contamination damage (after suit and cap) is **3 or more**, roll d12 on the Quirk table. Minor exposure (1-2 damage) erodes willpower without mutating. Only significant exposure triggers a Quirk. If you already have that Quirk, reroll. At 5 Quirks, gaining a sixth means you become a **temporal echo**: character lost."),
@@ -1020,6 +1022,8 @@ def story():
     # ════════════════════════════════
     s += [h1("Temporal Relics"), rule(),
     p("Temporal relics are artifacts recovered from the zones. They are not weapons or tools in the ordinary sense. They are fragments of broken time made solid. Each bends reality in a specific way, costs something to use, and is worth a fortune on the black market. Relics take up 1 inventory slot unless noted."),
+    sp(2),
+    note("**Warden: the relic economy.** Relics are rare on purpose, roughly one worth keeping per two or three missions. The high black-market prices below are the temptation, not the expectation. Selling a relic to Zhou or a black-market fence pays full but costs +1 Corruption and advances the Exposure clock by 1. Selling to the Division is clean but pays a quarter to a third of the street value and draws scrutiny about where you found it. No single buyer both clears the debt and keeps your hands clean. A relic that could erase weeks of deficit (the Rewind Syringe at $8,000, say) should arrive rarely and never without a tail of heat behind it."),
     sp(3),
     p("**Stillwatch.** *3 charges.* A cracked pocket watch that freezes time in a 10-foot radius for 6 seconds. Everything inside stops: bullets, people, falling debris. You are frozen too. Useful for stopping a bleeding wound long enough to apply pressure. *Recharge: submerge in running water for 1 hour.*"),
     sp(2),
@@ -1268,6 +1272,9 @@ def story():
     p("Do not balance encounters to the party's strength. If players enter a Red Zone unprepared, they meet lethal enemies. This is not cruelty. It is honesty. Players learn fast: combat is the last resort."),
     sp(1),
     p("Do not save players from stupid choices. But warn them before suicidal ones: 'You see 8 armed mercenaries behind sandbags. They have not noticed you yet. What do you do?' If after the warning they charge in, let the dice fall."),
+    sp(2),
+    h3("Telegraph That Combat Is the Wrong Choice"),
+    p("When you set up a fight the players are meant to avoid, the failure is not that they lose it. The failure is letting them walk in thinking it was the intended path. Give three signals before anyone rolls initiative. **Show the cost up front:** name the odds and the clock out loud (how many enemies, what cover, what is burning down while bullets fly). **Make the enemy reluctant too:** an opponent who would rather deal than die signals that a non-violent exit exists. **Reward the bloodless win explicitly:** if talking or stealing the objective earns the same XP as winning the firefight, or more, the table learns which path the game is built around. Combat should read as the expensive option, not the default. This is exactly how the Chicago Loop climax is built."),
     sp(2),
     h3("Give Them Information"),
     p("Information is free. Players do not roll to notice obvious things. Tell them: 'The corridor smells of ozone and decay. The lights flicker: 3 seconds on, 2 off. You hear footsteps, at least three people, coming from the left.' Let them make informed decisions."),
@@ -1684,9 +1691,11 @@ def story():
     p("**Jin 'Ghost' Tanaka:** 6 HP, 1 Armor, 8 STR, 16 DEX, 10 WIL, suppressed pistol (d6), knife (d6). *Always wins initiative. Will flee with the fragment if combat turns bad.*"),
     sp(2),
     h3("Player Options"),
-    b("**Direct combat:** High difficulty. Mercenaries are veterans with cover. Win: +1 Loyalty. Zhou is angry (future vendetta). Lose: mercenaries flee with fragment, -2 Loyalty."),
-    b("**Negotiate:** Anya is pragmatic. Deals include: 50/50 split (+1 Corruption), let them go and lie to Hayes (+2 Corruption, -1 Loyalty if discovered), or work together for Zhou (+2 Corruption). WIL save to persuade."),
-    b("**Deception:** 'The Division has surrounded the building' (WIL save, difficulty). 'Steal the fragment while they are distracted' (DEX save + coordination)."),
+    p("**Warden, telegraph this first.** Three armed veterans behind a table, a collapse clock already ticking (see the note below), and a single objective everyone wants intact. This is not the boss fight. A firefight here is the *failure state*: the way the scene goes wrong, not the way it is meant to resolve. Anya does not want a gunfight either; she wants the fragment and a clean exit. Make the reluctance on both sides visible before anyone rolls initiative."),
+    sp(1),
+    b("**Negotiate (intended).** Anya is pragmatic. Deals include: 50/50 split (+1 Corruption), let them go and lie to Hayes (+2 Corruption, -1 Loyalty if discovered), or work together for Zhou (+2 Corruption). WIL save to persuade. A resolution that gets everyone out without a shot fired: +50 XP."),
+    b("**Deception or theft (intended).** 'The Division has surrounded the building' (WIL save, difficulty). Or palm the fragment while they are distracted (DEX save + coordination). Walking out with the prize and no bodies: +1 Loyalty, +50 XP."),
+    b("**Direct combat (the failure state).** High difficulty. Mercenaries are veterans with cover, and the clock is running against you. Win: +1 Loyalty, but Zhou is angry (future vendetta) and you have burned time you did not have. Lose: mercenaries flee with the fragment, -2 Loyalty. Either way, this is the outcome the scene is built to let players avoid."),
     sp(2),
     note("The radio crackles: 'Zone has entered phase 3. Estimated collapse in 2 hours, not 8. Repeat: you have 2 hours to extract.' Now combat costs precious time. What do you prioritize: mission, survival, or wealth?"),
     sp(3),

@@ -12,6 +12,8 @@ Temporal relics are artifacts recovered from the zones. They are not weapons or 
 
 Relics take up 1 inventory slot unless noted. They have **charges** and a **recharge condition**. Using a relic never requires a save unless specified.
 
+> **Warden: the relic economy.** Relics are the one honest object in the game worth real money, which makes them a pressure valve on the whole economic design. Keep them **rare**: at Recruit tier, a party should see a sellable relic roughly once every two or three missions, not every session. A single high-value sale (the Rewind Syringe fetches $8,000 from Zhou, nearly two months of deficit) can erase weeks of pressure, so price that against the two markets deliberately. **Selling to Zhou or the black market** pays full price but is a corrupt transaction: +1 Corruption per sale and +1 to the Exposure clock (see The Economy of Desperation); relics are exactly how clean agents discover they have a price. **Selling to the Division** is lawful but pays a fraction (typically a quarter to a third of the black-market figure), is taxed by "administrative deductions," and draws a quartermaster's attention to where the relic came from. There is no third market where a relic both clears your debt and keeps you clean. That absence is the point.
+
 ---
 
 **Stillwatch.** 3 charges. A cracked pocket watch that freezes time in a 10-foot radius for 6 seconds (1 round). Everything inside the radius stops: bullets, people, falling debris. You are frozen too. Useful for avoiding an explosion or stopping a bleeding wound long enough to apply pressure. Recharge: submerge in running water for 1 hour.

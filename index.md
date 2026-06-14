@@ -22,7 +22,7 @@ You are an agent of the Temporal Division, a government agency that sends expend
 
 The pay is $800 a week. The mandatory expenses are $900 a week. The math does not add up. And Madame Zhou is always ready with an offer you cannot refuse.
 
-Every session is a moral dilemma disguised as a dungeon crawl. The economic system is designed to push you toward corruption. Your characters have an expiration date. Time itself is corroding them.
+Every session is a moral dilemma disguised as a dungeon crawl. Staying honest keeps you alive but never ahead; the only way to actually clear the debt runs through Madame Zhou, and her margin has a price. Your characters have an expiration date. Time itself is corroding them.
 
 ---
 
@@ -32,7 +32,7 @@ Every session is a moral dilemma disguised as a dungeon crawl. The economic syst
 
 The deficit is not an accident. It is the engine of the game.
 
-At Recruit tier, after pay and mandatory expenses (rent $500, food $150, anti-rejection medicine $250), you are guaranteed to lose $50 a week. Miss a mission bonus and the deficit doubles. After ten weeks you are $1,000 in debt. Eviction is imminent. Medicine is running out.
+At Recruit tier, after pay and mandatory expenses (rent $500, food $150, anti-rejection medicine $250), a week with no completed mission leaves you $100 in the red. Complete a mission and the bonus narrows the gap to roughly $50, never closes it. Honest work tops out at break-even on your very best week. You start $500 in debt, the debt accrues 5% interest a week, and after ten weeks of this you are well past $1,500 in the hole. Eviction is imminent. Medicine is running out.
 
 That is when Madame Zhou calls.
 

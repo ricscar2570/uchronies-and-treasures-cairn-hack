@@ -41,6 +41,16 @@ Don't balance encounters to the party's strength. If players enter a Red Zone un
 
 "You see 8 armed mercenaries behind sandbags. They haven't noticed you yet. You could try to sneak past, create a distraction, or retreat. What do you do?" If after this warning they charge in, let the dice fall where they may.
 
+### Telegraph That Combat Is the Wrong Choice
+
+When you set up a fight the players are meant to avoid, the failure isn't that they lose the fight. The failure is that you let them walk into it thinking it was the intended path. Three signals, given before anyone rolls initiative, keep agency intact:
+
+- **Show the cost up front.** Name the odds and the clock out loud: how many enemies, what cover they hold, what's burning down while bullets fly. "Three veterans, behind a table, and the zone collapses in two hours" is information, not a threat.
+- **Make the enemy reluctant too.** Opponents who would rather deal than die signal that a non-violent exit exists. A mercenary who wants the prize and a clean getaway is an open door; a snarling brute is a wall.
+- **Reward the bloodless win explicitly.** If talking or stealing the objective out from under them earns the same XP as winning the firefight, or more, the table learns fast which path the game is built around. Combat should read as the expensive option, not the default one.
+
+This is the same principle as *The Chicago Loop*'s climax: the firefight is the way the scene goes wrong, and the players should be able to see that before they commit.
+
 ### Give Them Information
 
 Information is free. Players don't roll to notice obvious things. "The corridor smells of ozone and decay. The lights flicker in a pattern: 3 seconds on, 2 seconds off. You hear footsteps, at least three people, coming from the left." Let them make informed decisions.
