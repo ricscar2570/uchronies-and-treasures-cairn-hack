@@ -2,126 +2,66 @@
 layout: default
 title: Home
 nav_order: 1
+permalink: /
+content_class: front_matter
+essentiality: operational
 ---
-
-<div style="text-align: center; margin-bottom: 2.5rem;">
-  <img src="{{ '/img/cover.png' | relative_url }}" alt="Uchronies & Treasures cover" style="max-width: 420px; width: 100%; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.7);">
-</div>
 
 # Uchronies & Treasures
+{: .no_toc }
 
-**A Cairn hack of temporal heists and financial desperation.**
+**A time-crime horror roleplaying game powered by Cairn.**
 
-*Breaking Bad meets OSR meets Looper.*
+Las Vegas, 2080. Fifty-five years after Project Oculus fractured the city across incompatible histories, the Temporal Division still sends underpaid agents into unstable zones to recover people, evidence, and impossible relics.
 
----
+You are one of those agents. The work damages your body. The Division controls your medicine. Your Debt grows whenever a mission goes badly. Madame Zhou can solve almost any immediate problem, provided you are willing to let her own part of the next one.
 
-## The High Concept
+## What You Do
 
-You are an agent of the Temporal Division, a government agency that sends expendable operatives into unstable time zones to recover artifacts, neutralize threats, and maintain the timeline.
+A typical session follows a recurring cycle:
 
-The pay is $800 a week. The mandatory expenses are $900 a week. The math does not add up. And Madame Zhou is always ready with an offer you cannot refuse.
-
-Every session is a moral dilemma disguised as a dungeon crawl. Staying honest keeps you alive but never ahead; the only way to actually clear the debt runs through Madame Zhou, and her margin has a price. Your characters have an expiration date. Time itself is corroding them.
-
----
+1. Accept or pursue a mission.
+2. Prepare with limited Cash, time, and inventory.
+3. Enter a temporal zone whose conditions keep changing.
+4. Recover a person, relic, or piece of information.
+5. Decide which faction receives the truth.
+6. Resolve mission income, tier pay, side work, expenses, voluntary Debt payments, interest, and consequences.
+7. Spend any downtime actions not reserved by side work and watch Debt, Loyalty, Corruption, Exposure, and Quirks reshape the next week.
 
 ## The Three Pillars
 
-### 1. Economic Pressure
+### Time Leaves Scars
 
-The deficit is not an accident. It is the engine of the game.
+Temporal contamination reduces current WIL, is tracked separately from other WIL loss, and can produce permanent Temporal Quirks. Zone clocks and functioning protection remain visible, while every Quirk makes later contamination saves harder to a maximum penalty of -3. Five distinct Quirks are survivable. A sixth, or WIL 0 caused by contamination, transforms the agent into a temporal echo.
 
-At Recruit tier, after pay and mandatory expenses (rent $500, food $150, anti-rejection medicine $250), a week with no completed mission leaves you $100 in the red. Complete a mission and the bonus narrows the gap to roughly $50, never closes it. Honest work tops out at break-even on your very best week. You start $500 in debt, the debt accrues 5% interest a week, and after ten weeks of this you are well past $1,500 in the hole. Eviction is imminent. Medicine is running out.
+### Debt Changes Decisions
 
-That is when Madame Zhou calls.
+Cash and Debt are separate. A new agent begins with **$300 Cash** and **$1,200 Debt**. During weekly settlement, the agent resolves income and required costs, may make a voluntary Debt payment, and then adds **3% interest**, rounded up, to the remaining balance. Careful agents can survive honestly and may eventually reduce what they owe, but mistakes and emergencies create immediate pressure.
 
-The game does not force you to accept. It simply makes the math undeniable.
+### Every Faction Offers Safety at a Price
 
-### 2. The Loyalty/Corruption Dual Tracker
+The Division offers legitimacy, medicine, equipment, and institutional protection in exchange for obedience. Zhou offers liquidity, restricted goods, and personal protection in exchange for leverage. Independent brokers offer flexibility in exchange for Exposure and divided loyalties.
 
-Loyalty and Corruption are not good versus evil. They are two neutral trackers that record your choices and your alliances.
+## Rules at a Glance
 
-High Loyalty means the Division trusts you, gives you better missions, and covers your back. But it means poverty and blind obedience to a bureaucracy that considers you expendable.
+Characters have STR, DEX, and WIL, each rolled on 3d6. Saves use a d20: roll equal to or under the relevant attribute. Attacks normally hit and roll damage. Armor reduces damage, HP absorbs immediate danger, and damage beyond HP reduces STR.
 
-High Corruption means Zhou protects you, you have access to the black market, and money is no longer a problem. But Zhou owns you. The Division is hunting you. Everyone knows.
+Character creation takes about fifteen minutes. Advancement does not use XP. Agents progress through objectively recorded Tier appointments, financial freedom, access, contacts, routes, relics, projects, reputation with named people, scars, and the consequences of their decisions.
 
-The system records. It does not judge.
+<!-- UTLARGE-ONLY-START -->
+## How to Read the Rules
 
-You cannot maximize both. You cannot stay in the middle forever. After ten sessions, the game will have forced you to choose a side.
+The manual uses four visual labels. They are navigation aids, not extra subsystems.
 
-### 3. Temporal Contamination
+<!-- UTRULE: INFO-01 | RULE | Binding procedure -->
+A **RULE** is binding game procedure and has one authoritative home. Its stable code (for example `CORE-18` or `SET-04`) is used for cross-reference even if page numbers change.
 
-The time zones corrode you. Slowly. Permanently.
+<!-- UTRULE: INFO-02 | PRINCIPLE | Adjudication guidance -->
+A **PRINCIPLE** explains how to apply procedures without replacing them. Removing the principle would not make the mechanical rule incomplete.
 
-Every six hours in a temporal zone, make a WIL save. Failure means direct damage to your willpower. Significant damage triggers a **Temporal Quirk**: a permanent biological mutation caused by exposure to overlapping timelines.
+<!-- UTRULE: INFO-03 | EXAMPLE | Worked application -->
+An **EXAMPLE** demonstrates a rule with concrete inputs, decisions, and outcomes. Examples never create exceptions by themselves.
 
-Quirks are not powers. They are scars. Your shadow moves three seconds behind your body. Your voice echoes in three time streams simultaneously. You see how everyone around you will die.
-
-Accumulate five Quirks and you survive. At the sixth, you become a **temporal echo**: a hostile NPC existing across multiple time periods, retaining only fragments of the person you were. Your character is permanently lost.
-
-The other players watch it happen. Slowly. They know what is coming. The question is whether they can finish the campaign before it happens to them too.
-
----
-
-## The Setting: Las Vegas, 2080
-
-Forty-five years ago, the **Oculus Event** fractured time across the Las Vegas basin. The casino strip collapsed into overlapping timelines. The city was evacuated. The Temporal Division was founded to contain the damage.
-
-Today, the Division operates out of the former Aria Casino, 35 kilometers from the epicenter. Agents are deployed into zones ranked by instability: Green (safe), Yellow, Orange, Red, and Black (the Oculus core, forbidden even to most agents).
-
-The zones contain **temporal relics**: artifacts from broken timelines. A pocket watch that rewinds the last ten seconds for everyone nearby. An earpiece that plays conversations from the past 72 hours. A brass device that makes everyone forget the last ten seconds happened.
-
-The Division wants them for research. Zhou wants them for profit. The black market pays better.
-
----
-
-## The Key NPCs
-
-**Director Hayes.** 45 years old, scarred, missing her left eye. Twenty years in the Division. Refused promotion five times. "Bring everyone home." Gruff mentor who covers for your mistakes. If you betray the squad, she kills you personally.
-
-**Madame Zhou.** Age unknown. No confirmed photographs. Runs the most sophisticated black market operation in the Western hemisphere. Patient, precise, and always several moves ahead. She has been waiting for the Division to underpay its agents since the beginning. She is still waiting. She is very good at waiting.
-
-**Raines.** A grey-market fixer with Division connections. Not as dangerous as Zhou, not as principled as Hayes. He offers a middle road: jobs that pay well without the full Corruption cost. The middle road has its own risks.
-
----
-
-## Core Mechanics
-
-*Uchronies & Treasures* uses the **Cairn** engine by Yochai Gal. The system is intentionally lean.
-
-Characters have three attributes: **STR** (strength, physical resistance), **DEX** (agility, reflexes, initiative), **WIL** (willpower, social presence, contamination resistance). Each is generated with 3d6.
-
-**HP** reflects your ability to avoid harm. When HP reaches 0, the next hit deals attribute damage directly. At STR 0, you die. At WIL 0 from contamination, you become an echo.
-
-**Saves** are attribute checks: roll d20 equal to or under the relevant attribute to succeed. No modifiers, no skill lists. The referee decides which attribute applies.
-
-**Combat** is fast and dangerous. Most fights end in two or three rounds. Running is always a valid option. The game does not reward heroic last stands.
-
-Character creation takes fifteen minutes. The real character development happens over sessions, tracked through your Loyalty and Corruption scores.
-
----
-
-## Campaign Length
-
-**One-shot (3-4 hours).** The included adventure *The Chicago Loop* is designed for this format. A single evening, a single moral dilemma, a resolution. Ideal for conventions or new groups.
-
-**Mini-campaign (4-8 sessions).** The sweet spot. Enough time to watch Loyalty and Corruption diverge across the group. Characters accumulate 2-3 Quirks. Debts grow. Alliances form and break.
-
-**Long campaign (10+ sessions).** Possible but demanding. Most characters will have 3-4 Quirks by session ten. Some will have become echoes. Prepare to lose characters you care about.
-
----
-
-## Is This Game For You?
-
-*Uchronies & Treasures* is for groups who want moral tension built into the system, not just the fiction. The economy creates pressure that no amount of clever play can fully eliminate. The contamination system gives every mission a clock that runs whether you notice it or not.
-
-It is not a game about heroes. It is a game about people who started out trying to do the right thing and are slowly running out of reasons to keep trying.
-
-If that sounds like a good evening, you are in the right place.
-
----
-
-**Requires:** 2-5 players, one Warden, polyhedral dice.
-
-**Based on** [Cairn](https://cairnrpg.com) by Yochai Gal. Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+<!-- UTRULE: INFO-04 | WARNING | Critical limit or exception -->
+A **WARNING** isolates a limit, irreversible threshold, or easy-to-miss exception that can materially change play.
+<!-- UTLARGE-ONLY-END -->
