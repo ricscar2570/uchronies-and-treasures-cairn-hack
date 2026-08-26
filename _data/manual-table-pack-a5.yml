@@ -1,0 +1,32 @@
+output: dist/Uchronies and Treasures Table Reference Pack.pdf
+profile: table_pack
+cover_title: Uchronies & Treasures
+cover_subtitle: Table Reference Pack
+profile_label: Table Reference Pack
+chapters:
+- path: reference/character-creation-checklist.md
+  content_class: table_tool
+- path: reference/player-reference.md
+  content_class: table_tool
+- path: reference/warden-cheat-sheet.md
+  content_class: table_tool
+- path: reference/character-sheet.md
+  content_class: table_tool
+- path: reference/weekly-settlement-worksheet.md
+  content_class: table_tool
+- path: reference/team-campaign-sheet.md
+  content_class: table_tool
+- path: reference/mission-worksheet.md
+  content_class: table_tool
+- path: reference/player-led-expedition-worksheet.md
+  content_class: table_tool
+- path: reference/warden-quick-reference.md
+  content_class: table_tool
+- path: reference/meridian-hotel-operations-sheet.md
+  content_class: table_tool
+- path: reference/credits-and-licenses.md
+  content_class: legal
+include_proof_page: false
+include_end_proof_page: false
+ensure_even_pages: true
+pdf_title: 'Uchronies & Treasures: Table Reference Pack'

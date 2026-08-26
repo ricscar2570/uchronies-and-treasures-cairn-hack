@@ -1,0 +1,19 @@
+output: dist/Uchronies_and_Treasures_Design_Hacking_Companion.pdf
+profile: companion
+cover_title: Uchronies & Treasures
+cover_subtitle: Design & Hacking Companion
+profile_label: Extended FAQ, design notes, research, and hacking guidance
+chapters:
+- path: companion/design-hacking-companion.md
+  title: Design & Hacking Companion
+  content_class: front_matter
+- path: wardens-guide/design-notes.md
+  content_class: design_note
+- path: wardens-guide/faq.md
+  content_class: optional_reference
+- path: reference/monte-carlo-transparency.md
+  content_class: research_appendix
+- path: reference/hack-this-hack.md
+  content_class: design_note
+- path: reference/credits-and-licenses.md
+  content_class: legal

@@ -1,0 +1,63 @@
+output: dist/Uchronies_and_Treasures_Operational_Manual.pdf
+profile: operational
+cover_title: Uchronies & Treasures
+cover_subtitle: Operational Manual
+profile_label: Rules, procedures, setting, adventures, and table tools
+chapters:
+- path: index.md
+  title: Uchronies & Treasures
+  content_class: front_matter
+- path: players-guide/overview-and-principles.md
+  content_class: core_rule
+- path: players-guide/character-creation.md
+  content_class: procedure
+- path: players-guide/core-rules.md
+  content_class: core_rule
+- path: players-guide/exploration-and-time.md
+  content_class: procedure
+- path: players-guide/temporal-relics.md
+  content_class: core_rule
+- path: game-systems/economy.md
+  content_class: procedure
+- path: game-systems/contamination.md
+  content_class: core_rule
+- path: game-systems/temporal-quirks.md
+  content_class: core_rule
+- path: game-systems/loyalty-corruption.md
+  content_class: core_rule
+- path: setting/las-vegas-2080.md
+  content_class: setting
+- path: setting/adventure-sites.md
+  content_class: procedure
+- path: wardens-guide/running-the-game.md
+  content_class: warden_procedure
+- path: wardens-guide/campaign-management.md
+  content_class: warden_procedure
+- path: wardens-guide/creating-enemies.md
+  content_class: warden_procedure
+- path: wardens-guide/tables-and-generators.md
+  content_class: optional_tool
+- path: adventures/the-chicago-loop.md
+  content_class: adventure
+- path: adventures/the-first-four-weeks.md
+  content_class: adventure
+- path: players-guide/example-of-play.md
+  content_class: example
+- path: reference/character-creation-checklist.md
+  content_class: table_tool
+- path: reference/player-reference.md
+  content_class: table_tool
+- path: reference/warden-cheat-sheet.md
+  content_class: table_tool
+- path: reference/character-sheet.md
+  content_class: table_tool
+- path: reference/weekly-settlement-worksheet.md
+  content_class: table_tool
+- path: reference/team-campaign-sheet.md
+  content_class: table_tool
+- path: reference/mission-worksheet.md
+  content_class: table_tool
+- path: reference/player-led-expedition-worksheet.md
+  content_class: table_tool
+- path: reference/credits-and-licenses.md
+  content_class: legal

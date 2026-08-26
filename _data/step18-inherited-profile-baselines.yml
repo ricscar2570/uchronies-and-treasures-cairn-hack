@@ -1,0 +1,62 @@
+version: 1
+source_release: a5-step17-structural-corrections
+profiles:
+  adventures:
+    output_sha256: 2a405aa18730d37f15943cfba851313535ab83f81300c403561eae1e455b8fa8
+    source_sha256:
+      companion/adventures-volume.md: 8c1dcea2ef1a323b1ec1cac69f6e40622fed864d9a6692f39dba2501dfec8746
+      adventures/the-chicago-loop.md: 962c9f6e9b8f07d709b56f59cb9205e388fd41a279ba1858936c0cc6c3ea2eec
+      adventures/the-first-four-weeks.md: c673d59ada34911dab81f65a1d01bf111bd41c0d91586fda607afb5da234577c
+      reference/credits-and-licenses-large.md: 2d8c1c0c4345b75b977da10058764961ddd21c9693a3375d20c3ed5b6c5ea46b
+  operational:
+    output_sha256: d93a81c27073b004ef3e65f556a7f9af82e4f8b311d84ab04697c7533cc79e4d
+    source_sha256:
+      index.md: c2b2a0327db262e3e9c86cd615f9c31aff0c5f42d5b14c5a2d913c8402d06341
+      players-guide/overview-and-principles.md: 4f9a5806531e1baf77d618ad56d9bcb88837d70224192cc8a865196ab47c4401
+      players-guide/character-creation.md: 6a45e9a4d0bfb317f3a1632db34732a1763638561542ec4fef60306a0dda6fca
+      players-guide/core-rules.md: 905f8d16f5921a35d1cc41adb2f1f0d77edff35a4368712769482d2b0ccbd807
+      players-guide/exploration-and-time.md: ebeca1a330143b4c44b1d9fc584e37593231109da2892d577bbe168c358fc2f0
+      players-guide/temporal-relics.md: b1a4a1c52dc0ecb615b9709a93f293332e8ef689ce9757ba4b87d4057bdb39e0
+      game-systems/economy.md: 4a0e0919208d8eb55357786b61129aa1ba5ff61510c6c560a2ed80d0afda3c12
+      game-systems/contamination.md: a0e49e0a66cc88865f54d10bcec001ec814f215340b53a5576e33f7678e7f593
+      game-systems/temporal-quirks.md: 9bfc9b4d560cdff9d907bfc167d9c3eff82b9b0cefbfb95b73582c5d771485cf
+      game-systems/loyalty-corruption.md: ca9c7592a9425a6b376ca74ac6d6f5f3ae660592df5dc6f6b1fbe8b7ada3f931
+      setting/las-vegas-2080.md: 333aadf6d147312da12a9f1974a4f6c6e115e58184dfe6c3e288639f634b3532
+      setting/adventure-sites.md: dcfe2b1317604daa40272bde444e4766b7bad59ba7a2691e93d5c095d466d298
+      wardens-guide/running-the-game.md: fead48e13a498176c4d131169906b4be64ea704a54dbe28dee8bfbd1a573e044
+      wardens-guide/campaign-management.md: bb22bb0333bcca0c2dcbe940b622d5b68f3516ebb09ef860fbf104afbcc9cd0a
+      wardens-guide/creating-enemies.md: 268964ce1cc9746bc279e27671a8d7937b25eb3bf6330d23cc311ddde7567241
+      wardens-guide/tables-and-generators.md: f036f7e1209096091ec1fc9092bf630fe1e4d0b91fce5758927eb9fe11f6f13d
+      adventures/the-chicago-loop.md: 962c9f6e9b8f07d709b56f59cb9205e388fd41a279ba1858936c0cc6c3ea2eec
+      adventures/the-first-four-weeks.md: c673d59ada34911dab81f65a1d01bf111bd41c0d91586fda607afb5da234577c
+      players-guide/example-of-play.md: 740f3072bc776a5d487bf789e4434fd07531537fcec695d49e15b84daf516fc6
+      reference/character-creation-checklist.md: 109d37a8c7aabe4432355db1b6073382f70416dc253fc25566d243c4d76cdb54
+      reference/player-reference.md: e9d14249eae121a88900901dd215f86c172b61d2ac13b05ee4fbd1bbb9f7ca44
+      reference/warden-cheat-sheet.md: a9043c5ee1077562c4192ffd52e166b964225424b03429a62583520acd12d786
+      reference/character-sheet.md: 17c4e39ffee8579407c899c2bb2c9e261c9a08f479ee81b38e53e05287795821
+      reference/weekly-settlement-worksheet.md: 6e47d442581991085b6ec1b13320a535139008898af69be5ed6178c0114eb30a
+      reference/team-campaign-sheet.md: 707dd760cb43c105d321bfd6cc38cb9a9e27e3642bacde4b6513b98aa90675ed
+      reference/mission-worksheet.md: 8a0b4a33788327388a41f714f60ebdd82cfa9996b1c690ce6ba0a84665aaaaf1
+      reference/player-led-expedition-worksheet.md: 82ebd4ccd2708b0169cb2166bbb5f0a5a2d6c80c2a55bb511520db39e39cc849
+      reference/credits-and-licenses.md: 1fe2ae8981216d125f001314da83c58ec920f6d92e3f923230376cf801f6613c
+  table_pack:
+    output_sha256: 52f6ec97f5915e8f998890c69f6601b697152d78380c24fa16bd4252e9cddf3f
+    source_sha256:
+      reference/character-creation-checklist.md: 109d37a8c7aabe4432355db1b6073382f70416dc253fc25566d243c4d76cdb54
+      reference/player-reference.md: e9d14249eae121a88900901dd215f86c172b61d2ac13b05ee4fbd1bbb9f7ca44
+      reference/warden-cheat-sheet.md: a9043c5ee1077562c4192ffd52e166b964225424b03429a62583520acd12d786
+      reference/character-sheet.md: 17c4e39ffee8579407c899c2bb2c9e261c9a08f479ee81b38e53e05287795821
+      reference/weekly-settlement-worksheet.md: 6e47d442581991085b6ec1b13320a535139008898af69be5ed6178c0114eb30a
+      reference/team-campaign-sheet.md: 707dd760cb43c105d321bfd6cc38cb9a9e27e3642bacde4b6513b98aa90675ed
+      reference/mission-worksheet.md: 8a0b4a33788327388a41f714f60ebdd82cfa9996b1c690ce6ba0a84665aaaaf1
+      reference/player-led-expedition-worksheet.md: 82ebd4ccd2708b0169cb2166bbb5f0a5a2d6c80c2a55bb511520db39e39cc849
+      reference/credits-and-licenses.md: 1fe2ae8981216d125f001314da83c58ec920f6d92e3f923230376cf801f6613c
+  companion:
+    output_sha256: 62d7cdbf867daaf7c0c8b4578c1d888c0991a8a02aaa05f0580ff4c869a86d1f
+    source_sha256:
+      companion/design-hacking-companion.md: 6bfda77c6a3ccd95eae2c45bf71a8597089c35bb154a8d07d07eaa2b4df97edb
+      wardens-guide/design-notes.md: 6c97747258f6458218bac00925089a8e3fdec2cf326161e3c0a70264f359a781
+      wardens-guide/faq.md: ac489297020a39693933253f65ef495d432795decf8149c9072de1009cd9f75c
+      reference/monte-carlo-transparency.md: abff50f9802ef5808269269a0e667cb1e75131cb7a0f451607110d63fa6e8d99
+      reference/hack-this-hack.md: b5acaade071881aa2a4439a8106f5e81a4f7fc61a3b069a1fefff003998329c5
+      reference/credits-and-licenses.md: 1fe2ae8981216d125f001314da83c58ec920f6d92e3f923230376cf801f6613c

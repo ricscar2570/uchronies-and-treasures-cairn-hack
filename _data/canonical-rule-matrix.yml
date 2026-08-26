@@ -1,0 +1,616 @@
+version: 1
+purpose: Canonical rule and information-hierarchy registry for the A5 Large profile. RULE entries are authoritative
+  mechanical/procedural homes; other kinds are navigational teaching labels.
+allowed_kinds:
+- RULE
+- PRINCIPLE
+- EXAMPLE
+- WARNING
+entries:
+- id: OVER-01
+  kind: RULE
+  title: Mission cycle
+  path: players-guide/overview-and-principles.md
+  section: '## The Mission Cycle'
+  summary: The default play loop moves from objective through preparation, incursion, recovery, extraction/debriefing,
+    settlement, and downtime without forcing any particular mission choice.
+- id: PRIN-01
+  kind: PRINCIPLE
+  title: Player agency
+  path: players-guide/overview-and-principles.md
+  section: '## Principles for Players'
+  summary: Players state goals and methods, seek leverage in the fiction, and retain the right to refuse or withdraw.
+- id: PRIN-02
+  kind: PRINCIPLE
+  title: Table causality
+  path: players-guide/overview-and-principles.md
+  section: '## Principles for the Table'
+  summary: Essential information is reachable, costs are legible, and consequences follow established causes rather
+    than a preferred plot.
+- id: CHAR-01
+  kind: RULE
+  title: Attributes
+  path: players-guide/character-creation.md
+  section: '## 3. Roll Attributes'
+  summary: Roll STR, DEX, and WIL on 3d6 in order, then swap any two if desired.
+- id: CHAR-02
+  kind: RULE
+  title: Hit Protection
+  path: players-guide/character-creation.md
+  section: '## 4. Roll Hit Protection'
+  summary: Roll d6 for starting HP.
+- id: CHAR-03
+  kind: RULE
+  title: Starting inventory
+  path: players-guide/character-creation.md
+  section: '## 7. Record Inventory'
+  summary: Agents have ten inventory slots; standard issue and background gear occupy them as specified.
+- id: CHAR-04
+  kind: RULE
+  title: Starting trackers
+  path: players-guide/character-creation.md
+  section: '## 8. Set Starting Trackers'
+  summary: Record starting Cash, Debt, Loyalty, Corruption, Exposure, Certificates, and Quirks from the canonical
+    values.
+- id: EX-CHAR-01
+  kind: EXAMPLE
+  title: Worked character
+  path: players-guide/character-creation.md
+  section: '## Worked Example: Mara Velez'
+  summary: A complete character-creation example showing the sequence without adding extra rules.
+- id: CORE-01
+  kind: RULE
+  title: Saving throws
+  path: players-guide/core-rules.md
+  section: '### Making a Save'
+  summary: Roll d20 equal to or under the relevant current attribute; natural 1 succeeds and natural 20 fails.
+- id: CORE-02
+  kind: RULE
+  title: Advantage and disadvantage
+  path: players-guide/core-rules.md
+  section: '### Advantage and Disadvantage'
+  summary: Roll 2d20 and keep the lower for advantage or higher for disadvantage.
+- id: CORE-03
+  kind: RULE
+  title: Assistance
+  path: players-guide/core-rules.md
+  section: '### Assistance'
+  summary: Assistance changes position or grants advantage only when the helper can materially affect the attempt.
+- id: CORE-04
+  kind: RULE
+  title: Fate Die
+  path: players-guide/core-rules.md
+  section: '## The Fate Die'
+  summary: 'Use a d6 only for uncertain circumstances not governed by an attribute save: 4-6 favorable, 1-3 trouble.'
+- id: CORE-05
+  kind: RULE
+  title: HP and attribute harm
+  path: players-guide/core-rules.md
+  section: '## HP, Attributes, and Harm'
+  summary: Damage reduces HP first; excess damage reduces STR and may cause critical damage.
+- id: CORE-06
+  kind: RULE
+  title: Healing and recovery
+  path: players-guide/core-rules.md
+  section: '## Healing and Recovery'
+  summary: Recovery requires appropriate safety, treatment, time, and freedom from deprivation as specified.
+- id: CORE-07
+  kind: RULE
+  title: Deprivation and Fatigue
+  path: players-guide/core-rules.md
+  section: '## Deprivation and Fatigue'
+  summary: Unresolved deprivation prevents recovery and adds Fatigue that occupies inventory slots.
+- id: CORE-08
+  kind: WARNING
+  title: Full inventory
+  path: players-guide/core-rules.md
+  section: '## Deprivation and Fatigue'
+  summary: At ten occupied slots current HP becomes 0 until a slot is cleared; this is not damage.
+- id: CORE-09
+  kind: RULE
+  title: Armor
+  path: players-guide/core-rules.md
+  section: '## Armor and Protection'
+  summary: Subtract relevant Armor from damage; total Armor is capped at 3.
+- id: CORE-10
+  kind: RULE
+  title: Reaction rolls
+  path: players-guide/core-rules.md
+  section: '## Reactions'
+  summary: When immediate NPC attitude is genuinely uncertain, roll 2d6 and use the reaction table.
+- id: CORE-11
+  kind: RULE
+  title: Morale
+  path: players-guide/core-rules.md
+  section: '## Morale'
+  summary: Enemies save WIL at the first casualty and half strength; failed morale produces credible self-preservation.
+- id: CORE-12
+  kind: RULE
+  title: Initiative
+  path: players-guide/core-rules.md
+  section: '## Rounds, Sides, and Initiative'
+  summary: First-round PC DEX saves determine which PCs act before opponents; later rounds proceed PCs then opponents.
+- id: CORE-13
+  kind: RULE
+  title: Movement and actions
+  path: players-guide/core-rules.md
+  section: '## Movement and Actions'
+  summary: On a turn a character may move about 40 feet and take one action.
+- id: CORE-14
+  kind: RULE
+  title: Automatic attacks
+  path: players-guide/core-rules.md
+  section: '## Attacking'
+  summary: Possible attacks hit automatically; roll damage, subtract Armor, and apply the remainder.
+- id: CORE-15
+  kind: RULE
+  title: Impaired and enhanced attacks
+  path: players-guide/core-rules.md
+  section: '### Impaired and Enhanced Attacks'
+  summary: Impaired attacks roll d4; enhanced attacks roll d12; if both apply they cancel.
+- id: CORE-16
+  kind: RULE
+  title: Focused fire
+  path: players-guide/core-rules.md
+  section: '### Multiple Attackers'
+  summary: Same-side attackers focusing one target roll all damage dice and keep only the single highest result.
+- id: CORE-17
+  kind: RULE
+  title: Blast
+  path: players-guide/core-rules.md
+  section: '### Blast'
+  summary: Blast attacks roll damage separately for every valid target in the stated area.
+- id: CORE-18
+  kind: RULE
+  title: Damage sequence
+  path: players-guide/core-rules.md
+  section: '## Damage Sequence'
+  summary: Resolve attack state, damage, Armor, HP, Scar at exact zero, STR loss, STR save, then critical damage.
+- id: CORE-19
+  kind: RULE
+  title: Critical damage and stabilization
+  path: players-guide/core-rules.md
+  section: '## Critical Damage and Stabilization'
+  summary: Failed STR save after STR damage causes critical damage; stabilization follows the stated first-aid procedure.
+- id: CORE-20
+  kind: RULE
+  title: Scars
+  path: players-guide/core-rules.md
+  section: '## Scars'
+  summary: PCs reduced to exactly 0 HP with no excess damage resolve a Scar.
+- id: CORE-21
+  kind: RULE
+  title: Retreat
+  path: players-guide/core-rules.md
+  section: '## Retreat'
+  summary: Retreat is resolved from established position and opposition rather than as a universal free disengage.
+- id: CORE-22
+  kind: RULE
+  title: Ammo Dice
+  path: players-guide/core-rules.md
+  section: '### Ammo Dice'
+  summary: Firearms begin at d6 Ammo; after qualifying use, a 1-2 steps the die down.
+- id: CORE-23
+  kind: RULE
+  title: Death and replacement
+  path: players-guide/core-rules.md
+  section: '## Death and Replacement'
+  summary: STR 0 kills the character; replacement follows the campaign procedure rather than level or XP inheritance.
+- id: TIME-01
+  kind: RULE
+  title: Four time scales
+  path: players-guide/exploration-and-time.md
+  section: '## The Four Time Scales'
+  summary: Use rounds, exploration turns, hours, and weeks for the appropriate operational scale.
+- id: TIME-02
+  kind: RULE
+  title: Exploration turn
+  path: players-guide/exploration-and-time.md
+  section: '## The Exploration Turn'
+  summary: A standard exploration turn is ten minutes and resolves the group through the stated sequence.
+- id: TIME-03
+  kind: RULE
+  title: Search and information
+  path: players-guide/exploration-and-time.md
+  section: '## Information and Searching'
+  summary: Careful searching finds what the declared method can realistically reveal; roll only when risk remains.
+- id: TIME-04
+  kind: RULE
+  title: Site Checks
+  path: players-guide/exploration-and-time.md
+  section: '## Site Checks and Random Encounters'
+  summary: Every three exploration turns roll the site check unless a specific site rule changes the interval.
+- id: TIME-05
+  kind: PRINCIPLE
+  title: Active randomness
+  path: players-guide/exploration-and-time.md
+  section: '### Active random procedure'
+  summary: Active table rolls are made impartially and their results stand unless impossible under established facts.
+- id: TIME-06
+  kind: RULE
+  title: Contamination clock
+  path: players-guide/exploration-and-time.md
+  section: '## The Contamination Clock'
+  summary: Continuous zone exposure advances according to the zone interval and preserves elapsed time across zone
+    changes.
+- id: EX-TIME-01
+  kind: EXAMPLE
+  title: Time ledger example
+  path: players-guide/exploration-and-time.md
+  section: '## Worked Example: The Last Thirty Minutes'
+  summary: Shows simultaneous actions, elapsed turns, site checks, and contamination timing in one sequence.
+- id: RELIC-01
+  kind: RULE
+  title: Relic activation
+  path: players-guide/temporal-relics.md
+  section: '## Using a Relic'
+  summary: Relic activation follows the entry and normally consumes one action or one meaningful exploration task.
+- id: RELIC-02
+  kind: RULE
+  title: Relic custody
+  path: players-guide/temporal-relics.md
+  section: '## Custody, Registration, and Sale'
+  summary: Recovery does not determine ownership; registration, concealment, transfer, and sale use the stated custody
+    procedure.
+- id: SET-01
+  kind: RULE
+  title: Financial records
+  path: game-systems/economy.md
+  section: '## The Four Financial Records'
+  summary: Cash, Debt, Certificates, and Team Fund are distinct records and do not substitute for one another.
+- id: SET-02
+  kind: RULE
+  title: Tier pay and expenses
+  path: game-systems/economy.md
+  section: '## Tier Pay and Required Expenses'
+  summary: Each tier has canonical weekly pay and required expenses resolved during settlement.
+- id: SET-03
+  kind: RULE
+  title: Mission compensation
+  path: game-systems/economy.md
+  section: '## Mission Compensation'
+  summary: Mission awards and deductions are calculated from the published schedule and participation rules.
+- id: SET-04
+  kind: RULE
+  title: Weekly Settlement
+  path: game-systems/economy.md
+  section: '## Weekly Settlement: The Complete Procedure'
+  summary: Resolve settlement in the canonical ten-step order.
+- id: SET-05
+  kind: RULE
+  title: Debt interest
+  path: game-systems/economy.md
+  section: '### Step 8: Apply Interest'
+  summary: After voluntary payment, add 3% interest to remaining Debt, rounded up to the nearest dollar.
+- id: SET-06
+  kind: RULE
+  title: Side income
+  path: game-systems/economy.md
+  section: '## Side-Income Procedure'
+  summary: Side income reserves downtime actions and resolves through its specified procedure.
+- id: SET-07
+  kind: RULE
+  title: Zhou thresholds
+  path: game-systems/economy.md
+  section: '## Zhou''s Debt Thresholds'
+  summary: Crossing a listed Debt threshold produces its scene once per crossing.
+- id: SET-08
+  kind: RULE
+  title: Qualifying operation
+  path: game-systems/economy.md
+  section: '### Qualifying Operations'
+  summary: A qualifying operation requires a concrete objective and boundary, substantial participation, a recorded
+    outcome or return state, and verification.
+- id: SET-09
+  kind: RULE
+  title: Recruit to Agent
+  path: game-systems/economy.md
+  section: '### Recruit to Agent'
+  summary: Promotion requires five qualifying operations with primary objectives completed, Loyalty 4+, clear disciplinary
+    status, and complete evidence.
+- id: SET-10
+  kind: RULE
+  title: Agent to Veteran
+  path: game-systems/economy.md
+  section: '### Agent to Veteran'
+  summary: Veteran appointment requires any four of six published criteria plus clear disciplinary status and complete
+    evidence.
+- id: SET-11
+  kind: PRINCIPLE
+  title: Economic agency
+  path: game-systems/economy.md
+  section: '## Warden Principles for Economic Play'
+  summary: Debt pressure creates choices but honest survival and debt reduction remain genuinely possible.
+- id: SET-12
+  kind: RULE
+  title: Quick Settlement
+  path: game-systems/economy.md
+  section: '## Quick Settlement'
+  summary: When no unresolved exception or choice remains, compress SET-04 into six arithmetic lines without changing
+    any closing state.
+- id: EX-SET-01
+  kind: EXAMPLE
+  title: Worked settlement
+  path: game-systems/economy.md
+  section: '## Worked Settlement'
+  summary: A complete settlement example using the canonical order and record separation.
+- id: CONT-01
+  kind: RULE
+  title: Scheduled contamination
+  path: game-systems/contamination.md
+  section: '### Scheduled Check'
+  summary: Continuous exposure triggers scheduled WIL saves at the interval for the current zone.
+- id: CONT-02
+  kind: RULE
+  title: Forced contamination
+  path: game-systems/contamination.md
+  section: '### Forced Check'
+  summary: Specific established sources can force checks without resetting the scheduled exposure clock.
+- id: CONT-03
+  kind: RULE
+  title: Zone intensity
+  path: game-systems/contamination.md
+  section: '## Zone Intensity'
+  summary: Green through Black zones define the canonical exposure intervals and base damage.
+- id: CONT-04
+  kind: RULE
+  title: Temporal protection
+  path: game-systems/contamination.md
+  section: '## Temporal Protection'
+  summary: Functioning protection reduces contamination damage by its listed amount subject to minimum damage and
+    stacking rules.
+- id: CONT-05
+  kind: RULE
+  title: Contamination check
+  path: game-systems/contamination.md
+  section: '## The Contamination Check'
+  summary: Resolve source, effective WIL, save, base damage, protection, half-WIL cap, WIL loss, and transformation/Quirk
+    in order.
+- id: CONT-06
+  kind: RULE
+  title: Quirk acquisition from contamination
+  path: game-systems/contamination.md
+  section: '## Quirk Acquisition'
+  summary: Taking at least the threshold contamination damage can add at most one new distinct Quirk per contamination
+    instance.
+- id: CONT-07
+  kind: RULE
+  title: Contamination recovery
+  path: game-systems/contamination.md
+  section: '## Recovery and Treatment'
+  summary: Contamination WIL loss recovers only through the listed procedures and limits.
+- id: CONT-08
+  kind: WARNING
+  title: Echo transformation
+  path: game-systems/contamination.md
+  section: '## Temporal Echo Transformation'
+  summary: The sixth distinct Quirk or WIL 0 caused by contamination transforms the agent into a temporal echo.
+- id: QUIRK-01
+  kind: RULE
+  title: Quirk record
+  path: game-systems/temporal-quirks.md
+  section: '## The Quirk Record'
+  summary: Record distinct Quirks, state, triggers, adaptation, and any relevant recovery conditions.
+- id: QUIRK-02
+  kind: RULE
+  title: Primed and Spent
+  path: game-systems/temporal-quirks.md
+  section: '### Primed Uses and Stable Rest'
+  summary: Limited-use Quirks use Primed/Spent state and recover only after the stated stable rest or specific rule.
+- id: QUIRK-03
+  kind: RULE
+  title: Hourly Quirk checks
+  path: game-systems/temporal-quirks.md
+  section: '### Hourly Checks'
+  summary: Quirks that call for active-hour checks use the end of every sixth exploration turn unless otherwise
+    specified.
+- id: QUIRK-04
+  kind: RULE
+  title: Early and Late
+  path: game-systems/temporal-quirks.md
+  section: '### First-Round Timing'
+  summary: Early treats the first-round DEX save as success; Late treats it as failure; both together cancel.
+- id: QUIRK-05
+  kind: PRINCIPLE
+  title: Quirk agency
+  path: game-systems/temporal-quirks.md
+  section: '### Involuntary Effects and Agency'
+  summary: Involuntary effects alter circumstances but do not authorize arbitrary loss of player choice.
+- id: TRACK-01
+  kind: RULE
+  title: Loyalty
+  path: game-systems/loyalty-corruption.md
+  section: '## Loyalty: Institutional Trust and Access'
+  summary: Loyalty records observable Division trust, access, and protection on the canonical 0-10 scale.
+- id: TRACK-02
+  kind: RULE
+  title: Corruption claims
+  path: game-systems/loyalty-corruption.md
+  section: '## Corruption: Zhou''s Active Claims'
+  summary: Corruption is the summed strength of active Zhou claims, not a morality score.
+- id: TRACK-03
+  kind: RULE
+  title: Exposure evidence
+  path: game-systems/loyalty-corruption.md
+  section: '## Exposure: the Evidence Clock'
+  summary: Exposure is the total weight of active evidence connecting the agent to unauthorized activity.
+- id: TRACK-04
+  kind: RULE
+  title: Double Exposure
+  path: game-systems/loyalty-corruption.md
+  section: '## Double Exposure'
+  summary: When Loyalty and Corruption reach the published thresholds, resolve the Double Exposure condition as
+    written.
+- id: TRACK-05
+  kind: PRINCIPLE
+  title: Tracker causality
+  path: game-systems/loyalty-corruption.md
+  section: '## Open Information and Ownership'
+  summary: Tracker changes are open and require a recorded cause, owner, and relevant evidence or claim.
+- id: SITE-01
+  kind: RULE
+  title: Site packet
+  path: setting/adventure-sites.md
+  section: '## The Site Packet'
+  summary: Every prepared site records identity, zone, local rule, nodes/routes, active parties, truths, clocks,
+    exits, and return state.
+- id: SITE-02
+  kind: PRINCIPLE
+  title: Persistent sites
+  path: setting/adventure-sites.md
+  section: '## Running a Site'
+  summary: Sites persist after extraction; changes to access, control, clocks, people, and objects are recorded
+    for return play.
+- id: WARDEN-01
+  kind: PRINCIPLE
+  title: Causal Warden authority
+  path: wardens-guide/running-the-game.md
+  section: '## Warden Operating Principles'
+  summary: The Warden presents causes, information, and consequences without selecting outcomes to protect a plot.
+- id: WARDEN-02
+  kind: RULE
+  title: Adjudication Ladder
+  path: wardens-guide/running-the-game.md
+  section: '## The Adjudication Ladder'
+  summary: Determine possibility, uncertainty, danger, and consequence before calling for a save or Fate Die.
+- id: WARDEN-03
+  kind: WARNING
+  title: No repeated unchanged rolls
+  path: wardens-guide/running-the-game.md
+  section: '### No repeated unchanged rolls'
+  summary: Do not repeat the same roll when the fictional position has not materially changed.
+- id: WARDEN-04
+  kind: RULE
+  title: Three-source rule
+  path: wardens-guide/running-the-game.md
+  section: '### The three-source rule'
+  summary: Vital truths should be reachable through at least three distinct source families.
+- id: WARDEN-05
+  kind: PRINCIPLE
+  title: NPC knowledge has a source
+  path: wardens-guide/running-the-game.md
+  section: '### Knowledge has a source'
+  summary: NPC and faction knowledge must come from an established source rather than Warden omniscience.
+- id: WARDEN-06
+  kind: PRINCIPLE
+  title: Pressure follows triggers
+  path: wardens-guide/running-the-game.md
+  section: '### Pressure follows triggers'
+  summary: Clocks, trackers, and off-screen pressure advance only from declared or established causes.
+- id: WARDEN-07
+  kind: WARNING
+  title: Telegraph lethality
+  path: wardens-guide/running-the-game.md
+  section: '### Telegraph lethality'
+  summary: Before irreversible violence, make observable danger and likely consequences legible when the fiction
+    permits.
+- id: CAMP-01
+  kind: RULE
+  title: Campaign Turn
+  path: wardens-guide/campaign-management.md
+  section: '## The Session-to-Session Campaign Turn'
+  summary: Resolve persistent campaign state in the canonical campaign-turn sequence.
+- id: CAMP-02
+  kind: RULE
+  title: Player-led expeditions
+  path: wardens-guide/campaign-management.md
+  section: '## Player-Led Expeditions'
+  summary: Players may initiate operations through intent, target, information, access, funding, logistics, world
+    response, and entry.
+- id: CAMP-03
+  kind: RULE
+  title: Consequence Ledger
+  path: wardens-guide/campaign-management.md
+  section: '## The Consequence Ledger'
+  summary: Record only consequences capable of changing future access, risk, payment, custody, relationships, evidence,
+    faction position, or scenes.
+- id: CAMP-04
+  kind: RULE
+  title: Faction positions
+  path: wardens-guide/campaign-management.md
+  section: '## Faction Positions and Off-Screen Actions'
+  summary: Faction actions require knowledge, means, motive, and a causal opportunity in the campaign state.
+- id: CAMP-05
+  kind: RULE
+  title: Persistent Site Ledger
+  path: wardens-guide/campaign-management.md
+  section: '## Persistent Site Ledger'
+  summary: Record meaningful site changes so return visits begin from the established new state.
+- id: CAMP-06
+  kind: RULE
+  title: Objective advancement
+  path: wardens-guide/campaign-management.md
+  section: '## Advancement Without XP'
+  summary: Campaign advancement uses qualifying operations, objective appointments, projects, access, and diegetic
+    change rather than XP.
+- id: CAMP-15
+  kind: RULE
+  title: Bookkeeping levels
+  path: wardens-guide/campaign-management.md
+  section: '## Choose a Bookkeeping Level'
+  summary: Essential, Standard, and Full Audit change record detail only; all canonical mechanics and causal requirements
+    remain identical.
+- id: ENEMY-01
+  kind: RULE
+  title: Opposition record
+  path: wardens-guide/creating-enemies.md
+  section: '## The Opposition Record'
+  summary: Opposition is defined by goal, visible tell, knowledge source, behavior, stats, morale, and aftermath.
+- id: ENEMY-02
+  kind: PRINCIPLE
+  title: Build the situation first
+  path: wardens-guide/creating-enemies.md
+  section: '## Build the Situation First'
+  summary: Design what happens, what opponents want, what they know, what is visible, and what remains before assigning
+    combat numbers.
+- id: ENEMY-03
+  kind: RULE
+  title: Enemy morale and surrender
+  path: wardens-guide/creating-enemies.md
+  section: '## Reaction, Morale, and Surrender'
+  summary: Opposition uses the core reaction and morale procedures unless a specific established trait overrides
+    them.
+- id: GEN-01
+  kind: RULE
+  title: Generator protocol
+  path: wardens-guide/tables-and-generators.md
+  section: '## The Generator Protocol'
+  summary: Preparation generators may be chosen, rolled, or combined; active procedures preserve impartial results.
+- id: GEN-02
+  kind: RULE
+  title: Active Roll Protocol
+  path: wardens-guide/tables-and-generators.md
+  section: '## Active Roll Protocol'
+  summary: Fix eligibility before rolling, roll openly by default, record hidden rolls immediately, and preserve
+    compatible results.
+- id: EX-PLAY-01
+  kind: EXAMPLE
+  title: Complete play cycle
+  path: players-guide/example-of-play-compact.md
+  section: '## The Agents and the Objective'
+  summary: Compact example showing preparation, information, failure, contamination, violence, extraction, consequences,
+    and settlement.
+- id: INFO-01
+  kind: RULE
+  title: Binding procedure
+  path: index.md
+  section: '## How to Read the Rules'
+  summary: Reader-facing legend entry for the information hierarchy.
+- id: INFO-02
+  kind: PRINCIPLE
+  title: Adjudication guidance
+  path: index.md
+  section: '## How to Read the Rules'
+  summary: Reader-facing legend entry for the information hierarchy.
+- id: INFO-03
+  kind: EXAMPLE
+  title: Worked application
+  path: index.md
+  section: '## How to Read the Rules'
+  summary: Reader-facing legend entry for the information hierarchy.
+- id: INFO-04
+  kind: WARNING
+  title: Critical limit or exception
+  path: index.md
+  section: '## How to Read the Rules'
+  summary: Reader-facing legend entry for the information hierarchy.

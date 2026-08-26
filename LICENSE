@@ -1,22 +1,98 @@
-This theme is Open Source under the GPLv3 license as stated below. The theme is intended
-to be used for creating jekyll blogs where the author is expected to retain copyright
-on their content and therefore the following files and directories are not included in
-the GPLv3 license:
+Uchronies & Treasures - License Allocation
+==========================================
 
- * _config.yml
- * _data/
- * _drafts/
- * _posts/
+Copyright (c) 2026 Riccardo Scaringi
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+This repository contains manuscript, code, third-party material, and visual
+assets with different rights. No single license applies to every file.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+1. Game manuscript and canonical rule data - CC BY-SA 4.0
+----------------------------------------------------------
+Except where a third-party source or exclusion is identified, the following
+material is licensed under the Creative Commons Attribution-ShareAlike 4.0
+International License (CC BY-SA 4.0):
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+- Markdown game text included in the website or generated manual;
+- canonical rule data in _data/rules.yml;
+- manual ordering and chapter metadata in _data/manual.yml to the extent they
+  express the game manuscript;
+- original tables, examples, worksheets, and reference text;
+- generated manual text derived from those sources.
+
+License deed: https://creativecommons.org/licenses/by-sa/4.0/
+Legal code: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Attribution should identify "Uchronies & Treasures" and Riccardo Scaringi,
+preserve the Cairn attribution in THIRD_PARTY_NOTICES.md, provide the license
+notice or link where reasonably practicable, and indicate that changes were
+made. Adapted manuscript contributions must use CC BY-SA 4.0 or a Creative
+Commons-approved compatible license.
+
+2. Original repository code - MIT
+---------------------------------
+Original scripts, workflow files, templates, style overrides, JavaScript, and
+other repository code are licensed under the MIT License:
+
+MIT License
+
+Copyright (c) 2026 Riccardo Scaringi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+3. Cairn material
+-----------------
+This work is based on the Cairn First Edition System Reference Document v1.0
+by Yochai Gal, licensed under CC BY-SA 4.0.
+
+Source: https://cairnrpg.com/first-edition/cairn-srd/
+License: https://creativecommons.org/licenses/by-sa/4.0/
+
+The adaptation changes the setting, economy, backgrounds, exploration,
+contamination, Quirks, relics, faction trackers, advancement, campaign
+procedures, examples, references, and adventures. This project is independent
+and is not affiliated with or endorsed by Yochai Gal or the Cairn project.
+
+4. Previous Uchronies material
+------------------------------
+The project adapts "Ucronie e Tesori" by Riccardo Scaringi, identified by the
+author as licensed under Creative Commons Attribution 4.0 International.
+
+License: https://creativecommons.org/licenses/by/4.0/
+
+5. Visual assets and other excluded material
+--------------------------------------------
+The CC BY-SA manuscript license and MIT code license do not automatically
+cover visual assets, logos, favicons, maps, illustrations, commissioned work,
+or system fonts. ASSET_PROVENANCE.md identifies the current visual files and
+their clearance state. An asset without documented provenance and reuse terms
+must be treated as development-only and not cleared for commercial release or
+downstream reuse.
+
+6. Dependencies and third-party notices
+---------------------------------------
+Software dependencies, system fonts, and other third-party works remain under
+their upstream licenses. See THIRD_PARTY_NOTICES.md and the applicable package
+or source distribution. Nothing in this file relicenses third-party material.
+
+7. No additional rights or warranties
+--------------------------------------
+This allocation does not grant trademark, publicity, privacy, moral, image,
+font, or other rights the project does not possess. Creative Commons licenses
+and the MIT License contain their own warranty and liability terms. This file
+is a project notice, not legal advice.

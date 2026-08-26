@@ -1,0 +1,110 @@
+output: dist/Uchronies and Treasures Large.pdf
+chapters:
+- path: index.md
+  title: Uchronies & Treasures
+  content_class: front_matter
+  profiles:
+  - full
+  - operational
+- path: players-guide/overview-and-principles.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: players-guide/character-creation.md
+  content_class: procedure
+  profiles:
+  - full
+  - operational
+- path: players-guide/core-rules.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: players-guide/exploration-and-time.md
+  content_class: procedure
+  profiles:
+  - full
+  - operational
+- path: players-guide/temporal-relics.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: game-systems/economy.md
+  content_class: procedure
+  profiles:
+  - full
+  - operational
+- path: game-systems/contamination.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: game-systems/temporal-quirks.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: game-systems/loyalty-corruption.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: setting/las-vegas-2080.md
+  content_class: setting
+  profiles:
+  - full
+  - operational
+- path: setting/adventure-sites.md
+  content_class: procedure
+  profiles:
+  - full
+  - operational
+- path: wardens-guide/running-the-game.md
+  content_class: warden_procedure
+  profiles:
+  - full
+  - operational
+- path: wardens-guide/campaign-management.md
+  content_class: warden_procedure
+  profiles:
+  - full
+  - operational
+- path: wardens-guide/creating-enemies.md
+  content_class: warden_procedure
+  profiles:
+  - full
+  - operational
+- path: wardens-guide/tables-and-generators.md
+  content_class: optional_tool
+  profiles:
+  - full
+  - operational
+- path: players-guide/example-of-play-compact.md
+  title: Example of Play
+  content_class: example
+  profiles:
+  - full
+  summary: A compact complete play cycle showing player-led objectives, information before dice, real failure, impartial Site
+    Checks, contamination, withdrawal, persistence, and settlement.
+- path: reference/glossary.md
+  content_class: optional_reference
+  profiles:
+  - full
+- path: reference/rule-subject-index.md
+  content_class: optional_reference
+  profiles:
+  - full
+- path: reference/credits-and-licenses-large.md
+  content_class: legal
+  profiles:
+  - full
+  summary: Project attribution, Cairn lineage, license allocation, and the rights gate for final visual assets.
+profile: full
+cover_subtitle: A Time-Crime Horror Roleplaying Game
+profile_label: Large
+include_proof_page: false
+include_end_proof_page: false
+ensure_even_pages: true
+pdf_title: 'Uchronies & Treasures: Large'

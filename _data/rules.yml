@@ -1,0 +1,549 @@
+edition:
+  title: Uchronies & Treasures
+  subtitle: A Time-Crime Horror Roleplaying Game
+  version: 0.11.14-osr-conformance-suite
+  status: osr-conformance-suite
+  baseline_source: 0.11.1-editorial-ch19
+  author: Riccardo Scaringi
+character:
+  attribute_roll: 3d6 in order; swap any two
+  hp_roll: d6
+  starting_standard_slots: 5
+  starting_cash: 300
+  starting_debt: 1200
+  starting_loyalty: 5
+  starting_corruption: 0
+  starting_exposure: 0
+  starting_certificates: 0
+  starting_quirks: 0
+  max_survivable_quirks: 5
+  echo_quirk: 6
+  inventory_slots: 10
+  downtime_actions: 2
+core:
+  save_die: d20
+  natural_success: 1
+  natural_failure: 20
+  advantage: 2d20, keep lower
+  disadvantage: 2d20, keep higher
+  fate_die: d6; 4-6 favorable, 1-3 trouble
+  armor_cap: 3
+  round_seconds: 10
+  exploration_turn_minutes: 10
+  exploration_turns_per_hour: 6
+  rest_turns: 1
+  move_feet: 40
+  critical_window_minutes: 60
+  first_aid_uses_to_stabilize: 1
+  inventory_full_hp: 0
+  ammo_start: d6
+  ammo_step_down_on: 1-2
+  site_check_turns: 3
+  site_check_die: d6
+  site_check_contact_on: 1
+  site_check_event_on: 2
+  site_check_omen_on: 3
+  site_check_quiet_on: 4-6
+  random_encounters_enabled: true
+  preparation_tables_allow_choose_roll_combine: true
+  active_random_procedure: roll and preserve the result
+  active_random_roll_open_by_default: true
+  hidden_random_roll_requires_immediate_record: true
+  active_random_eligibility_fixed_before_roll: true
+  impossible_active_result: reroll until compatible; never substitute by preference
+  duplicate_active_result: apply unless the table explicitly says otherwise
+economy:
+  interest_percent: 3
+  interest_rounding: up to the nearest dollar
+  settlement_order:
+  - Mission earnings
+  - Tier pay
+  - Side-income and reserved downtime actions
+  - Required expenses
+  - Weekly expense or event
+  - Optional purchases and treatment
+  - Voluntary debt payment
+  - Interest
+  - Threshold scenes and tracker changes
+  - Remaining downtime actions
+  tiers:
+    recruit:
+      pay: 800
+      expenses: 900
+    agent:
+      pay: 1200
+      expenses: 1100
+    veteran:
+      pay: 1600
+      expenses: 1300
+  expenses:
+    recruit:
+      housing: 500
+      food_transit: 150
+      medicine_therapy: 250
+    agent:
+      housing: 600
+      food_transit: 200
+      medicine_therapy: 300
+    veteran:
+      housing: 700
+      food_transit: 250
+      medicine_therapy: 350
+  mission_payments:
+    completion_gross: 50
+    completion_net: 50
+    primary_gross: 100
+    primary_net: 70
+    secondary_gross: 50
+    secondary_net: 35
+    civilians_gross: 100
+    civilians_net: 70
+    deduction_percent: 30
+    participation: standard payments are per participating agent
+    registered_relic_recipient: one team award, divided or placed in the team fund
+  zhou_debt_thresholds:
+  - 1500
+  - 2200
+  - 3500
+  - 5000
+  side_income_reserves_actions: true
+  unexpected_expense: once per active agent unless the week already imposed an equivalent personal cost
+  debt_threshold_once_per_crossing: true
+  promotion_effective: next week
+  team_fund_interest: 0
+  advancement_uses_xp: false
+  qualifying_operation:
+    assigned_or_player_led: true
+    substantial_participation_required: true
+    objective_and_boundary_required: true
+    recorded_outcome_or_return_state_required: true
+    verification_required: true
+    maximum_credit_per_operation: 1
+  promotion:
+    default_appointment_authority: Office of Field Operations
+    hidden_requirements_allowed: false
+    tier_loss_requires_documented_authority_and_evidence: true
+    recruit_to_agent:
+      completed_primary_qualifying_operations: 5
+      loyalty_minimum: 4
+      active_suspension_allowed: false
+      active_disciplinary_probation_allowed: false
+    agent_to_veteran:
+      criteria_required: 4
+      criteria_available: 6
+      qualifying_operations_total: 10
+      sites_mapped_or_stabilized: 3
+      class_b_or_higher_recoveries: 1
+      campaign_scale_projects_completed: 1
+      loyalty_minimum: 7
+      protected_communities_teams_or_contacts: 2
+      active_suspension_allowed: false
+      active_disciplinary_probation_allowed: false
+  quick_settlement:
+    status: compression of canonical ten-step settlement, never a replacement rule
+    eligible_only_when: all choices, financing, random costs, tracker facts, and threshold scenes are already resolved
+    tier_recurring_balance:
+      recruit: -100
+      agent: 100
+      veteran: 300
+    interest_percent: 3
+    interest_rounding: up to the nearest dollar
+    target_five_agents_minutes: 15
+contamination:
+  quirk_damage_threshold: 3
+  quirk_penalty_cap: 3
+  standard_suit_reduction: 1
+  heavy_suit_reduction: 2
+  max_damage_fraction: 0.5
+  moving_zones_preserves_elapsed_time: true
+  green_ends_continuous_exposure: true
+  forced_check_resets_schedule: false
+  scheduled_check_resets_elapsed_time: true
+  protection_minimum_damage: 1
+  suit_reductions_stack: false
+  max_quirks_per_instance: 1
+  contamination_recovery_procedures_per_week: 1
+  division_treatment_actions: 2
+  black_market_treatment_actions: 1
+  black_market_treatment_cost: 500
+  zones:
+    green:
+      interval: none
+      damage: none
+    yellow:
+      interval: 8 hours
+      exploration_turns: 48
+      damage: d4
+    orange:
+      interval: 6 hours
+      exploration_turns: 36
+      damage: d4
+    red:
+      interval: 3 hours
+      exploration_turns: 18
+      damage: d4
+    black:
+      interval: 1 hour
+      exploration_turns: 6
+      damage: d6
+trackers:
+  loyalty: The Division's observable trust, access, and willingness to protect the agent.
+  loyalty_min: 0
+  loyalty_max: 10
+  corruption: The total strength of active claims held by Zhou's network; it is not a morality score.
+  corruption_min: 0
+  corruption_max: 10
+  corruption_claim_strengths:
+    limited: 1
+    serious: 2
+    dominant: 3
+  exposure: The total weight of active evidence connecting the agent to unauthorized activity.
+  exposure_min: 0
+  exposure_max: 6
+  exposure_evidence_weights:
+    linked: 1
+    corroborated: 2
+  exposure_scrutiny: 3
+  exposure_investigation: 6
+  investigation_outcomes:
+    exonerated: 0
+    contained: 1-2
+    unresolved: 3-5
+  tracker_changes_are_open: true
+  shared_entries_list_implicated_agents: true
+  double_exposure_loyalty: 6
+  double_exposure_corruption: 4
+  exposure_typical_contained_after_investigation: 2
+relics:
+  default_slots: 1
+  default_activation: one action or one meaningful exploration task
+  recharge_restores_all_spent_charges: true
+  division_assessed_min: 300
+  division_assessed_max: 1000
+  division_net_percent: 70
+  recruit_sellable_frequency: about once every two or three missions
+  compass_site_check_contact_on: 1-2 while unshielded in Red or Black
+quirks:
+  limited_use_state: Primed or Spent
+  default_recovery: 8 uninterrupted hours of safe rest in a genuine Green Zone or equally stable refuge
+  stable_rest_hours: 8
+  session_boundary_refresh: false
+  unused_readiness_accumulates: false
+  inverse_scars_recovery: start of next Weekly Settlement
+  active_hour_check: end of every sixth exploration turn or other explicitly tracked active hour
+  early_timing: treat first-round DEX save as success
+  late_timing: treat first-round DEX save as failure
+  early_late_cancel: true
+  armor_uses_normal_cap: 3
+  duplicate_result: reroll until distinct; an explicit source rule applies without rolling
+  division_excision_loyalty: 8
+  division_excision_weeks: 4
+  division_excision_actions_each_week: 2
+  black_market_surgery_cost: 50000
+  black_market_surgery_certificates: 50
+  black_market_surgery_weeks: 3
+setting:
+  year: 2080
+  event_date: 2025-08-15 03:47
+  years_since_event: 55
+  public_agent_facts: 8
+  districts: 7
+  stable_corridors_stop_contamination: false
+  continuity_file_is_metaphysical_truth: false
+  zone_boundaries_are_telegraphed: true
+sites:
+  default_node_min: 4
+  default_node_max: 7
+  vital_truth_sources: 3
+  factions_require_knowledge_source: true
+  no_single_route_failure: true
+  return_state_required: true
+  canonical_sites: 7
+  meridian_location: Strip Red Spine, Las Vegas; alternate 1934 Chicago layer
+  site_check_is_impartial: true
+  site_check_allows_quiet: true
+  clocks_advance_on_written_triggers: true
+  encounters_use_reaction_when_uncertain: true
+  active_site_tables_are_rolled: true
+  route_change_selection: roll among unsecured eligible routes
+  quiet_results_are_preserved: true
+warden:
+  information_layers: 5
+  vital_truth_sources: 3
+  standard_clock_steps: 4 or 6
+  session_open_questions: 4
+  success_stands: true
+  factions_require_knowledge_source: true
+  temporary_rulings_are_logged: true
+  retroactive_punishment_for_ruling_change: false
+  failure_may_leave_objective_unachieved: true
+  partial_success_is_not_default: true
+  risk_warning_is_not_outcome_contract: true
+  site_checks_are_random: true
+  table_procedure_steps: 7
+campaign:
+  phases: 3
+  campaign_turn_steps: 10
+  mission_portfolio_min: 2
+  mission_portfolio_max: 3
+  open_campaign_review_sessions: 6
+  faction_action_requires:
+  - knowledge source
+  - means
+  - motive
+  campaign_truth_sources: 3
+  endgame_readiness_conditions: 5
+  project_segment_options:
+  - 4
+  - 6
+  - 8
+  replacement_enters_promptly: true
+  campaign_facts_are_not_rewritten: true
+  player_led_expeditions: true
+  player_led_expedition_steps: 8
+  mission_portfolio_is_optional: true
+  campaign_can_continue_without_offered_missions: true
+  initial_sandbox_known_sites: 3
+  initial_sandbox_rumors: 3
+  initial_sandbox_official_opportunities: 2
+  initial_sandbox_personal_leads_per_agent: 1
+  initial_sandbox_unverified_routes: 1
+  self_directed_standard_mission_pay: false
+  unauthorized_action_automatic_exposure: false
+  expedition_faction_response_requires:
+  - knowledge source
+  - means
+  - motive
+  expedition_worksheet: reference/player-led-expedition-worksheet.md
+design:
+  gameplay_loops:
+  - mission
+  - weekly settlement
+  - campaign turn
+  pressure_visible_before_commitment: true
+  pressure_does_not_control_pc_choice: true
+  competence_changes_situation: true
+  consequences_persist: true
+  relief_is_real: true
+  vital_truth_sources: 3
+  faction_action_requires:
+  - knowledge source
+  - means
+  - motive
+  calibration_change_one_variable: true
+  calibration_min_comparable_cycles: 3
+  simulation_is_not_human_playtest: true
+  failure_is_allowed: true
+  random_encounters_create_external_uncertainty: true
+  no_intended_solutions: true
+  clocks_do_not_replace_random_encounters: true
+enemies:
+  hp_fragile: 2-3
+  hp_capable: 4-6
+  hp_elite: 7-9
+  hp_major: 10-12
+  ordinary_hp_max: 12
+  armor_min: 0
+  armor_max: 3
+  attribute_min: 3
+  attribute_max: 18
+  one_primary_special_rule: true
+  critical_effect_after_failed_save: true
+  morale_first_casualty: true
+  morale_half_strength: true
+  lone_morale_at_zero_hp: true
+  detachment_individual_attacks_impaired: true
+  detachment_attacks_individuals: enhanced and Blast
+  major_threat_uses_components_or_clocks: true
+  knowledge_requires_source: true
+  aftermath_required: true
+faq:
+  precedence_levels: 5
+  specific_rule_overrides_general: true
+  full_chapter_overrides_summary: true
+  temporary_rulings_are_logged: true
+  retroactive_punishment_for_corrections: false
+  edge_case_sequences: 6
+generators:
+  protocol_steps: 6
+  generated_fact_fixed_when_used: true
+  established_facts_override_rolls: true
+  faction_action_requires:
+  - knowledge source
+  - means
+  - motive
+  site_node_min: 4
+  site_node_max: 7
+  vital_truth_sources: 3
+  anomaly_parts:
+  - sign
+  - trigger
+  - effect
+  - countermeasure
+  - persistence
+  tracker_changes_require_ledger: true
+  site_check_is_impartial: true
+  site_check_has_quiet_result: true
+  consequence_generator_cannot_grant_objective: true
+advancement:
+  diegetic_only: true
+  ledger_fields:
+  - asset or standing
+  - holder or authority
+  - source
+  - permission
+  - access condition
+  - loss condition
+  categories:
+  - institutional
+  - financial
+  - logistical
+  - social
+  - operational
+  - knowledge
+  - project
+  abstract_reputation_bonus: false
+  independent_advancement_without_tier: true
+example_of_play:
+  complete_cycle: true
+  player_led_expedition: true
+  exploration_turns: 14
+  real_failed_objective: true
+  active_site_checks:
+  - contact
+  - omen
+  - quiet
+  - event
+  reaction_roll_demonstrated: true
+  contamination_demonstrated: true
+  combat_demonstrated: true
+  morale_demonstrated: true
+  retreat_demonstrated: true
+  ammo_step_down_demonstrated: true
+  inventory_tradeoff_demonstrated: true
+  persistent_return_state: true
+  qualifying_operation_credit: true
+  weekly_settlement_demonstrated: true
+  session_boundaries_inert: true
+reference_core:
+  split_substeps: 4
+  completed_chapters:
+  - 21
+  - 22
+  - 23
+  checklist_steps: 12
+  checklist_background_loads:
+    ex_military: 6
+    failed_academic: 7
+    reformed_criminal: 6
+    disgraced_detective: 7
+    disbarred_medic: 8
+    con_artist: 6
+  player_reference_real_failure: true
+  player_reference_site_checks_impartial: true
+  player_reference_persistent_close: true
+  warden_osr_contract_points: 10
+  warden_table_procedure_steps: 7
+  warden_active_random_protocol: true
+  warden_clock_trigger_only: true
+  warden_faction_knowledge_source: true
+reference_tools:
+  worksheet_max_columns: 5
+  character_inventory_slots: 10
+  mission_turn_log_rows: 18
+  weekly_settlement_steps: 10
+  player_led_expedition_steps: 8
+  veteran_criteria_required: 4
+  veteran_criteria_available: 6
+reference_appendices:
+  completed_chapters:
+  - 29
+  - 30
+  - 31
+  - 32
+  glossary_min_terms: 120
+  table_max_columns: 5
+  simulation_appendix_distinguishes_human_playtest: true
+  hack_preserves_osr_contracts: true
+  license_allocation_explicit: true
+  asset_provenance_ledger_required: true
+simulation:
+  scope: contamination and Quirk subsystem comparison only
+  trials: 200000
+  seed: 42
+  cycles: 15
+  checks_per_cycle: 2
+  uses_common_random_numbers: true
+  reports_wilson_95_interval: true
+  is_human_playtest: false
+  historical_full_simulator_in_repository: false
+licensing:
+  manuscript: CC BY-SA 4.0
+  code: MIT
+  cairn_source: Cairn First Edition SRD v1.0
+  cairn_license: CC BY-SA 4.0
+  previous_work_license: CC BY 4.0
+  visual_assets_separately_licensed: true
+  uncleared_assets_block_commercial_release: true
+  asset_ledger: ASSET_PROVENANCE.md
+reference_reconciliation:
+  point_7_complete: true
+  reference_chapters: 12
+  reference_nav_order_contiguous: true
+  authoritative_source_map_required: true
+  canonical_table_max_columns: 5
+  pdf_chapter_bookmarks_required: true
+  rules_precedence_layers: 4
+  packet_flow:
+  - Character Creation Checklist -> Character Sheet
+  - Player-Led Expedition Worksheet -> Mission Worksheet
+  - Mission Worksheet -> Weekly Settlement Worksheet
+  - Operation and settlement records -> Character Sheet and Team Campaign Sheet
+publication_profiles:
+  full:
+    manifest: _data/manual.yml
+    includes_optional_design_and_research: true
+  operational:
+    manifest: _data/manual-operational.yml
+    excludes:
+    - Design Notes
+    - Frequently Asked Questions
+    - Monte Carlo Transparency
+    - Glossary
+    - Hack This Hack
+  table_pack:
+    manifest: _data/manual-table-pack.yml
+    purpose: printable checklists, references, sheets, and worksheets
+  section_classification_required: true
+  faq_is_non_normative: true
+osr_validation:
+  normative_requirements: 18
+  automated_gates:
+  - A
+  - B
+  - C
+  - D
+  human_evidence_gate: E
+  gate_e_status: pending-human-playtest
+  unified_validator: scripts/validate_osr_conformance.py
+  regression_runner: scripts/test_osr_regressions.py
+  mutation_cases: 20
+  automated_tests_are_human_playtest: false
+campaign_bookkeeping:
+  levels:
+  - Essential
+  - Standard
+  - Full Audit
+  default: Standard
+  mechanical_equivalence_required: true
+  essential_post_session_target_minutes: 5
+  standard_post_session_target_minutes: 12
+  separate_record_criterion:
+  - access
+  - risk
+  - payment
+  - custody
+  - relationship
+  - evidence
+  - faction position
+  - future scene

@@ -1,0 +1,175 @@
+output: dist/Uchronies_and_Treasures_Manual.pdf
+chapters:
+- path: index.md
+  title: Uchronies & Treasures
+  content_class: front_matter
+  profiles:
+  - full
+  - operational
+- path: players-guide/overview-and-principles.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: players-guide/character-creation.md
+  content_class: procedure
+  profiles:
+  - full
+  - operational
+- path: players-guide/core-rules.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: players-guide/exploration-and-time.md
+  content_class: procedure
+  profiles:
+  - full
+  - operational
+- path: players-guide/temporal-relics.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: game-systems/economy.md
+  content_class: procedure
+  profiles:
+  - full
+  - operational
+- path: game-systems/contamination.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: game-systems/temporal-quirks.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: game-systems/loyalty-corruption.md
+  content_class: core_rule
+  profiles:
+  - full
+  - operational
+- path: setting/las-vegas-2080.md
+  content_class: setting
+  profiles:
+  - full
+  - operational
+- path: setting/adventure-sites.md
+  content_class: procedure
+  profiles:
+  - full
+  - operational
+- path: wardens-guide/running-the-game.md
+  content_class: warden_procedure
+  profiles:
+  - full
+  - operational
+- path: wardens-guide/campaign-management.md
+  content_class: warden_procedure
+  profiles:
+  - full
+  - operational
+- path: wardens-guide/design-notes.md
+  content_class: design_note
+  profiles:
+  - full
+- path: wardens-guide/faq.md
+  content_class: optional_reference
+  profiles:
+  - full
+- path: wardens-guide/creating-enemies.md
+  content_class: warden_procedure
+  profiles:
+  - full
+  - operational
+- path: wardens-guide/tables-and-generators.md
+  content_class: optional_tool
+  profiles:
+  - full
+  - operational
+- path: adventures/the-chicago-loop.md
+  content_class: adventure
+  profiles:
+  - full
+  - operational
+- path: adventures/the-first-four-weeks.md
+  content_class: adventure
+  profiles:
+  - full
+  - operational
+- path: players-guide/example-of-play.md
+  content_class: example
+  profiles:
+  - full
+  - operational
+- path: reference/character-creation-checklist.md
+  content_class: table_tool
+  profiles:
+  - full
+  - operational
+  - table_pack
+- path: reference/player-reference.md
+  content_class: table_tool
+  profiles:
+  - full
+  - operational
+  - table_pack
+- path: reference/warden-cheat-sheet.md
+  content_class: table_tool
+  profiles:
+  - full
+  - operational
+  - table_pack
+- path: reference/character-sheet.md
+  content_class: table_tool
+  profiles:
+  - full
+  - operational
+  - table_pack
+- path: reference/weekly-settlement-worksheet.md
+  content_class: table_tool
+  profiles:
+  - full
+  - operational
+  - table_pack
+- path: reference/team-campaign-sheet.md
+  content_class: table_tool
+  profiles:
+  - full
+  - operational
+  - table_pack
+- path: reference/mission-worksheet.md
+  content_class: table_tool
+  profiles:
+  - full
+  - operational
+  - table_pack
+- path: reference/player-led-expedition-worksheet.md
+  content_class: table_tool
+  profiles:
+  - full
+  - operational
+  - table_pack
+- path: reference/monte-carlo-transparency.md
+  content_class: research_appendix
+  profiles:
+  - full
+- path: reference/glossary.md
+  content_class: optional_reference
+  profiles:
+  - full
+- path: reference/hack-this-hack.md
+  content_class: design_note
+  profiles:
+  - full
+- path: reference/credits-and-licenses.md
+  content_class: legal
+  profiles:
+  - full
+  - operational
+  - table_pack
+profile: full
+cover_subtitle: A Time-Crime Horror Roleplaying Game
+profile_label: Complete Edition

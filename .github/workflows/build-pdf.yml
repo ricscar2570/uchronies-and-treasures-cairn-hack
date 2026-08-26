@@ -1,54 +1,74 @@
-name: Build PDF
+name: Validate and Build A5 Release Profiles
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 jobs:
-  build-pdf:
+  release-check:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Liberation fonts
-        run: sudo apt-get install -y fonts-liberation
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PDF toolchain and Noto fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc \
+            texlive-xetex \
+            texlive-latex-extra \
+            texlive-pictures \
+            fonts-noto-core \
+            fonts-noto-mono \
+            poppler-utils \
+            ghostscript
 
       - name: Install Python dependencies
-        run: pip install -r scripts/requirements.txt
+        run: python -m pip install -r scripts/requirements.txt
 
-      - name: Build PDF
-        run: python scripts/build-pdf.py
+      - name: Verify required commands and fonts
+        run: |
+          pandoc --version | head -n 2
+          xelatex --version | head -n 2
+          fc-match "Noto Serif"
+          fc-match "Noto Sans"
+          fc-match "Noto Sans Mono"
+          pdffonts -v 2>&1 | head -n 1
+          gs --version
 
-      - name: Upload PDF as artifact
+      - name: Run Step 18 release check
+        run: python scripts/release_check.py
+
+      - name: Upload A5 publication profiles and evidence
         uses: actions/upload-artifact@v4
         with:
-          name: UeT-Manual
-          path: UeT_Final_Complete.pdf
+          name: Uchronies-and-Treasures-A5-Step18
+          path: |
+            dist/Uchronies and Treasures Large.pdf
+            dist/Uchronies and Treasures Large.pdf.sha256
+            dist/Uchronies and Treasures Adventures.pdf
+            dist/Uchronies and Treasures Adventures.pdf.sha256
+            dist/Uchronies and Treasures Operational.pdf
+            dist/Uchronies and Treasures Operational.pdf.sha256
+            dist/Uchronies and Treasures Table Reference Pack.pdf
+            dist/Uchronies and Treasures Table Reference Pack.pdf.sha256
+            dist/Uchronies and Treasures Design and Hacking Companion.pdf
+            dist/Uchronies and Treasures Design and Hacking Companion.pdf.sha256
+            reports/a5-step18/a5-step18-validation.json
+            reports/a5-step18/release-check-summary.json
+            audit/osr-point-5/advancement-consistency-live.json
+            audit/osr-point-9/conformance-live.json
+            audit/osr-point-9/mutation-live.json
+          if-no-files-found: error
           retention-days: 90
-
-      - name: Get current date
-        id: date
-        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
-
-      - name: Delete previous latest release
-        run: |
-          gh release delete latest --yes || true
-          git push origin :refs/tags/latest || true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create release with PDF
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: latest
-          name: "Manual — ${{ steps.date.outputs.date }}"
-          body: |
-            Latest build of the Uchronies & Treasures manual.
-            Generated automatically from the `main` branch.
-          files: UeT_Final_Complete.pdf
-          make_latest: true

@@ -1,0 +1,46 @@
+release_id: a5-step22-technical-candidate
+canonical_edition: 0.11.14-osr-conformance-suite
+profiles:
+  large:
+    manifest: _data/manual-a5-two-column.yml
+    output: dist/Uchronies and Treasures Large.pdf
+    expected_chapters: 20
+    min_pages: 140
+    max_pages: 180
+    require_even_pages: true
+  adventures:
+    manifest: _data/manual-adventures-a5.yml
+    output: dist/Uchronies and Treasures Adventures.pdf
+    expected_chapters: 4
+    min_pages: 40
+    max_pages: 80
+    require_even_pages: true
+  operational:
+    manifest: _data/manual-operational-a5-two-column.yml
+    output: dist/Uchronies and Treasures Operational.pdf
+    expected_chapters: 28
+    min_pages: 240
+    max_pages: 290
+    require_even_pages: true
+  table_pack:
+    manifest: _data/manual-table-pack-a5.yml
+    output: dist/Uchronies and Treasures Table Reference Pack.pdf
+    expected_chapters: 11
+    min_pages: 50
+    max_pages: 90
+    require_even_pages: true
+  companion:
+    manifest: _data/manual-design-companion-a5.yml
+    output: dist/Uchronies and Treasures Design and Hacking Companion.pdf
+    expected_chapters: 6
+    min_pages: 40
+    max_pages: 80
+    require_even_pages: true
+
+  omnibus:
+    manifest: _data/manual-omnibus-a5.yml
+    output: dist/Uchronies and Treasures Omnibus.pdf
+    expected_chapters: 36
+    min_pages: 280
+    max_pages: 380
+    require_even_pages: true
