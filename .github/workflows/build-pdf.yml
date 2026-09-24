@@ -27,7 +27,7 @@ jobs:
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: UeT-Manual
+          name: CHRONOCAIRN-Manual
           path: CHRONOCAIRN_Final_Complete.pdf
           retention-days: 90
 
@@ -46,7 +46,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          name: "Manual — ${{ steps.date.outputs.date }}"
+          name: "CHRONOCAIRN — ${{ steps.date.outputs.date }}"
           body: |
             Latest build of the CHRONOCAIRN manual.
             Generated automatically from the `main` branch.

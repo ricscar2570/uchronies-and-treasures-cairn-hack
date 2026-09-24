@@ -6,10 +6,11 @@ permalink: /
 ---
 
 # CHRONOCAIRN
+{: .no_toc }
 
 **Time-Crime Horror Roleplaying**
+
 Riccardo Scaringi
-{: .no_toc }
 
 **A Cairn hack of temporal heists and financial desperation.**
 
