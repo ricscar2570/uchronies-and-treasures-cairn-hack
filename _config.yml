@@ -1,5 +1,6 @@
-title: "Uchronies & Treasures"
-description: "A Cairn hack of temporal heists and financial desperation"
+title: "CHRONOCAIRN"
+description: "Time-Crime Horror Roleplaying"
+author: "Riccardo Scaringi"
 permalink: pretty
 remote_theme: pmarsceill/just-the-docs
 color_scheme: dark
@@ -27,7 +28,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p"
 
 aux_links:
   "GitHub":
-    - "https://github.com/riccardosgaringi/uchronies-and-treasures"
+    - "https://github.com/ricscar2570/uchronies-and-treasures-cairn-hack"
   "itch.io":
     - "#"
 

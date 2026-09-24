@@ -17,7 +17,7 @@ Print this page or save the image below. [Download PDF version](#) (coming soon)
   <rect width="595" height="842" fill="#faf6ee"/>
 
   <!-- Header -->
-  <text x="297" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#8B1A1A">UCHRONIES &amp; TREASURES</text>
+  <text x="297" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#8B1A1A">CHRONOCAIRN</text>
   <text x="297" y="52" text-anchor="middle" font-size="10" fill="#6b5d4a" letter-spacing="3">AGENT DOSSIER</text>
   <line x1="40" y1="60" x2="555" y2="60" stroke="#8B1A1A" stroke-width="1.5"/>
 
@@ -175,7 +175,7 @@ Print this page or save the image below. [Download PDF version](#) (coming soon)
 
   <!-- Footer -->
   <line x1="40" y1="770" x2="555" y2="770" stroke="#8B1A1A" stroke-width="0.5"/>
-  <text x="297" y="785" text-anchor="middle" font-size="7" fill="#999">UCHRONIES &amp; TREASURES - A Cairn hack by Riccardo Sgaringi - Based on Cairn by Yochai Gal - CC BY-SA 4.0</text>
+  <text x="297" y="785" text-anchor="middle" font-size="7" fill="#999">CHRONOCAIRN - Time-Crime Horror Roleplaying - by Riccardo Scaringi - Based on Cairn by Yochai Gal - CC BY-SA 4.0</text>
 
   <!-- Weekly Accounting (bottom strip) -->
   <rect x="40" y="795" width="515" height="35" rx="4" fill="none" stroke="#996515" stroke-width="0.5"/>

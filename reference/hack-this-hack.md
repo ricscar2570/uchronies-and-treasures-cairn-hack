@@ -5,11 +5,11 @@ parent: Reference
 nav_order: 4
 ---
 
-# Hack This Hack: Building Your Own Uchronies
+# Hack This Hack: Building Your Own CHRONOCAIRN
 
 > This section separates the mechanics from the setting. Las Vegas 2080 is one implementation of the system. This is the system itself.
 
-## What Makes Uchronies Work
+## What Makes CHRONOCAIRN Work
 
 The game runs on three interlocking pressures:
 
@@ -87,7 +87,7 @@ The following mechanics are setting-agnostic and transfer cleanly to any context
 
 ---
 
-## The Minimum Viable Uchronies
+## The Minimum Viable CHRONOCAIRN
 
 If you want to strip the setting entirely and run a one-shot or con game in a new context, you need:
 

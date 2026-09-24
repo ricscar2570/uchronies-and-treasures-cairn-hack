@@ -1,5 +1,5 @@
 """
-Uchronies & Treasures: Complete KDP Manual
+CHRONOCAIRN: Complete KDP Manual
 A5 two-column, premium layout
 All content from repository, edited and formatted
 """
@@ -247,7 +247,7 @@ class UeTDoc(BaseDocTemplate):
         if show and self._chapter:
             c.setFont("SanI", 6)
             c.drawString(ML, MB-7*mm, self._chapter[:45])
-            c.drawRightString(PW-MR, MB-7*mm, "Uchronies & Treasures")
+            c.drawRightString(PW-MR, MB-7*mm, "CHRONOCAIRN")
         c.restoreState()
 
 
@@ -283,10 +283,11 @@ def make_cover_pdf():
 
     # Titles
     c.setFont("SanB", 21); c.setFillColor(WHITE)
-    c.drawCentredString(PW/2, PH-19*mm_pt, "UCHRONIES")
-    c.drawCentredString(PW/2, PH-27*mm_pt, "& TREASURES")
+    c.drawCentredString(PW/2, PH-19*mm_pt, "CHRONOCAIRN")
+    c.setFont("San", 10)
+    c.drawCentredString(PW/2, PH-27*mm_pt, "Time-Crime Horror Roleplaying")
     c.setFont("SanI", 9.5); c.setFillColor(GOLD)
-    c.drawCentredString(PW/2, PH-40*mm_pt, "A Cairn Hack by Riccardo Scaringi")
+    c.drawCentredString(PW/2, PH-40*mm_pt, "Riccardo Scaringi")
 
     # Rule
     c.setStrokeColor(GOLD); c.setLineWidth(0.4)
@@ -294,7 +295,7 @@ def make_cover_pdf():
 
     # Genre label
     c.setFont("SanB", 7); c.setFillColor(GOLD)
-    c.drawCentredString(PW/2, PH-49*mm_pt, "TEMPORAL NOIR  RPG")
+    c.drawCentredString(PW/2, PH-49*mm_pt, "Powered by Cairn")
 
     # Taglines
     c.setFont("SerI", 8.5); c.setFillColor(WHITE)
@@ -397,7 +398,7 @@ def story():
     # OVERVIEW & PRINCIPLES
     # ════════════════════════════════
     s += [h1("Overview & Principles"), rule(),
-    p("**Uchronies & Treasures** is a tabletop RPG for one Warden and 2-5 players. You are agents of the Temporal Division, a government agency that sends expendable operatives into unstable time zones to recover artifacts, neutralize threats, and maintain the timeline. The pay is terrible. The rent is worse. And Madame Zhou is always ready with an offer you cannot refuse."),
+    p("**CHRONOCAIRN** is a tabletop RPG for one Warden and 2-5 players. You are agents of the Temporal Division, a government agency that sends expendable operatives into unstable time zones to recover artifacts, neutralize threats, and maintain the timeline. The pay is terrible. The rent is worse. And Madame Zhou is always ready with an offer you cannot refuse."),
     sp(1),
     p("The game uses the **Cairn** engine by Yochai Gal. Character creation takes 15 minutes. Combat is fast and deadly. The real danger is not the bullets. It is the debt."),
     sp(2),
@@ -1533,7 +1534,7 @@ def story():
     p("The original UeT had 6 attributes, roll-under to-hit, 10 levels, and a skill list. The problem: all of this competed for cognitive space with the game's original systems (economy, contamination, loyalty/corruption, Quirks, instability). Players spent mental energy on 'do I hit?' instead of 'do I accept Zhou's offer?' Cairn strips the overhead to near-zero. Three attributes. No attack rolls. No levels. This frees the table's attention for the systems that make UeT unique."),
     sp(3),
     h2("Why 3 Tiers Instead of 10 Levels"),
-    p("Tiers strip mechanical progression entirely. The only thing that changes is pay. Advancement in Uchronies & Treasures is purely financial: you get better at paying your bills. You do not get stronger. You get more stable. And stability, in a world designed to destabilize you, is power."),
+    p("Tiers strip mechanical progression entirely. The only thing that changes is pay. Advancement in CHRONOCAIRN is purely financial: you get better at paying your bills. You do not get stronger. You get more stable. And stability, in a world designed to destabilize you, is power."),
     sp(3),
     h2("The Quirk Design Philosophy"),
     p("Each Quirk has a permanent mechanical effect (both benefit and cost), a narrative trigger (what it looks like at the table), and a social consequence (how NPCs react). The benefits are intentional. Prescience gives automatic initiative. Phase shift lets you pass through walls. These are real powers. But each comes with a social cost more significant than the mechanical one. You see how people die. Your hand passes through objects you try to hold. The game does not take away your agency. It makes your agency uncomfortable."),
@@ -1882,7 +1883,7 @@ def story():
     sp(2),
     note("What does NOT need to change: the save system (d20 under attribute), the Cairn combat engine, the Quirk structure, the Loyalty/Corruption dual tracker with intermediate thresholds, the inventory system, the contamination mechanic, the tier progression."),
     sp(3),
-    p("*Based on Cairn by Yochai Gal (cairnrpg.com), used under CC BY-SA 4.0. Uchronies & Treasures is released under CC BY-SA 4.0. Original Italian edition: Ucronie e Tesori, by Riccardo Scaringi, ilgiocointavolo.it.*"),
+    p("*Based on Cairn by Yochai Gal (cairnrpg.com), used under CC BY-SA 4.0. CHRONOCAIRN is released under CC BY-SA 4.0. Original Italian edition by Riccardo Scaringi, ilgiocointavolo.it.*"),
     ]
 
     return s
@@ -1896,7 +1897,7 @@ def main():
 
     import pathlib
     here = pathlib.Path.cwd()
-    outpath = str(here / "UeT_Complete.pdf")
+    outpath = str(here / "CHRONOCAIRN_Complete.pdf")
     doc = UeTDoc(outpath)
 
     # Build TOC correctly
@@ -1919,12 +1920,13 @@ def main():
     main_r  = PdfReader(outpath)
 
     writer = PdfWriter()
+    writer.add_metadata({"/Title": "CHRONOCAIRN", "/Subject": "Time-Crime Horror Roleplaying", "/Author": "Riccardo Scaringi"})
     writer.add_page(cover_r.pages[0])
     for i, pg in enumerate(main_r.pages):
         if i == 0: continue  # skip blank cover placeholder
         writer.add_page(pg)
 
-    final = str(here / "UeT_Final_Complete.pdf")
+    final = str(here / "CHRONOCAIRN_Final_Complete.pdf")
     with open(final, "wb") as f:
         writer.write(f)
 

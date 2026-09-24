@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: UeT-Manual
-          path: UeT_Final_Complete.pdf
+          path: CHRONOCAIRN_Final_Complete.pdf
           retention-days: 90
 
       - name: Get current date
@@ -48,7 +48,7 @@ jobs:
           tag_name: latest
           name: "Manual — ${{ steps.date.outputs.date }}"
           body: |
-            Latest build of the Uchronies & Treasures manual.
+            Latest build of the CHRONOCAIRN manual.
             Generated automatically from the `main` branch.
-          files: UeT_Final_Complete.pdf
+          files: CHRONOCAIRN_Final_Complete.pdf
           make_latest: true

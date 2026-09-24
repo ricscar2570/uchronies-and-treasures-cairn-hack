@@ -19,7 +19,7 @@ WIL damage from contamination doesn't heal normally because the time zones are c
 
 ## Why Combat Should Be Avoided
 
-In the Cairn engine, a Glock 17 does d6 damage. Average starting HP is 3.5. One good roll drops a PC to 0 and triggers critical damage. Two hits kill. This is intentional. Combat in Uchronies & Treasures should feel like combat in a crime thriller, not a fantasy dungeon: terrifying, brief, and something you plan your way around. The game's real challenges are economic and moral, not tactical.
+In the Cairn engine, a Glock 17 does d6 damage. Average starting HP is 3.5. One good roll drops a PC to 0 and triggers critical damage. Two hits kill. This is intentional. Combat in CHRONOCAIRN should feel like combat in a crime thriller, not a fantasy dungeon: terrifying, brief, and something you plan your way around. The game's real challenges are economic and moral, not tactical.
 
 ## The Monte Carlo Validation
 
@@ -31,7 +31,7 @@ The original UeT had 6 attributes, THAC0 (later roll-under), 10 levels, and a sk
 
 ## Why 3 Tiers Instead of 10 Levels
 
-The original 10-level progression gave mechanical bonuses (better saves, more HP, attack improvements). In practice, most campaigns ended at level 3-5. Levels 6-10 existed only theoretically. Cairn tiers (Recruit, Agent, Veteran) strip the mechanical progression entirely. The only thing that changes is pay. This means "advancement" in Uchronies & Treasures is purely financial: you get better at paying your bills. Which is exactly the point. You don't get stronger. You get more stable. And stability, in a world designed to destabilize you, IS power.
+The original 10-level progression gave mechanical bonuses (better saves, more HP, attack improvements). In practice, most campaigns ended at level 3-5. Levels 6-10 existed only theoretically. Cairn tiers (Recruit, Agent, Veteran) strip the mechanical progression entirely. The only thing that changes is pay. This means "advancement" in CHRONOCAIRN is purely financial: you get better at paying your bills. Which is exactly the point. You don't get stronger. You get more stable. And stability, in a world designed to destabilize you, IS power.
 
 ## The Quirk Design Philosophy
 

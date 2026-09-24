@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Contamination / Temporal Quirk subsystem Monte Carlo for Uchronies & Treasures.
+Contamination / Temporal Quirk subsystem Monte Carlo for CHRONOCAIRN.
 
 Validates the relative effect of the accumulation penalty (D2): each Quirk lowers
 the contamination save target by 1. Calibrated so the no-penalty case reproduces

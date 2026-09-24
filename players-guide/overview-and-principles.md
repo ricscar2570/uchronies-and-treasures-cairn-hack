@@ -8,7 +8,7 @@ nav_order: 1
 
 ## Overview & Principles
 
-**Uchronies & Treasures** is a tabletop RPG for one facilitator (the **Warden**) and 2-5 players. You play as agents of the Temporal Division, a government agency that sends expendable operatives into unstable time zones to recover artifacts, neutralize threats, and maintain the timeline. The pay is terrible. The rent is worse. And Madame Zhou is always ready with an offer you can't refuse.
+**CHRONOCAIRN** is a tabletop RPG for one facilitator (the **Warden**) and 2-5 players. You play as agents of the Temporal Division, a government agency that sends expendable operatives into unstable time zones to recover artifacts, neutralize threats, and maintain the timeline. The pay is terrible. The rent is worse. And Madame Zhou is always ready with an offer you can't refuse.
 
 The game uses the **Cairn** engine by Yochai Gal. Character creation takes 15 minutes. Combat is fast and deadly. The real danger isn't the bullets: it's the debt.
 

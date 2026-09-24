@@ -5,10 +5,13 @@ nav_order: 1
 ---
 
 <div style="text-align: center; margin-bottom: 2.5rem;">
-  <img src="{{ '/img/cover.png' | relative_url }}" alt="Uchronies & Treasures cover" style="max-width: 420px; width: 100%; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.7);">
+  <img src="{{ '/img/cover.png' | relative_url }}" alt="CHRONOCAIRN cover" style="max-width: 420px; width: 100%; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.7);">
 </div>
 
-# Uchronies & Treasures
+# CHRONOCAIRN
+
+**Time-Crime Horror Roleplaying**
+Riccardo Scaringi
 
 **A Cairn hack of temporal heists and financial desperation.**
 
@@ -88,7 +91,7 @@ The Division wants them for research. Zhou wants them for profit. The black mark
 
 ## Core Mechanics
 
-*Uchronies & Treasures* uses the **Cairn** engine by Yochai Gal. The system is intentionally lean.
+*CHRONOCAIRN* uses the **Cairn** engine by Yochai Gal. The system is intentionally lean.
 
 Characters have three attributes: **STR** (strength, physical resistance), **DEX** (agility, reflexes, initiative), **WIL** (willpower, social presence, contamination resistance). Each is generated with 3d6.
 
@@ -114,7 +117,7 @@ Character creation takes fifteen minutes. The real character development happens
 
 ## Is This Game For You?
 
-*Uchronies & Treasures* is for groups who want moral tension built into the system, not just the fiction. The economy creates pressure that no amount of clever play can fully eliminate. The contamination system gives every mission a clock that runs whether you notice it or not.
+*CHRONOCAIRN* is for groups who want moral tension built into the system, not just the fiction. The economy creates pressure that no amount of clever play can fully eliminate. The contamination system gives every mission a clock that runs whether you notice it or not.
 
 It is not a game about heroes. It is a game about people who started out trying to do the right thing and are slowly running out of reasons to keep trying.
 

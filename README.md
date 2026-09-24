@@ -5,7 +5,10 @@ nav_order: 1
 permalink: /
 ---
 
-# Uchronies & Treasures
+# CHRONOCAIRN
+
+**Time-Crime Horror Roleplaying**
+Riccardo Scaringi
 {: .no_toc }
 
 **A Cairn hack of temporal heists and financial desperation.**
@@ -18,6 +21,6 @@ You play as agents of the Temporal Division, a government agency in Las Vegas 20
 
 The game uses the [Cairn](https://cairnrpg.com) engine by Yochai Gal. Character creation takes 15 minutes. Combat is fast and deadly. The real danger isn't the bullets: it's the debt.
 
-The full text is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Based on [Cairn](https://cairnrpg.com) by Yochai Gal (CC-BY-SA 4.0) and [Ucronie e Tesori](https://github.com/riccardosgaringi/uchronies-and-treasures) by Riccardo Sgaringi (CC BY 4.0).
+The full text is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Based on [Cairn](https://cairnrpg.com) by Yochai Gal (CC-BY-SA 4.0) and [CHRONOCAIRN](https://github.com/ricscar2570/ucronie-e-tesori) by Riccardo Scaringi (CC BY 4.0).
 
-Design, writing and simulation by Riccardo Sgaringi. Balance validated through Monte Carlo simulation; the method and the before/after numbers are documented openly in the [Monte Carlo Transparency](reference/monte-carlo-transparency.md) appendix.
+Design, writing and simulation by Riccardo Scaringi. Balance validated through Monte Carlo simulation; the method and the before/after numbers are documented openly in the [Monte Carlo Transparency](reference/monte-carlo-transparency.md) appendix.
