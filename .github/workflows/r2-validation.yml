@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: chronocairn-r2-${{ github.ref }}
@@ -22,51 +22,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Apply hash-checked R2 source checkpoint when present
-        id: checkpoint
-        shell: bash
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import base64, hashlib, json, lzma, os
-          root=Path('.').resolve()
-          parts=sorted(Path('maintenance').glob('r2-checkpoint.part*.b64'))
-          if not parts:
-              raise SystemExit(0)
-          if len(parts)!=3:
-              raise SystemExit('Incomplete checkpoint transport')
-          data=lzma.decompress(base64.b64decode(''.join(p.read_text() for p in parts)))
-          if hashlib.sha256(data).hexdigest()!='58930a72cf655a16823f63ff9a98ee0979322f0a9618e21a5232711951b163ea':
-              raise SystemExit('Checkpoint checksum mismatch')
-          checkpoint=json.loads(data)
-          assert checkpoint['format']=='chronocairn-checked-line-delta-v1'
-          pending=[]
-          for entry in checkpoint['files']:
-              path=(root/entry['path']).resolve()
-              if not path.is_relative_to(root) or '.git' in path.relative_to(root).parts:
-                  raise SystemExit('Unsafe checkpoint path')
-              before=path.read_bytes() if path.exists() else b''
-              actual=hashlib.sha256(before).hexdigest() if path.exists() else None
-              if actual!=entry['before']:
-                  raise SystemExit('Source changed; refusing overwrite: '+entry['path'])
-              lines=before.decode('utf-8').splitlines(keepends=True)
-              for start,end,text in reversed(entry['ops']):
-                  if not 0<=start<=end<=len(lines):
-                      raise SystemExit('Invalid checkpoint range')
-                  lines[start:end]=[text]
-              after=''.join(lines).encode('utf-8')
-              if hashlib.sha256(after).hexdigest()!=entry['after']:
-                  raise SystemExit('Result checksum mismatch: '+entry['path'])
-              pending.append((path,after))
-          for path,after in pending:
-              path.parent.mkdir(parents=True,exist_ok=True)
-              path.write_bytes(after)
-          for part in parts:
-              part.unlink()
-          with open(os.environ['GITHUB_OUTPUT'],'a') as output:
-              output.write('applied=true\n')
-          print('Applied and individually verified',len(pending),'source files')
-          PY
       - name: Install checkpoint build dependencies
         run: |
           sudo apt-get update -qq
@@ -83,16 +38,6 @@ jobs:
         run: |
           python scripts/build-pdf.py
           python scripts/check_pdf_r2.py CHRONOCAIRN_Final_Complete.pdf
-      - name: Commit verified source checkpoint on development branch only
-        if: steps.checkpoint.outputs.applied == 'true' && github.ref_name == 'development/r2-contamination-20261006'
-        shell: bash
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -u
-          git add _data docs reports scripts/contamination_rules.py scripts/test_contamination_r2.py scripts/check_pdf_r2.py
-          git commit -m 'R2.1: consolidate contamination, reproduce 240k diagnostics, pass 29 regressions and PDF geometry'
-          git push origin HEAD:${{ github.ref_name }}
       - name: Package verified sources and manual without font binaries
         run: |
           python - <<'PY'
