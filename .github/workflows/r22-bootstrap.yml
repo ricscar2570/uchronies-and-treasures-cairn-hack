@@ -1,0 +1,101 @@
+name: R2.2 Source Checkpoint
+on:
+  push:
+    branches: [development/r22-procedural-20261006]
+    paths: ['maintenance/r22-checkpoint.part*.b64', '.github/workflows/r22-bootstrap.yml']
+permissions:
+  contents: write
+concurrency:
+  group: chronocairn-r22-bootstrap
+  cancel-in-progress: false
+jobs:
+  checkpoint:
+    if: github.ref_name == 'development/r22-procedural-20261006'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Apply independently hash-checked source changes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64, hashlib, json, lzma
+          root=Path('.').resolve()
+          parts=sorted(Path('maintenance').glob('r22-checkpoint.part*.b64'))
+          if len(parts)!=5:
+              raise SystemExit('Incomplete source transport')
+          data=lzma.decompress(base64.b64decode(''.join(p.read_text() for p in parts), validate=True))
+          if hashlib.sha256(data).hexdigest()!='fccba881a6de01d2dea1925e88de7a40f24a6308a4507f6280ad5a0ad5f87773':
+              raise SystemExit('Source transport checksum mismatch')
+          payload=json.loads(data)
+          assert payload['format']=='chronocairn-checked-line-delta-v1'
+          pending=[]
+          for e in payload['files']:
+              p=(root/e['path']).resolve()
+              if not p.is_relative_to(root) or '.git' in p.relative_to(root).parts:
+                  raise SystemExit('Unsafe source path')
+              before=p.read_bytes() if p.exists() else b''
+              actual=hashlib.sha256(before).hexdigest() if p.exists() else None
+              if actual!=e['before']:
+                  raise SystemExit('Source differs from R2.1; refusing overwrite: '+e['path'])
+              lines=before.decode('utf-8').splitlines(keepends=True)
+              for start,end,text in reversed(e['ops']):
+                  if not 0<=start<=end<=len(lines):raise SystemExit('Invalid line range')
+                  lines[start:end]=[text]
+              after=''.join(lines).encode('utf-8')
+              if hashlib.sha256(after).hexdigest()!=e['after']:
+                  raise SystemExit('Result checksum mismatch: '+e['path'])
+              pending.append((p,after))
+          for p,after in pending:
+              p.parent.mkdir(parents=True,exist_ok=True)
+              p.write_bytes(after)
+          for p in parts:p.unlink()
+          print('Individually verified and applied',len(pending),'source files')
+          PY
+      - name: Install pinned dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-liberation
+          python -m pip install -r scripts/requirements.txt
+      - name: Reproduce unchanged 240,000-path diagnostic
+        run: |
+          python scripts/contamination_sim.py --runs 20000 --seed 42026 --output reports/r22-contamination-reproduction.json
+          python -c "import json; from pathlib import Path; assert json.loads(Path('reports/r22-contamination-reproduction.json').read_text()) == json.loads(Path('reports/r2-contamination.json').read_text())"
+      - name: Build all canonical chapters and three fillable sheets
+        run: |
+          python scripts/build-pdf.py
+          python scripts/build_sheets_r22.py
+      - name: Run regression and artifact checks
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m unittest discover -s scripts -p 'test_*.py' -v 2>&1 | tee reports/r22-tests.txt
+          python scripts/check_pdf_r22.py CHRONOCAIRN_Final_Complete.pdf
+      - name: Save verified sources and remove one-use write workflow
+        shell: bash
+        run: |
+          test "$GITHUB_REF_NAME" = development/r22-procedural-20261006
+          git fetch origin "$GITHUB_REF_NAME"
+          test "$(git rev-parse FETCH_HEAD)" = "$GITHUB_SHA"
+          rm .github/workflows/r22-bootstrap.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          git commit -m 'R2.2: consolidate 26 canonical chapters, close P0/P1 audit, pass 78 tests and reproduce 240k paths'
+          git push origin HEAD:"$GITHUB_REF_NAME"
+      - name: Package exact committed revision
+        run: python scripts/package_r22.py --source-commit "$(git rev-parse HEAD)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CHRONOCAIRN-R22-Verified
+          path: |
+            CHRONOCAIRN_R2_2_Verified.zip
+            CHRONOCAIRN_Final_Complete.pdf
+            downloads/CHRONOCAIRN_R2_2_*.pdf
+            reports/r22-tests.txt
+            reports/r22-pdf-check.json
+          retention-days: 90
