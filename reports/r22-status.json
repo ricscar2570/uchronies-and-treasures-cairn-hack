@@ -1,0 +1,25 @@
+{
+  "edition": "R2.2",
+  "state": "PROCEDURAL_CONSOLIDATION",
+  "base_commit": "d4b13099c8b530b0d717396df72c5f41aa9e197b",
+  "p0_implemented": 10,
+  "p1_implemented": 10,
+  "p2_implemented": 9,
+  "p2_deferred": [
+    "global 7-10 percent editorial cut"
+  ],
+  "qualification": [
+    "diagnostic-script copyright grant remains to be clarified by author"
+  ],
+  "tests_passed": 78,
+  "synthetic_contamination_paths_reproduced": 240000,
+  "contamination_json_identical_to_r21": true,
+  "human_playtests_added": 0,
+  "manual_pages": 88,
+  "source_chapters": 26,
+  "outline_entries": 299,
+  "links": 57,
+  "form_fields": 162,
+  "commercial_publication_certified": false,
+  "main_updated": false
+}

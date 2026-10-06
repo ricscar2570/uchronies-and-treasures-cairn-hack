@@ -1,4 +1,6 @@
 ---
+
+> **R2.2 development checkpoint (6 October 2026):** all manual chapters now render from canonical Markdown. See `docs/RESUME.md`, `docs/R22_CHECKPOINT_2026-10-06.md` and `scripts/README.md`. Public-release and human-playtest gates remain open. The development branch is not an automatic replacement for the public latest release.
 layout: default
 title: Home
 nav_order: 1

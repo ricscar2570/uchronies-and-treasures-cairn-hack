@@ -1,0 +1,20 @@
+{
+  "file": "CHRONOCAIRN_Final_Complete.pdf",
+  "pages": 88,
+  "a5": true,
+  "outline_entries": 299,
+  "chapter_bookmarks": 26,
+  "links": 57,
+  "outside_page": [],
+  "blank_body_pages": [
+    2
+  ],
+  "broken_internal_links": [],
+  "replacement_glyphs": [],
+  "forbidden_active_text": [],
+  "missing_anchors": [],
+  "sha256": "e0482c5b226ba5b8c5bd8a63b1902a1c39771d954ad6b2432d93298ce82a0623",
+  "source_hash_mismatches": [],
+  "pass": true,
+  "scope": "Page bounds, declared text anchors, imported navigation and all 26 source hashes. Not proof of complete semantic, accessibility or commercial readiness."
+}

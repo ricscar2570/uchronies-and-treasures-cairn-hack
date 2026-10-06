@@ -17,7 +17,7 @@ nav_order: 1
 {:toc}
 </details>
 
-> **Your role as Warden:** You are not a storyteller, a neutral arbiter, or the players' enemy. You are a **facilitator of emergent stories.** Present interesting situations (not solutions). Interpret rules quickly and fairly. React to player choices logically. Create tension through scarcity (time, resources, options). Celebrate successes, make failures meaningful.
+> **Your role as Warden:** You are an **impartial arbiter of consequences**, not a passive observer or the author of predetermined outcomes. You facilitate emergent stories. Present interesting situations (not solutions). Interpret rules quickly and fairly. React to player choices logically. Create tension through scarcity (time, resources, options). Celebrate successes, make failures meaningful.
 
 ## Core Philosophy
 
@@ -47,7 +47,7 @@ When you set up a fight the players are meant to avoid, the failure isn't that t
 
 - **Show the cost up front.** Name the odds and the clock out loud: how many enemies, what cover they hold, what's burning down while bullets fly. "Three veterans, behind a table, and the zone collapses in two hours" is information, not a threat.
 - **Make the enemy reluctant too.** Opponents who would rather deal than die signal that a non-violent exit exists. A mercenary who wants the prize and a clean getaway is an open door; a snarling brute is a wall.
-- **Reward the bloodless win explicitly.** If talking or stealing the objective out from under them earns the same XP as winning the firefight, or more, the table learns fast which path the game is built around. Combat should read as the expensive option, not the default one.
+- **Recognize outcomes, not kill counts.** Successful negotiation or theft can earn the same performance band as armed recovery. A bloodless recovery with civilian safety can qualify as Exceptional when it meets the briefed criteria. Award one band, not an extra bonus; contacts and goodwill follow what the NPCs actually experienced.
 
 This is the same principle as *The Chicago Loop*'s climax: the firefight is the way the scene goes wrong, and the players should be able to see that before they commit.
 
@@ -115,7 +115,7 @@ Red/Black Zone missions. The central conspiracy emerges (who is deliberately des
 
 ### The Formula
 
-A good dilemma has: **two options, both costly, both defensible, with permanent consequences.**
+A good dilemma has **at least two incompatible interests, no cost-free solution, and room for players to invent a third path with its own price**. Assess that path by the situation, not by whether it appears in the preparation.
 
 ### Concrete Examples
 
@@ -139,20 +139,20 @@ When one or more agents begin working for Raines, the Warden takes on an additio
 
 After an agent completes their third mission for Raines, Hayes knows. The Warden does not announce this. Hayes does not call the agent in for a conversation. The change is visible only through mission assignments.
 
-Each Raines mission costs **-1 Loyalty every 2 missions** and **+1 Corruption every 2 missions**. The Loyalty erosion reflects institutional distance from the Division. The Corruption reflects the moral cost of operating in a grey market: selling artifacts to private collectors, providing intelligence to foreign clients, bypassing Division oversight. These are not neutral acts.
+Every second completed Raines job costs **-1 Loyalty**. It causes **no automatic Corruption**: that tracker measures Zhou-network entanglement, not a moral verdict on independent work. Record discoveries and rival obligations in the mission log.
 
-**Starting with the fourth week after the threshold is crossed:**
+**From the next Division assignment after the third completed Raines job:**
 
 - Missions assigned to the agent shift from Orange zones to Red zones by default.
 - Secondary objectives become harder: extraction under time pressure, no civilian casualties in hostile environments, artifact recovery from contested locations.
 - Timing windows tighten: mission windows drop from 72 hours to 48 hours without explanation.
-- Hayes's tone in briefings becomes neutral where it was previously collegial. He still provides all necessary information. He stops making small talk.
+- Hayes's tone in briefings becomes neutral where it was previously collegial. She still provides all necessary information. She stops making small talk.
 
-### What Hayes Knows and What He Does Not Know
+### What Hayes Knows and What She Does Not Know
 
-Hayes knows an agent is working outside the Division. He does not necessarily know it is Raines specifically. He does not act on incomplete information. He reassigns, applies pressure, and waits to see if the agent corrects course.
+Hayes knows an agent is working outside the Division. She does not necessarily know it is Raines specifically. She does not act on incomplete information. She reassigns, applies pressure, and waits to see if the agent corrects course.
 
-**If the agent reaches five missions for Raines**, Hayes files a formal surveillance request. From this point, one additional NPC agent is present on every Division mission (see Corruption 5 rules in the Loyalty and Corruption section). The two systems stack: an agent with high Corruption and five Raines missions has both the surveillance agent and the heightened mission difficulty simultaneously.
+**If the agent reaches five missions for Raines**, Hayes files a formal surveillance request. From this point, one additional NPC agent is present on every Division mission (see Corruption 5 rules in the Loyalty and Corruption section). If Corruption 5 already supplies an escort, use that same escort; do not add a duplicate. The escort and the heightened assignment pressure coexist. These consequences never change the published contamination intervals or produce automatic extra checks.
 
 ### The Raines Dilemma in Practice
 
@@ -174,7 +174,7 @@ This is not a spoiler. It is information the character would reasonably calculat
 
 ### Replacement Rules
 
-New PC starts at Recruit tier. Inherits the team's shared debt proportion. Loyalty starts at 5, Corruption at 0. Arrives with standard equipment. The Warden introduces them: a new recruit assigned to fill the gap, a scavenger who decides to join, or a prisoner freed during a mission.
+New PC starts at Recruit tier with $500 Cash ($1,000 for a Con Artist), $500 personal Debt, no Certificates or Quirks, Loyalty 5 and Corruption 0. They do not inherit the dead PC's personal Debt. Explicit team obligations remain with the team without silently assigning a financial share. Arrives with standard equipment. The Warden introduces them: a new recruit assigned to fill the gap, a scavenger who decides to join, or a prisoner freed during a mission.
 
 ## Improvisation
 

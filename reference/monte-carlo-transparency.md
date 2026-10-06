@@ -27,7 +27,7 @@ The decisive fix was capping contamination damage at half current WIL (rounded u
 
 The original economic-pressure check used a single negative balance and an earlier bonus model. R1 supersedes that accounting model. Its historical result is development context, not evidence for the current rules. The current edition treats Cash, Debt, and Certificates separately and no longer claims that corruption is mathematically inevitable.
 
-## R1 economy subsystem validation
+## R1 economy subsystem diagnostic (historical model)
 
 R1 was checked with **100,000 simulated 15-week ledgers** using fixed seed 42026. This is a pressure test, not a forecast of player behavior. Baseline assumptions: one field mission per week, 65% mission success, one non-cumulative performance band, the published unexpected-expense table, a $200 emergency Cash reserve before voluntary repayments, and Agent promotion after 8 successful missions.
 
@@ -36,7 +36,7 @@ R1 was checked with **100,000 simulated 15-week ledgers** using fixed seed 42026
 | Honest | $622 | $2,568 | 78.8% | 7 |
 | Accept first Zhou offer | $0 | $308 | 78.9% before accepting | 7 |
 
-The result is the intended shape: strong pressure without predetermined corruption. The reproducible model is `scripts/economy_sim.py`.
+The reproducible historical model is `scripts/economy_sim.py`. **These R1 statistics do not validate R2.2 economics:** the model does not implement the clarified Loyalty band improvement and Hero base-pay benefit. R2.2 verifies the ten-week worked ledger separately; a new coupled economy/faction simulation and human observations remain open. Do not present the 78.8% result as a current-edition campaign prediction.
 
 ## R2.1 contamination diagnostic
 
@@ -76,3 +76,15 @@ Using the 6-hour Red schedule, completed d6 treatment and 20,000 trials per conf
 Run `python scripts/contamination_sim.py --runs 20000 --seed 42026` from the repository root. The default output is `reports/r2-contamination.json` plus a Markdown report. It records profile seeds, survivor denominators, cause-specific losses, WIL bands, first-Quirk timing and source hashes. Rules values live in `_data/contamination.json`; the tested resolution procedure is `scripts/contamination_rules.py`.
 
 No tactical choices, combat, Quirk-specific secondary effects, surgery, retirement, missed medicine, special bonuses, or the coupled economy are simulated. Averages cannot validate fear, comprehensibility or agency. The former 3-4-Quirk Red pacing target remains unestablished; the human protocol is not rewritten to make it pass. Human sessions added by this checkpoint: **0**.
+
+## Locate and Reproduce the Evidence
+
+**Edition:** CHRONOCAIRN R2.2, procedural consolidation, 6 October 2026. The unchanged contamination diagnostic comes from the verified **R2.1 source commit** below, run on 6 October 2026 with seed 42026 and 20,000 paths per profile. R2.2 adds no human sessions.
+
+- [Repository](https://github.com/ricscar2570/uchronies-and-treasures-cairn-hack)
+- [Exact R2.1 diagnostic source](https://github.com/ricscar2570/uchronies-and-treasures-cairn-hack/tree/d4b13099c8b530b0d717396df72c5f41aa9e197b)
+- [R2.1 machine-readable results](https://github.com/ricscar2570/uchronies-and-treasures-cairn-hack/blob/d4b13099c8b530b0d717396df72c5f41aa9e197b/reports/r2-contamination.json)
+
+Source commit: `d4b13099c8b530b0d717396df72c5f41aa9e197b`. The game text declares **CC BY-SA 4.0**. The root `LICENSE` instead describes the site's **GPLv3 theme**; a separate, unambiguous grant for the diagnostic scripts has not been identified. Code-licensing clarification remains an authorial publication task. No new blanket license is invented here; third-party dependencies retain their own licenses. The delivery archive includes source hashes and its source-commit record. This records provenance, not commercial or human-play validation.
+
+The Scars clarification was checked against the [Cairn first-edition SRD](https://cairnrpg.com/first-edition/cairn-srd/): damage taken indexes the table. R2.2 explicitly states after-Armor damage and the cap at entry 12 rather than adding a random d12 selection.

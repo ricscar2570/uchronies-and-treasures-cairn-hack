@@ -7,7 +7,7 @@ nav_order: 6
 
 # Example of Play
 
-This scene shows a typical session opening: the weekly accounting, a briefing, a short exploration, and Zhou's offer. The players are **Reyes** (Ex-Military, STR 12, DEX 14, WIL 9, 4 HP) and **Marco** (Con Artist, STR 8, DEX 11, WIL 13, 3 HP). It's Week 4. Both are Recruits.
+This scene shows a typical session opening: the weekly accounting, a briefing, a short exploration, and Zhou's offer. The players are **Reyes** (Ex-Military, STR 12, DEX 14, WIL 9, 4 HP) and **Marco** (Con Artist, STR 8, DEX 11, WIL 13, 3 HP). It's Week 4. Both are Recruits. Reyes starts this week at Loyalty 7, Marco at Loyalty 5; their paid Week 3 mission was resolved at Loyalty 6 and 4 respectively, before its +1 completion award. Neither is unstable.
 
 ---
 
@@ -83,9 +83,9 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 **Warden:** "Marco, DEX save."
 
-**Marco:** *(rolls d20: 15, over DEX 11)* "Failed. I lose my first turn."
+**Marco:** *(rolls d20: 15, over DEX 11)* "Failed. I act after the enemies."
 
-**Warden:** "Reyes, you act first. The scavengers are 30 feet away, partially behind crates."
+**Warden:** "Reyes, you act first. The scavengers are 30 feet away. The crates cover the walkway, but your loading-dock flank gives a clear shot."
 
 **Reyes:** "I shoot the one with the pistol. He's the bigger threat."
 
@@ -93,7 +93,7 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 **Reyes:** *(rolls d6: 5)* "Five."
 
-**Warden:** "Scavenger has no armor. Five damage to his 4 HP. That drops him below zero. One point carries over to STR. He makes a STR save..."  *(rolls d20: 17, over STR 10)* "Failed. Critical damage. He collapses, screaming, clutching his shoulder. The other scavenger sees his partner go down. Morale check."  *(rolls d20 for WIL save: 14, over WIL 8)* "Failed. He drops the crowbar and runs for the loading dock."
+**Warden:** "Scavenger has no armor. Five damage to his 4 HP. That drops him below zero. One point carries over to STR. He makes a STR save..."  *(rolls d20: 17, over his reduced STR of 9 (10 before the hit))* "Failed. Critical damage. He collapses, screaming, clutching his shoulder. The other scavenger sees his partner go down. Morale check."  *(rolls d20 for WIL save: 14, over WIL 8)* "Failed. He drops the crowbar and runs for the loading dock."
 
 **Marco:** "I shout from the catwalk: 'There are Division agents everywhere! You're surrounded!'"
 
@@ -111,9 +111,9 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 ---
 
-**Warden:** "Back at base. Debriefing with Hayes. You hand over the chip. She nods. 'Good work. Kowalski's death is... unfortunate. His family will be notified.' She pauses. 'Standard success. Two hundred gross. Finance keeps thirty percent. Plus the fifty-dollar field allowance. One hundred ninety dollars each.'"
+**Warden:** "Back at base. Debriefing with Hayes. You hand over the chip. She nods. 'Good work. Kowalski's death is... unfortunate. His family will be notified.' She pauses. 'Standard success. Two hundred gross. Finance keeps thirty percent. Plus the fifty-dollar field allowance. Marco earns $190. Reyes uses her once-per-week Trusted improvement: Strong, $300 gross, $210 net, plus $50 allowance, for $260.'"
 
-**Warden:** "The $190 goes into Cash now. Reyes goes from $100 to $290 Cash; Marco from $180 to $370. Debt does not fall automatically. You can keep liquidity or repay principal before next week's interest."
+**Warden:** "The payments go into Cash now, marked as already paid so the weekly close will not add them again. Reyes goes from $100 to $360 Cash; Marco from $180 to $370. Each gains +1 Loyalty for the completed mission: Reyes reaches 8, Marco 6. Debt does not fall automatically. You can keep liquidity or repay principal before next week's interest."
 
 **Marco:** "Finally breathing."
 
@@ -135,7 +135,7 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 **Reyes:** "I'd tell Zhou to go to hell."
 
-**Marco:** "Easy for you to say. Your Loyalty is 7. Mine is 5. And my mother's medicine costs $300 a week on top of everything else."
+**Marco:** "Easy for you to say. Your Loyalty is 8. Mine is 6. And my mother's medicine costs $300 a week on top of everything else."
 
 **Warden:** "Zhou's note is sitting on your kitchen table. The rent bill is next to it. What do you do?"
 

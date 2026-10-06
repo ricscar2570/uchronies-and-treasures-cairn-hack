@@ -1,0 +1,6 @@
+{
+  "_data/contamination.json": "a619b639deffbbf200bf4eef3379663fd6daadb6ab67b1fc8213109ffc6ce953",
+  "scripts/contamination_rules.py": "1edf1433131f98c154f011210401361d43d14d876a3f13a533c36df425efb0b0",
+  "scripts/contamination_sim.py": "c02049c926236dc377c64f33d7e619f9d950cf1338fc4b3ee6cdc9a7cd130764",
+  "scripts/economy_sim.py": "feea867e699208dd092bee1fe6fd53313c4e91ee1a564fe3487d772ebadc5e90"
+}

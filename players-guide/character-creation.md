@@ -58,14 +58,14 @@ In Cairn, backgrounds don't grant mechanical skills. Instead, they inform what y
 | 5 | **Disbarred Medic** | You had a medical license. A mistake took it away. The Division doesn't ask for references. They ask for competence. |
 | 6 | **Con Artist** | You sold air, false promises, worthless investments. Good with words, better with lies. |
 
-### Starting Gear
+### 4. Starting Gear and Inventory
 
 All agents begin with:
 
 **Standard Division issue (5 slots used):**
 
 - Glock 17 pistol (d6 damage, 1 slot)
-- 2 extra magazines (1 slot, bundled)
+- Loaded magazine included with the pistol; 2 spare reloads (1 slot, bundled)
 - Basic first aid kit (3 uses, heals d4 STR loss, 1 slot)
 - Anti-rejection medicine, 4 weeks supply (1 slot)
 - 3 days rations (1 slot)
@@ -87,13 +87,13 @@ All agents begin with:
 | Background | Items |
 |---|---|
 | **Ex-Military** | Combat knife (d6, 1 slot); compass (0 slots); Zippo lighter (0 slots) |
-| **Failed Academic** | 3 rare books (bulky); magnifying lens (0 slots); half-filled notebook (0 slots) |
+| **Failed Academic** | Three rare books, bundled as one bulky item (2 slots); magnifying lens (0 slots); half-filled notebook (0 slots) |
 | **Reformed Criminal** | Lockpick set (1 slot); 1 criminal contact (name and number); burner phone (0 slots) |
 | **Corrupt Cop** | Fake detective badge (0 slots); handcuffs (1 slot); pepper spray (d4, 0 slots) |
 | **Disbarred Medic** | Field med kit (5 uses, d4 STR, 1 slot); morphine, 3 vials (1 slot); surgical scalpel (d6, 0 slots) |
 | **Con Artist** | 3 fake IDs (1 slot); $500 extra cash (0 slots); fake Rolex (looks real, 0 slots) |
 
-### Inventory
+#### Inventory
 
 Characters have **10 inventory slots**: a backpack with six slots, one slot for each hand, and two slots on the body (belt, vest, holster).
 
@@ -103,26 +103,28 @@ A character with a full inventory (all 10 slots occupied) is reduced to **0 HP**
 
 > **Tension by design:** the anti-rejection medicine takes 1 slot. Your gun takes 1 slot. Every piece of loot you take from a time zone is a slot you can't use for something else. Inventory management *is* the game's resource pressure alongside money.
 
-### 4. Trackers
+### 5. Trackers
 
 Record these on your character sheet:
 
 | Tracker | Starting Value | What it means |
 |---|---|---|
 | **Loyalty** | 5 | Neutral toward the Division. Neither hero nor traitor. |
-| **Corruption** | 0 | Clean (on paper). No grey choices made. Yet. |
-| **Certificates** | 0 | Black market currency. 1 certificate = ~$1,000. |
+| **Corruption** | 0 | No established ties to Zhou's network. |
+| **Certificates** | 0 | Zhou-network scrip; $800 Cash per certificate when cashed out. |
+| **Cash** | $500 | Ordinary spendable dollars; separate from Debt. The Con Artist starts with $1,000. |
 | **Debt** | $500 owed | Formal Debt is separate from Cash. It accrues 5% interest at weekly close after repayments. |
 | **Temporal Quirks** | 0 | Permanent mutations from contamination. Limit: 5. At 6, you become an echo. |
-| **Tier** | Recruit | Your standing. Affects pay only. Recruit ($800/wk), Agent ($1,200/wk), Veteran ($1,800/wk). |
+
+**Rank, not a seventh tracker:** start at **Recruit**. Rank sets base pay and narrative standing, not combat ability: Recruit $800/week, Agent $1,200/week, Veteran $1,800/week. Record current/max attributes, inventory and the Exposure Clock separately from the six trackers.
 
 > **Critical:** Anti-rejection medicine ($250/week) is not optional. Missing a dose makes you **Deprived** (cannot recover HP or attributes) and your WIL degrades by 1 per week.
 
-### 5. Traits
+### 6. Traits
 
 Roll on each table (d10) to flesh out your character.
 
-| d10 | Physique | Face | Voice | Vice | Virtue |
+| d10 | Physique | Face | Speech | Vice | Virtue |
 |---|---|---|---|---|---|
 | 1 | Athletic | Bony | Blunt | Gambling | Cautious |
 | 2 | Brawny | Broken nose | Mumbling | Drinking | Courageous |
@@ -135,7 +137,7 @@ Roll on each table (d10) to flesh out your character.
 | 9 | Stocky | Square | Stuttering | Greed | Resourceful |
 | 10 | Towering | Sunken eyes | Whispery | Lust | Stoic |
 
-### 6. Narrative Details
+### 7. Narrative Details
 
 Answer each briefly (1-2 sentences):
 

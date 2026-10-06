@@ -20,9 +20,9 @@ The game uses the **Cairn** engine by Yochai Gal. Character creation takes 15 mi
 
 You're not a hero saving the world. You're a desperate person trying to survive an impossible situation. Every mission offers choices without a "right" answer:
 
-- **Deliver the Oculus fragment to the Division:** you stay loyal but poor. Base pay, plus one loyalty point.
-- **Sell it on the black market:** you get rich (plus 15 certificates, roughly $15,000) but also corrupt (plus 2 corruption), and if you're caught you're done.
-- **Keep it for yourself:** you gain immense power but run enormous risks (everyone hunts you), plus 5 corruption immediately.
+- **Deliver the Oculus fragment to the Division:** earn the briefed mission payout and +1 Loyalty for successful completion.
+- **Sell a relic to Zhou:** gain the agreed Certificates, +1 Corruption for the sale, and face the announced handling hazard. Cashing out later is a separate transaction.
+- **Keep an unregistered fragment:** gain a dangerous resource and the risk of discovery. Keeping it alone adds no Zhou-network Corruption; an actual deal with Zhou does.
 
 **The game doesn't judge. It records.** The loyalty and corruption system tracks your choices, but doesn't tell you which is "better." They're all valid. They're all costly. After 10 sessions, you'll look at your character sheet and see who you've become.
 
@@ -59,17 +59,17 @@ The game has six trackers per character and a weekly accounting rhythm. This is 
 
 **The game rewards decisions under pressure, not system mastery. But the system is worth knowing.**
 
-#### 5. The Curiosity Machine
+#### 5. Who Have You Become?
 
-Five questions every player should be asking:
+Five questions to ask at the end of a session:
 
-1. "I made a decision that had real weight. Not just rolling dice."
-2. "Every decision had real consequences."
-3. "I did things I didn't think I'd do. And I justified them."
-4. "I chose survival over principles. Would I do it again?"
-5. "What happens next? How far can I push before I break?"
+- Which decision carried the most weight?
+- What consequence changed our situation?
+- What did I justify that I once would have refused?
+- When did I choose survival over principle, and would I do it again?
+- What happens next, and what am I now willing to risk?
 
-**If you achieve this result at the table,** the game works. The rest is details.
+These are prompts for reflection, not a score or a demand for a particular emotional response.
 
 ### Principles for the Warden
 

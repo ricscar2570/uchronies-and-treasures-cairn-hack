@@ -17,7 +17,7 @@ nav_order: 2
 {:toc}
 </details>
 
-## Mission Generator (roll d6 three times)
+## Mission Generator (roll d6 five times)
 
 ### 1. Mission Type (d6)
 
@@ -53,6 +53,55 @@ nav_order: 2
 | 6 | A sentient echo is guarding the objective |
 
 **Example generated mission:** Recovery (1) + Subway tunnels (6) + Zhou's mercenaries already there (1) = "Recover a class-B Oculus fragment from the collapsed metro station under Fremont Street. Problem: Zhou sent a team 3 hours ago. They're probably already inside."
+
+### 4. Immediate Economic Cost (d6)
+
+| d6 | Visible cost or constraint |
+|---|---|
+| 1 | The usable extraction vehicle costs $100 Cash; a free walking route adds 2 hours of exposure. |
+| 2 | A hired guide asks $150 Cash; an old municipal map is free but omits one clearly marked collapsed passage. |
+| 3 | A civilian needs one week of medicine from the party's stock. Record the actual transfer and any $250 replacement, not a second automatic weekly bill. |
+| 4 | A two-day delay interrupts a medical treatment that requires uninterrupted rest. The ordinary weekly ledger still closes only once. |
+| 5 | The fragment occupies 2 inventory slots in its shielding case. More loot needs a carrier or a second journey. |
+| 6 | A secure data transfer costs $200 Cash. A free public channel exposes the agents' names to the named recipient and to whoever controls that channel. |
+
+### 5. Incompatible Interests (d6)
+
+| d6 | Two interests and an opening for another approach |
+|---|---|
+| 1 | Division needs the generator; a shelter needs its power. A repairable backup is visible but takes 3 turns to test. |
+| 2 | Hayes wants a witness in custody; the witness demands anonymity. A lawyer will review a limited statement by radio. |
+| 3 | A collector wants intact archives; refugees want incriminating names destroyed. Copies, redaction and chain of custody have different buyers and costs. |
+| 4 | An echo guards its former family; evacuation crosses its patrol. The family knows a name that might open communication. |
+| 5 | Zhou offers immediate payment for the only medicine crate; a public clinic needs it by dawn. A lawful emergency purchase requires proof of delivery. |
+| 6 | An order asks the team to deny a disaster; residents hold photographs. Disclosure, a qualified report and refusal each leave different evidence. |
+
+**Complete the brief before play.** Set the zone and entry time, realistic route duration, performance-band criteria, who pays which costs, one visible retreat and what changes if nobody intervenes. Roll costs and interests as prompts; make impossible combinations coherent before presenting them. Do not charge generated costs twice through the weekly table. A mission band pays once, regardless of how many objectives the prompt names.
+
+**Worked combination:** recover a fragment from the metro, competing with Anya; vehicle cost $100 versus two extra hours on foot; the shelter relies on the fragment's generator. Brief a Strong recovery band ($260 including allowance), upgraded to Exceptional ($400) if the shelter remains powered. The technicians can attempt a backup repair; Zhou offers a separate $1,500 Cash purchase, +1 Corruption with the usual relic-authentication hazard. These payments are mutually exclusive for the same fragment. An eligible Loyalty improvement modifies the Division band only.
+
+### Independent Pressure Valve: Emergency Clinic Contract
+
+A clinic outside both factions offers **$600 Cash on delivery** of a legally purchased medicine crate. Round trip: 4 hours in Yellow; from a fresh clock, no periodic check is due unless delayed. The driver insists on delivery before dawn; the clinic cannot advance the money. Taking an overlapping Division assignment is impossible, so refusing that assignment uses Mission Absence. The crate is sealed, takes 2 slots, and belongs to the clinic: selling or using it leaves a documented breach. No automatic Corruption, no hidden Zhou ownership. This is a scarce job with a real client and deadline, not an unlimited weekly income button.
+
+## Causal Distortions (d12)
+
+**Procedure:** use at most one during preparation when temporal causality matters. Record the contradiction, an observable clue, the condition that can resolve it, and who remembers each version. Announce what the PCs can detect before they commit. Alternative history does not silently erase recorded Cash, injuries, decisions or equipment. Apply actual changes only through an explicitly stated effect; use the Exposure Clock for real elapsed exposure even inside a replayed scene. None of these results creates an automatic extra contamination check.
+
+| d12 | Contradiction, clue and possible consequence |
+|---|---|
+| 1 | A casualty report names a PC who is still alive. The pictured wound matches a visible machine. Disabling the machine can falsify the report; nobody must die to make it true. |
+| 2 | A landlord presents next week's signed repayment receipt. Its paper bears the zone's residue. Treat it as disputed evidence, not an automatic subtraction from Debt. |
+| 3 | A future Hayes orders retreat and gives a correct private code. The live channel denies the order. Tracing the code identifies which event would send it. |
+| 4 | A civilian remembers a rescue the team has not performed. Their account reveals a route and a locked door. The team can create, alter or refuse that future. |
+| 5 | The objective is already in a sealed Division vault, but its matching serial number is still in the zone. Comparing material signatures can expose a substituted copy. |
+| 6 | A wounded alternate agent asks to swap places. Both have the same badge but different remembered contacts. Agreeing changes who those contacts recognize, not who controls the player character. |
+| 7 | Payment arrives as a promised transfer dated tomorrow. The sending account is frozen. Until cleared, it is a receivable, not spendable Cash; the payer wants a meeting. |
+| 8 | A corridor contains yesterday's argument. The replay gives away an ambush location. A second traversal costs actual time even if the words repeat. |
+| 9 | A photo shows the agent accepting Zhou's offer. The background includes a room not yet built. It is leverage to investigate, not automatic Corruption or proof that the player already consented. |
+| 10 | A hospital lists two incompatible blood types for one survivor. Both samples are real. Chen can isolate which exposure caused the divergence without deciding that one person is disposable. |
+| 11 | A debt collector carries a contract signed by an alternate PC. The signature is genuine but the witnesses differ. Record a contested claim, not enforceable personal Debt until the table establishes the terms. |
+| 12 | A message warns that breaking the device causes the warning. The transmitter and trigger are visible. Preservation, destruction and controlled testing each leave different evidence; none is the required solution. |
 
 ## NPC Generator (roll d6 per category)
 
@@ -99,6 +148,10 @@ nav_order: 2
 | 4 | Murdered someone and is hiding it |
 | 5 | Is related to a key NPC (Hayes, Zhou, Rodriguez) |
 | 6 | Has no secret (is exactly what they seem, which is suspicious) |
+
+## Quick NPC Names (d6 + d6)
+
+**Male:** 1-Marcus, 2-Jin, 3-Alejandro, 4-Viktor, 5-Tommy, 6-Darnell. **Female:** 1-Elena, 2-Sofia, 3-Maya, 4-Anya, 5-Grace, 6-Yuki. **Surnames:** 1-Chen, 2-Volkov, 3-Martinez, 4-O'Brien, 5-Tanaka, 6-Greene. **Codenames:** 1-Viper, 2-Ghost, 3-Tank, 4-Whisper, 5-Lucky, 6-Double.
 
 ## Temporal Zone Characteristics (d6 each)
 
@@ -161,7 +214,3 @@ Use when you need instant tension.
 | 4 | Unexpected expense back home: $d6 x $100 (landlord, medical, car). |
 | 5 | Zhou's courier finds you in the field. She has an offer. Now. |
 | 6 | You find a dead Division agent. Their badge says they're from next week. |
-
-## Quick NPC Names (d6 + d6)
-
-**Male:** 1-Marcus, 2-Jin, 3-Alejandro, 4-Viktor, 5-Tommy, 6-Darnell. **Female:** 1-Elena, 2-Sofia, 3-Maya, 4-Anya, 5-Grace, 6-Yuki. **Surnames:** 1-Chen, 2-Volkov, 3-Martinez, 4-O'Brien, 5-Tanaka, 6-Greene. **Codenames:** 1-Viper, 2-Ghost, 3-Tank, 4-Whisper, 5-Lucky, 6-Double.

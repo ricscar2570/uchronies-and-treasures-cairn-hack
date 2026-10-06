@@ -1,10 +1,13 @@
 # Resume CHRONOCAIRN
 
-Read `docs/R2_CHECKPOINT_2026-10-06.md` first.
+Read `docs/R22_CHECKPOINT_2026-10-06.md` and `docs/R22_CORRECTION_MATRIX.md` first.
 
-- Base: R1 `32dd003b70a403d19de121f8156bffe009bd38d8`.
-- Current work: R2.1 technical corrections; 29 regression checks, 240,000 synthetic paths, local 67-page PDF.
-- Human evidence added: 0. Human pacing/publication gates remain open.
-- Next: R3 cross-format/procedural audit of the remaining embedded PDF chapters.
-- Do not recalibrate to a historical target percentage. Do not equate cycles with sessions or weeks.
-- The eight-hour Green rest reset and fractional exposure carryover are explicit R2.1 design decisions requiring table usability testing.
+- Base R2.1: `d4b13099c8b530b0d717396df72c5f41aa9e197b`.
+- R2.2: procedural consolidation implemented; 10 P0 + 10 P1, 9 P2 with code-license qualification; global editorial cut deferred.
+- 78 local regression tests pass. 240,000 contamination paths reproduce R2.1 exactly; no recalibration.
+- All 26 manual chapters use canonical Markdown, not embedded duplicates. PDF: 88 A5 pages; 299 bookmarks; three separate fillable A4 aids, 162 fields.
+- Human sessions added: 0. No final commercial, typography or human-pacing validation claimed.
+- Old `economy_sim.py` does not model R2.2 Loyalty benefits. Do not present its historical percentages as current validation.
+- Next R3.1: residual Quirk/medical/institutional interactions, authorial script licensing, human observations, then a coupled economy/faction/calendar model with declared assumptions.
+- Keep the development branch separate from `main` and the public latest PDF release until an explicit publication decision.
+- Exact delivered source commit is in `SOURCE_COMMIT.txt` in the verified archive. GitHub's actual workflow result is the authority for remote verification.

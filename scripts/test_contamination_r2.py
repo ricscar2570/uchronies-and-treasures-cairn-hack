@@ -172,9 +172,15 @@ class EvidenceTests(unittest.TestCase):
     def test_web_and_pdf_source_invariants(self):
         root=Path(__file__).resolve().parents[1]
         build=(root/'scripts/build-pdf.py').read_text()
-        self.assertIn('markdown_chapter("game-systems/contamination.md")',build)
-        self.assertIn('markdown_chapter("reference/monte-carlo-transparency.md")',build)
-        self.assertIn('markdown_chapter("adventures/the-first-four-weeks.md")',build)
+        # R2.2 routes all canonical chapters through a manifest, rather than
+        # embedding three literal calls. Check the wiring, not its old spelling.
+        manifest=json.loads((root/'_data/manual-chapters.json').read_text())
+        paths=[entry['path'] for entry in manifest['chapters']]
+        for source in ('game-systems/contamination.md',
+                       'reference/monte-carlo-transparency.md',
+                       'adventures/the-first-four-weeks.md'):
+            self.assertEqual(paths.count(source),1)
+        self.assertIn("markdown_chapter(chapter['path'], chapter['layout'])",build)
         self.assertIn("class CheckedTable(Table):",build)
         banned=['Accumulate 5 Quirks and you become','echo threshold of 5',
                 'On any WIL damage from contamination','WIL minus 4',

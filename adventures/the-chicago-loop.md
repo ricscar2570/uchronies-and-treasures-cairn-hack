@@ -17,9 +17,9 @@ nav_order: 1
 {:toc}
 </details>
 
-> **Overview.** The Chicago Loop is a one-shot adventure for 3-5 players, lasting 3-4 hours. It introduces all core mechanics (combat, exploration, contamination), presents the central loyalty-vs-corruption dilemma, and shows permanent consequences of choices.
+> **Overview.** The Chicago Loop is a one-shot adventure for 3-5 players, lasting 3-4 hours. It offers opportunities for exploration, negotiation, combat and contamination, presents the central loyalty-vs-corruption dilemma, and shows lasting consequences. No fight, failed save or new Quirk is required for the adventure to succeed.
 
-**Structure:** Act 1: The Briefing (20 min). Act 2: The Infiltration (60 min). Act 3: The Climax (45 min). Act 4: The Consequences (30 min).
+**Pacing guide:** Briefing about 20 minutes, infiltration about 60, confrontation about 45 and debrief about 30, plus creation and breaks. These are table-time estimates, not the fictional Exposure Clock. Players may bypass, revisit or leave scenes.
 
 ## Act 1: The Briefing (20 minutes)
 
@@ -44,7 +44,7 @@ nav_order: 1
 - **Mission pay:** the $50 field allowance always applies. Recovering the class-A fragment is an **exceptional success**: $500 gross, $350 after the fixed 30% deduction, for **$400 total**. Civilian evacuation, speed, and avoiding casualties are criteria supporting the exceptional band; they are not additive cash bonuses.
 - **Rules of engagement:** Lethal force only if necessary. Civilians are the priority after the fragment.
 
-**Special equipment provided:** Advanced temporal protection suit (reduces contamination WIL damage by 2 instead of 1), encrypted radio (5 km range), field med kit (3 uses, d4 STR), extra ammo, shielded container for the Oculus fragment.
+**Equipment provided:** Standard temporal suit (reduces contamination WIL damage by 1), encrypted radio (5 km range), field med kit (3 uses, d4 STR), **2 compatible spare reloads** and a shielded fragment container. The suit, kit and spares are the normal starting allocation, not duplicate free bundles. This briefing does not issue heavy suits. PCs who already own heavy protection may use it; d4 contamination then cannot trigger a damage-based Quirk, but WIL loss remains possible. Never remove earned protection to force a mutation.
 
 **The hidden complication (Hayes doesn't say):** Zhou has already sent 3 mercenaries, 2 hours ahead of the Division. Their goal: steal the fragment and vanish before you arrive. Hayes may suspect this. She doesn't warn you. She wants to see how you react.
 
@@ -68,11 +68,11 @@ The lobby superimposes two eras. Half has a 1930s art deco reception desk, half 
 
 **The dilemma:** The children want to go upstairs to find their parents (probably dead or echoes). Margaret wants immediate evacuation. Thomas is a ghost and can't leave.
 
-**Choices:** Evacuate civilians now (costs 2 turns but humane). Promise to return for them after getting the fragment (fast but risky). Bring them along (slow but safe). Ignore them completely (fast, Division approves, morally terrible).
+**Visible trade-offs:** escort willing civilians to the landing roof now (2 turns); arrange a temporary shelter and return later (less immediate delay, but collapse threatens them); take them upstairs (slower movement and danger shared with the group); or leave them. Ask what the PCs arrange rather than forcing one of these examples. Tell them Thomas cannot cross the zone boundary; he may still reveal a route or choose whom to help. Civilian testimony follows what the PCs actually do.
 
 ### The Stairs
 
-Elevators don't work. Stairs function but every 5 floors there's a "temporal interface," a zone where you physically cross from one era to another. **STR save** or take d6 damage from temporal shock.
+Elevators don't work. Stairs function but every 5 floors there's a "temporal interface," a zone where you physically cross from one era to another. Warn with flickering steps and a visible arc before crossing. A **STR save** avoids **d6 damage to HP, with overflow to STR** from the physical shock; ordinary Armor applies. This is not a contamination check and does not use the half-WIL cap. PCs may seek another route, ground the interface or retreat.
 
 **Random encounters (roll d6 every 2 turns):**
 
@@ -99,7 +99,7 @@ Elevators don't work. Stairs function but every 5 floors there's a "temporal int
 >
 > The woman spots you. 'Shit. Division.' She raises her rifle."
 
-> **Warden, read the room before anyone rolls initiative.** This is the failure state, not the set-piece. Three armed veterans behind cover, in a building two hours from collapse, against PCs who average 3-4 HP. A straight firefight here is how this one-shot ends in a wipe, and the players should be able to feel that before they commit. Telegraph it: have a merc thumb the safety off and say they have no reason to die over this if the agents don't; let the floor lurch and dust rain from the ceiling on the word "collapse"; remind the table on the radio that the clock just dropped from eight hours to two. The intended resolution is a deal or a trick. Combat is what happens when those fail.
+> **Warden: telegraph the situation, not a preferred solution.** Three armed veterans have cover and better weapons. Show the sight lines, nearby exits, unstable floor and the time actually remaining. Anya wants a fragment and a living team, not a gunfight. She may bargain, withdraw, pursue or fight according to what happens. Players may negotiate, steal, attack from a prepared position, evacuate civilians instead, abandon the objective or invent another plan. Do not change opposition or the clock to reward obedience to an outline.
 
 ### Zhou's Mercenaries
 
@@ -109,55 +109,41 @@ Elevators don't work. Stairs function but every 5 floors there's a "temporal int
 
 **Jin "Ghost" Tanaka** - 6 HP, 1 Armor, 8 STR, 16 DEX, 10 WIL, suppressed pistol (d6), knife (d6). Always wins initiative. Will try to flee with the fragment if combat turns bad.
 
-### Player Options
+### Possible Approaches
 
-The fragment is on the table and the building is dying. There are three ways out. Two of them are intended.
+The fragment is on the table. The mercenaries want it, the Division wants it, and the building has a recorded deadline. These examples are not an exhaustive menu.
 
-**Path A: Negotiate (intended).** Anya is pragmatic, not ideological, and she can do the math on the collapse clock as well as the PCs can. A successful **WIL save** opens a deal:
+**Negotiate.** Anya can consider a split fragment, a paid withdrawal, shared extraction or a future introduction to Zhou. Establish what each side actually accepts before calling for a save; a credible deal with no meaningful uncertainty needs none. Use a WIL save only when deception, intimidation or distrust puts something at risk. A split-fragment deal creates +1 Corruption if it makes the PCs partners in Zhou's recovery. Knowingly covering the mercenaries' escape or accepting future Zhou work creates the stated +2 Corruption. Refusing a deal adds none. Cutting the fragment risks the unshielding event below, which must be explained first.
 
-- "50/50 split" (cut the fragment, risky but possible): +1 Corruption, both sides walk with half.
-- "We let you go, we report it was already gone" (they flee, you lie to Hayes): +2 Corruption, -1 Loyalty if discovered.
-- "Work together for Zhou" (future black market access): +2 Corruption.
+**Deception or theft.** A false perimeter report needs believable evidence; impersonating Zhou's backup needs a convincing credential. Describe the guards' attention and the container's position so a coordinated distraction or theft can work. A risky unnoticed theft may need a DEX save. Resolve what the plan exposes, rather than imposing undefined 'hard' or 'very hard' modifiers.
 
-A clean, fast negotiation that gets the PCs out before phase 3 collapse also earns each PC **+50 XP** (resolving the climax without a shot fired is the hard mode, and the game rewards it).
+**Combat.** Apply normal initiative, cover, morale and damage. Retreat, surrender and a changed bargain remain available when plausible. If the PCs recover the objective, judge its condition and their report under the same mission criteria as any other method. If the mercenaries escape with it, the recovery objective is lost; surviving civilians, allies and evidence still matter. Zhou learns only what witnesses or evidence reveal; a vendetta is not automatic punishment for choosing combat.
 
-**Path B: Deception or theft (intended).** Beat them with the fiction instead of bullets:
+**Rewards.** Recovering the intact class-A fragment qualifies as **Exceptional: $400 total mission pay**, once per PC, with +1 Loyalty for successful Division completion. A bloodless recovery does not add another payment or Loyalty point on top of this. A split fragment and substantial useful intelligence qualify as Strong ($260); civilian extraction with useful reconnaissance but no recoverable fragment qualifies as Standard ($190). An abandoned objective with no useful result pays only the $50 field allowance. Apply an eligible Loyalty band improvement once, never beyond Exceptional. Bargained cash from Zhou is separate and must be recorded with the deal's Corruption cost.
 
-- "The Division has surrounded the building" (WIL save, hard).
-- "Zhou sent us too, we're backup" (WIL save, very hard).
-- Palm the fragment while they're distracted (DEX save + coordinated teamwork). On success, the PCs are on the stairs with the prize before the mercs realize the table is empty.
+### The Complication: Unshielding the Fragment
 
-A successful theft or bluff that recovers the fragment without combat earns **+1 Loyalty** and **+50 XP**, and leaves Zhou guessing rather than vengeful.
+Record **zone entry as hour 0**. The zone changes from Orange to Red at hour 4, carrying its two-thirds-filled interval; periodic checks then fall at hours 5 and 8. The initial collapse deadline is hour 8. Tell the players about resonance increasing whenever the fragment is removed from shielding or an attempt is made to cut it.
 
-**Path C: Direct combat (the failure state).** If the deal collapses and the trick falls flat, the guns come out. Difficulty: high. The mercenaries are veterans with cover and better weapons; the collapse clock is still running while PCs bleed. If the PCs somehow win: recover the fragment, +1 Loyalty, but Zhou marks them for a vendetta and the time spent fighting may cost a contamination check or a civilian. If the PCs lose: the mercenaries flee with the fragment, -2 Loyalty, Hayes furious. This is the outcome the scene is built to make the players *avoid*, not aspire to.
+If anyone unshields the fragment, the building shudders and a radio warning gives the new deadline: **the earlier of the existing deadline and two hours from now**. This event occurs once and never grants extra time. Returning the fragment to shielding stops further escalation but does not restore lost time. Merely entering Suite 2701 does not trigger it. Track actions in elapsed time, not by scene number. This event changes the collapse deadline, not the periodic contamination interval, and inflicts no unannounced extra contamination check.
 
-### The Complication: Collapse Accelerates
-
-> "You hear a rumble. The building shakes. Lights flicker violently. The radio crackles: 'Team Alpha, this is base. Sensors show accelerated deterioration. Zone has entered phase 3. Estimated collapse in 2 hours, not 8. Repeat: you have 2 hours to extract. Confirm reception.'"
-
-Now the pressure is real. Fighting costs precious time. Negotiating is faster. What do you prioritize: mission, survival, or wealth?
+A prepared extraction can still succeed before a periodic check. A long negotiation can cost more time than a short fight. Let the actual actions determine the pressure.
 
 ## Act 4: The Consequences (30 minutes)
 
 ### Extraction
 
-Call the helicopter, reach the roof. Final WIL save against contamination (4-6 hours of exposure). Watch the Meridian Hotel implode behind you.
+Call the helicopter and reach the landing roof or another established safe route. Resolve only contamination checks actually reached on the **Exposure Clock**; do not add one because the mission ends. At four hours from a fresh clock there has been no periodic check; at five hours there has been one Red check. If a check falls exactly at the exit time, resolve it before leaving. Characters who remain past the announced collapse face the described structural hazard; do not move the deadline to script an escape or a death.
 
 ### Debriefing with Hayes
 
-**Scenario 1 (mission completed, loyal):** Hayes takes the fragment. "Good work. The fragment is intact." She mentions the civilian casualties. "The bonuses will be in your account tomorrow. You have 48 hours of downtime." Almost a compliment.
+Hayes asks what was recovered, who was evacuated and what happened to the opposing team. Pay the single band established above and award successful-completion Loyalty once. Negotiating does not automatically mean betrayal; lying about a partnership may conceal evidence but cannot erase witnesses. A sound report requires no persuasion roll merely to be accepted.
 
-**Scenario 2 (negotiated with mercenaries):** Hayes examines half a fragment. "Only half. Interesting. Where's the rest?" You must lie (WIL save, hard) or tell a partial truth. If the lie fails: "Whatever deal you made with Zhou ends here. Clear?" No immediate penalty but you're under observation.
-
-**Scenario 3 (mission failed):** Hayes says nothing for 10 seconds. Then: "Get out. Now." Formal hearing tomorrow. Internal affairs investigation. -2 Loyalty. No bonus. Pay suspended 1 week. Next mission is a "test."
+An objective genuinely lost with no useful outcome costs **-2 Loyalty once**, not again at each mention of failure. The field allowance still pays $50. A review or harder future assignment must follow disclosed institutional consequences; this adventure adds no improvised salary suspension or permanent $200 pay cut. Further refusal follows Mission Absence in the economy chapter.
 
 ### What Happens After
 
-**If you kept the fragment for the Division:** Dr. Chen thanks you. Better missions from Hayes. But Zhou knows you refused her mercenaries. You're on her list.
-
-**If you negotiated:** Zhou contacts you within 48 hours. "Impressive pragmatism. Let's talk." Black market access (10% discount). But internal affairs watches you.
-
-**If the mercenaries won:** Zhou's power grows. Division investigations. Your pay is cut $200/week until "redemption." Next mission is a lethal test.
+Chen values any recovered research. Rescued residents remember their treatment. Anya may honor a deal, complain about a betrayal, or seek an opportunity to recover lost property; establish which facts she knows. A Zhou introduction can produce an offer within 48 hours, but its terms must be stated before acceptance. Division scrutiny follows evidence or the published tracker thresholds, not the Warden's approval of the chosen approach.
 
 ### Campaign Hook
 

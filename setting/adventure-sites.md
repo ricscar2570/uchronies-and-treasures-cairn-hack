@@ -93,7 +93,7 @@ Four locations ready to explore. Each has a node map (rooms connected by passage
 
 **D. Briefing Room.** Where Hayes assigns missions. Holographic projector showing zone maps. 12 chairs, usually half empty (agents die or quit faster than they're replaced). The coffee machine hasn't worked since 2078. Nobody fixes it. It's a running joke and a metaphor.
 
-**E. Infirmary.** Dr. Chen's domain. 6 beds, usually 3-4 occupied. Chen treats everyone regardless of faction or status. Healing takes 1 week (3 days at Loyalty 7+). If PCs befriend Chen, he shares information about contamination research. He's also the only person who can tell a PC how many Quirks they can sustain before echo transformation.
+**E. Infirmary.** Dr. Chen's domain. 6 beds, usually 3-4 occupied. Chen treats everyone regardless of faction or status. Healing takes 1 week (3 days at Loyalty 7+). If PCs befriend Chen, he shares information about contamination research. Chen can assess current and maximum WIL, explain whether WIL collapse or the sixth Quirk is the more immediate danger, and identify treatment that can still restore WIL. He does not change the universal five-Quirk limit, predict an exact next mutation, or guarantee survival.
 
 **Dilemma:** Chen asks a PC to volunteer for an experimental anti-contamination treatment. If it works: permanent +1 to WIL saves vs contamination. If it fails (50/50): gain 1 Fatigue permanently. Chen is honest about the odds. He's also desperate.
 

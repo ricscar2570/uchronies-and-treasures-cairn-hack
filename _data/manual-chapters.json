@@ -1,0 +1,109 @@
+{
+  "edition": "R2.2",
+  "chapters": [
+    {
+      "path": "players-guide/overview-and-principles.md",
+      "layout": "TwoCol"
+    },
+    {
+      "path": "players-guide/character-creation.md",
+      "layout": "Full"
+    },
+    {
+      "path": "players-guide/core-rules.md",
+      "layout": "Full"
+    },
+    {
+      "path": "game-systems/economy.md",
+      "layout": "Full"
+    },
+    {
+      "path": "game-systems/loyalty-corruption.md",
+      "layout": "Full"
+    },
+    {
+      "path": "game-systems/contamination.md",
+      "layout": "Full"
+    },
+    {
+      "path": "game-systems/temporal-quirks.md",
+      "layout": "Full"
+    },
+    {
+      "path": "players-guide/exploration-and-time.md",
+      "layout": "Full"
+    },
+    {
+      "path": "players-guide/temporal-relics.md",
+      "layout": "TwoCol"
+    },
+    {
+      "path": "setting/las-vegas-2080.md",
+      "layout": "Full"
+    },
+    {
+      "path": "setting/adventure-sites.md",
+      "layout": "Full"
+    },
+    {
+      "path": "wardens-guide/running-the-game.md",
+      "layout": "TwoCol"
+    },
+    {
+      "path": "wardens-guide/creating-enemies.md",
+      "layout": "Full"
+    },
+    {
+      "path": "wardens-guide/tables-and-generators.md",
+      "layout": "Full"
+    },
+    {
+      "path": "wardens-guide/campaign-management.md",
+      "layout": "TwoCol"
+    },
+    {
+      "path": "wardens-guide/design-notes.md",
+      "layout": "TwoCol"
+    },
+    {
+      "path": "players-guide/example-of-play.md",
+      "layout": "TwoCol"
+    },
+    {
+      "path": "adventures/the-chicago-loop.md",
+      "layout": "TwoCol"
+    },
+    {
+      "path": "adventures/the-first-four-weeks.md",
+      "layout": "Full"
+    },
+    {
+      "path": "reference/character-creation-checklist.md",
+      "layout": "Full"
+    },
+    {
+      "path": "reference/warden-cheat-sheet.md",
+      "layout": "Full"
+    },
+    {
+      "path": "reference/hack-this-hack.md",
+      "layout": "Full"
+    },
+    {
+      "path": "wardens-guide/faq.md",
+      "layout": "TwoCol"
+    },
+    {
+      "path": "reference/rules-interactions.md",
+      "layout": "Full"
+    },
+    {
+      "path": "reference/character-sheet.md",
+      "layout": "Full"
+    },
+    {
+      "path": "reference/monte-carlo-transparency.md",
+      "layout": "Full"
+    }
+  ]
+}

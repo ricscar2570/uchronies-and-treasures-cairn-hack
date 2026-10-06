@@ -14,9 +14,9 @@ nav_order: 3
 
 Each of the first three distinct Quirks lowers the contamination save target by 1. The **maximum penalty is -3**. Effective WIL is current WIL minus min(Quirks, 3). With WIL 11 and four Quirks, save against 8. This penalty does not apply to unrelated WIL saves.
 
-The fourth and fifth Quirks still have their individual effects and reduce your remaining margin before the sixth causes an echo; they do not further lower the contamination save target. Useful Quirk abilities remain useful. Their tactical value is not a mathematical proof that their permanent costs are always greater.
+The fourth and fifth Quirks retain their effects and bring you closer to the sixth, but do not lower the contamination save target further. Useful abilities remain useful; their permanent costs are not mathematically guaranteed to outweigh every tactical benefit.
 
-> **Standard rule, not a dial.** The -3 cap is canonical for R2.1. An uncapped penalty is a house rule and must not be mixed into standard playtest evidence. Five distinct Quirks are survivable; the sixth is not.
+> **Standard rule, not a dial.** The -3 cap remains canonical in R2.2. Uncapped penalties are house rules; keep their playtest evidence separate.
 
 ### The Quirk Table (roll d12)
 
@@ -26,11 +26,11 @@ Only when one contamination hit deals **3 or more final WIL damage after protect
 |---|---|---|
 | 1 | Accelerated Aging | Age 1d10 years instantly |
 | 2 | Memories of Unlived Lives | Paralyzing flashbacks, always lose initiative |
-| 3 | Vision of Future Deaths | See how people die; +1 Armor, all social interactions impaired |
+| 3 | Vision of Future Deaths | See how people die; +1 Armor, risky social saves at disadvantage |
 | 4 | Partial Phase Shift | Body part becomes translucent, passes through walls |
 | 5 | Vocal Echo | Voice overlaps in 3 time streams, verbal stealth impossible |
 | 6 | Inverse Scars | Wounds from your future appear before they happen |
-| 7 | Cursed Prescience | See 10 seconds ahead; always win initiative, can't change outcome |
+| 7 | Cursed Prescience | See 10 seconds ahead; always win initiative, but cannot avoid every foreseen danger |
 | 8 | Delayed Shadow | Shadow moves 3 seconds behind |
 | 9 | Personal Loop | Every 10 min, repeat same 6 involuntary words |
 | 10 | Temporal Fragmentation | Occasionally vanish for 1d6 seconds; +1 Armor |
@@ -60,7 +60,7 @@ You always **lose initiative** (automatically fail DEX save in combat round 1). 
 #### [3] Vision of Future Deaths
 *You see the future dead versions of living people overlaid on their faces.*
 
-**+1 Armor** permanently (you see attacks before they land). **All social interactions are impaired** (people see death in your eyes). Once per session: "I know how you die" - the Warden reveals approximately how an NPC will die.
+**+1 Armor** permanently (you see attacks before they land). **Risky social saves are made with disadvantage** (people see death in your eyes). Once per session: "I know how you die" - the Warden reveals one plausible future danger facing an NPC. It is a warning that can be changed, not a prescribed death.
 
 *At the table: children cry, animals flee, every conversation is a memento mori.*
 
@@ -71,7 +71,7 @@ You always **lose initiative** (automatically fail DEX save in combat round 1). 
 #### [4] Partial Phase Shift
 *One body part (roll d6: 1-2 arm, 3-4 leg, 5 torso, 6 head) becomes translucent and semi-intangible.*
 
-The phased part passes through walls and solid objects (WIL save to control). You cannot hold objects with it. Arm: attacks with that hand are impaired. Head: all social interactions impaired. Torso: add 1 permanent Fatigue.
+The phased part passes through walls and solid objects (WIL save to control). You cannot hold objects with it. Arm: attacks with that hand are impaired. Head: risky social saves at disadvantage. Torso: add 1 permanent Fatigue.
 
 *At the table: visibly mutated, impossible to hide.*
 
@@ -96,9 +96,9 @@ No HP penalty. When hit where a scar matches: STR save, success means half damag
 ---
 
 #### [7] Cursed Prescience
-*You see 10 seconds into the future, constantly. You know what will happen but cannot change it.*
+*You see 10 seconds into the future, constantly. You glimpse approaching danger but cannot guarantee that you will escape it.*
 
-Always win initiative (automatic DEX save success). Never surprised. In combat: describe what the enemy does next round (Warden confirms or denies). Curse: when you fail a critical damage save, describe having seen it coming.
+Always win initiative (automatic DEX save success). Never surprised. In combat: describe what the enemy does next round (Warden confirms or denies). Prescience does not bind a PC's choices or predetermine a die result. Conflicting automatic opening-initiative effects cancel: make the normal DEX save. Curse: when you fail a critical damage save, describe having seen it coming.
 
 *At the table: answer before questions, watch deaths approach helplessly.*
 
@@ -116,7 +116,7 @@ Stealth is impaired when in light. Once per session: leave shadow as decoy, fool
 #### [9] Personal Loop
 *Every 10 minutes, you involuntarily repeat the same 6 words.*
 
-The loop can ruin stealth operations. Benefit: perfect timer (always know when 10 minutes pass). Roll d6 or choose with Warden for the 6 words.
+The loop can ruin stealth operations. Benefit: perfect timer (always know when 10 minutes pass). Choose the six-word phrase with the Warden when you acquire the Quirk.
 
 *At the table: serious conversations interrupted. Some NPCs think the words are prophecies.*
 

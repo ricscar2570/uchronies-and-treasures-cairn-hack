@@ -24,7 +24,7 @@ WIL damage from contamination doesn't heal normally because the time zones are c
 
 ## Why Combat Should Be Avoided
 
-In the Cairn engine, a Glock 17 does d6 damage. Average starting HP is 3.5. One good roll drops a PC to 0 and triggers critical damage. Two hits kill. This is intentional. Combat in CHRONOCAIRN should feel like combat in a crime thriller, not a fantasy dungeon: terrifying, brief, and something you plan your way around. The game's real challenges are economic and moral, not tactical.
+In the Cairn engine, a Glock 17 does d6 damage. Average starting HP is 3.5. A strong roll can exhaust HP and damage STR; critical damage requires failing the save against reduced STR. Exactly 0 HP triggers a Scar instead. Two solid hits can kill an unprepared recruit. This is intentional. Combat in CHRONOCAIRN should feel like combat in a crime thriller, not a fantasy dungeon: terrifying, brief, and something you plan your way around. The game's real challenges are economic and moral, not tactical.
 
 ## The Monte Carlo Validation
 

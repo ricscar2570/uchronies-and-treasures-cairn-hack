@@ -95,6 +95,6 @@ If you want to strip the setting entirely and run a one-shot or con game in a ne
 2. A name and one-line description of the corruptor and what they offer.
 3. A name for the corrosive force and which attribute it damages.
 4. Three Quirks appropriate to the setting (you do not need all 12 for a one-shot).
-5. One moral dilemma prepared in advance (two options, both costly, both defensible).
+5. One dilemma with at least two incompatible interests, visible costs and room for an unforeseen third approach.
 
 Everything else, the save system, the inventory, the combat rules, the tier progression, transfers without modification.

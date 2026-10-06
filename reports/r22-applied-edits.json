@@ -1,0 +1,198 @@
+[
+  [
+    "players-guide/character-creation.md",
+    "### Starting Gear"
+  ],
+  [
+    "players-guide/character-creation.md",
+    "### Inventory"
+  ],
+  [
+    "players-guide/character-creation.md",
+    "### 4. Trackers"
+  ],
+  [
+    "players-guide/character-creation.md",
+    "### 5. Traits"
+  ],
+  [
+    "players-guide/character-creation.md",
+    "### 6. Narrative Details"
+  ],
+  [
+    "players-guide/character-creation.md",
+    "3 rare books (bulky)"
+  ],
+  [
+    "players-guide/character-creation.md",
+    "2 extra magazines (1 slot, bundled)"
+  ],
+  [
+    "players-guide/character-creation.md",
+    "| **Corruption** | 0 | Clean (on paper). No grey choices made. Ye"
+  ],
+  [
+    "players-guide/character-creation.md",
+    "| **Certificates** | 0 | Black market currency. 1 certificate = ~"
+  ],
+  [
+    "players-guide/character-creation.md",
+    "| **Tier** | Recruit | Your standing. Affects pay only. Recruit ("
+  ],
+  [
+    "players-guide/character-creation.md",
+    "| d10 | Physique | Face | Voice | Vice | Virtue |"
+  ],
+  [
+    "players-guide/core-rules.md",
+    "PCs who fail lose their first turn. After the first round, turns "
+  ],
+  [
+    "players-guide/core-rules.md",
+    "subtracts the target's Armor. The remainder is applied"
+  ],
+  [
+    "players-guide/core-rules.md",
+    "(behind cover, restrained, blinded)"
+  ],
+  [
+    "players-guide/core-rules.md",
+    "The target must then make a **STR save**"
+  ],
+  [
+    "players-guide/core-rules.md",
+    "Chen must make a STR save. His STR is 11. He rolls 14."
+  ],
+  [
+    "players-guide/core-rules.md",
+    "The new PC starts at Recruit tier with Loyalty 5 and Corruption 0"
+  ],
+  [
+    "players-guide/core-rules.md",
+    "**Ammunition.**"
+  ],
+  [
+    "players-guide/core-rules.md",
+    "When damage reduces HP to **exactly 0**, the character is marked."
+  ],
+  [
+    "players-guide/core-rules.md",
+    "| d12 | Scar |"
+  ],
+  [
+    "game-systems/loyalty-corruption.md",
+    "Better missions (+$200). Priority Division medics (3 days instead"
+  ],
+  [
+    "game-systems/loyalty-corruption.md",
+    "Pay +50%. Military-grade equipment free."
+  ],
+  [
+    "game-systems/loyalty-corruption.md",
+    "### The Corruption Scale"
+  ],
+  [
+    "game-systems/loyalty-corruption.md",
+    "### Instability"
+  ],
+  [
+    "game-systems/economy.md",
+    "### Mandatory Weekly Expenses"
+  ],
+  [
+    "game-systems/economy.md",
+    "social interactions are impaired from stress and lack of a fixed "
+  ],
+  [
+    "game-systems/economy.md",
+    "| Temporal info market | $200-600 first sale/wk | WIL save | Expo"
+  ],
+  [
+    "game-systems/economy.md",
+    "| Gambling | -$200 to +$400 | Medium | +1 after 3 wins |"
+  ],
+  [
+    "game-systems/economy.md",
+    "| Drug courier | $300-600/run | High | +1 |"
+  ],
+  [
+    "game-systems/economy.md",
+    "Exposure +1 per sale; at 6 the next buyer is a Zhou front, at 10 "
+  ],
+  [
+    "game-systems/economy.md",
+    "spend at least **8 weeks** as a Recruit"
+  ],
+  [
+    "game-systems/economy.md",
+    "Tiers affect pay and narrative standing, not combat power."
+  ],
+  [
+    "players-guide/temporal-relics.md",
+    "Selling to her costs +1 Corruption and +1 Exposure; converting th"
+  ],
+  [
+    "wardens-guide/creating-enemies.md",
+    "**The hidden cost.** Every mission completed for Raines costs -1 "
+  ],
+  [
+    "wardens-guide/running-the-game.md",
+    "You are not a storyteller, a neutral arbiter, or the players' ene"
+  ],
+  [
+    "wardens-guide/running-the-game.md",
+    "- **Reward the bloodless win explicitly.** If talking or stealing"
+  ],
+  [
+    "wardens-guide/running-the-game.md",
+    "A good dilemma has: **two options, both costly, both defensible, "
+  ],
+  [
+    "wardens-guide/running-the-game.md",
+    "Each Raines mission costs **-1 Loyalty every 2 missions** and **+"
+  ],
+  [
+    "wardens-guide/running-the-game.md",
+    "New PC starts at Recruit tier. Inherits the team's shared debt pr"
+  ],
+  [
+    "setting/adventure-sites.md",
+    "He's also the only person who can tell a PC how many Quirks they "
+  ],
+  [
+    "wardens-guide/design-notes.md",
+    "One good roll drops a PC to 0 and triggers critical damage. Two h"
+  ],
+  [
+    "reference/hack-this-hack.md",
+    "One moral dilemma prepared in advance (two options, both costly, "
+  ],
+  [
+    "reference/warden-cheat-sheet.md",
+    "- **0 HP exact:** Roll on Scars table (total damage taken)"
+  ],
+  [
+    "reference/warden-cheat-sheet.md",
+    "- Corrupt action (Zhou work, black market, betrayal): +1 to +3 Co"
+  ],
+  [
+    "reference/warden-cheat-sheet.md",
+    "- Instability: if |Loyalty - Corruption| is 2 or less, PC is UNST"
+  ],
+  [
+    "reference/warden-cheat-sheet.md",
+    "- After 3 consecutive weeks UNSTABLE: forced narrative event"
+  ],
+  [
+    "reference/warden-cheat-sheet.md",
+    "- **PC death:** New PC starts at Recruit tier. Inherits team's sh"
+  ],
+  [
+    "reference/warden-cheat-sheet.md",
+    "| Instability | \\|Loyalty - Corruption\\| \u2264 2 |"
+  ],
+  [
+    "reference/warden-cheat-sheet.md",
+    "## Between Sessions"
+  ]
+]

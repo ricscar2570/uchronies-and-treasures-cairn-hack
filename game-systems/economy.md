@@ -56,6 +56,8 @@ Every field mission pays a **$50 allowance** plus at most **one** performance ba
 
 Secondary objectives, civilian safety, speed, and recovered intelligence determine the band; they are not additive bonuses. An explicitly briefed artifact bounty of $300-$1,000 may **replace** the performance band. It never stacks.
 
+**Loyalty benefits:** Loyalty 7+ can improve one successful band per accounting week, never beyond Exceptional. Loyalty 9+ increases only base pay by 50%. Use the timing and Instability restrictions in [Loyalty & Corruption](../game-systems/loyalty-corruption.md). A specifically briefed bounty is gross performance pay, subject to the same 30% deduction; its net replaces the band, and the $50 allowance is added once.
+
 ### Mandatory Weekly Expenses
 
 | Expense | Cost/Week | If Skipped |
@@ -101,7 +103,7 @@ Certificates are separate scrip. Earn them from Zhou jobs, artifacts, or intelli
 
 ### What Happens When You Don't Pay
 
-**Rent arrears (3 weeks):** eviction starts; social interactions are impaired from stress and lack of a fixed address.
+**Rent arrears (3 weeks):** eviction starts; risky social saves that depend on a fixed address or proof of housing are made with disadvantage; unrelated interactions are unaffected.
 
 **No food (2 weeks):** Deprived. After 4 weeks: -2 STR permanent.
 
@@ -114,15 +116,15 @@ Certificates are separate scrip. Earn them from Zhou jobs, artifacts, or intelli
 | Security guard | $100-200/week | Low | None |
 | Manual labor | $80-150/week | Low | None |
 | Division consulting | $150-250/week | None | None (Loyalty 5+) |
-| Temporal info market | $200-600 first sale/wk | WIL save | Exposure clock |
-| Gambling | -$200 to +$400 | Medium | +1 after 3 wins |
+| Temporal info market | $200-600 first sale/wk | WIL save; log completed sales | None unless a disclosed Zhou deal says otherwise |
+| Gambling at a Zhou-backed table | -$200 to +$400 | Medium | +1 after 3 wins financed by her house credit |
 | Street fighting | $200-500/fight | High | None |
-| Drug courier | $300-600/run | High | +1 |
+| Drug courier for Zhou | $300-600/run | High | +1 |
 | Info sale to Zhou | $500-2,000 | Very high | +2 |
 
 **Division Consulting:** available only in a week with no field mission. At the $200 midpoint, Recruit pay plus consulting reaches $1,000 before unexpected costs: a clean pressure valve, not a guaranteed escape.
 
-**Temporal Information Market:** first sale $200-600. After each sale make a WIL save; failure costs -2 Loyalty. Additional same-week sales pay half. Exposure +1 per sale; at 6 the next buyer is a Zhou front, at 10 Zhou contacts you directly.
+**Temporal Information Market:** first sale $200-600. After each sale make a WIL save; failure costs -2 Loyalty. Additional same-week sales pay half. Log completed information sales in the transaction record: after 6 sales the next buyer is a Zhou front; after 10, Zhou contacts you directly. This is a transaction count, **not temporal Exposure** and not another character tracker. Reveal the Zhou connection before charging any network-specific Corruption cost.
 
 ### Unexpected Weekly Expenses
 
@@ -152,8 +154,8 @@ Refusing does not anger Zhou. She waits.
 
 ### Tier Advancement
 
-**Recruit to Agent:** complete **8 successful missions**, spend at least **8 weeks** as a Recruit, and have **Loyalty 4+**.
+**Recruit to Agent:** complete **8 successful missions**, complete at least **8 full accounting weeks** as a Recruit, and have **Loyalty 4+**.
 
 **Agent to Veteran:** complete a significant narrative milestone.
 
-Tiers affect pay and narrative standing, not combat power. Promotion is a pressure release, not a reset: Debt, Exposure, Corruption, obligations, and Quirks remain.
+Multiple missions in one week advance the mission count, not the eight-week requirement. Promotion takes effect for the next paid week. Tiers affect pay and narrative standing, not combat power. Promotion is a pressure release, not a reset: Debt, Exposure, Corruption, obligations, and Quirks remain.

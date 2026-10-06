@@ -24,9 +24,13 @@ Loyalty and Corruption are two independent trackers, scale 0-10. They are **not*
 | 0-1 | Traitor | Division hunting you. Shoot-on-sight. |
 | 2-3 | Suspect | Constant surveillance. Colleagues avoid you. |
 | 4-6 | Neutral | Standard agent. No special treatment. |
-| 7-8 | Trusted | Better missions (+$200). Priority Division medics (3 days instead of 1 week). |
-| 9-10 | Division Hero | Pay +50%. Military-grade equipment free. |
+| 7-8 | Trusted | Once per week, improve one successful Division performance band by one step (maximum Exceptional). Priority Division medics: 3 days instead of 1 week. |
+| 9-10 | Division Hero | Keep Trusted benefits. Base Division pay +50%; mission allowance and bands unchanged. Mission-issued military equipment is loaned, not a cash award. |
 
+
+**Benefit timing.** Use Loyalty immediately before a mission's rewards are resolved, before adding that mission's Loyalty gain. Trusted benefits change Standard to Strong or Strong to Exceptional; failure, an already Exceptional result and a separately briefed bounty do not improve. Only one eligible mission per agent per accounting week receives the improvement. It is never a separate $200 bonus.
+
+At Loyalty 9-10, multiply **base pay only** by 1.5: a Recruit receives $1,200 before any disciplinary pay cut. Use rank and Loyalty recorded at the start of the paid week; changes take effect next week. Do not multiply allowances, performance pay, bounties or side income. During Instability, the benefit lock below suspends these special benefits, not ordinary base pay or medicine access.
 
 ### The Corruption Scale
 
@@ -47,7 +51,7 @@ Loyalty and Corruption are two independent trackers, scale 0-10. They are **not*
 
 At Corruption 3, Zhou considers the agent a confirmed asset. The dynamic shifts.
 
-**Zhou stops making offers and starts making requests.** The first request is small: surveil a location for one night, carry a sealed package across town, confirm a name. Pay is $300. The framing is professional. But refusal has a cost: Zhou "withholds" $500 in payments from previous transactions for "administrative processing." The money may or may not be returned.
+**Zhou stops making offers and starts making requests.** The first request is small: surveil a location for one night, carry a sealed package across town, confirm a name. Pay is $300. The framing is professional. But refusal has a cost: Zhou "withholds" $500 in payments from previous transactions for "administrative processing." Only unpaid receivables can be withheld: never subtract already-paid Cash or create a negative Cash balance. If less than $500 is pending, withhold only that amount. The money may or may not be returned.
 
 > This is the mechanical moment where the agent realizes the relationship has changed. They are no longer a client. They are a resource.
 
@@ -59,7 +63,7 @@ At Corruption 5, the Division has enough to act on suspicion, not enough to act 
 
 > The Warden should play this ambiguity honestly. Sometimes the second agent is just a second agent. Sometimes they report back. Players should not be able to reliably determine which. The uncertainty is the mechanic.
 
-**This threshold stacks with the Raines threshold.** An agent who has completed five missions for Raines and reaches Corruption 5 has both the surveillance agent and the heightened mission difficulty from Hayes's reassignment. The pressure compounds.
+**Interaction with Raines:** Corruption 5 and the fifth completed Raines job can establish the same surveillance escort; they do not create two escorts. Raines-related reassignment pressure can coexist with that escort.
 
 ### Corruption Threshold: 7
 
@@ -71,16 +75,14 @@ At Corruption 7, Zhou has documentation.
 
 ### Instability
 
-When **|Loyalty - Corruption| is 2 or less**, you enter **INSTABILITY**.
+Instability applies only when **Loyalty >= 3, Corruption >= 3, and |Loyalty - Corruption| <= 2**. It represents active double allegiance. Loyalty 0 / Corruption 0 and Loyalty 2 / Corruption 0 are not unstable.
 
-**Consequences:**
+1. **Faction-specific pressure.** Risky social saves with Division personnel, Zhou's network, or intermediaries who know about the divided allegiance are made with **disadvantage**. Do not roll for an ordinary conversation or a sound agreement that needs no save. Uninformed civilians and unrelated factions are unaffected. This is not the d4 damage rule for impaired attacks.
+2. **Weekly suspicion.** At weekly close, if unstable, roll d20 once: **1-5**, Hayes suspects (WIL save or -2 Loyalty); **6-10**, Zhou doubts (WIL save or her next offered job tests allegiance; refusal remains possible); **11-15**, mark -2 to the next WIL save caused by this weekly suspicion procedure; **16-20**, no new consequence. The marked -2 is used once and does not stack. Do not apply it to the event-table roll, ordinary social saves or contamination. The two suspicion saves are pressure saves, not social interactions; they do not automatically suffer social disadvantage.
+3. **Benefit lock.** While unstable, suspend the Loyalty 7+ band improvement, Loyalty 9+ base-pay increase and special equipment access, and Corruption 8+ preferential provision. Ordinary wages, existing debts and equipment already issued remain. Priority medical care still follows actual Loyalty 7+ and is not suspended by this benefit lock. Check mission benefits at resolution and payroll benefits at the start of the paid week; restored access never creates retroactive pay.
+4. **A crisis, not a forced allegiance.** Count consecutive weekly closes at which the PC is still unstable after suspicion is resolved. At the third, present incompatible demands from both factions, each with stated costs of refusal. Players may satisfy one, bargain, expose the conflict, seek another patron or refuse both. Refusal can cost access, resources or protection; it never lets the Warden select the PC's allegiance or action. Reset the crisis count to 0 after a crisis; another three unstable closes may create a new one.
 
-1. **Social Penalty.** All social interactions are **impaired**.
-2. **Weekly Suspicion.** Each downtime week, roll d20: 1-5 Hayes suspects (WIL save or -2 Loyalty), 6-10 Zhou doubts (WIL save or next mission is a loyalty test), 11-15 tension grows (next check at -2), 16-20 no consequence.
-3. **Benefit Lock.** Cannot receive Loyalty 8+ or Corruption 8+ benefits.
-4. **Forced Resolution.** After 3 consecutive weeks unstable, the Warden triggers a narrative event forcing a choice.
-
-**Escaping instability:** Commit fully (betray one faction openly), wait for events to shift trackers naturally, or accept a forced-choice mission from the Warden.
+**Ending Instability:** when any activation condition ceases to hold, Instability ends; clear the consecutive-week count and unused suspicion penalty. Tracker changes come from actions and recorded consequences, not from declaring a side. A crisis can remain unresolved in the fiction after the mechanical condition ends.
 
 ### The Instability Rule
 

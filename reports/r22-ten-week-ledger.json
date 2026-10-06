@@ -1,0 +1,82 @@
+[
+  {
+    "week": 1,
+    "loyalty_start": 5,
+    "income": 990,
+    "costs": 950,
+    "cash": 540,
+    "debt": 525
+  },
+  {
+    "week": 2,
+    "loyalty_start": 6,
+    "income": 800,
+    "costs": 1000,
+    "cash": 340,
+    "debt": 552
+  },
+  {
+    "week": 3,
+    "loyalty_start": 6,
+    "income": 990,
+    "costs": 1050,
+    "cash": 280,
+    "debt": 580
+  },
+  {
+    "week": 4,
+    "loyalty_start": 7,
+    "income": 800,
+    "costs": 1200,
+    "cash": 0,
+    "debt": 735
+  },
+  {
+    "week": 5,
+    "loyalty_start": 7,
+    "income": 1200,
+    "costs": 1000,
+    "cash": 200,
+    "debt": 772
+  },
+  {
+    "week": 6,
+    "loyalty_start": 8,
+    "income": 800,
+    "costs": 950,
+    "cash": 50,
+    "debt": 811
+  },
+  {
+    "week": 7,
+    "loyalty_start": 8,
+    "income": 1060,
+    "costs": 1100,
+    "cash": 10,
+    "debt": 852
+  },
+  {
+    "week": 8,
+    "loyalty_start": 9,
+    "income": 1600,
+    "costs": 950,
+    "cash": 660,
+    "debt": 895
+  },
+  {
+    "week": 9,
+    "loyalty_start": 10,
+    "income": 1200,
+    "costs": 1000,
+    "cash": 860,
+    "debt": 940
+  },
+  {
+    "week": 10,
+    "loyalty_start": 10,
+    "income": 1460,
+    "costs": 1050,
+    "cash": 1270,
+    "debt": 987
+  }
+]

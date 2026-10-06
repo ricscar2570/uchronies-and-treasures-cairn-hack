@@ -1,0 +1,20 @@
+[
+  {
+    "file": "CHRONOCAIRN_R2_2_Character_Sheet.pdf",
+    "pages": 1,
+    "fields": 43,
+    "sha256": "fbc0c8cf2636218ae11bd425cd9e91cc34996b52cc3429d2fbce9cbd64ec45e4"
+  },
+  {
+    "file": "CHRONOCAIRN_R2_2_Accounting_Sheet.pdf",
+    "pages": 1,
+    "fields": 109,
+    "sha256": "2a2ee65850ba86eb0a8f580e1225f0bc7997ab4dd74d739f2e70bf545b605823"
+  },
+  {
+    "file": "CHRONOCAIRN_R2_2_Warden_Mission_Sheet.pdf",
+    "pages": 1,
+    "fields": 10,
+    "sha256": "5ea9aa13cbaa22b210aba989b003261453719b56a99d8b4f7af96f86a826bbd3"
+  }
+]

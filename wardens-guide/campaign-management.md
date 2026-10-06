@@ -19,6 +19,8 @@ nav_order: 3
 
 ## Narrative Arcs (10-15 Sessions)
 
+These arcs and endings are possible developments, not milestones that must occur. Establish the conspiracy before presenting decisive evidence; do not change its culprit to negate a sound player theory. Use recorded fictional weeks, not session numbers, for wages, healing and faction clocks.
+
 ### Act I: Survival and Discovery (Sessions 1-5)
 
 PCs are fresh recruits. They learn the systems: first missions in Yellow Zones, first paychecks, first deficits, first Zhou contact. The economy tightens slowly. A first Quirk may appear if significant exposure occurs; it is not scheduled. Players discover that honest play requires active Cash/Debt management, and that a bad week can compound quickly.
@@ -33,7 +35,7 @@ Red Zone missions begin. The economy becomes critical. Some PCs may carry Quirks
 
 ### Act III: Consequences and Resolution (Sessions 11-15)
 
-Red/Black Zone missions. The conspiracy emerges: someone is deliberately destabilizing temporal zones. PCs must commit to a faction. Repeated exposure can produce multiple Quirks. Echo transformation is a real threat, not a required ending.
+Red/Black Zone missions. The conspiracy emerges: someone is deliberately destabilizing temporal zones. Faction demands can collide; the PCs may commit, bargain, play both sides or refuse both. Repeated exposure can produce multiple Quirks. Echo transformation is a real threat, not a required ending.
 
 **Warden focus:** Bring all threads together. Every past choice has consequences now. Zhou calls in favors. Hayes demands results. The endgame approaches.
 
@@ -54,6 +56,16 @@ Red/Black Zone missions. The conspiracy emerges: someone is deliberately destabi
 ### The Sentient Echoes (Mysterious Faction)
 
 **Wants:** Unknown. Some seem to be trying to communicate. Some are hostile. Some are... organized? **They emerge** around session 10+ when PCs realize not all echoes are mindless. Something is happening in the deep zones.
+
+### Foreign Buyers and Independent Institutions
+
+Raines's clients are not one unified third superpower. Before a foreign client becomes relevant, choose and record its representative, objective, budget and red line. The following are fictional campaign roles, not assertions about any real government.
+
+- **Public research institute:** wants de-identified contamination data; offers $300 Cash for a complete anonymized dataset, paid once on verification. It refuses named patient records. Hayes disputes the right to export the data; a written research waiver can prevent that conflict.
+- **Private archive consortium:** wants ownership of a dated relic; offers 3 Certificates' equivalent in purchasing value, but pays **$2,400 Cash** through a seven-day escrow. Its contract bars later lending to the Division. It has money, not military extraction teams.
+- **Foreign agency observer:** wants the truth about one Oculus shipment; offers transport and a safe meeting rather than an automatic cash reward. The observer will not enter a hot zone and may end contact if used to target civilians.
+
+These contacts add no automatic Corruption unless they are actually serving Zhou. Unauthorized Division property transfers still create evidence and institutional consequences. Write the terms before acceptance; a buyer is not secretly a Zhou front merely because the PCs found an alternative.
 
 ### How Factions Interact
 

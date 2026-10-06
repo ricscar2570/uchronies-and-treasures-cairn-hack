@@ -29,7 +29,7 @@ nav_order: 1
 
 - **Initiative:** Each PC makes DEX save. Fail = lose first turn. After round 1: PCs then enemies alternating
 - **Attack:** Automatic hit. Roll weapon damage die, subtract target's Armor, apply to HP
-- **0 HP exact:** Roll on Scars table (total damage taken)
+- **0 HP exact from positive HP:** use the single attack's damage after Armor as the Scar result, capped at 12; do not roll d12
 - **Below 0 HP:** Overflow goes to STR. Target makes STR save or suffers critical damage (incapacitated, dies in 1 hour without aid)
 - **STR 0 = death. DEX 0 = paralysis. WIL 0 = echo (if contamination) or catatonia**
 - **Impaired:** d4 damage (behind cover, restrained). **Enhanced:** d12 damage (ambush, helpless target)
@@ -57,16 +57,18 @@ nav_order: 1
 **Loyalty/Corruption:**
 
 - Mission completed for Division: +1 Loyalty
-- Corrupt action (Zhou work, black market, betrayal): +1 to +3 Corruption
-- Instability: if |Loyalty - Corruption| is 2 or less, PC is UNSTABLE
+- Zhou-network deal: use its stated Corruption cost. Independent Raines jobs add none automatically; every second completed job costs -1 Loyalty
+- Instability: both Loyalty and Corruption must be at least 3 and differ by no more than 2
 - UNSTABLE: each downtime week, roll d20 for suspicion event
-- After 3 consecutive weeks UNSTABLE: forced narrative event
+- After 3 consecutive unstable weekly closes: a faction crisis with stated costs; choosing neither remains possible. Social disadvantage applies only to risky saves with involved, informed factions
 
 **Mission pay:** one non-cumulative performance band, 30% administrative deduction, plus the $50 field allowance. Standard success pays $190 total; exceptional success $400. Use the R1 economy table for all other bands.
 
+**Loyalty pay:** 7+ improves one successful band per week; 9+ adds 50% to base pay only. Instability suspends these benefits. A loaded firearm can fire without spare reloads; 1 on the post-firefight die empties it, 2 marks low (a second low empties it), 3-6 leaves its state unchanged. Loading one spare is an action in danger; one spare costs $50.
+
 ## Between Sessions
 
-- **PC death:** New PC starts at Recruit tier. Inherits team's shared debt
+- **PC death:** replacement starts at Recruit with $500 personal Debt and normal starting Cash; no inherited personal Debt
 - **Replacement:** Loyalty 5, Corruption 0, standard equipment
 - **Absence:** If PC refuses missions, escalating consequences (warning, formal reprimand, pay cut, termination)
 
@@ -93,4 +95,4 @@ nav_order: 1
 | Zhou first offer | Debt $700+ |
 | Starting Loyalty | 5 |
 | Starting Corruption | 0 |
-| Instability | \|Loyalty - Corruption\| ≤ 2 |
+| Instability | Both values >= 3; difference <= 2 |

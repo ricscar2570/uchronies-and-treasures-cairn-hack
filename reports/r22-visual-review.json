@@ -1,0 +1,16 @@
+{
+  "edition": "R2.2",
+  "date": "2026-10-06",
+  "renderer": "Poppler pdftoppm",
+  "pages_rendered": 88,
+  "contact_sheets_inspected": 5,
+  "forms_inspected": 3,
+  "manual_body_pt": 8,
+  "layout_fixes": [
+    "one-page linked contents",
+    "wide Adventure Sites tables use full-width frames",
+    "Speech result 10 stays in its table",
+    "isolated terminal text removed by spacing/margin adjustment and local copyedit"
+  ],
+  "scope": "Contact-sheet layout review of every page, focused rule/table inspection, and full-size review of each A4 form. Not a complete native copyedit, PDF/UA assessment, proof-print approval or human playtest."
+}
