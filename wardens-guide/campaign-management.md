@@ -21,7 +21,7 @@ nav_order: 3
 
 ### Act I: Survival and Discovery (Sessions 1-5)
 
-PCs are fresh recruits. They learn the systems: first missions in Yellow Zones, first paychecks, first deficits, first Zhou contact. The economy tightens slowly. The first Quirk appears. Players discover that honest play leads to debt.
+PCs are fresh recruits. They learn the systems: first missions in Yellow Zones, first paychecks, first deficits, first Zhou contact. The economy tightens slowly. The first Quirk appears. Players discover that honest play requires active Cash/Debt management, and that a bad week can compound quickly.
 
 **Warden focus:** Teach the mechanics through play. Show the economic spiral. Introduce Hayes as fair-but-cold, Zhou as friendly-but-dangerous. Don't rush the dilemmas.
 
@@ -77,7 +77,7 @@ These notes become plot hooks. The package Marco carried? It contained plans for
 
 ### Ending A: Loyalty Redeemed
 
-PCs stayed loyal despite the cost. Debt is massive but Hayes promotes them. They uncover the conspiracy (a rogue Division scientist is deliberately creating temporal zones). The Division stabilizes Vegas. The PCs are heroes. But at what cost? Quirks, dead friends, permanent contamination. They won, but they're not the same people who started.
+PCs stayed loyal despite the cost. Debt may still be substantial, but Hayes promotes them and Agent pay finally creates reliable breathing room. They uncover the conspiracy (a rogue Division scientist is deliberately creating temporal zones). The Division stabilizes Vegas. The PCs are heroes. But at what cost? Quirks, dead friends, permanent contamination. They won, but they're not the same people who started.
 
 ### Ending B: The Corruption Kingdom
 

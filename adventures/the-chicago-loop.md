@@ -41,7 +41,7 @@ nav_order: 1
 - **Trapped civilians:** 30-50 people (2080 residents + 1934 temporal ghosts).
 - **Temporal echoes:** Confirmed. At least 5-10 hostile entities.
 - **Support:** None. You're on your own. The helicopter drops you off and returns in 8 hours (or sooner on emergency call).
-- **Mission bonus:** $500 each if completed + $200 per civilian evacuated alive.
+- **Mission pay:** the $50 field allowance always applies. Recovering the class-A fragment is an **exceptional success**: $500 gross, $350 after the fixed 30% deduction, for **$400 total**. Civilian evacuation, speed, and avoiding casualties are criteria supporting the exceptional band; they are not additive cash bonuses.
 - **Rules of engagement:** Lethal force only if necessary. Civilians are the priority after the fragment.
 
 **Special equipment provided:** Advanced temporal protection suit (reduces contamination WIL damage by 2 instead of 1), encrypted radio (5 km range), field med kit (3 uses, d4 STR), extra ammo, shielded container for the Oculus fragment.

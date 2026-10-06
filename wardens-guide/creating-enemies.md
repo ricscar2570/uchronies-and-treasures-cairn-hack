@@ -79,13 +79,14 @@ These are not enemies in the traditional sense. They are recurring figures whose
 
 **What he wants.** Artifacts recovered from temporal zones. Operational intelligence about Division activities. Introductions to other agents who might be willing to work outside the Division structure.
 
-**His offer.** Raines pays 40% more than the Division for completed missions, but offers no guaranteed base pay. If a mission fails, the payment is zero, with no $150 guaranteed floor.
+**His offer.** Raines pays about 40% more than the Division's corresponding **mission payout**, rounded to the nearest $5, but he offers no $50 failure allowance. A Raines job does not erase normal Division salary by itself; if taking it means refusing an assigned Division mission, that refusal counts toward Mission Absence.
 
-| Mission Outcome | Division | Raines |
-|---|---|---|
-| Full success | $500-700 | $800-1,100 |
-| Partial success | $350 | $400 |
-| Failure | $150 guaranteed | $0 |
+| Mission Outcome | Division Mission Pay | Raines |
+|---|---:|---:|
+| Standard success | $190 | $265 |
+| Strong success | $260 | $365 |
+| Exceptional success | $400 | $560 |
+| Failure | $50 | $0 |
 
 **The hidden cost.** Every mission completed for Raines costs -1 Loyalty with the Division every 2 missions (not every single mission, but the erosion is steady and visible). Additionally, working for Raines accumulates **+1 Corruption every 2 missions**: operating outside the Division's oversight, selling artifacts to private buyers, and providing intelligence to foreign clients are morally compromising acts regardless of legality. After three missions for Raines, Hayes knows.
 

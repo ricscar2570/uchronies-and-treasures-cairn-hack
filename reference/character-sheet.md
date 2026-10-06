@@ -180,7 +180,7 @@ Print this page or save the image below. [Download PDF version](#) (coming soon)
   <!-- Weekly Accounting (bottom strip) -->
   <rect x="40" y="795" width="515" height="35" rx="4" fill="none" stroke="#996515" stroke-width="0.5"/>
   <text x="50" y="812" font-size="8" fill="#996515" font-weight="700">WEEKLY: </text>
-  <text x="100" y="812" font-size="7" fill="#6b5d4a">Pay $_____ - Rent $500 - Food $150 - Medicine $250 - Unexpected $_____ = Balance $_____ | New Debt: $_____</text>
+  <text x="100" y="812" font-size="7" fill="#6b5d4a">Cash $_____ | Debt $_____ | Cert _____ | Income $_____ | Costs $_____ | Repay $_____ | 5% -> Debt $_____</text>
 
 </svg>
 
