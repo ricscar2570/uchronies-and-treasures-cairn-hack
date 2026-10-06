@@ -1,0 +1,122 @@
+name: R1B Economy Verification
+
+on:
+  push:
+    branches: ['development/r1-economy-2026-10-06']
+    paths:
+      - '.github/workflows/r1b-verify.yml'
+      - 'maintenance/r1b-bootstrap.part*'
+      - 'scripts/r1*.py'
+      - 'scripts/economy_sim.py'
+      - 'tests/test_r1*.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chronocairn-r1b-development
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Apply checksum-guarded source bootstrap
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, json, lzma
+          from pathlib import Path, PurePosixPath
+          root = Path.cwd()
+          parts = [root / f'maintenance/r1b-bootstrap.part{i}' for i in range(1, 5)]
+          if not any(p.exists() for p in parts):
+              print('Bootstrap already applied; checking existing sources.')
+              raise SystemExit(0)
+          if not all(p.exists() for p in parts):
+              raise SystemExit('Incomplete bootstrap: no files have been written.')
+          compressed = b''.join(p.read_bytes() for p in parts)
+          digest = hashlib.sha256(compressed).hexdigest()
+          if digest != '8e013884637d7861869320db6791a709b338a0ab66a6638563e11c1d2586ad3b':
+              raise SystemExit('Bootstrap checksum mismatch: no files have been written.')
+          payload = json.loads(lzma.decompress(compressed))
+          def target(raw):
+              path = PurePosixPath(raw)
+              if path.is_absolute() or '..' in path.parts:
+                  raise ValueError('Unsafe source path')
+              result = root / path
+              result.resolve().relative_to(root.resolve())
+              return result
+          for item in payload['guards']:
+              p = target(item['path'])
+              if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest() != item['sha256']:
+                  raise SystemExit('Baseline changed: ' + item['path'])
+          pending = []
+          for item in payload['files']:
+              p = target(item['path'])
+              current = hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else None
+              if current != item['before']:
+                  raise SystemExit('File changed: ' + item['path'])
+              content = item['content'].encode('utf-8')
+              if hashlib.sha256(content).hexdigest() != item['after']:
+                  raise SystemExit('Source content checksum mismatch')
+              pending.append((p, content))
+          for p, content in pending:
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_bytes(content)
+          for p in parts:
+              p.unlink()
+          print('Verified and installed', len(pending), 'readable source files.')
+          PY
+      - name: Install reproducible PDF dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-liberation poppler-utils
+          python -m pip install reportlab==4.4.9 pypdf==5.9.0 PyMuPDF==1.26.7 Pillow==12.3.0
+      - name: Reconcile guarded R1 manuscript passages
+        run: python scripts/r1_finalize_sources.py
+      - name: Run matched-path economy study and generate evidence
+        run: |
+          mkdir -p reports/r1b
+          python scripts/economy_sim.py | tee reports/r1b/simulation.log
+          python scripts/r1_report.py
+      - name: Run regression tests
+        run: |
+          python -m unittest discover -s tests -v > reports/r1b/tests.txt 2>&1
+          cat reports/r1b/tests.txt
+      - name: Build and inspect review PDF
+        run: |
+          python scripts/build-pdf.py | tee reports/r1b/build.log
+          python scripts/r1_pdf_check.py | tee reports/r1b/pdf_check.log
+      - name: Preserve verified readable sources on development branch
+        if: github.ref == 'refs/heads/development/r1-economy-2026-10-06'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- README.md R1B_CHECKPOINT.md scripts/*.py scripts/README.md tests/test_r1*.py
+          git add -- adventures/the-first-four-weeks.md game-systems/economy.md game-systems/loyalty-corruption.md
+          git add -- players-guide/example-of-play.md players-guide/overview-and-principles.md
+          git add -- reference/monte-carlo-transparency.md reference/warden-cheat-sheet.md reference/weekly-settlement-r1.md reference/r1-economy-validation.md
+          git add -- wardens-guide/design-notes.md wardens-guide/faq.md wardens-guide/running-the-game.md
+          git add -f -- reports/r1b/*.json reports/r1b/*.csv reports/r1b/tests.txt
+          git add -u -- maintenance/
+          if ! git diff --cached --quiet; then
+            git commit -m 'R1B: verify economy ledger, document Loyalty sensitivity, and rebuild review manual'
+            git push origin HEAD:development/r1-economy-2026-10-06
+          fi
+          git rev-parse HEAD > reports/r1b/VERIFIED_COMMIT.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CHRONOCAIRN-R1B-verified
+          path: |
+            CHRONOCAIRN_Final_Complete.pdf
+            R1B_CHECKPOINT.md
+            reports/r1b/
+          retention-days: 30
+          if-no-files-found: error
