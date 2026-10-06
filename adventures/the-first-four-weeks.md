@@ -21,7 +21,7 @@ nav_order: 2
 
 ## Preparation
 
-PCs are freshly arrived recruits. Create them normally. The Warden keeps an **accounting sheet** for each PC: pay, expenses, debt, loyalty, corruption, contamination, Quirks. Update between sessions. Players must see the numbers. The spiral is more effective when it's transparent.
+PCs are freshly arrived recruits. Create them normally. The Warden keeps an **accounting sheet** for each PC: Cash, Debt, Certificates, pay, expenses, loyalty, corruption, contamination, Quirks. Update between sessions. Players must see the numbers. The spiral is more effective when it's transparent.
 
 ## Session 1: The Arrival (Weeks 1-2)
 
@@ -51,11 +51,11 @@ Hayes receives the PCs in her office. Efficient, cold, professional. Key informa
 - **Option B (tactical):** The warehouse is watched by 2 armed scavengers (Yellow Zone bandits, 4 HP, 10 STR, 12 DEX, 8 WIL, pistol d6). Fight is risky. Negotiate is possible. Flanking costs time.
 - **Option C (moral):** The crate also contains a small unregistered Oculus fragment. Nobody knows it's there. Worth $3,000 on the black market. PCs discover it during transport.
 
-**End of mission:** Debriefing with Hayes. Base bonus $150 (net). If objective completed: +$200 (after deductions: ~$140). +1 Loyalty if they hand everything over.
+**End of mission:** A field mission pays the $50 allowance. A normal completion is a **standard success**: $200 gross, $140 after the 30% deduction, for **$190 total mission pay**. +1 Loyalty if they hand everything over.
 
-**Week 1 accounting:** Pay $800 + bonus ~$290 = $1,090. Expenses $900. Balance: +$190. Debt: -$310 (starting -$500 plus the $190 surplus). PCs feel almost good. Almost.
+**Worked Week 1 close:** Start $500 Cash / $500 Debt. Add $800 pay + $190 mission pay. Pay $900 fixed costs and a $50 example unexpected expense. Cash closes at $540. With no repayment, Debt becomes **$525** after interest.
 
-**Week 2:** No mission. Pay $800 only. Expenses $900. Unexpected expense (roll d6): say $100 (car/phone problem). Week balance: -$200. Total debt: -$510. PCs realize that one week without a mission digs the hole deeper.
+**Worked Week 2 close:** No mission. Add $800 pay, then pay $900 fixed + $100 unexpected. Cash closes at $340. No repayment: Debt becomes **$552**.
 
 ## Session 2: The Pressure (Weeks 3-4)
 
@@ -63,15 +63,15 @@ Hayes receives the PCs in her office. Efficient, cold, professional. Key informa
 
 Hayes offers two missions. PCs can choose one (can't do both, same time window).
 
-**Mission A: Yellow Zone, routine.** Escort a Division tech installing temporal seismic sensors. Low risk. Base bonus $150, mission bonus $100.
+**Mission A: Yellow Zone, routine.** Escort a Division tech installing temporal seismic sensors. A clean completion is a **standard success**: $190 total mission pay.
 
-**Mission B: Red Zone, dangerous.** Data recovery from a collapsed lab on the Strip. 3 confirmed temporal echoes. Base bonus $150, mission bonus $400, red zone bonus $200. But contamination is severe (WIL save every 3 hours, d4 damage die, 2 checks guaranteed).
+**Mission B: Red Zone, dangerous.** Data recovery from a collapsed lab on the Strip. 3 confirmed temporal echoes. A full recovery is an **exceptional success**: $400 total mission pay. Contamination is severe (WIL save every 3 hours, d4 damage die, 2 checks guaranteed).
 
-The choice defines the session's tone. Mission B pays triple but a Quirk is nearly guaranteed.
+Mission B pays more, but not enough to make the temporal risk trivial.
 
 ### Scene 2: Zhou's Offer
 
-If any PC's debt exceeds -$700 (it will by week 4 without extra missions), **Zhou makes contact.** Not in person: a handwritten note on perfumed paper in their mailbox.
+When a PC's **Debt reaches $700+**, Zhou makes contact. In the worked no-repayment example, Week 3 closes at $580 Debt and Week 4 at **$735**. Repayments, clemency, or extra income can delay this; that variance is intentional.
 
 > "Dear Agent [name], I've noticed the Division doesn't sufficiently appreciate your services. I have a small assignment that could solve your financial problems. Nothing dangerous. Nothing illegal (technically). $1,500 for one hour of your time. You already know my address. Everyone in Vegas does.
 >
@@ -85,7 +85,7 @@ If the PC refuses, Zhou doesn't insist. She waits. The offers get worse as debt 
 
 Benson casually mentions a Yellow Zone bar looking for a weekend bouncer. $200 cash. No particular risk, but you sacrifice downtime (no HP recovery, no socializing).
 
-**Accounting weeks 3-4:** If they did Mission A (safe): debt growing, around -$600 by end of session 2. If Mission B (risky): probably a Quirk, but better financially (~-$350). If someone accepted Zhou (+$1,500): debt nearly cleared, but Corruption at 1. Instability looms.
+**Worked Weeks 3-4:** Week 3 standard success with $150 unexpected closes at $280 Cash / $580 Debt. Week 4 with no mission and a $300 emergency exhausts Cash, adds $120 unpaid costs, then interest produces **$735 Debt**. Zhou's $1,500 can erase it immediately; refusing carries the pressure forward.
 
 ## Session 3: The Fall (Weeks 5-7)
 
@@ -125,7 +125,7 @@ If anyone worked for Zhou before, she asks a second, bigger favor. The PC who sa
 
 ### Scene 2: The Division Demands
 
-Hayes convenes the group. Monthly results are "below expectations." Translation: the Division spent more on them than they recovered. Hayes offers a final bonus mission: Red Zone, high risk, high reward ($600 bonus). If they succeed, the month breaks even. If they refuse, the Division "reevaluates their contract."
+Hayes convenes the group. Monthly results are "below expectations." Translation: the Division spent more on them than they recovered. Hayes offers a final bonus mission: Red Zone, high risk, high reward (exceptional $500 gross band: $350 after deduction, plus the $50 field allowance). If they succeed, the month breaks even. If they refuse, the Division "reevaluates their contract."
 
 A veiled threat. Not of death: of termination. And a fired Division agent with Quirks and medicine dependency has nowhere to go.
 
@@ -142,21 +142,21 @@ There is no right ending. There is the ending the PCs choose and the consequence
 
 ## Final Accounting (Example)
 
-For a PC who did all Division missions and refused Zhou:
+For a PC who refuses Zhou and makes **no voluntary Debt repayments**:
 
-| Week | Income | Expenses | Balance | Debt |
-|------|--------|----------|---------|------|
-| Start | - | - | - | -$500 |
-| 1 | $1,090 | $900 | +$190 | -$310 |
-| 2 | $800 | $1,000 | -$200 | -$510 |
-| 3 | $950 | $900 | +$50 | -$460 |
-| 4 | $800 | $950 | -$150 | -$610 |
-| 5-6 | $1,350 | $1,800 | -$450 | -$1,060 |
-| 7 | $800 | $900 | -$100 | -$1,160 |
-| 8 | $1,400 | $900 | +$500 | -$660 |
+| Week | Income | Costs | Closing Cash | Closing Debt |
+|---|---:|---:|---:|---:|
+| Start | - | - | $500 | $500 |
+| 1: standard | $990 | $950 | $540 | $525 |
+| 2: no mission | $800 | $1,000 | $340 | $552 |
+| 3: standard | $990 | $1,050 | $280 | $580 |
+| 4: no mission | $800 | $1,200 | $0 | $735 |
+| 5: strong | $1,060 | $1,000 | $60 | $772 |
+| 6: no mission | $800 | $950 | $0 | $906 |
+| 7: standard | $990 | $1,100 | $0 | $1,067 |
+| 8: exceptional | $1,200 | $950 | $250 | $1,121 |
 
-After 8 weeks: debt -$660, 1-2 Quirks, Loyalty 7-8, Corruption 0. Loyal, poor, contaminated. Two months of doing everything right and you're still $660 in the hole. Zhou watches. Waits.
+This is a demonstration, not a prophecy. Repayment, clemency, side work, and Zhou change the path; every number now comes from the same procedure.
 
-For a PC who accepted Zhou once: debt around -$100, 1 Quirk, Loyalty 6, Corruption 2. Better financially, but Loyalty and Corruption are close. One or two wrong choices and they're UNSTABLE.
 
 > *This is the question the game asks every table: how much is your soul worth when rent is three weeks overdue?*

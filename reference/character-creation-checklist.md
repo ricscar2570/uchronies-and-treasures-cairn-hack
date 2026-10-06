@@ -60,7 +60,7 @@ All agents start with:
 | Loyalty | 5 |
 | Corruption | 0 |
 | Certificates | 0 |
-| Debt | -$500 |
+| Debt | $500 owed |
 | Temporal Quirks | 0/5 |
 | Tier | Recruit ($800/wk) |
 

@@ -112,7 +112,7 @@ Record these on your character sheet:
 | **Loyalty** | 5 | Neutral toward the Division. Neither hero nor traitor. |
 | **Corruption** | 0 | Clean (on paper). No grey choices made. Yet. |
 | **Certificates** | 0 | Black market currency. 1 certificate = ~$1,000. |
-| **Debt** | -$500 | The Division advances training, equipment, housing costs. Welcome to debt. |
+| **Debt** | $500 owed | Formal Debt is separate from Cash. It accrues 5% interest at weekly close after repayments. |
 | **Temporal Quirks** | 0 | Permanent mutations from contamination. Limit: 5. At 6, you become an echo. |
 | **Tier** | Recruit | Your standing. Affects pay only. Recruit ($800/wk), Agent ($1,200/wk), Veteran ($1,800/wk). |
 

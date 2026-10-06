@@ -31,7 +31,7 @@ nav_order: 4
 
 ## Balance
 
-**The economy seems impossible. Is this intentional?** Yes. The $100/week deficit at Recruit tier is the game's engine. Without it, there's no pressure toward corruption. If your players are comfortable financially, you're doing it wrong.
+**The economy seems harsh. Is corruption mandatory?** No. The $100 Recruit gap is the pressure engine, not a script. Standard success can produce a positive week before unexpected costs, clemency can buy time, and Cash can repay Debt. Zhou offers speed: one corrupt job can solve a problem that honest play may take weeks to manage. If every clean character is automatically doomed, or effortlessly comfortable, check the weekly ledger.
 
 **How lethal should combat be?** Very. A pistol does d6 damage. Average starting HP is 3.5. One shot can drop a PC to 0 HP and trigger critical damage. Players should avoid combat. When they can't avoid it, they should stack every advantage.
 

@@ -15,10 +15,10 @@ nav_order: 1
 
 - **Pay:** $800/wk (Recruit), $1,200 (Agent), $1,800 (Veteran)
 - **Mandatory expenses:** $900/wk (rent $500, food $150, medicine $250)
-- **Guaranteed deficit (Recruit):** -$100/week. Eviction at -$1,500 debt
-- **Unexpected expenses:** roll d6 on weekly table (Economy chapter)
-- **Zhou:** if debt is $700 or more, Zhou contacts (thresholds: $700, $1,300, $2,200)
-- **Clemency:** if Loyalty 5+, monthly clemency $300 (Loyalty 7+: $400). If corruption same month: loses clemency and -2 Loyalty
+- **Recruit baseline:** $800 pay vs $900 fixed expenses; -$100 before mission income and unexpected costs
+- **Weekly ledger:** income -> costs -> unpaid costs to Debt -> repayment/clemency -> 5% interest (round up) -> pressure checks
+- **Zhou:** Debt thresholds $700 / $1,300 / $2,200 / $4,000
+- **Clemency:** once per 4 weeks, Loyalty 5+ reduces Debt by $300 (Loyalty 7+: $400); costs -1 Loyalty
 - **Side gig:** if PC has one active, resolve the weekly result
 
 ## During the Mission
@@ -48,7 +48,7 @@ nav_order: 1
 
 **Tier Advancement:**
 
-- Recruit to Agent: 5 successful missions AND Loyalty 4+
+- Recruit to Agent: 8 successful missions, at least 8 weeks as Recruit, AND Loyalty 4+
 - Agent to Veteran: Significant narrative milestone (Warden decides)
 
 **Loyalty/Corruption:**
@@ -84,6 +84,9 @@ nav_order: 1
 | Quirk max | 5 (at 6th = echo) |
 | Recruit pay | $800/wk |
 | Fixed expenses | $900/wk |
+| Starting Cash | $500 |
+| Starting Debt | $500 owed |
+| Debt interest | 5% at weekly close, round up |
 | Zhou first offer | debt $500+ |
 | Starting Loyalty | 5 |
 | Starting Corruption | 0 |

@@ -28,7 +28,7 @@ To move the system to any other setting, redefine these five elements. Everythin
 | **The employer** | The Division / Agent Hayes | Who pays the characters, in what currency, with what hierarchy and what power to punish |
 | **The corruptor** | Madame Zhou / certificates | Who offers the shortcut, what their currency is, what they want in return, at what cost |
 | **The corrosive force** | Temporal exposure / WIL damage | What force degrades the characters over time, which attribute it erodes, how it manifests visibly |
-| **The deficit** | -$100/week at Recruit tier | Which resource is structurally insufficient and why legitimate income cannot cover it |
+| **The deficit** | $100 base-pay gap at Recruit tier | Which resource is structurally tight, what legitimate pressure valves exist, and why the corrupt shortcut is faster or more certain |
 | **The echo** | Temporal echo (hostile NPC) | What a character becomes when corruption or corrosion fully consumes them |
 
 ## What Does NOT Need to Change

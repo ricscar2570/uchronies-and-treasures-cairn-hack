@@ -25,7 +25,7 @@ You are an agent of the Temporal Division, a government agency that sends expend
 
 The pay is $800 a week. The mandatory expenses are $900 a week. The math does not add up. And Madame Zhou is always ready with an offer you cannot refuse.
 
-Every session is a moral dilemma disguised as a dungeon crawl. Staying honest keeps you alive but never ahead; the only way to actually clear the debt runs through Madame Zhou, and her margin has a price. Your characters have an expiration date. Time itself is corroding them.
+Every session is a moral dilemma disguised as a dungeon crawl. Staying honest is possible, but it is slower, less certain, and constantly exposed to new costs. Madame Zhou can solve a financial crisis immediately, and her margin has a price. Your characters have an expiration date. Time itself is corroding them.
 
 ---
 
@@ -35,11 +35,12 @@ Every session is a moral dilemma disguised as a dungeon crawl. Staying honest ke
 
 The deficit is not an accident. It is the engine of the game.
 
-At Recruit tier, after pay and mandatory expenses (rent $500, food $150, anti-rejection medicine $250), a week with no completed mission leaves you $100 in the red. Complete a mission and the bonus narrows the gap to roughly $50, never closes it. Honest work tops out at break-even on your very best week. You start $500 in debt, the debt accrues 5% interest a week, and after ten weeks of this you are well past $1,500 in the hole. Eviction is imminent. Medicine is running out.
+At Recruit tier, base pay is $800 and fixed expenses are $900. A no-mission week starts $100 short before unexpected costs. A standard successful mission pays $190 after the field allowance and fixed administrative deduction, which can put that week in the black before the unexpected-expense roll.
 
-That is when Madame Zhou calls.
+You begin with **$500 Cash and $500 Debt**. They are separate. Keeping Cash protects you from the next emergency; using it to repay Debt slows 5% weekly interest. Strong honest weeks exist, but they are not a guaranteed structural surplus.
 
-The game does not force you to accept. It simply makes the math undeniable.
+That is why Zhou matters. When Debt reaches $700, she can put $1,500 Cash on the table immediately. The game does not make the offer mandatory. It makes the speed of the offer difficult to ignore.
+
 
 ### 2. The Loyalty/Corruption Dual Tracker
 

@@ -13,7 +13,7 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 **Warden:** "Monday morning. Payday. Let's do the books."
 
-**Warden:** *(writing on the whiteboard)* "Reyes: $800 pay. Expenses: rent $500, food $150, medicine $250. That's $900 out, $800 in. Balance: minus $100. Your debt was $420 from last week. Now it's $520. Marco, same math. Your debt was $380. Now it's $480."
+**Warden:** *(writing on the whiteboard)* "We are closing Week 3. Reyes: Cash $110, Debt $690. Add $800 pay and last week's standard mission payout, $190. Pay $900 fixed expenses and a $100 unexpected expense. Cash closes at $100. You keep it, so Debt receives one 5% interest charge and becomes $725. Marco closes with $180 Cash and $714 Debt."
 
 **Marco:** "Every week. Every single week. Can we at least get some overtime?"
 
@@ -21,7 +21,7 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 ---
 
-**Warden:** *(as Hayes)* "Agents. A warehouse in the Yellow Zone, 14 km out. We lost contact with a sensor team yesterday. Objective: find the team, recover their data chip, get out. You have the standard suit. Bonus: $150 base plus $200 if the data comes back intact."
+**Warden:** *(as Hayes)* "Agents. A warehouse in the Yellow Zone, 14 km out. We lost contact with a sensor team yesterday. Objective: find the team, recover their data chip, get out. Field allowance is $50. Recover the chip and this is a standard success: $200 gross, with the usual thirty-percent deduction."
 
 **Reyes:** "Any hostile contacts?"
 
@@ -111,9 +111,9 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 ---
 
-**Warden:** "Back at base. Debriefing with Hayes. You hand over the chip. She nods. 'Good work. Kowalski's death is... unfortunate. His family will be notified.' She pauses. 'Bonus: $150 base plus $200 for the chip. Dominguez confirms your performance. Dismissed.'"
+**Warden:** "Back at base. Debriefing with Hayes. You hand over the chip. She nods. 'Good work. Kowalski's death is... unfortunate. His family will be notified.' She pauses. 'Standard success. Two hundred gross. Finance keeps thirty percent. Plus the fifty-dollar field allowance. One hundred ninety dollars each.'"
 
-**Warden:** "Accounting update. $350 bonus this week. Your deficit was $100. Net gain: $250. Reyes, your debt goes from $520 to $270. Marco, $480 to $230."
+**Warden:** "The $190 goes into Cash now. Reyes goes from $100 to $290 Cash; Marco from $180 to $370. Debt does not fall automatically. You can keep liquidity or repay principal before next week's interest."
 
 **Marco:** "Finally breathing."
 
@@ -125,11 +125,11 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 **Marco:** *(long pause)* "What's my debt again?"
 
-**Warden:** "$230."
+**Warden:** "$714 owed. You also have $370 Cash after today's payout."
 
-**Marco:** "And next week's deficit?"
+**Marco:** "And next week's math?"
 
-**Warden:** "$100. So by next Monday you're at $330 debt. Unless you do a mission."
+**Warden:** "$800 pay against $900 fixed costs, then the unexpected-cost roll and whatever you earn. You can repay Debt now, but that spends your reserve."
 
 **Marco:** *(to Reyes)* "What would you do?"
 

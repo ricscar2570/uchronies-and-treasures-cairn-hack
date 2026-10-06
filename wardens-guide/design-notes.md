@@ -9,9 +9,14 @@ nav_order: 5
 
 > These notes explain the reasoning behind key design decisions. They were originally embedded throughout the Italian edition as designer commentary boxes and have been collected here as an appendix for the Cairn edition.
 
-## Why the Economy Is Unsustainable
+## Why the Economy Creates Pressure
 
-The $100/week deficit at Recruit tier is not a balance error. It is the single most important number in the game. Without it, corruption is a free choice (why not?). With it, corruption is a survival mechanism (I have to). The difference between "I chose to be corrupt" and "the system forced me to choose" is the entire moral weight of the game. The deficit is what makes the dilemma real rather than decorative. We confirmed that the pressure works as intended with simulation, but the specific figures live in the Monte Carlo Transparency appendix rather than here, because they are evidence *for the designer*, not a prophecy about your table. The point of the system is that the choice stays yours. The deficit just makes sure it costs something.
+The $100 gap between Recruit base pay and fixed weekly expenses is the opening pressure, not proof that corruption is inevitable. R1 deliberately separates **Cash** from **Debt**: players can preserve liquidity, repay principal, request clemency, or chase legal income. Those choices matter because Debt still compounds at 5% and unexpected costs keep arriving.
+
+The design target is not "the system forces you to be corrupt." It is: **Zhou can solve in one evening what honest play may take weeks to solve.** The moral pressure comes from the difference in speed, certainty, and strings attached.
+
+Mission performance bonuses are non-cumulative bands so an ordinary success cannot accidentally collect several simultaneous bonuses and erase the economy. Strong play can still produce strong weeks. A clean path must be difficult, not fake.
+
 
 ## Why Contamination Is Permanent
 

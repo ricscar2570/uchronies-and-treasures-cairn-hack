@@ -28,15 +28,16 @@ You're not a hero saving the world. You're a desperate person trying to survive 
 
 #### 2. Economic Pressure
 
-**Corruption is not a moral choice. It's a mathematical necessity.**
+**Corruption is not inevitable. It is the fastest escape from a bad equation.**
 
-The economic system is calibrated to be *unsustainable*. This is not a design flaw: it is the beating heart of the game.
+Recruit pay is $800 against $900 fixed weekly expenses. A standard successful mission pays $190 total, but unexpected costs average about $133 a week and Debt compounds at 5% after repayments.
 
-Base pay: $800 per week. Mandatory expenses: rent $500, food and necessities $150, anti-rejection medicine $250. Total expenses: $900 per week. **Guaranteed deficit: -$100 per week.**
+You start with **$500 Cash and $500 Debt**. They are separate ledgers. Keeping Cash protects you from the next emergency; paying Debt slows the interest clock. Both are rational.
 
-Honest play keeps you breathing but never ahead. With no completed mission you lose $100 a week; complete one and the bonus narrows the gap to about $50, never to zero. You start $500 in debt, the balance accrues 5% interest a week, and after ten weeks of honest work you are well past -$1,500. Eviction is imminent. Medicines run out. You're starving. Madame Zhou offers $5,000 for a "small piece of information" about the Division. What do you do?
+Zhou's advantage is speed. Her first courier job pays $1,500 Cash when an agent with $700+ Debt most wants immediate relief. The game does not force acceptance. It makes acceptance materially reasonable and morally expensive.
 
-**The game gently pushes you toward corruption.** Not by force. With math.
+**The math creates pressure. The players decide what the pressure means.**
+
 
 #### 3. Temporal Contamination
 
@@ -76,7 +77,7 @@ Five questions every player should be asking:
 
 **Danger.** Telegraph serious danger clearly. The more lethal the situation, the more obvious the warning signs should be. Never kill a character without warning.
 
-**The Economy is the Engine.** Track money carefully. The deficit is the game's heartbeat. If players aren't worried about rent, something has gone wrong.
+**The Economy is the Engine.** Track Cash, Debt, and Certificates separately and settle them in the same weekly order.
 
 **NPCs Want Things.** Hayes wants order and results. Zhou wants profit and leverage. Every NPC has goals that may align or conflict with the players. Let them pursue those goals.
 
@@ -88,7 +89,7 @@ Five questions every player should be asking:
 
 **You Are Expendable.** The Division considers you replaceable. Act accordingly. Caution keeps you alive longer than bravery.
 
-**The Math is Real.** Track every dollar. Know your weekly deficit. Plan how you'll cover the gap. The moment you stop tracking money, the game loses its teeth.
+**The Math is Real.** Track every dollar. Know your Cash, your Debt, and the next weekly close.
 
 **Fighting is Expensive.** Bullets, injuries, and downtime all cost money you don't have. Avoid combat when possible. When you must fight, end it fast.
 

@@ -25,13 +25,24 @@ The Italian edition was balanced with **300,000 simulated 15-session campaigns**
 
 The decisive fix was capping contamination damage at half current WIL (rounded up), which turns a runaway spiral into a slow, decelerating decline. The contamination damage die (d4), the suit reduction (1 point), and the zone intensity table all derive from this work.
 
-The economic-pressure check used the same engine: at $800 pay against $900 expenses, the large majority of simulated agents took Zhou's first offer within the first few sessions; at a balanced $1,000 budget, only a minority did. The deficit, not the writing, is what makes corruption feel inevitable. Those exact offer-acceptance figures are evidence for the designer and are deliberately not printed in the player-facing text.
+The original economic-pressure check used a single negative balance and an earlier bonus model. R1 supersedes that accounting model. Its historical result is development context, not evidence for the current rules. The current edition treats Cash, Debt, and Certificates separately and no longer claims that corruption is mathematically inevitable.
+
+## R1 economy subsystem validation
+
+R1 was checked with **100,000 simulated 15-week ledgers** using fixed seed 42026. This is a pressure test, not a forecast of player behavior. Baseline assumptions: one field mission per week, 65% mission success, one non-cumulative performance band, the published unexpected-expense table, a $200 emergency Cash reserve before voluntary repayments, and Agent promotion after 8 successful missions.
+
+| Strategy | Median Debt, Week 15 | 90th Percentile Debt | Ever Reaches $700 Debt | Median First $700 Week |
+|---|---:|---:|---:|---:|
+| Honest | $622 | $2,568 | 78.8% | 7 |
+| Accept first Zhou offer | $0 | $308 | 78.9% before accepting | 7 |
+
+The result is the intended shape: strong pressure without predetermined corruption. The reproducible model is `scripts/economy_sim.py`.
 
 ## Re-validating the Cairn-edition changes (this release)
 
 Two changes in this edition postdate the original 300,000-campaign run and therefore need their own validation:
 
-- **The honest-economy ceiling (D1):** honest income is capped at break-even at Recruit tier; only corruption produces structural surplus.
+- **R1 economy:** Cash, Debt, and Certificates are separate; mission bonuses are non-cumulative bands; weekly interest is applied once after repayments; honest play may produce surplus but does not guarantee stability.
 - **The accumulation penalty (D2):** each Quirk lowers the contamination save target by 1.
 
 The original campaign simulator is not part of this repository, so it has not been re-run in full. What follows is a **subsystem** simulation of contamination and Quirk accumulation only, calibrated so that the no-penalty case reproduces the documented ~25% echo baseline. Treat the absolute numbers as direction, not gospel; the relative effect is the robust part.
