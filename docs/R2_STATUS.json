@@ -1,0 +1,13 @@
+{
+  "checkpoint": "R2.1",
+  "base_commit": "32dd003b70a403d19de121f8156bffe009bd38d8",
+  "technical_implementation": "complete_for_listed_scope",
+  "human_validation": "open",
+  "publication_gate": "open",
+  "human_sessions_added": 0,
+  "regression_tests": 29,
+  "synthetic_paths": 240000,
+  "synthetic_profiles": 12,
+  "local_pdf_pages": 67,
+  "next": "R3 procedural and cross-format consistency"
+}

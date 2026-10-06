@@ -38,11 +38,14 @@ nav_order: 1
 
 **Contamination:**
 
-- **When:** Every 6 hours in zone (varies by zone intensity: Yellow 8h, Orange 6h, Red 3h, Black 1h)
-- **Check:** WIL save (d20 equal to or under current WIL)
-- **Failure:** Roll d4 WIL damage (Red: d4, Black: d6). Cap: max half current WIL. Suit reduces by 1 (heavy suit: by 2). Minimum 1
-- **Quirk:** On any WIL damage from contamination, roll d12 on Quirk table. If duplicate: reroll
-- **Limit:** 5 different Quirks. At 6th: temporal echo (PC lost)
+- **Clock:** Yellow 8h, Orange 6h, Red 3h, Black 1h; designated sheltered room 12h. Carry the filled fraction across zone changes. Green pauses it; 8 uninterrupted hours of Green rest clear residual exposure only. Entry, exit and session end add no automatic check.
+- **Save:** d20 <= current WIL minus min(distinct Quirks, 3). Natural 1 succeeds; natural 20 fails. This penalty affects contamination saves only.
+- **Failure, in order:** roll zone die (d4; Black d6) -> subtract temporal protection, minimum 1 -> cap at half pre-hit current WIL, rounded up -> lose final WIL. Standard suit -1; heavy -2 instead. Armor does not apply.
+- **WIL 0:** immediate echo; stop resolving checks for that PC.
+- **Quirk:** only a single hit of 3+ final damage, while WIL stays above 0. Roll d12, reroll duplicates; gain one new distinct Quirk. Do not sum small hits.
+- **Limit:** five distinct Quirks are survivable. Gaining the sixth causes an echo. The save penalty never exceeds -3.
+- **Extra hazards:** explicit immediate checks are separate and do not reset the periodic clock.
+- **Recovery:** completed medical care only, capped at maximum WIL; none while Deprived. Green rest and medicine do not restore WIL or remove Quirks.
 
 ## End of Mission
 
@@ -59,7 +62,7 @@ nav_order: 1
 - UNSTABLE: each downtime week, roll d20 for suspicion event
 - After 3 consecutive weeks UNSTABLE: forced narrative event
 
-**Mission bonus:** $150 base (net) + variable bonuses subject to deductions
+**Mission pay:** one non-cumulative performance band, 30% administrative deduction, plus the $50 field allowance. Standard success pays $190 total; exceptional success $400. Use the R1 economy table for all other bands.
 
 ## Between Sessions
 
@@ -87,7 +90,7 @@ nav_order: 1
 | Starting Cash | $500 |
 | Starting Debt | $500 owed |
 | Debt interest | 5% at weekly close, round up |
-| Zhou first offer | debt $500+ |
+| Zhou first offer | Debt $700+ |
 | Starting Loyalty | 5 |
 | Starting Corruption | 0 |
 | Instability | \|Loyalty - Corruption\| ≤ 2 |

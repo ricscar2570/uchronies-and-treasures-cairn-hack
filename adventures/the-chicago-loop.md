@@ -37,7 +37,7 @@ nav_order: 1
 
 **What Hayes tells you (if PCs ask):**
 
-- **Zone stability:** Phase 2 (deteriorating). WIL save every 6 hours initially, every 3 hours after the first 4 hours.
+- **Zone stability:** Phase 2 (deteriorating). WIL save every 6 hours initially, every 3 hours after the first 4 hours. Carry the elapsed fraction: 4 hours in Orange fill two-thirds of the interval, so the first periodic check is at total hour 5, then hours 8, 11, and so on while Red. Explicit floor hazards remain additional checks.
 - **Trapped civilians:** 30-50 people (2080 residents + 1934 temporal ghosts).
 - **Temporal echoes:** Confirmed. At least 5-10 hostile entities.
 - **Support:** None. You're on your own. The helicopter drops you off and returns in 8 hours (or sooner on emergency call).

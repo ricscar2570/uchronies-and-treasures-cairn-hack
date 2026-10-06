@@ -21,19 +21,19 @@ nav_order: 3
 
 ### Act I: Survival and Discovery (Sessions 1-5)
 
-PCs are fresh recruits. They learn the systems: first missions in Yellow Zones, first paychecks, first deficits, first Zhou contact. The economy tightens slowly. The first Quirk appears. Players discover that honest play requires active Cash/Debt management, and that a bad week can compound quickly.
+PCs are fresh recruits. They learn the systems: first missions in Yellow Zones, first paychecks, first deficits, first Zhou contact. The economy tightens slowly. A first Quirk may appear if significant exposure occurs; it is not scheduled. Players discover that honest play requires active Cash/Debt management, and that a bad week can compound quickly.
 
 **Warden focus:** Teach the mechanics through play. Show the economic spiral. Introduce Hayes as fair-but-cold, Zhou as friendly-but-dangerous. Don't rush the dilemmas.
 
 ### Act II: Corruption and Choices (Sessions 6-10)
 
-Red Zone missions begin. The economy becomes critical. PCs have 1-3 Quirks. At least one PC has probably dealt with Zhou. Instability becomes possible. The first PC death is likely. The big questions emerge: who are you becoming?
+Red Zone missions begin. The economy becomes critical. Some PCs may carry Quirks; their number depends on actual exposure. Zhou may have secured a deal, but neither corruption nor a PC death is required. Instability becomes possible. The big questions emerge: who are you becoming?
 
 **Warden focus:** Increase pressure on all fronts simultaneously. Money, contamination, loyalty, and corruption should all be in play every session. This is where the game's systems shine together.
 
 ### Act III: Consequences and Resolution (Sessions 11-15)
 
-Red/Black Zone missions. The conspiracy emerges: someone is deliberately destabilizing temporal zones. PCs must commit to a faction. Multiple Quirks per character. Echo transformation is a real threat.
+Red/Black Zone missions. The conspiracy emerges: someone is deliberately destabilizing temporal zones. PCs must commit to a faction. Repeated exposure can produce multiple Quirks. Echo transformation is a real threat, not a required ending.
 
 **Warden focus:** Bring all threads together. Every past choice has consequences now. Zhou calls in favors. Hayes demands results. The endgame approaches.
 

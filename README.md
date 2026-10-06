@@ -24,4 +24,4 @@ The game uses the [Cairn](https://cairnrpg.com) engine by Yochai Gal. Character 
 
 The full text is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Based on [Cairn](https://cairnrpg.com) by Yochai Gal (CC-BY-SA 4.0) and [CHRONOCAIRN](https://github.com/ricscar2570/ucronie-e-tesori) by Riccardo Scaringi (CC BY 4.0).
 
-Design, writing and simulation by Riccardo Scaringi. Balance validated through Monte Carlo simulation; the method and the before/after numbers are documented openly in the [Monte Carlo Transparency](reference/monte-carlo-transparency.md) appendix.
+Design and writing by Riccardo Scaringi. Reproducible subsystem diagnostics and their limitations are documented in [Monte Carlo Transparency](reference/monte-carlo-transparency.md). They are not human playtests or proof of publication readiness. R2.1 aligns contamination procedures; its human pacing gate remains open.

@@ -65,7 +65,7 @@ Hayes offers two missions. PCs can choose one (can't do both, same time window).
 
 **Mission A: Yellow Zone, routine.** Escort a Division tech installing temporal seismic sensors. A clean completion is a **standard success**: $190 total mission pay.
 
-**Mission B: Red Zone, dangerous.** Data recovery from a collapsed lab on the Strip. 3 confirmed temporal echoes. A full recovery is an **exceptional success**: $400 total mission pay. Contamination is severe (WIL save every 3 hours, d4 damage die, 2 checks guaranteed).
+**Mission B: Red Zone, dangerous.** Data recovery from a collapsed lab on the Strip. 3 confirmed temporal echoes. A full recovery is an **exceptional success**: $400 total mission pay. Contamination is severe (a check every 3 hours, d4). The planned 6-hour route reaches two periodic checks from a fresh clock; a faster successful exit can avoid the second. Telegraph delays and record actual elapsed exposure.
 
 Mission B pays more, but not enough to make the temporal risk trivial.
 

@@ -43,7 +43,7 @@ Zhou's advantage is speed. Her first courier job pays $1,500 Cash when an agent 
 
 **Time corrodes you. Slowly. Permanently.**
 
-Every 6 hours you spend in a temporal zone, you must make a **WIL save** against contamination. Failure means temporal damage directly to your willpower. If you fail, you may acquire a **Temporal Quirk**: a permanent mutation caused by exposure. Every Quirk brings you closer to transformation into a temporal echo, a being no longer fully human.
+At the zone interval (Yellow 8 hours, Orange 6, Red 3, Black 1), make a contamination save against current WIL minus your Quirk count, capped at -3. Timing, protection, the 3-damage Quirk trigger and the sixth-Quirk limit follow the Contamination chapter. Failure means temporal damage directly to your willpower. If you fail, you may acquire a **Temporal Quirk**: a permanent mutation caused by exposure. Every Quirk brings you closer to transformation into a temporal echo, a being no longer fully human.
 
 You can have at most **5 different Quirks**. When you would gain a sixth, you become an **echo**: a hostile NPC controlled by the Warden. Your character is lost forever.
 

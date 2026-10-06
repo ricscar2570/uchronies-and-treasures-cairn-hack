@@ -35,7 +35,7 @@ nav_order: 4
 
 **How lethal should combat be?** Very. A pistol does d6 damage. Average starting HP is 3.5. One shot can drop a PC to 0 HP and trigger critical damage. Players should avoid combat. When they can't avoid it, they should stack every advantage.
 
-**How fast do Quirks accumulate?** In a typical 10-session campaign, a PC who does mostly Yellow Zone missions will accumulate 1-2 Quirks. A PC who regularly enters Red Zones will get 3-4. Reaching 5 (echo threshold) should be rare but possible.
+**How fast do Quirks accumulate?** Count actual checks and completed treatments, not sessions. Ten 8-hour Yellow expeditions, each followed by completed d6 care, produce about 1.2 Quirks per starting character in the R2.1 diagnostic. Ten 6-hour Red expeditions produce about 2.3, with about 15% echo loss from both causes combined. A 4-hour Yellow trip from a fresh clock triggers no periodic check. These are conditional synthetic results, not promises. Five Quirks are survivable; the sixth causes an echo. The former target of 3-4 Quirks with regular Red exposure is not established by this model; its human pacing gate remains open.
 
 ## Session Zero
 

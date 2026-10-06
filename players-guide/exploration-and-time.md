@@ -35,7 +35,7 @@ When the party enters a temporal zone, the Warden describes the environment. Pla
 | 5 | **Scavengers** (d4). Reaction roll to determine attitude. Armed with knives (d6) and pistols (d6). |
 | 6 | **Temporal event.** Time stutters. Everyone makes a WIL save or loses their next turn (frozen in a loop). |
 
-**Every 6 hours of zone exposure**, each character makes a WIL save against contamination (see the Contamination chapter).
+**At the current zone interval** (Yellow 8 hours, Orange 6, Red 3, Black 1), each character makes a contamination save. Carry the filled fraction of the interval across zone changes. Brief Green visits pause it; only 8 uninterrupted hours of Green rest clear residual exposure. See the Contamination chapter for the complete procedure.
 
 ### Light and Darkness
 
@@ -53,6 +53,6 @@ Temporal zones often have unpredictable lighting. Carry torches or flashlights (
 
 ### Rest in the Zone
 
-Resting in a temporal zone restores HP but does NOT stop the contamination clock. Every 6 hours of presence counts, whether you're moving or resting.
+Resting in a temporal zone can restore HP but does NOT stop the contamination clock. All presence counts at that zone's interval, whether you are moving or resting. Deprived characters still cannot recover.
 
-Safe rooms (rare, marked on Division maps) reduce contamination checks to every 12 hours.
+Designated temporal safe rooms (rare, marked on Division maps) use a 12-hour interval and d4 damage. Carry the existing clock fraction into and out of them. They are not Green and do not clear exposure.

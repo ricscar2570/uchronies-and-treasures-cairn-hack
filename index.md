@@ -58,7 +58,7 @@ You cannot maximize both. You cannot stay in the middle forever. After ten sessi
 
 The time zones corrode you. Slowly. Permanently.
 
-Every six hours in a temporal zone, make a WIL save. Failure means direct damage to your willpower. Significant damage triggers a **Temporal Quirk**: a permanent biological mutation caused by exposure to overlapping timelines.
+At the zone interval (Yellow 8 hours, Orange 6, Red 3, Black 1), make a contamination save against current WIL minus up to 3 for existing Quirks. Failure means direct damage to your willpower. Significant damage triggers a **Temporal Quirk**: a permanent biological mutation caused by exposure to overlapping timelines.
 
 Quirks are not powers. They are scars. Your shadow moves three seconds behind your body. Your voice echoes in three time streams simultaneously. You see how everyone around you will die.
 
@@ -110,9 +110,9 @@ Character creation takes fifteen minutes. The real character development happens
 
 **One-shot (3-4 hours).** The included adventure *The Chicago Loop* is designed for this format. A single evening, a single moral dilemma, a resolution. Ideal for conventions or new groups.
 
-**Mini-campaign (4-8 sessions).** The sweet spot. Enough time to watch Loyalty and Corruption diverge across the group. Characters accumulate 2-3 Quirks. Debts grow. Alliances form and break.
+**Mini-campaign (4-8 sessions).** The sweet spot. Enough time to watch Loyalty and Corruption diverge across the group. Quirk accumulation depends on actual exposure, protection and completed treatment, not a fixed session quota. Debts grow. Alliances form and break.
 
-**Long campaign (10+ sessions).** Possible but demanding. Most characters will have 3-4 Quirks by session ten. Some will have become echoes. Prepare to lose characters you care about.
+**Long campaign (10+ sessions).** Possible but demanding. Long exposure without enough completed care can cause echoes. Shorter missions and better protection can slow or prevent Quirk acquisition; neither result is scripted. Prepare to lose characters you care about.
 
 ---
 

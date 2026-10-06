@@ -7,7 +7,7 @@ nav_order: 5
 
 # Monte Carlo Transparency
 
-This appendix collects the simulation evidence behind the game's numbers. It lives here, separate from the rules and the design notes, on purpose: these figures are how the design was *checked*, not a promise about what will happen at your table. The whole point of the economy and the contamination system is that the choices stay the players'. The simulations only confirm that the choices have weight.
+This appendix collects the simulation evidence behind the game's numbers. It lives here, separate from the rules and the design notes, on purpose: these figures are how the design was *checked*, not a promise about what will happen at your table. The whole point of the economy and the contamination system is that the choices stay the players'. The simulations describe consequences under explicit assumptions; they cannot establish what choices feel like at a real table.
 
 ## Why this is an appendix and not a sales pitch
 
@@ -38,24 +38,41 @@ R1 was checked with **100,000 simulated 15-week ledgers** using fixed seed 42026
 
 The result is the intended shape: strong pressure without predetermined corruption. The reproducible model is `scripts/economy_sim.py`.
 
-## Re-validating the Cairn-edition changes (this release)
+## R2.1 contamination diagnostic
 
-Two changes in this edition postdate the original 300,000-campaign run and therefore need their own validation:
+The former subsystem script described itself as calibrated to a historical echo rate. R2.1 instead derives periodic checks from stated zone exposure and reports its actual results without fitting them to that number. Historical Italian-edition figures above have not been independently reproduced and are not validation of this edition.
 
-- **R1 economy:** Cash, Debt, and Certificates are separate; mission bonuses are non-cumulative bands; weekly interest is applied once after repayments; honest play may produce surplus but does not guarantee stability.
-- **The accumulation penalty (D2):** each Quirk lowers the contamination save target by 1.
+The canonical accumulation penalty is capped at -3. Quirks require 3+ damage from one hit after temporal protection and the half-current-WIL cap. Echoes from WIL 0 and from a sixth Quirk are recorded separately. Ordinary Armor does not protect against contamination.
 
-The original campaign simulator is not part of this repository, so it has not been re-run in full. What follows is a **subsystem** simulation of contamination and Quirk accumulation only, calibrated so that the no-penalty case reproduces the documented ~25% echo baseline. Treat the absolute numbers as direction, not gospel; the relative effect is the robust part.
+### Ten expedition/care cycles
 
-| Configuration | Echo rate (15-session subsystem sim) |
-|---|---|
-| No accumulation penalty (calibrated baseline) | ~24% |
-| D2 penalty, capped at -2 | ~32% |
-| D2 penalty, capped at -3 (recommended) | ~34% |
-| D2 penalty, uncapped (rule as written) | ~36% |
+| Exposure per expedition | Checks | Mean Quirks, all starters | Echo loss | Care |
+|---|---|---|---|---|
+| Yellow, 4 hours | 0 | 0.00 | 0.00% | d6 |
+| Yellow, 8 hours | 1 | 1.21 | 0.21% | d6 |
+| Orange, 6 hours | 1 | 1.21 | 0.14% | d6 |
+| Red, 6 hours | 2 | 2.33 | 15.01% | d6 |
+| Red, 9 hours | 3 | 2.61 | 59.22% | d6 |
+| Black, 1 hour | 1 | 2.55 | 5.01% | d6 |
+| Red, 6h, heavy suit | 2 | 0.00 | 2.14% | d6 |
+| Yellow, 8h, no treatment | 1 | 0.83 | 58.54% | None |
 
-**Reading the result honestly.** The accumulation penalty does what it is meant to do: it makes every Quirk cost something and removes the "net-positive mutation" loophole. It also raises the echo rate by roughly 8 to 12 points. The uncapped rule lands near 36%; capping the penalty at -3 holds it closer to the documented "rare but real" target while preserving the intent. Which echo rate is correct is a design decision, and the authoritative figure for full campaign pacing requires re-running the original simulator (a Phase 4 task). The subsystem model assumes orange-zone exposure, the half-WIL damage cap, anti-rejection medicine taken, and between-session recovery; changing those assumptions moves the absolute numbers, not the direction.
+Each row uses 20,000 trials, fresh 3d6 WIL, no starting Quirks and standard suit except the heavy-suit row. Every cycle starts after adequate Green rest. Medicine is supplied. The d6 rows include one actually completed medical treatment before the next expedition; this is not automatic healing at session end. Differences between identical check schedules reflect Monte Carlo sampling, not a hidden Orange/Yellow modifier.
 
-## Method, in brief
+**These cycles are not ten weeks or ten sessions by definition.** Division care requires its full week, or 3 days and d8 at Loyalty 7+; black-market d6 care requires 2 days and payment. The diagnostic does not model these scheduling and financial constraints. A mission spread across several sessions does not generate extra checks merely because the real-world session changed.
 
-Pure Python, standard library `random`, fixed seed (42) for reproducibility. Each trial draws 3d6 WIL, runs a fixed number of contamination checks per session across 15 sessions, applies the suit reduction and the half-WIL damage cap, triggers a Quirk on significant exposure (3+ damage after the cap), and ends in an echo on the 6th Quirk or on WIL reaching 0 from contamination. Recovery between sessions models therapy and the no-degrade effect of anti-rejection medicine. The script is short enough to re-run and re-tune as the rules settle.
+### What the averages do not say
+
+The all-starter mean includes Quirks acquired before an echo, including a sixth. It is not the number carried by a surviving character. In the 6-hour Red row the survivor mean is 2.24; 11.02% of starters became echoes through WIL 0 and 3.99% through a sixth Quirk. In the 9-hour Red row the survivor mean is 2.62, with 52.76% WIL-zero echoes and 6.46% sixth-Quirk echoes. More prolonged exposure mainly increases loss; it does not reliably deliver 3-4 playable Quirks.
+
+The low mean in the no-treatment row is not safety: WIL exhaustion removes characters before they accumulate many mutations. Heavy protection prevents the d4-zone mutation trigger but not WIL-zero loss. Black exposure is not safer than Red: the displayed rows contain different numbers of checks and hours.
+
+### Fifteen-cycle sensitivity
+
+Using the 6-hour Red schedule, completed d6 treatment and 20,000 trials per configuration: no Quirk penalty gives 24.28% echo loss; cap -2 gives 32.95%; canonical cap -3 gives 34.66%; historical uncapped -5 gives 35.67%. The cap alone is not a solution to excessive exposure. These absolute rates are not universal campaign predictions.
+
+### Reproduction and open evidence
+
+Run `python scripts/contamination_sim.py --runs 20000 --seed 42026` from the repository root. The default output is `reports/r2-contamination.json` plus a Markdown report. It records profile seeds, survivor denominators, cause-specific losses, WIL bands, first-Quirk timing and source hashes. Rules values live in `_data/contamination.json`; the tested resolution procedure is `scripts/contamination_rules.py`.
+
+No tactical choices, combat, Quirk-specific secondary effects, surgery, retirement, missed medicine, special bonuses, or the coupled economy are simulated. Averages cannot validate fear, comprehensibility or agency. The former 3-4-Quirk Red pacing target remains unestablished; the human protocol is not rewritten to make it pass. Human sessions added by this checkpoint: **0**.

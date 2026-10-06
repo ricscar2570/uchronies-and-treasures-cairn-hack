@@ -107,7 +107,7 @@ Four locations ready to explore. Each has a node map (rooms connected by passage
 
 ## The Meridian Hotel (Chicago Loop Adventure Site)
 
-**Zone:** Orange, deteriorating to Red. **Contamination:** WIL save every 6 hours initially, every 3 hours after 4 hours.
+**Zone:** Orange, deteriorating to Red. **Contamination:** WIL save every 6 hours initially, every 3 hours after 4 hours. Carry the elapsed fraction: 4 hours in Orange fill two-thirds of the interval, so the first periodic check is at total hour 5, then hours 8, 11, and so on while Red. Explicit floor hazards remain additional checks.
 
 ### Map (Simplified by Section)
 

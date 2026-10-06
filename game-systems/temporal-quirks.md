@@ -12,17 +12,15 @@ nav_order: 3
 
 ### The Cost of Accumulation
 
-Every Quirk you carry makes you more permeable to time. **For each Quirk you have, your contamination save target drops by 1.** You save against your current WIL **minus the number of Quirks you carry**. With three Quirks and WIL 11, you save as if you had WIL 8.
+Each of the first three distinct Quirks lowers the contamination save target by 1. The **maximum penalty is -3**. Effective WIL is current WIL minus min(Quirks, 3). With WIL 11 and four Quirks, save against 8. This penalty does not apply to unrelated WIL saves.
 
-This is the dominant, inevitable cost, and it applies to *every* Quirk, including the ones that look like gifts. A Quirk that grants +1 Armor or free initiative still makes the next contamination check harder, which means the next Quirk arrives sooner. There is no net-positive Quirk. There is only the slope, and the rate at which you are sliding down it.
+The fourth and fifth Quirks still have their individual effects and reduce your remaining margin before the sixth causes an echo; they do not further lower the contamination save target. Useful Quirk abilities remain useful. Their tactical value is not a mathematical proof that their permanent costs are always greater.
 
-> **Design note.** Several Quirks (Vision of Future Deaths, Cursed Prescience, Temporal Fragmentation) hand you a real mechanical advantage. The accumulation penalty is what keeps them frightening: the more of these "useful" mutations you collect, the faster the saves fail, and the closer the echo gets. You are not building a character. You are spending one.
-
-> **Warden dial.** The accumulation penalty is the most lethal knob in the game. Subsystem simulation (see the Monte Carlo Transparency appendix) puts the full uncapped rule near a 36% echo rate over a 15-session campaign, against a documented baseline near 25%. If your table wants the slow horror without the higher body count, **cap the penalty at -3** (it stops growing past your third Quirk): this keeps every Quirk costly while holding the echo rate closer to the "rare but real" target. The authoritative figure for your exact pacing requires a full-campaign run; treat these as direction, not gospel.
+> **Standard rule, not a dial.** The -3 cap is canonical for R2.1. An uncapped penalty is a house rule and must not be mixed into standard playtest evidence. Five distinct Quirks are survivable; the sixth is not.
 
 ### The Quirk Table (roll d12)
 
-When you take WIL damage from contamination, roll d12. If you already have that Quirk, reroll until you get a new one.
+Only when one contamination hit deals **3 or more final WIL damage after protection and the half-WIL cap**, and WIL remains above 0, roll d12. Gain exactly one new distinct Quirk; reroll duplicates. Do not combine smaller hits. On gaining the sixth, the character becomes an echo.
 
 | d12 | Quirk Name | Effect Summary |
 |---|---|---|

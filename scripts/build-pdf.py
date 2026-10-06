@@ -1,7 +1,8 @@
 """
-CHRONOCAIRN: Complete KDP Manual
-A5 two-column, premium layout
-All content from repository, edited and formatted
+CHRONOCAIRN: development manual
+A5 mixed full-width / two-column layout
+Canonical Markdown used for R2 rule, evidence, and introductory campaign blocks.
+Other legacy embedded chapters await the R3 source-consolidation audit.
 """
 
 import os
@@ -166,6 +167,14 @@ def fullnote(text):
             ]))
     ])
 
+class CheckedTable(Table):
+    """Reject a full-width table accidentally placed in a narrow frame."""
+    def wrap(self, availWidth, availHeight):
+        if sum(self._argW) > availWidth + 0.1:
+            raise ValueError(f"Table width {sum(self._argW):.2f} exceeds frame {availWidth:.2f}")
+        return super().wrap(availWidth, availHeight)
+
+
 def T(headers, rows, widths, full=False):
     """Build a styled table."""
     base = FW if full else CW
@@ -182,7 +191,48 @@ def T(headers, rows, widths, full=False):
         ("RIGHTPADDING",  (0,0),(-1,-1), 3),
         ("VALIGN",        (0,0),(-1,-1), "MIDDLE"),
     ])
-    return KeepTogether([Table(data, colWidths=widths, style=ts, hAlign="LEFT")])
+    return CheckedTable(data, colWidths=widths, style=ts, hAlign="LEFT", repeatRows=1)
+
+
+def markdown_chapter(path):
+    """Render canonical Markdown at full width; used for the R2 rule and evidence blocks."""
+    from pathlib import Path
+    text = (Path(__file__).resolve().parents[1] / path).read_text()
+    text = re.sub(r"\A---\n.*?\n---\n", "", text, count=1, flags=re.S)
+    text = re.sub(r"<details\b.*?</details>", "", text, flags=re.S)
+    text = re.sub(r"^\{:[^}]*\}\s*$", "", text, flags=re.M)
+    lines, out, paragraph = text.splitlines(), [], []
+    def flush():
+        if paragraph:
+            out.append(p(" ".join(paragraph)))
+            paragraph.clear()
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+        if not line:
+            flush(); i += 1; continue
+        if line.startswith("|"):
+            flush(); rows = []
+            while i < len(lines) and lines[i].strip().startswith("|"):
+                cells = [cell.strip() for cell in lines[i].strip().strip("|").split("|")]
+                if not all(re.fullmatch(r"[:\- ]+", cell) for cell in cells):
+                    rows.append(cells)
+                i += 1
+            if rows:
+                out.extend([T(rows[0], rows[1:], [FW/len(rows[0])]*len(rows[0]), full=True), sp(2)])
+            continue
+        if line.startswith("#"):
+            flush(); level = len(line) - len(line.lstrip("#"))
+            out.append(p(line.lstrip("# "), "h1" if level == 1 else "h2" if level == 2 else "h3"))
+        elif line.startswith("- "):
+            flush(); out.append(b(line[2:]))
+        elif line.startswith("> "):
+            flush(); out.append(fullnote(line[2:]))
+        elif line != "---":
+            paragraph.append(line)
+        i += 1
+    flush()
+    return out
 
 def statblock(text):
     return Paragraph(md(text), STYLES["stat"])
@@ -208,16 +258,16 @@ class UeTDoc(BaseDocTemplate):
                     topPadding=0, bottomPadding=0, id="cov")
         blk = Frame(ML, MB, FW, PH-MT-MB, id="blk")
         toc = Frame(ML, MB, FW, PH-MT-MB, id="toc")
-        L   = Frame(ML,           MB, CW, PH-MT-MB, id="L")
-        R   = Frame(ML+CW+GAP,    MB, CW, PH-MT-MB, id="R")
-        F   = Frame(ML,           MB, FW, PH-MT-MB, id="F")
+        L   = Frame(ML,           MB, CW, PH-MT-MB, id="L", leftPadding=0, rightPadding=0)
+        R   = Frame(ML+CW+GAP,    MB, CW, PH-MT-MB, id="R", leftPadding=0, rightPadding=0)
+        F   = Frame(ML,           MB, FW, PH-MT-MB, id="F", leftPadding=0, rightPadding=0)
 
         self.addPageTemplates([
             PageTemplate(id="Cover", frames=[cov]),
             PageTemplate(id="Blank", frames=[blk], onPage=self._pg_blank),
             PageTemplate(id="TOC",   frames=[toc],  onPage=self._pg_toc),
-            PageTemplate(id="TwoCol",frames=[L,R],   onPage=self._pg_run),
-            PageTemplate(id="Full",  frames=[F],     onPage=self._pg_run),
+            PageTemplate(id="TwoCol",frames=[L,R],   onPageEnd=self._pg_run),
+            PageTemplate(id="Full",  frames=[F],     onPageEnd=self._pg_run),
         ])
 
     def afterFlowable(self, f):
@@ -414,7 +464,7 @@ def story():
     p("The game pushes you toward corruption. Not by force. With math."),
     sp(2),
     h3("3. Temporal Contamination"),
-    p("Time corrodes you. Slowly. Permanently. Every 6 hours in a temporal zone, make a **WIL save**. Failure means direct damage to your willpower and, if significant, a permanent **Temporal Quirk**. Accumulate 5 Quirks and you become a **temporal echo**: a hostile NPC. Your character is lost forever."),
+    p("At the zone interval (Yellow 8 hours, Orange 6, Red 3, Black 1), save against current WIL minus min(Quirks, 3). A failed check damages WIL. A single hit of 3+ final damage may add one distinct Quirk. Five Quirks are survivable; gaining the sixth, or reaching WIL 0 from contamination, makes you a **temporal echo**: a hostile NPC."),
     sp(2),
     h3("4. Speed"),
     p("Ready to play in 30 minutes. Comfortable with the system in two sessions."),
@@ -871,44 +921,8 @@ def story():
     # ════════════════════════════════
     # TEMPORAL CONTAMINATION
     # ════════════════════════════════
-    s += [h1("Temporal Contamination"), rule(),
-    p("**Time corrodes you. Slowly. Permanently.** Every 6 hours in a temporal zone, make a **WIL save**. This represents your mental and biological resistance to temporal forces."),
-    sp(3),
-    h2("The Contamination Save"),
-    p("On a failed save, roll the zone's damage die for WIL damage. The temporal protection suit reduces damage by 1 (minimum 1). A heavy containment suit (black market, $2,000, bulky) reduces by 2. **Damage cannot exceed half your current WIL, rounded up.** This prevents the death spiral from accelerating uncontrollably."),
-    sp(1),
-    note("Example: Jin has WIL 13. He fails in an Orange Zone. Rolls d4: 3. Suit absorbs 1. Net damage: 2. WIL drops to 11. At WIL 2, the cap means he can never take more than 1 damage per check."),
-    sp(2),
-    p("This creates a gradual decline, not a sudden crash. The spiral is real but it decelerates. Characters degrade over sessions, not in a single bad run."),
-    sp(2),
-    p("**The cost of accumulation.** You roll the contamination save against your **effective WIL**: current WIL minus the number of Quirks you already carry. Every Quirk makes the next save harder. There is no Quirk that pays for itself: even the ones that grant a battlefield edge still lower the threshold that keeps you human. The more the zones have already changed you, the faster they finish the job. (Warden dial: if the uncapped penalty bites too hard at your table, cap it at -3.)"),
-    sp(3),
-    h2("Quirk Acquisition"),
-    p("When contamination damage (after suit and cap) is **3 or more**, roll d12 on the Quirk table. Minor exposure (1-2 damage) erodes willpower without mutating. Only significant exposure triggers a Quirk. If you already have that Quirk, reroll. At 5 Quirks, gaining a sixth means you become a **temporal echo**: character lost."),
-    sp(3),
-    h2("Zone Intensity"),
-    T(["Zone","Frequency","Damage","Example"],
-      [["Stable (green)","No checks","None","Division HQ, Vegas Strip"],
-       ["Low (yellow)","Every 8 hours","d4","Outskirts, buffer zones"],
-       ["Standard (orange)","Every 6 hours","d4","Most mission areas"],
-       ["High (red)","Every 3 hours","d4","Deep zones, Oculus sites"],
-       ["Critical (black)","Every hour","d6","Oculus core, temporal rifts"]],
-      [CW*0.22, CW*0.26, CW*0.14, CW*0.38]),
-    sp(3),
-    h2("Recovery"),
-    b("**Division treatment** (1 week; 3 days at Loyalty 7+): restores d6 WIL (d8 at Loyalty 7+)."),
-    b("**Black market temporal therapy** ($500/session): restores d6 WIL, takes 2 days."),
-    b("**Anti-rejection medicine** ($250/week): prevents WIL from degrading further between missions."),
-    sp(2),
-    note("WIL damage from contamination does *not* heal normally. Time zones change your biology, not just injure it. A bullet wound heals. A temporal mutation does not."),
-    sp(3),
-    h2("Temporal Echoes"),
-    p("When WIL reaches 0 from contamination, or when a character acquires their 6th Quirk, they become a **temporal echo**. This is permanent and irreversible. The character becomes an NPC controlled by the Warden: hostile to living beings, existing simultaneously across multiple time periods, retaining fragmented memories of their former life."),
-    sp(1),
-    p("**For the player:** Create a new character. The replacement joins the party immediately. The Warden may use your echo as a future encounter."),
-    sp(1),
-    note("What makes this different from death: death is quick. Becoming an echo is a slow, visible process. The other players watch as your character accumulates Quirks. They know what is coming. The question is whether they can finish the campaign before it happens."),
-    ]
+    s += [nfull(), pb()]
+    s += markdown_chapter("game-systems/contamination.md")
 
     # ════════════════════════════════
     # TEMPORAL QUIRKS
@@ -917,6 +931,7 @@ def story():
     h1("Temporal Quirks"), rule(),
     p("Temporal Quirks are permanent mutations caused by contamination exposure. They are not powers. They are **biological scars**: your body and mind breaking under the weight of too many overlapping timelines. **Limit: 5 different Quirks.** At the 6th, you become an echo."),
     sp(3),
+    p("Roll only after one contamination hit deals 3+ final damage after protection and the cap, while WIL remains above 0. Reroll duplicates. The save penalty is capped at -3; the fourth and fifth Quirks still bring you closer to the fatal sixth."),
     h2("Quirk Table (roll d12)"),
     T(["d12","Quirk","Effect Summary"],
       [["1","Accelerated Aging","Age 1d10 years instantly"],
@@ -1020,7 +1035,7 @@ def story():
     b("**Light and darkness:** Working in darkness means all actions are **impaired**. Flashlights last 3 hours (1 slot)."),
     sp(3),
     h2("Rest in the Zone"),
-    p("Resting in a temporal zone restores HP but does **not** stop the contamination clock. Every 6 hours of presence counts, whether you are moving or resting. Safe rooms (rare, marked on Division maps) reduce checks to every 12 hours."),
+    p("Resting in a temporal zone can restore HP but does **not** stop its contamination clock. Count all elapsed presence at the zone interval. Carry the filled fraction when zones change. A designated sheltered room uses a 12-hour interval and d4; it is not Green. Brief Green visits pause exposure; only 8 uninterrupted hours of Green rest clear the residual clock, not WIL or Quirks."),
     pb(),
     ]
 
@@ -1208,7 +1223,7 @@ def story():
     sp(3),
     nfull(), pb(),
     h2("The Meridian Hotel (Chicago, 1934)"),
-    p("**Zone:** Orange, deteriorating to Red after 4 hours. WIL save every 6 hours initially, every 3 hours after the first 4."),
+    p("**Zone:** Orange, deteriorating to Red after 4 hours. Carry the two-thirds-filled exposure clock: first periodic check at total hour 5, then hours 8, 11, and so on while Red. Floor hazards remain additional checks."),
     sp(2),
     T(["Floors","Era","What's Here"],
       [["Basement","Mixed","Flooded corridors, old casino vault"],
@@ -1324,13 +1339,13 @@ def story():
     sp(3),
     h2("Campaign Difficulty Curve"),
     h3("Act I: Introduction (Sessions 1-6)"),
-    p("Yellow Zone missions. Economy pressure builds slowly. First Zhou contact around session 3-4. First Quirk around session 4-5. PCs learn the systems. Tone: tense but manageable."),
+    p("Begin with Yellow Zone missions and make exposure time visible. Zhou contact follows the debt thresholds and the fiction, not a fixed session. A first Quirk is a possible consequence, not a scheduled event. Short expeditions can avoid periodic checks. PCs learn the systems. Tone: tense but manageable."),
     sp(2),
     h3("Act II: Transition (Sessions 7-9)"),
     p("Red Zone missions begin. Economy becomes critical. Instability possible for PCs who played both sides. First PC death likely. Tone: desperate."),
     sp(2),
     h3("Act III: Climax (Sessions 10-15)"),
-    p("Red and Black Zone missions. The central conspiracy emerges (who is deliberately destabilizing the zones?). PCs must commit to a faction. Multiple Quirks per character. Echo transformation is a real threat. Tone: no way out."),
+    p("Red and Black Zone missions. The central conspiracy emerges (who is deliberately destabilizing the zones?). PCs must commit to a faction. Repeated exposure can produce multiple Quirks. Echo transformation is a real threat, not a required ending. Tone: no way out."),
     sp(3),
     h2("Managing the Raines Relationship"),
     p("After an agent completes 3 missions for Raines, Hayes knows. He says nothing. From that point forward, missions assigned to that agent become harder: Red zones instead of Orange, tighter timing windows, steeper secondary objectives. If the agent reaches 5 missions for Raines, Hayes files a formal surveillance request and a second NPC agent joins every Division mission."),
@@ -1381,7 +1396,7 @@ def story():
     sp(3),
     h2("Quick Conversion Rule"),
     p("Adapt any modern or sci-fi enemy: Hit Dice become HP (roughly 1:1 for humanoids, add 2-4 for tougher creatures). Armor Class becomes Armor (light=1, medium=2, heavy=3, max 3). Ignore attack bonuses (attacks auto-hit in Cairn). Damage stays roughly the same die. Give it **one memorable behavior** and **one critical damage effect**. Set morale based on motivation."),
-    pb(),
+    nfull(), pb(),
     ]
 
     # ════════════════════════════════
@@ -1396,7 +1411,7 @@ def story():
        ["4","Rescue (find and extract trapped civilians or agents)"],
        ["5","Sabotage (disable a rival operation or anomaly)"],
        ["6","Elimination (neutralize a specific threat or echo)"]],
-      [CW*0.15, CW*0.85]),
+      [FW*0.15, FW*0.85], full=True),
     sp(2),
     T(["d6","Location"],
       [["1","Abandoned hotel, half in the 1930s"],
@@ -1405,7 +1420,7 @@ def story():
        ["4","Residential block, civilians present"],
        ["5","Strip plaza, maximally unstable"],
        ["6","Subway tunnels, complete darkness"]],
-      [CW*0.15, CW*0.85]),
+      [FW*0.15, FW*0.85], full=True),
     sp(2),
     T(["d6","Complication"],
       [["1","Zhou's mercenaries are already there"],
@@ -1414,9 +1429,9 @@ def story():
        ["4","The objective is not what Hayes described"],
        ["5","A civilian group refuses to evacuate"],
        ["6","A sentient echo is guarding the objective"]],
-      [CW*0.15, CW*0.85]),
+      [FW*0.15, FW*0.85], full=True),
     sp(2),
-    note("Example: Recovery (1) + Subway tunnels (6) + Zhou's mercenaries already there (1) = Recover a class-B Oculus fragment from the collapsed metro station under Fremont Street. Problem: Zhou sent a team 3 hours ago."),
+    fullnote("Example: Recovery (1) + Subway tunnels (6) + Zhou's mercenaries already there (1) = Recover a class-B Oculus fragment from the collapsed metro station under Fremont Street. Problem: Zhou sent a team 3 hours ago."),
     sp(3),
     h2("NPC Generator (d6 per category)"),
     T(["d6","Appearance","Occupation","Motivation","Secret"],
@@ -1472,17 +1487,17 @@ def story():
     s += [h1("Campaign Management"), rule(),
     h2("Narrative Arcs (10-15 Sessions)"),
     h3("Act I: Survival and Discovery (Sessions 1-5)"),
-    p("PCs are fresh recruits. They learn the systems: first Yellow Zone missions, first paychecks, first Zhou contact. The economy tightens slowly. The first Quirk appears. Players discover that honest play requires active Cash/Debt management and that a bad week compounds quickly."),
+    p("PCs are fresh recruits. They learn the systems: first Yellow Zone missions, first paychecks, first Zhou contact. The economy tightens slowly. A first Quirk may appear if significant exposure occurs; it is not scheduled. Players discover that honest play requires active Cash/Debt management and that a bad week compounds quickly."),
     sp(1),
     p("**Warden focus:** Teach mechanics through play. Show the economic spiral. Introduce Hayes as fair-but-cold, Zhou as friendly-but-dangerous. Do not rush the dilemmas."),
     sp(2),
     h3("Act II: Corruption and Choices (Sessions 6-10)"),
-    p("Red Zone missions begin. Economy becomes critical. PCs have 1-3 Quirks. At least one has dealt with Zhou. Instability becomes possible. The first PC death is likely. The big questions emerge: who are you becoming?"),
+    p("Red Zone missions begin. Economy becomes critical. Some PCs may carry Quirks; their number depends on actual exposure. Zhou may have secured a deal, but neither corruption nor a PC death is required. Instability becomes possible. The big questions emerge: who are you becoming?"),
     sp(1),
     p("**Warden focus:** Increase pressure on all fronts simultaneously. Money, contamination, loyalty, and corruption should all be in play every session."),
     sp(2),
     h3("Act III: Consequences and Resolution (Sessions 11-15)"),
-    p("Red and Black Zone missions. The conspiracy emerges: someone is deliberately destabilizing temporal zones. PCs must commit to a faction. Multiple Quirks per character. Echo transformation is a real threat."),
+    p("Red and Black Zone missions. The conspiracy emerges: someone is deliberately destabilizing temporal zones. PCs must commit to a faction. Repeated exposure can produce multiple Quirks. Echo transformation is a real threat, not a required ending."),
     sp(1),
     p("**Warden focus:** Bring all threads together. Every past choice has consequences now. Zhou calls in favors. Hayes demands results. The endgame approaches."),
     sp(3),
@@ -1518,7 +1533,7 @@ def story():
     sp(2),
     h3("Ending E: The Escape"),
     p("PCs realize Vegas is doomed and leave. They flee with whatever money and artifacts they can carry. The Division marks them as deserters. Zhou marks them as assets who escaped. They start over somewhere else, with Quirks and nightmares. The zones continue expanding. Someone else's problem now."),
-    pb(),
+    npb(), pb(),
     ]
 
     # ════════════════════════════════
@@ -1528,10 +1543,10 @@ def story():
     p("These notes explain the reasoning behind key decisions. They were originally embedded throughout the Italian edition as designer commentary boxes."),
     sp(3),
     h2("Why the Economy Is Unsustainable"),
-    p("The deficit at Recruit tier is not a balance error. It is the single most important number in the game. Without it, corruption is a free choice (why not?). With it, corruption is a survival mechanism (I have to). The difference between 'I chose to be corrupt' and 'the system forced me to choose' is the entire moral weight of the game."),
+    p("Recruit base pay is $100 below fixed weekly expenses, before mission income. R1 creates persistent pressure without making corruption compulsory. Honest mission pay, careful spending, clemency and promotion remain real escape valves. Zhou offers speed and leverage, not the only mathematically possible survival route."),
     sp(3),
     h2("Why Contamination Is Permanent"),
-    p("WIL damage from contamination does not heal normally because the time zones are changing your biology, not injuring it. A bullet wound heals. A temporal mutation does not. The progressive degradation creates a natural campaign timer. Every mission brings characters closer to becoming echoes. This urgency drives the pace."),
+    p("WIL damage from contamination does not heal normally because the time zones are changing your biology, not injuring it. A bullet wound heals. A temporal mutation does not. The progressive degradation creates a natural campaign timer. Actual exposure drives this risk; a short, well-planned expedition can avoid periodic checks. Medical care restores some WIL only when it is completed, not at each session break."),
     sp(3),
     h2("Why Combat Should Be Avoided"),
     p("In the Cairn engine, a Glock 17 does d6 damage. Average starting HP is 3.5. One good roll drops a PC to 0 and triggers critical damage. Two hits kill. This is intentional. Combat should feel like combat in a crime thriller: terrifying, brief, and something you plan your way around. The game's real challenges are economic and moral, not tactical."),
@@ -1563,9 +1578,9 @@ def story():
     p("**Is Zhou evil?** No. Zhou is pragmatic. She exploits desperate people, but so does the Division. The difference is that Zhou is honest about the transaction. Hayes pretends it is patriotism. Neither is 'good.'"),
     sp(2),
     h3("Balance"),
-    p("**The economy seems impossible. Is this intentional?** Yes. The deficit at Recruit tier is the game's engine. Without it, there is no pressure toward corruption. If your players are comfortable financially, something has gone wrong."),
+    p("**Is corruption mandatory?** No. R1 separates Cash, Debt and Certificates and allows honest positive weeks. Unexpected costs and interest sustain pressure without guaranteeing failure. Check the ledger before blaming either comfortable or struggling characters."),
     sp(1),
-    p("**How fast do Quirks accumulate?** In a typical 10-session campaign, a PC doing mostly Yellow Zone missions will accumulate 1-2 Quirks. A PC who regularly enters Red Zones will get 3-4. Reaching the echo threshold of 5 should be rare but possible."),
+    p('**How fast do Quirks accumulate?** Count actual checks and completed treatments, not sessions. Ten 8-hour Yellow expeditions, each followed by completed d6 care, produce about 1.2 Quirks per starting character in the R2.1 diagnostic. Ten 6-hour Red expeditions produce about 2.3, with about 15% echo loss from both causes combined. A 4-hour Yellow trip from a fresh clock triggers no periodic check. These are conditional synthetic results, not promises. Five Quirks are survivable; the sixth causes an echo. The former target of 3-4 Quirks with regular Red exposure is not established by this model; its human pacing gate remains open.'),
     sp(1),
     p("**How do I handle players who want to be 'good guys'?** Let them try. The system does not punish goodness. It makes it expensive. A loyal PC will have more debt, more stress, fewer resources, but Hayes' trust, better missions, and their self-respect. Whether that is worth it is the entire point of the game."),
     pb(),
@@ -1724,92 +1739,9 @@ def story():
     # ════════════════════════════════
     # ADVENTURE 2: THE FIRST FOUR WEEKS
     # ════════════════════════════════
-    s += [h1("The First Four Weeks"), rule(),
-    p("A **4-session mini-campaign** (2-3 hours each) showing how all systems interact: economy, contamination, loyalty, corruption, and moral choices. Unlike the Chicago Loop (a single action-focused adventure), this campaign makes you *feel time passing*. Debt grows. Zhou knocks. Contamination accumulates. Characters change, literally."),
-    sp(1),
-    note("The Warden keeps an accounting sheet for each PC: pay, expenses, debt, loyalty, corruption, contamination, Quirks. Update between sessions. Players must see the numbers. The spiral is more effective when it is transparent."),
-    sp(3),
-    h2("Session 1: The Arrival (Weeks 1-2)"),
-    h3("Scene 1: Welcome Briefing"),
-    p("Hayes receives the PCs in her office. Efficient, cold, professional. She explains pay ($800/week), expenses ($900/week total), and standard equipment. The deficit of $100/week is never mentioned. The PCs discover it when they do the math."),
-    sp(1),
-    note("Hayes is not evil. She is a bureaucrat doing her job. When a PC asks 'how do you survive on $800 a week?', Hayes answers: 'With discipline and priorities, agent.' She is not lying. It simply is not her problem."),
-    sp(2),
-    h3("Scene 2: First Mission (Yellow Zone)"),
-    p("**Objective:** Recover a crate of biological samples from a warehouse 12 km from base. WIL save after 8 hours in zone. With suit, risk is low but real."),
-    sp(1),
-    p("**Complication (Warden's choice):**"),
-    b("**Social:** Inside the warehouse is a civilian family taking shelter. The crate is under their belongings. Taking it leaves them without shelter."),
-    b("**Tactical:** The warehouse is watched by 2 armed scavengers (4 HP, 10 STR, 12 DEX, 8 WIL, pistol d6). Fight is risky. Negotiate is possible. Flanking costs time."),
-    b("**Moral:** The crate also contains an unregistered Oculus fragment. Nobody knows it is there. Worth $3,000 on the black market."),
-    sp(1),
-    p("**Week 1 accounting:** Start $500 Cash / $500 Debt. Standard success pays $190. Add $800 pay, pay $900 fixed costs and a $50 unexpected cost. Cash closes at $540; with no repayment Debt becomes $525 after interest."),
-    sp(1),
-    p("**Week 2:** No mission. Pay $800. Expenses $900. Unexpected expense (roll d6). Week balance: around -$200. Debt back to -$510. PCs realize that one week without a mission digs the hole deeper."),
-    sp(3),
-    h2("Session 2: The Pressure (Weeks 3-4)"),
-    h3("Scene 1: Two Missions Offered"),
-    p("Hayes offers two missions. PCs can only choose one."),
-    sp(1),
-    p("**Mission A: Yellow Zone, routine.** Escort a tech installing sensors. Low risk. Base $50 + bonus $100."),
-    sp(1),
-    p("**Mission B: Red Zone, dangerous.** Data recovery from a collapsed lab on the Strip. 3 confirmed echoes. Base $50 + bonus $400 + red zone bonus $200. But contamination is severe: WIL save every 3 hours, d4 damage, 2 checks guaranteed. A Quirk is nearly certain."),
-    sp(2),
-    h3("Scene 2: Zhou's First Offer"),
-    p("If any PC's debt exceeds -$700 (it will by week 4 without extra missions), Zhou makes contact. A handwritten note on perfumed paper in their mailbox."),
-    sp(1),
-    p("*'Dear Agent [name]. I have noticed the Division does not sufficiently appreciate your services. I have a small assignment that could solve your financial problems. Nothing dangerous. $1,500 for one hour of your time. You know my address. Regards, M. Zhou.'*"),
-    sp(1),
-    p("If the PC goes: carry a sealed package from point A to B. Do not open it, do not ask questions. Pay: $1,500 cash. Corruption: +1. If they refuse, Zhou does not insist. She waits. The offers get worse as debt grows."),
-    sp(3),
-    h2("Session 3: The Fall (Weeks 5-7)"),
-    p("This is the session where the game bares its teeth."),
-    sp(2),
-    h3("Scene 1: The Mission Goes Wrong"),
-    p("Hayes sends the group to a Red Zone. No choice: it is an order. A previous squad did not come back. The Division wants to know why. Underground laboratory beneath the Luxor. Severe contamination. 4-6 temporal echoes. A corridor where time flows backward."),
-    sp(1),
-    p("What they find: bodies of 2 agents from the previous squad. 1 surviving agent, hidden, traumatized, with 2 visible Quirks. The data, intact, in an armored briefcase. A class-B Oculus fragment Hayes did not mention."),
-    sp(1),
-    p("**The combat:** 4 temporal echoes (4 HP, 8 STR, 12 DEX, 6 WIL, temporal claw d6, WIL save on critical damage or accelerated aging). This is the hardest fight yet."),
-    sp(1),
-    note("To the Warden: this is the scene where a PC probably dies. Do not force it, but do not protect them either. Death has weight because it is real."),
-    sp(2),
-    h3("Scene 2: The Fragment Dilemma"),
-    p("Hayes asks for the data. She gets it. The Oculus fragment is not in any report. If PCs mention it, Hayes takes it without comment. If they do not mention it, they have an unregistered class-B fragment. Zhou would pay $5,000. The Division does not know it exists. +1 Loyalty if they hand over everything. +2 Corruption if they keep the fragment."),
-    sp(3),
-    h2("Session 4: Who Are You? (Weeks 8-10)"),
-    h3("Scene 1: Zhou Collects"),
-    p("If anyone worked for Zhou previously, she asks a second, bigger favor. The PC who said yes the first time is in a weak position: Zhou knows things. If nobody worked for Zhou, she raises the offer to $3,000-5,000. For a PC with $1,500 in debt and eviction imminent, that changes everything."),
-    sp(1),
-    p("**Zhou's job (if accepted):** Sabotage a Division convoy. Do not kill anyone, just delay it. Zhou wants to reach an Oculus fragment first. Corruption: +3. If discovered: fired from the Division."),
-    sp(2),
-    h3("Scene 2: The Division Demands"),
-    p("Hayes convenes the group. Monthly results are below expectations. The Division spent more on them than they recovered. Hayes offers a final bonus mission: Red Zone, high risk, $600 bonus. If they succeed, the month breaks even. If they refuse, the Division 'reevaluates their contract.'"),
-    sp(1),
-    p("Not a threat of death. A threat of termination. And a fired Division agent with Quirks and medicine dependency has nowhere to go."),
-    sp(2),
-    h3("Scene 3: The Final Choice"),
-    b("**Division mission + refuse Zhou:** Loyal, poor, contaminated, but employed."),
-    b("**Division mission + work for Zhou:** Playing both sides. Enormous risk, enormous potential gain."),
-    b("**Zhou only:** High corruption, money, but no safety net."),
-    b("**Neither:** Fired by the Division, ignored by Zhou. Alone in Vegas with Quirks and no medicine."),
-    sp(2),
-    p("There is no right ending. There is the ending the PCs choose, and the consequences that follow."),
-    sp(3),
-    h2("Final Accounting (Example)"),
-    p("Worked no-repayment example for a PC who stays with the Division and refuses Zhou:"),
-    sp(1),
-    T(["Week","Income","Costs","Closing Cash","Closing Debt"],
-      [["Start","-","-","$500","$500"],["1: standard","$990","$950","$540","$525"],
-       ["2: no mission","$800","$1,000","$340","$552"],["3: standard","$990","$1,050","$280","$580"],
-       ["4: no mission","$800","$1,200","$0","$735"],["5: strong","$1,060","$1,000","$60","$772"],
-       ["6: no mission","$800","$950","$0","$906"],["7: standard","$990","$1,100","$0","$1,067"],
-       ["8: exceptional","$1,200","$950","$250","$1,121"]],
-      [FW*0.24,FW*0.18,FW*0.18,FW*0.20,FW*0.20], full=True),
-    sp(2),
-    note("This is a demonstration, not a prophecy. Repayment, clemency, side work, and Zhou change the path. Every number now comes from the same procedure."),
-    pb(),
-    ]
+    s += [nfull(), pb()]
+    s += markdown_chapter("adventures/the-first-four-weeks.md")
+    s += [npb(), pb()]
 
     # ════════════════════════════════
     # REFERENCE
@@ -1890,7 +1822,19 @@ def story():
     p("*Based on Cairn by Yochai Gal (cairnrpg.com), used under CC BY-SA 4.0. CHRONOCAIRN is released under CC BY-SA 4.0. Original Italian edition by Riccardo Scaringi, ilgiocointavolo.it.*"),
     ]
 
-    return s
+    s += [nfull(), pb()]
+    s += markdown_chapter("reference/monte-carlo-transparency.md")
+    # Consecutive boundary requests must not create empty running-footer pages.
+    clean = []
+    for item in s:
+        if isinstance(item, PageBreak):
+            j = len(clean) - 1
+            while j >= 0 and isinstance(clean[j], NextPageTemplate):
+                j -= 1
+            if j >= 0 and isinstance(clean[j], PageBreak):
+                clean.pop(j)
+        clean.append(item)
+    return clean
 
 
 # ── MAIN ─────────────────────────────────────────────────────────────────────

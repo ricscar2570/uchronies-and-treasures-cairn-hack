@@ -101,7 +101,7 @@ Players seem lost. Choices feel random. No emotional weight. Fix: slow down with
 
 ### Act I: Introduction (Sessions 1-6)
 
-Yellow Zone missions. Economy pressure builds slowly. First Zhou contact around session 3-4. First Quirk around session 4-5. PCs learn the systems. Tone: tense but manageable.
+Begin with Yellow Zone missions and make exposure time visible. Zhou contact follows the debt thresholds and the fiction, not a fixed session. A first Quirk is a possible consequence, not a scheduled event. Short expeditions can avoid periodic checks. PCs learn the systems. Tone: tense but manageable.
 
 ### Act II: Transition (Sessions 7-9)
 
@@ -109,7 +109,7 @@ Red Zone missions begin. Economy becomes critical. Instability possible for PCs 
 
 ### Act III: Climax (Sessions 10-15)
 
-Red/Black Zone missions. The central conspiracy emerges (who is deliberately destabilizing the zones?). PCs must commit: Division or Zhou. Multiple Quirks per PC. Echo transformation is a real threat. Tone: no way out.
+Red/Black Zone missions. The central conspiracy emerges (who is deliberately destabilizing the zones?). PCs must commit: Division or Zhou. Repeated exposure can produce multiple Quirks. Echo transformation is a real threat, not a required ending. Tone: no way out.
 
 ## Creating Effective Moral Dilemmas
 

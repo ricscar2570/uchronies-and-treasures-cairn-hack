@@ -5,56 +5,73 @@ parent: Game Systems
 nav_order: 2
 ---
 
+# Temporal Contamination
 
-## Temporal Contamination
+**Time corrodes you. Exposure, not the session number, determines the risk.**
 
-**Time corrodes you. Slowly. Permanently.**
+## Zone Intensity
 
-Every 6 hours you spend in a temporal zone, you must make a **WIL save** to resist contamination. This represents your mental and biological resistance to the temporal forces that permeate these zones.
-
-### The Contamination Save
-
-**When:** Every 6 hours of exposure to a temporal zone (varies by zone intensity).
-
-**How:** Roll d20. If the result is **equal to or under** your **effective WIL**, you resist. If you fail, you take contamination damage. Your **effective WIL** is your current WIL **minus the number of Temporal Quirks you carry** (see The Cost of Accumulation). A clean agent saves against full WIL; an agent with four Quirks saves at WIL minus 4.
-
-**Contamination damage:** On a failed save, roll the zone's damage die for WIL damage (see Zone Intensity table). The temporal protection suit reduces damage by 1 (minimum 1). A heavy containment suit (black market, $2,000, bulky) reduces by 2. **Damage cannot exceed half your current WIL, rounded up.** This prevents the death spiral from accelerating uncontrollably: as your WIL drops, each individual hit hurts less.
-
-*Example: Jin has WIL 13 and is wearing the standard suit. He fails a contamination save in an Orange Zone. He rolls d4: 3. Suit absorbs 1. Net damage: 2. His WIL drops to 11. Later, at WIL 5, he fails again and rolls d4: 4. Suit absorbs 1 = 3, but the cap is half of 5, rounded up = 3. He takes 3 WIL damage (would be the same anyway). At WIL 2, the cap is 1, so he can never take more than 1 damage per check.*
-
-**This creates a gradual decline, not a sudden crash.** The spiral is real but it decelerates. PCs degrade over sessions, not in a single bad run.
-
-### Quirk Acquisition
-
-**When contamination damage (after suit reduction and cap) is 3 or more**, roll **d12** on the Quirk table. Minor contamination exposure (1-2 damage) erodes your willpower without mutating you. Only significant exposure triggers a Quirk.
-
-If you already have that Quirk, **reroll** until you get a new one. If you already have 5 different Quirks and would gain a sixth, you become a **temporal echo**: a hostile NPC. Your character is lost.
-
-### Recovery
-
-**WIL damage from contamination does not heal normally.** You need:
-
-- **Division medical treatment** (available, takes 1 full week; 3 days at Loyalty 7+): Restores **d6 WIL** (d8 at Loyalty 7+)
-- **Black market temporal therapy** ($500 per session): Restores d6 WIL, takes 2 days
-- **Anti-rejection medicine** (weekly, $250): Prevents WIL from degrading further between missions. Missing a dose means you are **Deprived** and cannot recover WIL.
-
-### Zone Intensity
-
-| Zone Type | Check Frequency | Damage Die | Example |
+| Zone | Periodic check | Damage die | Typical location |
 |---|---|---|---|
-| Stable (green) | No checks | None | Division HQ, Vegas Strip |
-| Low (yellow) | Every 8 hours | d4 | Outskirts, buffer zones |
-| Standard (orange) | Every 6 hours | d4 | Most mission areas |
-| High (red) | Every 3 hours | d4 | Deep zones, Oculus sites |
-| Critical (black) | Every hour | d6 | Oculus core, temporal rifts |
+| Green | None | None | Division HQ, stabilized suburbs |
+| Yellow | Every 8 hours | d4 | Outskirts and buffer zones |
+| Orange | Every 6 hours | d4 | Standard mission areas |
+| Red | Every 3 hours | d4 | Deep zones and Oculus sites |
+| Black | Every 1 hour | d6 | Oculus core and temporal rifts |
+| Sheltered room | Every 12 hours | d4 | A specifically designated temporal safe room |
 
+A sheltered room is still contaminated. Ordinary cover, a locked door, or the Anchor Spike does not make a place sheltered or Green. Use a scenario's explicitly stated local exception when present.
 
-### Temporal Echoes
+## The Exposure Clock
 
-When a character acquires their 6th Quirk, or when WIL reaches 0 from contamination damage, they become a **temporal echo**. This is permanent and irreversible.
+Start a fresh expedition with an empty clock only after **8 uninterrupted hours of rest in Green**. Track how much of the current interval has elapsed. Walking, fighting, searching and resting in a contaminated zone all count. A check occurs exactly when an interval is completed, not automatically at entry, departure or the end of a session.
 
-The character becomes an NPC controlled by the Warden. They exist simultaneously across multiple time periods, are hostile to living beings, and retain fragmented memories of their former life.
+**Changing zones:** carry over the fraction of the interval already filled. The remaining fraction uses the new zone's interval. Use the damage die of the zone where the check becomes due. Do not reset the clock by crossing a boundary. Brief Green visits pause exposure; they do not clear it. A sheltered room slows the clock to its 12-hour interval; it does not pause it.
 
-**For the player:** Create a new character. The replacement joins the party immediately to minimize downtime. The Warden may use your echo as a future encounter.
+**Example:** after 4 hours in Orange, the clock is two-thirds full. If the area becomes Red, the last third takes 1 hour: the check occurs after 5 total hours, then every 3 hours while Red. No retroactive checks are added. After 4 hours in Yellow and a brief Green visit, another 4 hours in Yellow completes the same interval.
 
-> **What makes this different from death:** Death is quick. Becoming an echo is a slow, visible process. The other players watch as your character accumulates Quirks, becomes stranger, more unstable. They know what's coming. The question is whether they can finish the campaign before it happens.
+**Ending an expedition:** 8 uninterrupted hours of Green rest clear only the unfinished exposure interval. They do not restore contamination-damaged WIL or remove Quirks. A session break, debriefing or medicine dose is not a reset. Keep the clock visible; warn players when delays will reach a check.
+
+**Extra hazards:** a scenario can explicitly require an immediate contamination check. Resolve it separately using its stated zone or die. It does not fill or empty the periodic clock unless the hazard explicitly says so. A generic WIL save against fear, a time-loop event or loss of a turn is not automatically contamination damage.
+
+## Resolve One Check
+
+**1. Find effective WIL.** Effective WIL is current WIL minus the number of distinct Quirks, with a **maximum penalty of -3**. This is the standard rule, not an optional dial. With WIL 11 and four Quirks, save against 8, not 7. The penalty applies to contamination saves only, not every WIL save.
+
+**2. Save.** Roll d20 equal to or below effective WIL. A natural 1 always succeeds; a natural 20 always fails. On success, take no damage and gain no Quirk. Never raise a negative effective WIL to create extra successful die results: only the natural 1 succeeds in that case.
+
+**3. Apply protection, then the cap.** On failure, roll the zone's damage die. Subtract temporal protection, to a minimum of 1. Then cap that result at half the character's current WIL before this hit, rounded up. Subtract the final damage directly from WIL, bypassing HP. Armor does not reduce it.
+
+The standard temporal suit reduces damage by 1. The heavy containment suit reduces it by 2 ($2,000, bulky). They are alternatives, not cumulative suits. Dr. Voss's Injector adds its stated reduction and duration; the minimum damage remains 1.
+
+**4. Check WIL first.** If WIL reaches 0 from this hit, the character immediately becomes an echo. Do not resolve another check or treatment for that character as a living PC.
+
+**5. Check the Quirk trigger.** If the character remains above WIL 0 and the final damage from this single hit is **3 or more**, gain one new distinct Quirk. Roll d12; reroll duplicates until a new result appears. Multiple hits of 1-2 damage do not add together for this trigger. A hit never grants more than one Quirk.
+
+**6. Check the sixth Quirk.** Five distinct Quirks are survivable while WIL remains above 0. Gaining the **sixth** causes immediate, irreversible echo transformation. Four and five Quirks do not increase the save penalty beyond -3; they still bring the character closer to this limit.
+
+## Worked Cases and Limits
+
+**Standard suit:** Jin has WIL 13 and no Quirks. He fails an Orange check and rolls 4 on d4. The suit reduces it to 3; the cap is 7. He loses 3 WIL, falls to 10 and gains one Quirk.
+
+**Protection before cap:** at WIL 5, a failed Black check rolls 6. The standard suit reduces it to 5, then the cap reduces it to 3. Final WIL is 2 and one Quirk is gained. Applying the cap before the suit would incorrectly produce only 2 damage.
+
+**Low WIL:** at WIL 4, the cap is 2, so this hit cannot grant a Quirk. At WIL 1, a failed check still deals 1 damage and causes an echo. The cap limits one hit; it does not guarantee safety over repeated checks.
+
+**Heavy suit:** against a d4 zone, its maximum net damage is 2. It prevents the normal 3-damage Quirk trigger there, but not WIL erosion or WIL-zero echoes. Black d6 exposure can still grant Quirks. This is an intentional benefit of expensive, bulky protection, not immunity to contamination.
+
+## Recovery
+
+Contamination-damaged WIL does not recover through ordinary HP rest or merely because a session ends. Restore WIL only when the treatment actually finishes, never beyond maximum WIL.
+
+- **Division medical treatment:** one full week; restores d6 WIL. At Loyalty 7+, 3 days and d8 WIL.
+- **Black market temporal therapy:** $500, 2 days, restores d6 WIL.
+- **Anti-rejection medicine:** $250 weekly. Prevents withdrawal; it does not itself restore WIL. A missed dose makes the character Deprived. No WIL recovery while Deprived.
+
+Treatment does not remove Quirks, and ordinary treatment never reverses an echo. Exceptional Quirk removal follows the separate procedures in Temporal Quirks. Do not award a full week of care while also treating that same week as unrestricted field work.
+
+## Temporal Echoes
+
+At WIL 0 from contamination or on gaining a sixth distinct Quirk, the PC becomes a hostile NPC controlled by the Warden. The transformation is permanent and irreversible. The echo retains fragmented memories of its former life. The player creates a replacement who joins at the next plausible immediate opportunity.
+
+Before exposure, show the current WIL, Quirk count, protection and time to the next check. Players can retreat, reduce delays, arrange treatment or improve protection. Do not add hidden checks to force a mutation schedule.

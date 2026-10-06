@@ -1,0 +1,615 @@
+{
+  "rules_version": "R2.1",
+  "evidence_type": "synthetic_subsystem_diagnostic",
+  "human_playtests_added": 0,
+  "rules_sha256": "a619b639deffbbf200bf4eef3379663fd6daadb6ab67b1fc8213109ffc6ce953",
+  "assumptions": [
+    "Initial WIL is 3d6; no starting Quirks.",
+    "Fixed exposure per expedition; no extra hazard checks, combat or discretionary bonuses.",
+    "One completed d6 treatment after each surviving expedition except no-care profile.",
+    "Medicine supplied; no Deprivation; care timing and money NOT modeled.",
+    "Each expedition starts after at least 8 hours of rest in Green.",
+    "No Quirk-specific secondary effects, surgery, retirement decisions or tactical adaptation.",
+    "Ten or fifteen expedition/care cycles are NOT automatically sessions or campaign weeks.",
+    "All-character mean includes up to six Quirks acquired before loss; survivor mean is separate.",
+    "Paired cap runs reuse the seed but do not preserve identical later random draws.",
+    "No historical percentage is used as a calibration target."
+  ],
+  "source_sha256": {
+    "contamination_rules.py": "1edf1433131f98c154f011210401361d43d14d876a3f13a533c36df425efb0b0",
+    "contamination_sim.py": "c02049c926236dc377c64f33d7e619f9d950cf1338fc4b3ee6cdc9a7cd130764"
+  },
+  "rows": [
+    {
+      "profile": {
+        "id": "yellow_short",
+        "zone": "yellow",
+        "minutes": 240,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 10,
+      "seed": 42026,
+      "penalty_cap": 3,
+      "scheduled_checks_per_expedition": 0,
+      "mean_checks_taken": 0,
+      "outcome_counts": {
+        "survived": 20000
+      },
+      "echo_percent": 0.0,
+      "echo_wil_percent": 0.0,
+      "echo_sixth_percent": 0.0,
+      "quirks_all_mean": 0,
+      "quirks_survivors_mean": 0,
+      "quirks_survivors_median": 0.0,
+      "quirk_distribution_all": {
+        "0": 20000
+      },
+      "ever_quirk_percent": 0.0,
+      "first_quirk_cycle_median_among_gainers": null,
+      "wil_groups": {
+        "3-8": {
+          "n": 5127,
+          "echo": 0
+        },
+        "9-12": {
+          "n": 9582,
+          "echo": 0
+        },
+        "13-18": {
+          "n": 5291,
+          "echo": 0
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "yellow_standard",
+        "zone": "yellow",
+        "minutes": 480,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 10,
+      "seed": 43035,
+      "penalty_cap": 3,
+      "scheduled_checks_per_expedition": 1,
+      "mean_checks_taken": 9.99945,
+      "outcome_counts": {
+        "survived": 19958,
+        "sixth_quirk": 42
+      },
+      "echo_percent": 0.21,
+      "echo_wil_percent": 0.0,
+      "echo_sixth_percent": 0.21,
+      "quirks_all_mean": 1.21195,
+      "quirks_survivors_mean": 1.2018739352640546,
+      "quirks_survivors_median": 1.0,
+      "quirk_distribution_all": {
+        "3": 1872,
+        "1": 6737,
+        "5": 146,
+        "0": 6397,
+        "2": 4160,
+        "4": 646,
+        "6": 42
+      },
+      "ever_quirk_percent": 68.015,
+      "first_quirk_cycle_median_among_gainers": 4,
+      "wil_groups": {
+        "3-8": {
+          "n": 5011,
+          "echo": 21
+        },
+        "9-12": {
+          "n": 9734,
+          "echo": 19
+        },
+        "13-18": {
+          "n": 5255,
+          "echo": 2
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "orange_standard",
+        "zone": "orange",
+        "minutes": 360,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 10,
+      "seed": 44044,
+      "penalty_cap": 3,
+      "scheduled_checks_per_expedition": 1,
+      "mean_checks_taken": 9.99875,
+      "outcome_counts": {
+        "survived": 19972,
+        "sixth_quirk": 28
+      },
+      "echo_percent": 0.14,
+      "echo_wil_percent": 0.0,
+      "echo_sixth_percent": 0.14,
+      "quirks_all_mean": 1.20525,
+      "quirks_survivors_mean": 1.1985279391147607,
+      "quirks_survivors_median": 1.0,
+      "quirk_distribution_all": {
+        "2": 4172,
+        "0": 6418,
+        "1": 6755,
+        "3": 1838,
+        "4": 621,
+        "5": 168,
+        "6": 28
+      },
+      "ever_quirk_percent": 67.91,
+      "first_quirk_cycle_median_among_gainers": 4.0,
+      "wil_groups": {
+        "3-8": {
+          "n": 5168,
+          "echo": 16
+        },
+        "9-12": {
+          "n": 9683,
+          "echo": 12
+        },
+        "13-18": {
+          "n": 5149,
+          "echo": 0
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "red_standard",
+        "zone": "red",
+        "minutes": 360,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 10,
+      "seed": 45053,
+      "penalty_cap": 3,
+      "scheduled_checks_per_expedition": 2,
+      "mean_checks_taken": 19.03305,
+      "outcome_counts": {
+        "survived": 16999,
+        "wil_zero": 2203,
+        "sixth_quirk": 798
+      },
+      "echo_percent": 15.005,
+      "echo_wil_percent": 11.015,
+      "echo_sixth_percent": 3.99,
+      "quirks_all_mean": 2.33495,
+      "quirks_survivors_mean": 2.235307959291723,
+      "quirks_survivors_median": 2,
+      "quirk_distribution_all": {
+        "3": 3910,
+        "2": 4583,
+        "4": 2541,
+        "5": 1320,
+        "0": 2597,
+        "1": 4251,
+        "6": 798
+      },
+      "ever_quirk_percent": 87.015,
+      "first_quirk_cycle_median_among_gainers": 3,
+      "wil_groups": {
+        "3-8": {
+          "n": 5264,
+          "echo": 1909
+        },
+        "9-12": {
+          "n": 9641,
+          "echo": 973
+        },
+        "13-18": {
+          "n": 5095,
+          "echo": 119
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "red_extended",
+        "zone": "red",
+        "minutes": 540,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 10,
+      "seed": 46062,
+      "penalty_cap": 3,
+      "scheduled_checks_per_expedition": 3,
+      "mean_checks_taken": 22.24865,
+      "outcome_counts": {
+        "sixth_quirk": 1292,
+        "survived": 8157,
+        "wil_zero": 10551
+      },
+      "echo_percent": 59.215,
+      "echo_wil_percent": 52.755,
+      "echo_sixth_percent": 6.46,
+      "quirks_all_mean": 2.61,
+      "quirks_survivors_mean": 2.6220424175554737,
+      "quirks_survivors_median": 3,
+      "quirk_distribution_all": {
+        "6": 1292,
+        "2": 4447,
+        "1": 3828,
+        "4": 2876,
+        "3": 3919,
+        "5": 1693,
+        "0": 1945
+      },
+      "ever_quirk_percent": 90.275,
+      "first_quirk_cycle_median_among_gainers": 2,
+      "wil_groups": {
+        "3-8": {
+          "n": 5189,
+          "echo": 4800
+        },
+        "9-12": {
+          "n": 9597,
+          "echo": 5913
+        },
+        "13-18": {
+          "n": 5214,
+          "echo": 1130
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "black_short",
+        "zone": "black",
+        "minutes": 60,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 10,
+      "seed": 47071,
+      "penalty_cap": 3,
+      "scheduled_checks_per_expedition": 1,
+      "mean_checks_taken": 9.95685,
+      "outcome_counts": {
+        "survived": 18998,
+        "sixth_quirk": 1002
+      },
+      "echo_percent": 5.01,
+      "echo_wil_percent": 0.0,
+      "echo_sixth_percent": 5.01,
+      "quirks_all_mean": 2.5486,
+      "quirks_survivors_mean": 2.3665649015685863,
+      "quirks_survivors_median": 2.0,
+      "quirk_distribution_all": {
+        "2": 4291,
+        "5": 1734,
+        "4": 3080,
+        "3": 3916,
+        "1": 3640,
+        "0": 2337,
+        "6": 1002
+      },
+      "ever_quirk_percent": 88.315,
+      "first_quirk_cycle_median_among_gainers": 3,
+      "wil_groups": {
+        "3-8": {
+          "n": 5189,
+          "echo": 474
+        },
+        "9-12": {
+          "n": 9670,
+          "echo": 474
+        },
+        "13-18": {
+          "n": 5141,
+          "echo": 54
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "red_heavy",
+        "zone": "red",
+        "minutes": 360,
+        "suit": 2,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 10,
+      "seed": 48080,
+      "penalty_cap": 3,
+      "scheduled_checks_per_expedition": 2,
+      "mean_checks_taken": 19.8135,
+      "outcome_counts": {
+        "survived": 19572,
+        "wil_zero": 428
+      },
+      "echo_percent": 2.14,
+      "echo_wil_percent": 2.14,
+      "echo_sixth_percent": 0.0,
+      "quirks_all_mean": 0,
+      "quirks_survivors_mean": 0,
+      "quirks_survivors_median": 0.0,
+      "quirk_distribution_all": {
+        "0": 20000
+      },
+      "ever_quirk_percent": 0.0,
+      "first_quirk_cycle_median_among_gainers": null,
+      "wil_groups": {
+        "3-8": {
+          "n": 5068,
+          "echo": 422
+        },
+        "9-12": {
+          "n": 9728,
+          "echo": 6
+        },
+        "13-18": {
+          "n": 5204,
+          "echo": 0
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "yellow_no_care",
+        "zone": "yellow",
+        "minutes": 480,
+        "suit": 1,
+        "therapy": 0
+      },
+      "runs": 20000,
+      "cycles": 10,
+      "seed": 49089,
+      "penalty_cap": 3,
+      "scheduled_checks_per_expedition": 1,
+      "mean_checks_taken": 8.31435,
+      "outcome_counts": {
+        "survived": 8292,
+        "wil_zero": 11708
+      },
+      "echo_percent": 58.54,
+      "echo_wil_percent": 58.54,
+      "echo_sixth_percent": 0.0,
+      "quirks_all_mean": 0.83195,
+      "quirks_survivors_mean": 0.7111673902556681,
+      "quirks_survivors_median": 1.0,
+      "quirk_distribution_all": {
+        "1": 8553,
+        "2": 3258,
+        "0": 7674,
+        "3": 490,
+        "4": 25
+      },
+      "ever_quirk_percent": 61.63,
+      "first_quirk_cycle_median_among_gainers": 4.0,
+      "wil_groups": {
+        "3-8": {
+          "n": 5157,
+          "echo": 4996
+        },
+        "9-12": {
+          "n": 9542,
+          "echo": 5978
+        },
+        "13-18": {
+          "n": 5301,
+          "echo": 734
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "red_standard",
+        "zone": "red",
+        "minutes": 360,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 15,
+      "seed": 57041,
+      "penalty_cap": 0,
+      "scheduled_checks_per_expedition": 2,
+      "mean_checks_taken": 27.63475,
+      "outcome_counts": {
+        "survived": 15144,
+        "wil_zero": 2418,
+        "sixth_quirk": 2438
+      },
+      "echo_percent": 24.28,
+      "echo_wil_percent": 12.09,
+      "echo_sixth_percent": 12.19,
+      "quirks_all_mean": 3.1205,
+      "quirks_survivors_mean": 2.839012150026413,
+      "quirks_survivors_median": 3.0,
+      "quirk_distribution_all": {
+        "3": 3961,
+        "1": 2583,
+        "5": 2430,
+        "2": 3819,
+        "0": 1387,
+        "4": 3382,
+        "6": 2438
+      },
+      "ever_quirk_percent": 93.065,
+      "first_quirk_cycle_median_among_gainers": 3,
+      "wil_groups": {
+        "3-8": {
+          "n": 5179,
+          "echo": 2618
+        },
+        "9-12": {
+          "n": 9633,
+          "echo": 1992
+        },
+        "13-18": {
+          "n": 5188,
+          "echo": 246
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "red_standard",
+        "zone": "red",
+        "minutes": 360,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 15,
+      "seed": 57041,
+      "penalty_cap": 2,
+      "scheduled_checks_per_expedition": 2,
+      "mean_checks_taken": 26.8498,
+      "outcome_counts": {
+        "survived": 13410,
+        "wil_zero": 3133,
+        "sixth_quirk": 3457
+      },
+      "echo_percent": 32.95,
+      "echo_wil_percent": 15.665,
+      "echo_sixth_percent": 17.285,
+      "quirks_all_mean": 3.36055,
+      "quirks_survivors_mean": 2.9628635346756154,
+      "quirks_survivors_median": 3.0,
+      "quirk_distribution_all": {
+        "3": 3594,
+        "1": 2385,
+        "2": 3127,
+        "6": 3457,
+        "5": 2720,
+        "0": 1355,
+        "4": 3362
+      },
+      "ever_quirk_percent": 93.225,
+      "first_quirk_cycle_median_among_gainers": 3,
+      "wil_groups": {
+        "3-8": {
+          "n": 5283,
+          "echo": 3178
+        },
+        "9-12": {
+          "n": 9684,
+          "echo": 2929
+        },
+        "13-18": {
+          "n": 5033,
+          "echo": 483
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "red_standard",
+        "zone": "red",
+        "minutes": 360,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 15,
+      "seed": 57041,
+      "penalty_cap": 3,
+      "scheduled_checks_per_expedition": 2,
+      "mean_checks_taken": 26.7458,
+      "outcome_counts": {
+        "survived": 13067,
+        "sixth_quirk": 3737,
+        "wil_zero": 3196
+      },
+      "echo_percent": 34.665,
+      "echo_wil_percent": 15.98,
+      "echo_sixth_percent": 18.685,
+      "quirks_all_mean": 3.3908,
+      "quirks_survivors_mean": 2.9292875181755567,
+      "quirks_survivors_median": 3,
+      "quirk_distribution_all": {
+        "5": 2672,
+        "0": 1383,
+        "2": 3101,
+        "4": 3295,
+        "6": 3737,
+        "1": 2392,
+        "3": 3420
+      },
+      "ever_quirk_percent": 93.085,
+      "first_quirk_cycle_median_among_gainers": 3,
+      "wil_groups": {
+        "3-8": {
+          "n": 5247,
+          "echo": 3147
+        },
+        "9-12": {
+          "n": 9586,
+          "echo": 3222
+        },
+        "13-18": {
+          "n": 5167,
+          "echo": 564
+        }
+      }
+    },
+    {
+      "profile": {
+        "id": "red_standard",
+        "zone": "red",
+        "minutes": 360,
+        "suit": 1,
+        "therapy": 6
+      },
+      "runs": 20000,
+      "cycles": 15,
+      "seed": 57041,
+      "penalty_cap": 5,
+      "scheduled_checks_per_expedition": 2,
+      "mean_checks_taken": 26.6972,
+      "outcome_counts": {
+        "survived": 12866,
+        "sixth_quirk": 3900,
+        "wil_zero": 3234
+      },
+      "echo_percent": 35.67,
+      "echo_wil_percent": 16.17,
+      "echo_sixth_percent": 19.5,
+      "quirks_all_mean": 3.4083,
+      "quirks_survivors_mean": 2.9025338100419713,
+      "quirks_survivors_median": 3.0,
+      "quirk_distribution_all": {
+        "5": 2593,
+        "0": 1341,
+        "2": 3193,
+        "4": 3182,
+        "6": 3900,
+        "1": 2343,
+        "3": 3448
+      },
+      "ever_quirk_percent": 93.295,
+      "first_quirk_cycle_median_among_gainers": 3,
+      "wil_groups": {
+        "3-8": {
+          "n": 5214,
+          "echo": 3151
+        },
+        "9-12": {
+          "n": 9617,
+          "echo": 3350
+        },
+        "13-18": {
+          "n": 5169,
+          "echo": 633
+        }
+      }
+    }
+  ]
+}

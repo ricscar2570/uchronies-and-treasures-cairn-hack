@@ -1,0 +1,35 @@
+{
+  "version": "R2.1",
+  "penalty_cap": 3,
+  "quirk_threshold": 3,
+  "quirk_table_size": 12,
+  "echo_quirks": 6,
+  "minimum_damage": 1,
+  "safe_reset_hours": 8,
+  "zones": {
+    "green": {
+      "interval_minutes": null,
+      "damage_die": null
+    },
+    "yellow": {
+      "interval_minutes": 480,
+      "damage_die": 4
+    },
+    "orange": {
+      "interval_minutes": 360,
+      "damage_die": 4
+    },
+    "red": {
+      "interval_minutes": 180,
+      "damage_die": 4
+    },
+    "black": {
+      "interval_minutes": 60,
+      "damage_die": 6
+    },
+    "sheltered": {
+      "interval_minutes": 720,
+      "damage_die": 4
+    }
+  }
+}

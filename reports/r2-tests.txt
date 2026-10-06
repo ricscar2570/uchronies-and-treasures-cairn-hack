@@ -1,0 +1,34 @@
+test_black_three_hours_and_residual (test_contamination_r2.ClockTests.test_black_three_hours_and_residual) ... ok
+test_chunking_does_not_change_checks (test_contamination_r2.ClockTests.test_chunking_does_not_change_checks) ... ok
+test_eight_hour_rest_resets_only_residual_clock (test_contamination_r2.ClockTests.test_eight_hour_rest_resets_only_residual_clock) ... ok
+test_exact_boundaries_all_zones (test_contamination_r2.ClockTests.test_exact_boundaries_all_zones) ... ok
+test_green_visit_does_not_reset (test_contamination_r2.ClockTests.test_green_visit_does_not_reset) ... ok
+test_green_work_is_not_rest_and_interrupts_rest (test_contamination_r2.ClockTests.test_green_work_is_not_rest_and_interrupts_rest) ... ok
+test_shelter_slows_does_not_reset (test_contamination_r2.ClockTests.test_shelter_slows_does_not_reset) ... ok
+test_short_yellow_trip_has_no_periodic_check (test_contamination_r2.ClockTests.test_short_yellow_trip_has_no_periodic_check) ... ok
+test_unknown_zone_and_negative_time_rejected (test_contamination_r2.ClockTests.test_unknown_zone_and_negative_time_rejected) ... ok
+test_zone_transition_five_total_hours (test_contamination_r2.ClockTests.test_zone_transition_five_total_hours) ... ok
+test_heavy_suit_no_d4_mutations (test_contamination_r2.EvidenceTests.test_heavy_suit_no_d4_mutations) ... ok
+test_no_checks_zero_contamination_outcomes (test_contamination_r2.EvidenceTests.test_no_checks_zero_contamination_outcomes) ... ok
+test_reproducible_and_counts_partition (test_contamination_r2.EvidenceTests.test_reproducible_and_counts_partition) ... ok
+test_saved_report_provenance (test_contamination_r2.EvidenceTests.test_saved_report_provenance) ... ok
+test_web_and_pdf_source_invariants (test_contamination_r2.EvidenceTests.test_web_and_pdf_source_invariants) ... ok
+test_exact_clean_wil_twelve_quirk_probability (test_contamination_r2.ResolutionTests.test_exact_clean_wil_twelve_quirk_probability) ... ok
+test_fifth_is_survivable (test_contamination_r2.ResolutionTests.test_fifth_is_survivable) ... ok
+test_heavy_suit_and_black_zone (test_contamination_r2.ResolutionTests.test_heavy_suit_and_black_zone) ... ok
+test_invalid_inputs_are_rejected (test_contamination_r2.ResolutionTests.test_invalid_inputs_are_rejected) ... ok
+test_low_wil_blocks_quirk_not_echo (test_contamination_r2.ResolutionTests.test_low_wil_blocks_quirk_not_echo) ... ok
+test_minimum_one_and_monotonicity_exhaustive (test_contamination_r2.ResolutionTests.test_minimum_one_and_monotonicity_exhaustive) ... ok
+test_natural_one_and_twenty (test_contamination_r2.ResolutionTests.test_natural_one_and_twenty) ... ok
+test_penalty_cap_at_three (test_contamination_r2.ResolutionTests.test_penalty_cap_at_three) ... ok
+test_protection_before_cap (test_contamination_r2.ResolutionTests.test_protection_before_cap) ... ok
+test_recovery_not_automatic (test_contamination_r2.ResolutionTests.test_recovery_not_automatic) ... ok
+test_saved_check_consumes_no_damage_roll (test_contamination_r2.ResolutionTests.test_saved_check_consumes_no_damage_roll) ... ok
+test_single_hit_trigger (test_contamination_r2.ResolutionTests.test_single_hit_trigger) ... ok
+test_sixth_is_echo_and_distinct (test_contamination_r2.ResolutionTests.test_sixth_is_echo_and_distinct) ... ok
+test_small_hits_do_not_combine (test_contamination_r2.ResolutionTests.test_small_hits_do_not_combine) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.027s
+
+OK
