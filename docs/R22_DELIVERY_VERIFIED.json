@@ -1,0 +1,18 @@
+{
+  "edition": "R2.2",
+  "date": "2026-10-06",
+  "source_checkpoint_commit": "bbc1152ae7f09a0fadd19c77444d4f530b5b73fc",
+  "recovery_run_id": 37530990129,
+  "recovery_artifact_id": 11444601265,
+  "tests_passed": 78,
+  "contamination_paths_reproduced": 240000,
+  "manual_pages": 88,
+  "canonical_chapters": 26,
+  "manual_bookmarks": 299,
+  "form_fields": 162,
+  "human_playtests_added": 0,
+  "main_updated": false,
+  "initial_delivery_issue": "Tests and PDF build passed, but the Actions token could not update workflow files. Source writes were separated from workflow administration through the authorized connector.",
+  "cleanup": "One-use write workflow removed. Permanent validation workflow has read-only contents permission. Source text and rule parameters are unchanged by this cleanup.",
+  "package_provenance": "Use SOURCE_COMMIT.txt and SHA256SUMS.txt inside each generated archive for its exact revision and integrity. A workflow artifact proves the recorded checks, not publication or human-play validation."
+}
