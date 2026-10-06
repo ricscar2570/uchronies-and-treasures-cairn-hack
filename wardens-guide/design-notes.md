@@ -26,7 +26,11 @@ WIL damage from contamination doesn't heal normally because the time zones are c
 
 In the Cairn engine, a Glock 17 does d6 damage. Average starting HP is 3.5. One good roll drops a PC to 0 and triggers critical damage. Two hits kill. This is intentional. Combat in CHRONOCAIRN should feel like combat in a crime thriller, not a fantasy dungeon: terrifying, brief, and something you plan your way around. The game's real challenges are economic and moral, not tactical.
 
-## The Monte Carlo Validation
+## Simulation Scope
+
+R1B compares an isolated ledger with explicit Loyalty-benefit and clemency policies. It does not forecast player choices or validate the complete game. Historical figures in the next paragraph are reported legacy results: the original full-campaign simulator has not been recovered or rerun for this checkpoint.
+
+### Reported Historical Simulation
 
 The original Italian edition (UeT v2.2.3) was balanced using 300,000 simulated 15-session campaigns. The headline result: the early rules produced a runaway "death spiral," and a small set of mechanical adjustments (suit protection, contamination timing, an HP floor, experience rebalancing, and the rule that contamination damage cannot exceed half current WIL) brought the campaign back from near-certain collapse to a survivable but genuinely lethal baseline. The contamination damage die (d4), the suit reduction (1 point), and the zone intensity table all derive from that data. The full before/after numbers, the method, and the re-validation of the Cairn-edition changes are collected in the **Monte Carlo Transparency** appendix, kept separate so the analysis is auditable rather than buried in commentary.
 

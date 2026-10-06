@@ -1,0 +1,6 @@
+scenario,trials,median_debt_week_10,debt_p90_week_10,median_cash_week_10,median_debt_week_15,debt_p90_week_15,median_cash_week_15,ever_debt_700,ever_debt_1300,median_first_700_week,agent_paid_week_15,eligible_for_agent_after_week_15,mean_corruption_from_modelled_offer
+isolated_honest,100000,1031.0,1819,0.0,622.0,2568,200.0,0.78758,0.51294,7.0,0.81599,0.88706,0.0
+isolated_first_offer,100000,0.0,502,355.0,0.0,313,1171.0,0.78758,0.00933,7.0,0.81599,0.88706,0.78758
+loyalty_honest,100000,0.0,1121,806.0,0.0,0,4216.0,0.40149,0.12694,5,0.81599,0.88706,0.0
+loyalty_trusted_honest,100000,0.0,815,1120.0,0.0,0,4532.0,0.30112,0.08511,5.0,0.81599,0.88706,0.0
+loyalty_trusted_clemency_honest,100000,0.0,566,880.0,0.0,0,4330.0,0.16793,0.03255,6,0.81599,0.88706,0.0

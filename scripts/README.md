@@ -1,45 +1,13 @@
-# Build Scripts
+# CHRONOCAIRN build and R1 verification
 
-## PDF Generation
+Install the repository Python requirements and Liberation fonts. Run commands from the repository root.
 
-Generates the complete KDP-ready manual PDF.
+- `python -m unittest discover -s tests -v`: mechanical and source regression tests.
+- `python scripts/economy_sim.py`: 100,000 paths per each of five explicit policies; fixed seed 42026; 15 weeks. Use `--trials` for a smaller smoke check and `--output` to keep it separate from published results.
+- `python scripts/r1_report.py`: regenerate the measured evidence appendix from the JSON results.
+- `python scripts/build-pdf.py`: rebuild `CHRONOCAIRN_Final_Complete.pdf`.
+- `python scripts/r1_pdf_check.py`: structural/content checks of the generated PDF (not visual certification).
 
-### Requirements
+The economy, design/FAQ, mini-campaign and R1 evidence/worksheet sections are sourced directly from Markdown through `r1_pdf_sources.py`. Other chapters still use the legacy embedded builder; their complete migration is not claimed. `r1_finalize_sources.py` is an idempotent guarded migration from the recovered 32dd003 checkpoint. Do not apply it to the Omnibus line.
 
-```bash
-pip install -r scripts/requirements.txt
-```
-
-On Ubuntu/Debian, also install Liberation fonts if not present:
-
-```bash
-sudo apt install fonts-liberation
-```
-
-On macOS: update the `BASE` variable at the top of `build-pdf.py` to your local font path.
-
-### Usage
-
-Run from the repository root:
-
-```bash
-python scripts/build-pdf.py
-```
-
-Output: `UeT_Final_Complete.pdf` in the current directory.
-
-### What the script produces
-
-- A5 format (148 x 210 mm), KDP-compatible
-- Two-column layout with full-width tables where needed
-- Cover page: navy/crimson/gold color scheme
-- Automatic TOC with page numbers
-- Running headers and footers
-- Liberation Serif / Liberation Sans fonts (embedded)
-- Approximately 59 pages
-
-### Notes
-
-Content is embedded directly in the script and has been copy-edited for print.
-The markdown files in the repository are the source of truth for the web version;
-the PDF script is maintained separately for print layout control.
+The manual is a review build, not KDP/POD-ready by certification. The PDF contains embedded rendering fonts; font binaries are not redistributed in the delivery patch.

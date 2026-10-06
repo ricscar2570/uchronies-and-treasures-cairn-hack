@@ -29,14 +29,9 @@ The original economic-pressure check used a single negative balance and an earli
 
 ## R1 economy subsystem validation
 
-R1 was checked with **100,000 simulated 15-week ledgers** using fixed seed 42026. This is a pressure test, not a forecast of player behavior. Baseline assumptions: one field mission per week, 65% mission success, one non-cumulative performance band, the published unexpected-expense table, a $200 emergency Cash reserve before voluntary repayments, and Agent promotion after 8 successful missions.
+**Superseded scope statement:** the old 78.8% result describes an isolated ledger without high-Loyalty pay benefits, Trusted assignments, clemency or side work. It is not a whole-rules prediction for honest agents. The updated [R1 Economy Verification](r1-economy-validation.md) gives the rerun, five matched-path policies, actual assumptions, Week 10/15 outputs and the distinction between promotion eligibility and salary timing.
 
-| Strategy | Median Debt, Week 15 | 90th Percentile Debt | Ever Reaches $700 Debt | Median First $700 Week |
-|---|---:|---:|---:|---:|
-| Honest | $622 | $2,568 | 78.8% | 7 |
-| Accept first Zhou offer | $0 | $308 | 78.9% before accepting | 7 |
-
-The result is the intended shape: strong pressure without predetermined corruption. The reproducible model is `scripts/economy_sim.py`.
+The original full-campaign simulation has not been recovered or rerun. Historical results below are not evidence that R1B or the complete current game is playtest-validated.
 
 ## Re-validating the Cairn-edition changes (this release)
 

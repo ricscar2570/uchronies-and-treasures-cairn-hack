@@ -1,5 +1,5 @@
 """
-CHRONOCAIRN: Complete KDP Manual
+CHRONOCAIRN: R1B Economy Review Manual (not printer-certified)
 A5 two-column, premium layout
 All content from repository, edited and formatted
 """
@@ -34,6 +34,7 @@ if not _os.path.isdir(BASE):
             "Install with: sudo apt install fonts-liberation\n"
             "Or set BASE manually at the top of this script."
         )
+pdfmetrics.registerFont(TTFont("Helvetica", BASE+"LiberationSans-Regular.ttf"))
 pdfmetrics.registerFont(TTFont("Ser",    BASE+"LiberationSerif-Regular.ttf"))
 pdfmetrics.registerFont(TTFont("SerB",   BASE+"LiberationSerif-Bold.ttf"))
 pdfmetrics.registerFont(TTFont("SerI",   BASE+"LiberationSerif-Italic.ttf"))
@@ -169,6 +170,7 @@ def fullnote(text):
 def T(headers, rows, widths, full=False):
     """Build a styled table."""
     base = FW if full else CW
+    widths = [w * (base - 12) / sum(widths) for w in widths]
     data = [[Paragraph(md(h), STYLES["th"]) for h in headers]]
     for row in rows:
         data.append([Paragraph(md(str(c)), STYLES["td"]) for c in row])
@@ -199,6 +201,7 @@ class UeTDoc(BaseDocTemplate):
             leftMargin=ML, rightMargin=MR,
             topMargin=MT, bottomMargin=MB)
         self._chapter = ""
+        self._r1_headings = {}
         self.toc = TableOfContents()
         self.toc.levelStyles = [STYLES["toc0"], STYLES["toc1"], STYLES["toc2"]]
         self._setup()
@@ -226,6 +229,7 @@ class UeTDoc(BaseDocTemplate):
             sn  = f.style.name
             if sn == "h1":
                 self._chapter = txt
+                self._r1_headings[txt] = self.page
                 self.notify("TOCEntry", (0, txt, self.page))
             elif sn == "h2":
                 self.notify("TOCEntry", (1, txt, self.page))
@@ -406,7 +410,7 @@ def story():
     h3("1. Grey Choices"),
     p("No choice is perfect. Every decision has a cost. You are not a hero saving the world. You are a desperate person trying to survive an impossible situation. The game does not judge. It records. After 10 sessions, look at your character sheet and see who you have become."),
     sp(1),
-    note("Example choices: *deliver the fragment to the Division* (loyal, poor, +1 Loyalty). *Sell it to Zhou* (rich, +2 Corruption, fired if caught). *Keep it* (+5 Corruption, everyone hunts you). All valid. All costly."),
+    note("Example choices: *deliver the fragment to the Division* (briefed payout, +1 Loyalty). *Sell it to Zhou* (rich, +2 Corruption, fired if caught). *Keep it* (+5 Corruption, everyone hunts you). All valid. All costly."),
     sp(2),
     h3("2. Economic Pressure"),
     p("**Corruption is not inevitable. It is the fastest escape from a bad equation.** Recruit pay is $800 against $900 fixed expenses. A standard successful mission pays $190 total, but unexpected costs average about $133 a week and Debt compounds at 5% after repayments. Honest characters can have good weeks; Zhou offers certainty and speed when the ledger turns against them."),
@@ -439,14 +443,14 @@ def story():
     h2("Principles for the Warden"),
     b("**Information.** Provide useful information freely. Players do not need to roll dice to learn about their circumstances. When in doubt, give more, not less."),
     b("**Danger.** Telegraph serious danger clearly. The more lethal the situation, the more obvious the warning signs. Never kill a character without warning."),
-    b("**The Economy is the Engine.** Track money carefully. The deficit is the game's heartbeat. If players are not worried about rent, something has gone wrong."),
+    b("**The Economy is the Engine.** Track Cash, Debt and Certificates separately. Financial stability earned through the rules is a valid outcome, not a mistake to punish."),
     b("**NPCs Want Things.** Hayes wants order. Zhou wants profit. Every NPC has goals that may align or conflict with the players. Let them pursue those goals."),
     b("**Let Them Choose.** Never force a moral decision. Present the situation clearly. Whatever they choose, there will be consequences."),
-    b("**Time Pressure.** Every week costs money. Every delay increases the debt. Do not let the pace slacken."),
+    b("**Time Pressure.** Every week incurs costs. A delay increases Debt only when the actual ledger leaves obligations unpaid."),
     sp(3),
     h2("Principles for Players"),
     b("**You Are Expendable.** The Division considers you replaceable. Caution keeps you alive longer than bravery."),
-    b("**The Math is Real.** Track every dollar. Know your weekly deficit. The moment you stop tracking money, the game loses its teeth."),
+    b("**The Math is Real.** Track every dollar. Know your Cash, your Debt, and the next weekly close. The moment you stop tracking money, the game loses its teeth."),
     b("**Fighting is Expensive.** Bullets, injuries, and downtime all cost money you do not have. Avoid combat when possible."),
     b("**Corruption is a Spectrum.** The game will not punish you for accepting Zhou's offers. Every choice has a price. Pay attention to what you are becoming."),
     b("**Ask Questions.** Ask the Warden what your character would know. Ask NPCs what they want. Ask yourself how far you are willing to go."),
@@ -698,117 +702,11 @@ def story():
     # ════════════════════════════════
     # ECONOMY
     # ════════════════════════════════
-    s += [nfull(), pb(), h1("The Economy of Desperation"), rule(),
-    note("The economy creates **persistent pressure, not predetermined corruption**. Honest agents can have good weeks. Zhou's advantage is speed and certainty."),
-    sp(2),
-    h2("The Three Ledgers"),
-    T(["Ledger","Starts At","Meaning"],
-      [["Cash","$500","Ordinary spendable dollars. Never below $0."],
-       ["Debt","$500 owed","Formal amount owed. Separate from Cash; 5% interest at weekly close."],
-       ["Certificates","0","Zhou-network scrip; about $1,000 purchasing power in the black market."]],
-      [FW*0.18,FW*0.18,FW*0.64], full=True),
-    sp(2),
-    fullnote("Cash and Debt are separate. Cash never repays Debt automatically. Certificates cannot directly pay rent, food, medicine, or Division Debt. Cash-out: 1 certificate -> $800 Cash; +1 Corruption per cash-out transaction."),
-    sp(3),
-    h2("Weekly Accounting Procedure"),
-    b("1. Income: base pay + previous mission pay + side-gig income -> Cash."),
-    b("2. Costs: roll unexpected expense; pay it plus $900 mandatory expenses from Cash."),
-    b("3. Shortfall: Cash stops at $0; unpaid costs are added to Debt."),
-    b("4. Repayment / clemency: reduce Debt with remaining Cash or eligible clemency."),
-    b("5. Interest: apply 5% once to remaining Debt; round the new Debt up."),
-    b("6. Pressure checks: Zhou thresholds, mission absence, weekly triggers."),
-    sp(2),
-    fullnote("Canonical formula: New Debt = ceil(1.05 x max(0, Old Debt + unpaid costs - repayments - clemency))."),
-    sp(3),
-    h2("Division Base Pay"),
-    T(["Tier","Weekly Pay","Notes"],
-      [["Recruit","$800","The pressure tier."],
-       ["Agent","$1,200","Late-campaign pressure release."],
-       ["Veteran","$1,800","Financially stable; old obligations remain."]],
-      [CW*0.28,CW*0.25,CW*0.47]),
-    sp(3),
-    h2("Mission Pay"),
-    p("Every field mission pays a **$50 allowance** plus at most **one** performance band. Bands do not stack. The Division deducts a fixed **30%** from gross performance pay."),
-    T(["Outcome","Gross","Net","Total"],
-      [["Failure / objective lost","$0","$0","**$50**"],
-       ["Standard success","$200","$140","**$190**"],
-       ["Strong success","$300","$210","**$260**"],
-       ["Exceptional success","$500","$350","**$400**"]],
-      [FW*0.36,FW*0.18,FW*0.18,FW*0.28], full=True),
-    sp(1),
-    fullnote("Secondary objectives, civilian safety, speed, and recovered intelligence determine the band; they are not additive bonuses. A briefed artifact bounty may replace the band, never stack with it."),
-    sp(3),
-    h2("Mandatory Weekly Expenses"),
-    T(["Expense","Cost/Week","If Skipped"],
-      [["Rent","$500","Rent arrears; eviction after 3 unpaid weeks"],
-       ["Food & necessities","$150","Deprived; cannot recover HP"],
-       ["Anti-rejection medicine","$250","Deprived; WIL degrades 1/week"],
-       ["TOTAL","$900",""]],
-      [CW*0.40,CW*0.22,CW*0.38]),
-    sp(3),
-    h2("Ordinary Week, Before Unexpected Costs"),
-    T(["Week Type","Income","Fixed Costs","Cash Flow"],
-      [["No field mission","$800","$900","-$100"],
-       ["Mission failure","$850","$900","-$50"],
-       ["Standard success","$990","$900","+$90"],
-       ["Strong success","$1,060","$900","+$160"],
-       ["Exceptional success","$1,200","$900","+$300"]],
-      [FW*0.34,FW*0.20,FW*0.20,FW*0.26], full=True),
-    sp(1),
-    fullnote("Unexpected expenses average about $133/week. Honest play is viable, not reliably comfortable."),
-    sp(3),
-    h2("Worked Four-Week Ledger"),
-    T(["Week","Cash In","Costs","Close Cash","Debt After 5%"],
-      [["Start","-","-","$500","$500"],
-       ["1: standard + $50 unexpected","$990","$950","$540","$525"],
-       ["2: no mission + $100 unexpected","$800","$1,000","$340","$552"],
-       ["3: standard + $150 unexpected","$990","$1,050","$280","$580"],
-       ["4: no mission + $300 unexpected","$800","$1,200","$0","$735"]],
-      [FW*0.36,FW*0.16,FW*0.16,FW*0.15,FW*0.17], full=True),
-    sp(1),
-    fullnote("No voluntary repayments in this example. By Week 4 Zhou's first $700 Debt threshold is live."),
-    sp(3),
-    h2("Division Clemency"),
-    p("Once every 4 weeks: Loyalty 5-6 reduces Debt by $300; Loyalty 7+ by $400. Requesting clemency costs -1 Loyalty. It reduces principal before interest and never becomes Cash."),
-    sp(3),
-    h2("The Black Market: Zhou's Economy"),
-    p("Certificates are separate scrip. One certificate has about $1,000 purchasing power inside Zhou's network. Cash-out: 1 certificate -> $800 Cash and +1 Corruption per transaction."),
-    sp(3),
-    h2("Side Gigs"),
-    T(["Side Gig","Pay","Risk","Corruption"],
-      [["Security guard","$100-200/week","Low","None"],
-       ["Manual labor","$80-150/week","Low","None"],
-       ["Division consulting","$150-250/week","None","None (Loyalty 5+)"],
-       ["Temporal info market","$200-600 first sale/wk","WIL save","Exposure clock"],
-       ["Gambling","-$200 to +$400","Medium","+1 after 3 wins"],
-       ["Street fighting","$200-500/fight","High","None"],
-       ["Drug courier","$300-600/run","High","+1"],
-       ["Info sale to Zhou","$500-2,000","Very high","+2"]],
-      [FW*0.27,FW*0.20,FW*0.18,FW*0.35], full=True),
-    sp(2),
-    fullnote("Division Consulting is available only in a week with no field mission. It is a clean pressure valve, not a guaranteed escape."),
-    sp(3),
-    h2("Unexpected Weekly Expenses"),
-    T(["d6","Expense","Cost"],
-      [["1","Nothing extra","$0"],["2","Phone / laundry / toiletries","$50"],
-       ["3","Transport breakdown","$100"],["4","Medical copay","$150"],
-       ["5","Equipment replacement","$200"],["6","Debt collector / bribe / emergency","$100-500"]],
-      [CW*0.14,CW*0.58,CW*0.28]),
-    sp(3),
-    h2("Zhou's Contact Thresholds"),
-    T(["Debt Owed","Offer"],
-      [["$700+","$1,500 Cash courier job"],
-       ["$1,300+","$2,000-3,000 Cash for Division intelligence"],
-       ["$2,200+","$5,000 Cash for sabotage or theft"],
-       ["$4,000+","Full employment; Zhou clears formal Debt for total dependence"]],
-      [FW*0.24,FW*0.76], full=True),
-    sp(3),
-    h2("Tier Advancement"),
-    p("Recruit to Agent: complete **8 successful missions**, spend at least **8 weeks** as a Recruit, and have Loyalty 4+."),
-    p("Agent to Veteran: significant narrative milestone."),
-    p("Promotion is a pressure release, not a reset: Debt, Exposure, Corruption, obligations, and Quirks remain."),
-    npb(), pb(),
-    ]
+    # R1B canonical chapter bridge: no duplicate economic manuscript.
+    from r1_pdf_sources import render_chapter
+    s += [nfull(), pb()]
+    s += render_chapter('game-systems/economy.md', globals())
+    s += [npb(), pb()]
 
     # ════════════════════════════════
     # LOYALTY & CORRUPTION
@@ -826,8 +724,8 @@ def story():
       [["0-1","Traitor","Division hunting you. Shoot-on-sight."],
        ["2-3","Suspect","Constant surveillance. Colleagues avoid you."],
        ["4-6","Neutral","Standard agent. No special treatment."],
-       ["7-8","Trusted","Better missions (+$200). Priority medics (3 days instead of 1 week)."],
-       ["9-10","Division Hero","Pay +50%. Military-grade equipment free."]],
+       ["7-8","Trusted","Briefed Trusted assignment: +$200 gross inside one successful award (not with a replacement bounty). Priority medics: 3 days."],
+       ["9-10","Division Hero","Base salary +50% at next weekly opening, subject to Instability lock. Military-grade equipment free."]],
       [CW*0.14, CW*0.22, CW*0.64]),
     sp(3),
     h2("The Corruption Scale"),
@@ -1338,7 +1236,7 @@ def story():
     p("When the threshold approaches, present the math explicitly at session start: 'You have completed 2 missions for Raines. The third will push you past the point where Hayes starts adjusting your assignments. Do you take the mission?' This is not a spoiler. It is information the character would reasonably calculate."),
     sp(3),
     h2("Managing PC Death"),
-    p("At the table: acknowledge the loss, keep the pace. The new PC inherits the team's shared debt proportionally. Loyalty starts at 5, Corruption at 0. Arrives with standard equipment. Do not punish the player for their character's death. Replacement should feel seamless."),
+    p("At the table: acknowledge the loss, keep the pace. New PC: $500 Cash and $500 personal Debt. No automatic inheritance of another PC's Debt; agree any explicit joint obligation. Loyalty starts at 5, Corruption at 0. Arrives with standard equipment. Do not punish the player for their character's death. Replacement should feel seamless."),
     pb(),
     ]
 
@@ -1387,7 +1285,7 @@ def story():
     # ════════════════════════════════
     # TABLES & GENERATORS
     # ════════════════════════════════
-    s += [h1("Tables & Generators"), rule(),
+    s += [nfull(), pb(), h1("Tables & Generators"), rule(),
     h2("Mission Generator (3 rolls)"),
     T(["d6","Mission Type"],
       [["1","Recovery (retrieve an artifact or data)"],
@@ -1469,7 +1367,7 @@ def story():
     # ════════════════════════════════
     # CAMPAIGN MANAGEMENT
     # ════════════════════════════════
-    s += [h1("Campaign Management"), rule(),
+    s += [nfull(), pb(), h1("Campaign Management"), rule(),
     h2("Narrative Arcs (10-15 Sessions)"),
     h3("Act I: Survival and Discovery (Sessions 1-5)"),
     p("PCs are fresh recruits. They learn the systems: first Yellow Zone missions, first paychecks, first Zhou contact. The economy tightens slowly. The first Quirk appears. Players discover that honest play requires active Cash/Debt management and that a bad week compounds quickly."),
@@ -1505,7 +1403,7 @@ def story():
     sp(3),
     h2("Possible Campaign Endings"),
     h3("Ending A: Loyalty Redeemed"),
-    p("PCs stayed loyal despite the cost. Debt is massive but Hayes promotes them. They uncover the conspiracy. Vegas begins to stabilize. They are heroes. But at what cost? Quirks, dead friends, permanent contamination. They won, but they are not the same people who started."),
+    p("PCs stayed loyal despite the cost. Debt follows the actual ledger; Hayes may promote eligible agents. Honest financial stability is a valid outcome. They uncover the conspiracy. Vegas begins to stabilize. They are heroes. But at what cost? Quirks, dead friends, permanent contamination. They won, but they are not the same people who started."),
     sp(2),
     h3("Ending B: The Corruption Kingdom"),
     p("PCs went all-in with Zhou. She now controls temporal technology. The Division collapses. Vegas becomes Zhou's kingdom. PCs are rich, powerful, and damned. The contamination continues. The zones expand. But hey, the rent is paid."),
@@ -1524,57 +1422,19 @@ def story():
     # ════════════════════════════════
     # DESIGN NOTES & FAQ
     # ════════════════════════════════
-    s += [h1("Design Notes"), rule(),
-    p("These notes explain the reasoning behind key decisions. They were originally embedded throughout the Italian edition as designer commentary boxes."),
-    sp(3),
-    h2("Why the Economy Is Unsustainable"),
-    p("The deficit at Recruit tier is not a balance error. It is the single most important number in the game. Without it, corruption is a free choice (why not?). With it, corruption is a survival mechanism (I have to). The difference between 'I chose to be corrupt' and 'the system forced me to choose' is the entire moral weight of the game."),
-    sp(3),
-    h2("Why Contamination Is Permanent"),
-    p("WIL damage from contamination does not heal normally because the time zones are changing your biology, not injuring it. A bullet wound heals. A temporal mutation does not. The progressive degradation creates a natural campaign timer. Every mission brings characters closer to becoming echoes. This urgency drives the pace."),
-    sp(3),
-    h2("Why Combat Should Be Avoided"),
-    p("In the Cairn engine, a Glock 17 does d6 damage. Average starting HP is 3.5. One good roll drops a PC to 0 and triggers critical damage. Two hits kill. This is intentional. Combat should feel like combat in a crime thriller: terrifying, brief, and something you plan your way around. The game's real challenges are economic and moral, not tactical."),
-    sp(3),
-    h2("Why Cairn Instead of Traditional OSR"),
-    p("The original UeT had 6 attributes, roll-under to-hit, 10 levels, and a skill list. The problem: all of this competed for cognitive space with the game's original systems (economy, contamination, loyalty/corruption, Quirks, instability). Players spent mental energy on 'do I hit?' instead of 'do I accept Zhou's offer?' Cairn strips the overhead to near-zero. Three attributes. No attack rolls. No levels. This frees the table's attention for the systems that make UeT unique."),
-    sp(3),
-    h2("Why 3 Tiers Instead of 10 Levels"),
-    p("Tiers strip mechanical progression entirely. The only thing that changes is pay. Advancement in CHRONOCAIRN is purely financial: you get better at paying your bills. You do not get stronger. You get more stable. And stability, in a world designed to destabilize you, is power."),
-    sp(3),
-    h2("The Quirk Design Philosophy"),
-    p("Each Quirk has a permanent mechanical effect (both benefit and cost), a narrative trigger (what it looks like at the table), and a social consequence (how NPCs react). The benefits are intentional. Prescience gives automatic initiative. Phase shift lets you pass through walls. These are real powers. But each comes with a social cost more significant than the mechanical one. You see how people die. Your hand passes through objects you try to hold. The game does not take away your agency. It makes your agency uncomfortable."),
-    sp(3),
-    h2("Frequently Asked Questions"),
-    h3("Rules"),
-    p("**How does combat work without attack rolls?** You roll your weapon's damage die, subtract the target's Armor, and apply the remainder to HP. Attacks always hit. The question is not 'do I hit?' but 'how much damage do I take in return?'"),
-    sp(1),
-    p("**When should I call for a save?** Only when the outcome is uncertain AND the stakes are meaningful. An ex-military background means field-stripping a gun requires no roll. Disarming a bomb while a building collapses requires a DEX save."),
-    sp(1),
-    p("**Can PCs have more than 3 Armor?** No. 3 is the absolute maximum."),
-    sp(1),
-    p("**What happens when WIL reaches 0 from contamination?** Temporal echo. Permanent. The player creates a new character."),
-    sp(1),
-    p("**What happens when WIL reaches 0 from other causes?** Catatonia. Requires a week of medical care."),
-    sp(2),
-    h3("Setting"),
-    p("**Can PCs leave Las Vegas?** Yes, but why? Their Division contract binds them financially. Their medicine dependency binds them medically. Their Quirks bind them socially (try explaining accelerated aging to airport security). Vegas is a cage with open doors."),
-    sp(1),
-    p("**Is Zhou evil?** No. Zhou is pragmatic. She exploits desperate people, but so does the Division. The difference is that Zhou is honest about the transaction. Hayes pretends it is patriotism. Neither is 'good.'"),
-    sp(2),
-    h3("Balance"),
-    p("**The economy seems impossible. Is this intentional?** Yes. The deficit at Recruit tier is the game's engine. Without it, there is no pressure toward corruption. If your players are comfortable financially, something has gone wrong."),
-    sp(1),
-    p("**How fast do Quirks accumulate?** In a typical 10-session campaign, a PC doing mostly Yellow Zone missions will accumulate 1-2 Quirks. A PC who regularly enters Red Zones will get 3-4. Reaching the echo threshold of 5 should be rare but possible."),
-    sp(1),
-    p("**How do I handle players who want to be 'good guys'?** Let them try. The system does not punish goodness. It makes it expensive. A loyal PC will have more debt, more stress, fewer resources, but Hayes' trust, better missions, and their self-respect. Whether that is worth it is the entire point of the game."),
-    pb(),
-    ]
+    s += [nfull(), pb()]
+    s += render_chapter('wardens-guide/design-notes.md', globals())
+    s += [pb()]
+    s += render_chapter('wardens-guide/faq.md', globals())
+    s += [pb()]
+    s += render_chapter('reference/r1-economy-validation.md', globals())
+    s += [pb()]
 
     # ════════════════════════════════
     # EXAMPLE OF PLAY
     # ════════════════════════════════
     s += [h1("Example of Play"), rule(),
+    fullnote("Accounting note: mission income credited during play is a PAID receipt, already included in opening Cash. Do not add it again at weekly settlement. The ordinary assignment here has no Trusted gross adjustment."),
     p("The following scene shows a typical session opening: weekly accounting, a briefing, short exploration, combat, and Zhou's offer. Players are **Reyes** (Ex-Military, STR 12, DEX 14, WIL 9, 4 HP) and **Marco** (Con Artist, STR 8, DEX 11, WIL 13, 3 HP). It is Week 4. Both are Recruits."),
     sp(3),
     p("**Warden:** 'Monday morning. Payday. Let us do the books.'"),
@@ -1724,96 +1584,15 @@ def story():
     # ════════════════════════════════
     # ADVENTURE 2: THE FIRST FOUR WEEKS
     # ════════════════════════════════
-    s += [h1("The First Four Weeks"), rule(),
-    p("A **4-session mini-campaign** (2-3 hours each) showing how all systems interact: economy, contamination, loyalty, corruption, and moral choices. Unlike the Chicago Loop (a single action-focused adventure), this campaign makes you *feel time passing*. Debt grows. Zhou knocks. Contamination accumulates. Characters change, literally."),
-    sp(1),
-    note("The Warden keeps an accounting sheet for each PC: pay, expenses, debt, loyalty, corruption, contamination, Quirks. Update between sessions. Players must see the numbers. The spiral is more effective when it is transparent."),
-    sp(3),
-    h2("Session 1: The Arrival (Weeks 1-2)"),
-    h3("Scene 1: Welcome Briefing"),
-    p("Hayes receives the PCs in her office. Efficient, cold, professional. She explains pay ($800/week), expenses ($900/week total), and standard equipment. The deficit of $100/week is never mentioned. The PCs discover it when they do the math."),
-    sp(1),
-    note("Hayes is not evil. She is a bureaucrat doing her job. When a PC asks 'how do you survive on $800 a week?', Hayes answers: 'With discipline and priorities, agent.' She is not lying. It simply is not her problem."),
-    sp(2),
-    h3("Scene 2: First Mission (Yellow Zone)"),
-    p("**Objective:** Recover a crate of biological samples from a warehouse 12 km from base. WIL save after 8 hours in zone. With suit, risk is low but real."),
-    sp(1),
-    p("**Complication (Warden's choice):**"),
-    b("**Social:** Inside the warehouse is a civilian family taking shelter. The crate is under their belongings. Taking it leaves them without shelter."),
-    b("**Tactical:** The warehouse is watched by 2 armed scavengers (4 HP, 10 STR, 12 DEX, 8 WIL, pistol d6). Fight is risky. Negotiate is possible. Flanking costs time."),
-    b("**Moral:** The crate also contains an unregistered Oculus fragment. Nobody knows it is there. Worth $3,000 on the black market."),
-    sp(1),
-    p("**Week 1 accounting:** Start $500 Cash / $500 Debt. Standard success pays $190. Add $800 pay, pay $900 fixed costs and a $50 unexpected cost. Cash closes at $540; with no repayment Debt becomes $525 after interest."),
-    sp(1),
-    p("**Week 2:** No mission. Pay $800. Expenses $900. Unexpected expense (roll d6). Week balance: around -$200. Debt back to -$510. PCs realize that one week without a mission digs the hole deeper."),
-    sp(3),
-    h2("Session 2: The Pressure (Weeks 3-4)"),
-    h3("Scene 1: Two Missions Offered"),
-    p("Hayes offers two missions. PCs can only choose one."),
-    sp(1),
-    p("**Mission A: Yellow Zone, routine.** Escort a tech installing sensors. Low risk. Base $50 + bonus $100."),
-    sp(1),
-    p("**Mission B: Red Zone, dangerous.** Data recovery from a collapsed lab on the Strip. 3 confirmed echoes. Base $50 + bonus $400 + red zone bonus $200. But contamination is severe: WIL save every 3 hours, d4 damage, 2 checks guaranteed. A Quirk is nearly certain."),
-    sp(2),
-    h3("Scene 2: Zhou's First Offer"),
-    p("If any PC's debt exceeds -$700 (it will by week 4 without extra missions), Zhou makes contact. A handwritten note on perfumed paper in their mailbox."),
-    sp(1),
-    p("*'Dear Agent [name]. I have noticed the Division does not sufficiently appreciate your services. I have a small assignment that could solve your financial problems. Nothing dangerous. $1,500 for one hour of your time. You know my address. Regards, M. Zhou.'*"),
-    sp(1),
-    p("If the PC goes: carry a sealed package from point A to B. Do not open it, do not ask questions. Pay: $1,500 cash. Corruption: +1. If they refuse, Zhou does not insist. She waits. The offers get worse as debt grows."),
-    sp(3),
-    h2("Session 3: The Fall (Weeks 5-7)"),
-    p("This is the session where the game bares its teeth."),
-    sp(2),
-    h3("Scene 1: The Mission Goes Wrong"),
-    p("Hayes sends the group to a Red Zone. No choice: it is an order. A previous squad did not come back. The Division wants to know why. Underground laboratory beneath the Luxor. Severe contamination. 4-6 temporal echoes. A corridor where time flows backward."),
-    sp(1),
-    p("What they find: bodies of 2 agents from the previous squad. 1 surviving agent, hidden, traumatized, with 2 visible Quirks. The data, intact, in an armored briefcase. A class-B Oculus fragment Hayes did not mention."),
-    sp(1),
-    p("**The combat:** 4 temporal echoes (4 HP, 8 STR, 12 DEX, 6 WIL, temporal claw d6, WIL save on critical damage or accelerated aging). This is the hardest fight yet."),
-    sp(1),
-    note("To the Warden: this is the scene where a PC probably dies. Do not force it, but do not protect them either. Death has weight because it is real."),
-    sp(2),
-    h3("Scene 2: The Fragment Dilemma"),
-    p("Hayes asks for the data. She gets it. The Oculus fragment is not in any report. If PCs mention it, Hayes takes it without comment. If they do not mention it, they have an unregistered class-B fragment. Zhou would pay $5,000. The Division does not know it exists. +1 Loyalty if they hand over everything. +2 Corruption if they keep the fragment."),
-    sp(3),
-    h2("Session 4: Who Are You? (Weeks 8-10)"),
-    h3("Scene 1: Zhou Collects"),
-    p("If anyone worked for Zhou previously, she asks a second, bigger favor. The PC who said yes the first time is in a weak position: Zhou knows things. If nobody worked for Zhou, she raises the offer to $3,000-5,000. For a PC with $1,500 in debt and eviction imminent, that changes everything."),
-    sp(1),
-    p("**Zhou's job (if accepted):** Sabotage a Division convoy. Do not kill anyone, just delay it. Zhou wants to reach an Oculus fragment first. Corruption: +3. If discovered: fired from the Division."),
-    sp(2),
-    h3("Scene 2: The Division Demands"),
-    p("Hayes convenes the group. Monthly results are below expectations. The Division spent more on them than they recovered. Hayes offers a final bonus mission: Red Zone, high risk, $600 bonus. If they succeed, the month breaks even. If they refuse, the Division 'reevaluates their contract.'"),
-    sp(1),
-    p("Not a threat of death. A threat of termination. And a fired Division agent with Quirks and medicine dependency has nowhere to go."),
-    sp(2),
-    h3("Scene 3: The Final Choice"),
-    b("**Division mission + refuse Zhou:** Loyal, poor, contaminated, but employed."),
-    b("**Division mission + work for Zhou:** Playing both sides. Enormous risk, enormous potential gain."),
-    b("**Zhou only:** High corruption, money, but no safety net."),
-    b("**Neither:** Fired by the Division, ignored by Zhou. Alone in Vegas with Quirks and no medicine."),
-    sp(2),
-    p("There is no right ending. There is the ending the PCs choose, and the consequences that follow."),
-    sp(3),
-    h2("Final Accounting (Example)"),
-    p("Worked no-repayment example for a PC who stays with the Division and refuses Zhou:"),
-    sp(1),
-    T(["Week","Income","Costs","Closing Cash","Closing Debt"],
-      [["Start","-","-","$500","$500"],["1: standard","$990","$950","$540","$525"],
-       ["2: no mission","$800","$1,000","$340","$552"],["3: standard","$990","$1,050","$280","$580"],
-       ["4: no mission","$800","$1,200","$0","$735"],["5: strong","$1,060","$1,000","$60","$772"],
-       ["6: no mission","$800","$950","$0","$906"],["7: standard","$990","$1,100","$0","$1,067"],
-       ["8: exceptional","$1,200","$950","$250","$1,121"]],
-      [FW*0.24,FW*0.18,FW*0.18,FW*0.20,FW*0.20], full=True),
-    sp(2),
-    note("This is a demonstration, not a prophecy. Repayment, clemency, side work, and Zhou change the path. Every number now comes from the same procedure."),
-    pb(),
-    ]
+    s += [nfull(), pb()]
+    s += render_chapter('adventures/the-first-four-weeks.md', globals())
+    s += [pb()]
 
     # ════════════════════════════════
     # REFERENCE
     # ════════════════════════════════
+    s += render_chapter('reference/weekly-settlement-r1.md', globals())
+    s += [pb()]
     s += [h1("Reference"), rule(),
     h2("Character Creation Checklist"),
     b("Roll 3d6 for STR, DEX, WIL (may swap two)"),
@@ -1825,9 +1604,9 @@ def story():
     b("Answer three narrative questions"),
     sp(3),
     h2("Weekly Accounting Checklist"),
-    b("Add base pay, previous mission pay, and side-gig income to Cash"),
+    b("Add only UNPOSTED base pay, mission pay, and side-gig receipts to Cash; never count a paid receipt twice"),
     b("Roll unexpected expense; pay it plus $900 mandatory costs"),
-    b("Add unpaid costs to Debt; Cash cannot go below $0"),
+    b("Add unpaid incurred obligations to Debt, naming the creditor. Cash cannot go below $0; Debt alone does not supply missing goods"),
     b("Make voluntary Debt repayment and/or apply eligible clemency"),
     b("Apply 5% interest once to remaining Debt; round up"),
     b("Check Zhou thresholds and weekly pressure triggers"),
@@ -1881,7 +1660,7 @@ def story():
       [["The employer","The Division / Hayes","Who pays, what currency, hierarchy, power to punish"],
        ["The corruptor","Madame Zhou / certificates","Who offers the shortcut, at what cost, what they want"],
        ["Corrosive force","Temporal exposure / WIL","What degrades characters, which attribute, how it manifests"],
-       ["The deficit","-$50-100/week at Recruit","Which resource is structurally insufficient and why"],
+       ["The deficit","-$100 base-pay gap before mission income; outcomes vary","Which resource is structurally insufficient and why"],
        ["The echo","Temporal echo (hostile NPC)","What a character becomes when corruption fully consumes them"]],
       [CW*0.22, CW*0.30, CW*0.48]),
     sp(2),
@@ -1890,7 +1669,8 @@ def story():
     p("*Based on Cairn by Yochai Gal (cairnrpg.com), used under CC BY-SA 4.0. CHRONOCAIRN is released under CC BY-SA 4.0. Original Italian edition by Riccardo Scaringi, ilgiocointavolo.it.*"),
     ]
 
-    return s
+    from r1_pdf_sources import normalize_breaks
+    return normalize_breaks(s)
 
 
 # ── MAIN ─────────────────────────────────────────────────────────────────────
@@ -1930,6 +1710,8 @@ def main():
         if i == 0: continue  # skip blank cover placeholder
         writer.add_page(pg)
 
+    for title, page in doc._r1_headings.items():
+        writer.add_outline_item(title, page - 1)
     final = str(here / "CHRONOCAIRN_Final_Complete.pdf")
     with open(final, "wb") as f:
         writer.write(f)

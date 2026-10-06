@@ -21,7 +21,7 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 ---
 
-**Warden:** *(as Hayes)* "Agents. A warehouse in the Yellow Zone, 14 km out. We lost contact with a sensor team yesterday. Objective: find the team, recover their data chip, get out. Field allowance is $50. Recover the chip and this is a standard success: $200 gross, with the usual thirty-percent deduction."
+**Warden:** *(as Hayes)* "Agents. A warehouse in the Yellow Zone, 14 km out. We lost contact with a sensor team yesterday. Objective: find the team, recover their data chip, get out. This is an ordinary assignment, not a Trusted higher-paid mission. Field allowance is $50. Recover the chip and this is a standard success: $200 gross, with the usual thirty-percent deduction."
 
 **Reyes:** "Any hostile contacts?"
 
@@ -113,7 +113,7 @@ This scene shows a typical session opening: the weekly accounting, a briefing, a
 
 **Warden:** "Back at base. Debriefing with Hayes. You hand over the chip. She nods. 'Good work. Kowalski's death is... unfortunate. His family will be notified.' She pauses. 'Standard success. Two hundred gross. Finance keeps thirty percent. Plus the fifty-dollar field allowance. One hundred ninety dollars each.'"
 
-**Warden:** "The $190 goes into Cash now. Reyes goes from $100 to $290 Cash; Marco from $180 to $370. Debt does not fall automatically. You can keep liquidity or repay principal before next week's interest."
+**Warden:** "The $190 goes into Cash now. Mark this Week 4 mission receipt as PAID: it must not be added again next Monday. Reyes goes from $100 to $290 Cash; Marco from $180 to $370. Debt does not fall automatically. You can keep liquidity or repay principal before next week's interest."
 
 **Marco:** "Finally breathing."
 

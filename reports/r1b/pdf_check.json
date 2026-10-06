@@ -1,0 +1,25 @@
+{
+  "pages": 77,
+  "chapter_bookmarks": 25,
+  "A5_all_pages": true,
+  "missing_required": [],
+  "stale_r1_passages": [],
+  "off_page_text_spans": [],
+  "replacement_or_black_square_glyphs": [],
+  "font_embedding": {
+    "/AAAAAA+LiberationSans-Bold": true,
+    "/AAAAAA+LiberationSans": true,
+    "/AAAAAA+LiberationSans-Italic": true,
+    "/AAAAAA+LiberationSerif-Italic": true,
+    "/AAAAAA+LiberationSerif": true,
+    "/AAAAAA+LiberationSerif-Bold": true,
+    "/AAAAAA+LiberationSerif-BoldItalic": true,
+    "/AAAAAA+LiberationMono-Bold": true
+  },
+  "sparse_pages": [
+    2
+  ],
+  "intentional_blank": "Page 2 is the preserved blank cover verso.",
+  "visual_review": "Separate local rendered-page review; not asserted by this script.",
+  "pass": true
+}

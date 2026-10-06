@@ -105,7 +105,7 @@ Hayes sends the group to a Red Zone. No choice: it's an order. A previous squad 
 
 ### Scene 2: Replacement
 
-If a PC dies, the player creates a new character (15 minutes). The new PC inherits the team's shared debt and starts at Recruit tier. Hayes is pragmatic: "We lost Agent [name]. Your new colleague is Agent [new name]. Briefing at 06:00."
+If a PC dies, the player creates a new character (15 minutes). The new PC starts at Recruit tier with $500 Cash and $500 personal Debt. Another PC's personal Debt is not automatically inherited; any explicitly recorded joint obligation requires an agreed new debtor. Hayes is pragmatic: "We lost Agent [name]. Your new colleague is Agent [new name]. Briefing at 06:00."
 
 ### Scene 3: The Fragment Dilemma
 
@@ -125,7 +125,7 @@ If anyone worked for Zhou before, she asks a second, bigger favor. The PC who sa
 
 ### Scene 2: The Division Demands
 
-Hayes convenes the group. Monthly results are "below expectations." Translation: the Division spent more on them than they recovered. Hayes offers a final bonus mission: Red Zone, high risk, high reward (exceptional $500 gross band: $350 after deduction, plus the $50 field allowance). If they succeed, the month breaks even. If they refuse, the Division "reevaluates their contract."
+Hayes convenes the group. Monthly results are "below expectations." Translation: the Division spent more on them than they recovered. Hayes offers a final bonus mission: Red Zone, high risk, high reward (exceptional $500 gross band: $350 after deduction, plus the $50 field allowance). Success adds $400 mission income per agent. Whether the month breaks even depends on the actual ledger; Hayes cannot promise a result the numbers do not support. If they refuse, the Division "reevaluates their contract."
 
 A veiled threat. Not of death: of termination. And a fired Division agent with Quirks and medicine dependency has nowhere to go.
 
@@ -142,7 +142,7 @@ There is no right ending. There is the ending the PCs choose and the consequence
 
 ## Final Accounting (Example)
 
-For a PC who refuses Zhou and makes **no voluntary Debt repayments**:
+This isolated arithmetic example uses ordinary base salary, no Trusted assignments, no Hero salary modifier, no voluntary repayments and no clemency. It is not a trajectory for a successful agent whose Loyalty rises. Apply actual benefits at the table:
 
 | Week | Income | Costs | Closing Cash | Closing Debt |
 |---|---:|---:|---:|---:|

@@ -174,7 +174,7 @@ This is not a spoiler. It is information the character would reasonably calculat
 
 ### Replacement Rules
 
-New PC starts at Recruit tier. Inherits the team's shared debt proportion. Loyalty starts at 5, Corruption at 0. Arrives with standard equipment. The Warden introduces them: a new recruit assigned to fill the gap, a scavenger who decides to join, or a prisoner freed during a mission.
+New PC starts at Recruit tier with $500 Cash and $500 personal Debt. No other PC's personal Debt transfers automatically. Any expressly shared obligation needs an agreed new debtor. Loyalty starts at 5, Corruption at 0. Arrives with standard equipment. The Warden introduces them: a new recruit assigned to fill the gap, a scavenger who decides to join, or a prisoner freed during a mission.
 
 ## Improvisation
 

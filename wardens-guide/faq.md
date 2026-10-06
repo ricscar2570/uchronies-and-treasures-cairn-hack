@@ -41,4 +41,4 @@ nav_order: 4
 
 **What should I cover?** Themes (violence, corruption, body horror, economic desperation, PC death). Safety tools (X-Card, Lines & Veils). Tone expectations (this is not a power fantasy; it's a survival horror game with spreadsheets). Character creation (do it together). First scene (read the Division briefing).
 
-**How do I handle players who want to be "good guys"?** Let them try. The system doesn't punish goodness. It just makes it expensive. A PC who stays loyal and refuses Zhou will have more debt, more stress, and fewer resources. But they'll also have Hayes' trust, better missions, and their self-respect. Whether that's worth it is the whole point of the game.
+**How do I handle players who want to be "good guys"?** Let them try. The system doesn't punish goodness. It just makes it expensive. A PC who stays loyal and refuses Zhou may take longer to resolve a shortfall; that is not a guarantee of greater Debt. High Loyalty benefits, clemency and legal work can create stability. But they'll also have Hayes' trust, better missions, and their self-respect. Whether that's worth it is the whole point of the game.

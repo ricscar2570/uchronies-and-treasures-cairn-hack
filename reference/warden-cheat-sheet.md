@@ -7,7 +7,7 @@ nav_order: 1
 
 # Warden Cheat Sheet
 
-*All mechanical triggers in chronological session order. One page, behind the screen.*
+*Mechanical triggers in chronological session order. This is a reference, not a claim of complete cross-system validation.*
 
 ---
 
@@ -59,11 +59,13 @@ nav_order: 1
 - UNSTABLE: each downtime week, roll d20 for suspicion event
 - After 3 consecutive weeks UNSTABLE: forced narrative event
 
-**Mission bonus:** $150 base (net) + variable bonuses subject to deductions
+**Mission pay:** $50 allowance + one non-cumulative net award: failure $50 total; standard $190; strong $260; exceptional $400. Briefed bounties replace the award. Record paid receipts now and do not add them again at settlement.
+
+**Loyalty money:** Hero 9-10: +50% base salary, subject to benefit lock. Trusted 7-8: only a briefed assignment gets +$200 gross inside its successful award. Do not stack with a replacement bounty.
 
 ## Between Sessions
 
-- **PC death:** New PC starts at Recruit tier. Inherits team's shared debt
+- **PC death:** New PC starts at Recruit tier with $500 Cash and $500 personal Debt. A joint obligation transfers only if that liability was explicitly recorded and the new character accepts it; there is no automatic inheritance of another PC's personal Debt.
 - **Replacement:** Loyalty 5, Corruption 0, standard equipment
 - **Absence:** If PC refuses missions, escalating consequences (warning, formal reprimand, pay cut, termination)
 
@@ -87,7 +89,7 @@ nav_order: 1
 | Starting Cash | $500 |
 | Starting Debt | $500 owed |
 | Debt interest | 5% at weekly close, round up |
-| Zhou first offer | debt $500+ |
+| Zhou first offer | Debt $700+; an offer, never compulsory acceptance |
 | Starting Loyalty | 5 |
 | Starting Corruption | 0 |
 | Instability | \|Loyalty - Corruption\| ≤ 2 |

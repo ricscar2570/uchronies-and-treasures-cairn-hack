@@ -20,7 +20,7 @@ The game uses the **Cairn** engine by Yochai Gal. Character creation takes 15 mi
 
 You're not a hero saving the world. You're a desperate person trying to survive an impossible situation. Every mission offers choices without a "right" answer:
 
-- **Deliver the Oculus fragment to the Division:** you stay loyal but poor. Base pay, plus one loyalty point.
+- **Deliver the Oculus fragment to the Division:** you stay loyal and receive the briefed mission payout, plus one loyalty point. Your actual finances follow the ledger.
 - **Sell it on the black market:** you get rich (plus 15 certificates, roughly $15,000) but also corrupt (plus 2 corruption), and if you're caught you're done.
 - **Keep it for yourself:** you gain immense power but run enormous risks (everyone hunts you), plus 5 corruption immediately.
 
@@ -83,7 +83,7 @@ Five questions every player should be asking:
 
 **Let Them Choose.** Never force a moral decision. Present the situation clearly. Let the players weigh costs and benefits. Whatever they choose, there will be consequences.
 
-**Time Pressure.** Every week in game time costs money. Every mission costs time. Every delay increases the debt. Don't let the pace slacken.
+**Time Pressure.** Every week in game time incurs costs and every mission takes time. A delay can increase Debt when income and reserves do not cover obligations; do not add Debt merely because time passed. Use the ledger.
 
 ### Principles for Players
 

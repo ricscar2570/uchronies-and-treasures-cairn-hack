@@ -1,0 +1,47 @@
+test_all_principals_to_100000 (test_r1_economy.InterestTests.test_all_principals_to_100000) ... ok
+test_exact_multiple_float_regression (test_r1_economy.InterestTests.test_exact_multiple_float_regression) ... ok
+test_invalid_amounts (test_r1_economy.InterestTests.test_invalid_amounts) ... ok
+test_small_principals (test_r1_economy.InterestTests.test_small_principals) ... ok
+test_cash_conservation_random (test_r1_economy.LedgerTests.test_cash_conservation_random) ... ok
+test_clamped_repayment_and_clemency (test_r1_economy.LedgerTests.test_clamped_repayment_and_clemency) ... ok
+test_clemency_never_becomes_cash (test_r1_economy.LedgerTests.test_clemency_never_becomes_cash) ... ok
+test_duplicate_receipt_rejected (test_r1_economy.LedgerTests.test_duplicate_receipt_rejected) ... ok
+test_eight_week_campaign_example (test_r1_economy.LedgerTests.test_eight_week_campaign_example) ... ok
+test_four_week_printed_example (test_r1_economy.LedgerTests.test_four_week_printed_example) ... ok
+test_invalid_mixed_repayment_policy (test_r1_economy.LedgerTests.test_invalid_mixed_repayment_policy) ... ok
+test_no_automatic_repayment (test_r1_economy.LedgerTests.test_no_automatic_repayment) ... ok
+test_no_interest_on_cash (test_r1_economy.LedgerTests.test_no_interest_on_cash) ... ok
+test_repayment_before_interest (test_r1_economy.LedgerTests.test_repayment_before_interest) ... ok
+test_reserve_is_optional_policy (test_r1_economy.LedgerTests.test_reserve_is_optional_policy) ... ok
+test_reyes_opening (test_r1_economy.LedgerTests.test_reyes_opening) ... ok
+test_shortfall_floor (test_r1_economy.LedgerTests.test_shortfall_floor) ... ok
+test_bands (test_r1_economy.RewardTests.test_bands) ... ok
+test_bounty_replaces_band (test_r1_economy.RewardTests.test_bounty_replaces_band) ... ok
+test_cash_out_one_transaction (test_r1_economy.RewardTests.test_cash_out_one_transaction) ... ok
+test_clemency_cooldown (test_r1_economy.RewardTests.test_clemency_cooldown) ... ok
+test_failure_gets_allowance_only (test_r1_economy.RewardTests.test_failure_gets_allowance_only) ... ok
+test_hero_pay (test_r1_economy.RewardTests.test_hero_pay) ... ok
+test_promotion_all_requirements (test_r1_economy.RewardTests.test_promotion_all_requirements) ... ok
+test_round_net_down (test_r1_economy.RewardTests.test_round_net_down) ... ok
+test_trusted_adjustment (test_r1_economy.RewardTests.test_trusted_adjustment) ... ok
+test_trusted_bounty_cannot_stack (test_r1_economy.RewardTests.test_trusted_bounty_cannot_stack) ... ok
+test_trusted_not_automatic_hero_bonus (test_r1_economy.RewardTests.test_trusted_not_automatic_hero_bonus) ... ok
+test_default_expense_exact_mean (test_r1_economy.ScenarioTests.test_default_expense_exact_mean) ... ok
+test_loyalty_salary_next_week (test_r1_economy.ScenarioTests.test_loyalty_salary_next_week) ... ok
+test_no_success_no_promotion (test_r1_economy.ScenarioTests.test_no_success_no_promotion) ... ok
+test_offer_cannot_be_collected_twice (test_r1_economy.ScenarioTests.test_offer_cannot_be_collected_twice) ... ok
+test_promotion_salary_next_week (test_r1_economy.ScenarioTests.test_promotion_salary_next_week) ... ok
+test_scenario_reproducibility (test_r1_economy.ScenarioTests.test_scenario_reproducibility) ... ok
+test_builder_reads_canonical_economy (test_r1_sources.R1SourceTests.test_builder_reads_canonical_economy) ... ok
+test_campaign_is_not_a_guaranteed_financial_result (test_r1_sources.R1SourceTests.test_campaign_is_not_a_guaranteed_financial_result) ... ok
+test_economy_has_single_default_expense_instruction (test_r1_sources.R1SourceTests.test_economy_has_single_default_expense_instruction) ... ok
+test_example_income_is_marked_paid (test_r1_sources.R1SourceTests.test_example_income_is_marked_paid) ... ok
+test_five_report_policies_have_same_input_seed (test_r1_sources.R1SourceTests.test_five_report_policies_have_same_input_seed) ... ok
+test_full_game_claim_not_present (test_r1_sources.R1SourceTests.test_full_game_claim_not_present) ... ok
+test_receipt_and_credit_clarifications (test_r1_sources.R1SourceTests.test_receipt_and_credit_clarifications) ... ok
+test_warden_reference_removes_old_pay_and_threshold (test_r1_sources.R1SourceTests.test_warden_reference_removes_old_pay_and_threshold) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.111s
+
+OK

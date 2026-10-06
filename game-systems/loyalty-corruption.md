@@ -24,8 +24,8 @@ Loyalty and Corruption are two independent trackers, scale 0-10. They are **not*
 | 0-1 | Traitor | Division hunting you. Shoot-on-sight. |
 | 2-3 | Suspect | Constant surveillance. Colleagues avoid you. |
 | 4-6 | Neutral | Standard agent. No special treatment. |
-| 7-8 | Trusted | Better missions (+$200). Priority Division medics (3 days instead of 1 week). |
-| 9-10 | Division Hero | Pay +50%. Military-grade equipment free. |
+| 7-8 | Trusted | Access to a briefed higher-paid assignment (+$200 gross in its single successful award; see Economy). Priority Division medics (3 days instead of 1 week). |
+| 9-10 | Division Hero | Base salary +50% from the next weekly opening; not mission pay. Military-grade equipment free. Benefits remain subject to the Instability lock. |
 
 
 ### The Corruption Scale

@@ -1,0 +1,16 @@
+week,tier_paid,opening_loyalty,closing_loyalty,outcome,salary,mission_pay,unexpected,shortfall,repayment,clemency,interest,trigger_debt,offer_cash,cash,debt,eligible_for_agent_next_week
+1,Recruit,5,6,standard,800,190,100,0,290,0,11,221,0,200,221,False
+2,Recruit,6,6,failure,800,50,400,250,0,0,24,495,0,0,495,False
+3,Recruit,6,7,standard,800,190,150,60,0,0,28,583,0,0,583,False
+4,Recruit,7,8,strong,800,260,100,0,0,0,30,613,0,60,613,False
+5,Recruit,8,9,standard,800,190,250,100,0,0,36,749,0,0,749,False
+6,Recruit,9,10,strong,1200,260,50,0,310,0,22,461,0,200,461,False
+7,Recruit,10,10,standard,1200,190,450,0,40,0,22,443,0,200,443,False
+8,Recruit,10,10,strong,1200,260,50,0,443,0,0,0,0,267,0,False
+9,Recruit,10,10,strong,1200,260,0,0,0,0,0,0,0,827,0,True
+10,Agent,10,10,failure,1800,50,100,0,0,0,0,0,0,1677,0,True
+11,Agent,10,10,standard,1800,190,100,0,0,0,0,0,0,2667,0,True
+12,Agent,10,10,standard,1800,190,100,0,0,0,0,0,0,3657,0,True
+13,Agent,10,10,standard,1800,190,100,0,0,0,0,0,0,4647,0,True
+14,Agent,10,10,standard,1800,190,0,0,0,0,0,0,0,5737,0,True
+15,Agent,10,10,failure,1800,50,50,0,0,0,0,0,0,6637,0,True
