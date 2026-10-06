@@ -1,0 +1,34 @@
+name: R1 Source Checkpoint
+
+on:
+  push:
+    branches: ['development/r1-economy-2026-10-06']
+    paths: ['.github/workflows/r1-source-checkpoint.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Export pinned source baselines
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p checkpoint
+          git archive --format=zip --prefix=main/ HEAD -o checkpoint/main-source.zip
+          gh api repos/${{ github.repository }}/zipball/54854d5313f978921291369b6d4650f175d09eb9 > checkpoint/omnibus-source.zip
+          printf 'web_main_baseline=32dd003b70a403d19de121f8156bffe009bd38d8\nomnibus_baseline=54854d5313f978921291369b6d4650f175d09eb9\n' > checkpoint/BASELINES.txt
+          sha256sum checkpoint/*.zip > checkpoint/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CHRONOCAIRN-R1-source-checkpoint
+          path: checkpoint/
+          retention-days: 7
+          if-no-files-found: error
