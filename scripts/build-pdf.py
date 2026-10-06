@@ -698,7 +698,7 @@ def story():
     # ════════════════════════════════
     # ECONOMY
     # ════════════════════════════════
-    s += [h1("The Economy of Desperation"), rule(),
+    s += [nfull(), pb(), h1("The Economy of Desperation"), rule(),
     note("The economy creates **persistent pressure, not predetermined corruption**. Honest agents can have good weeks. Zhou's advantage is speed and certainty."),
     sp(2),
     h2("The Three Ledgers"),
@@ -807,7 +807,7 @@ def story():
     p("Recruit to Agent: complete **8 successful missions**, spend at least **8 weeks** as a Recruit, and have Loyalty 4+."),
     p("Agent to Veteran: significant narrative milestone."),
     p("Promotion is a pressure release, not a reset: Debt, Exposure, Corruption, obligations, and Quirks remain."),
-    sp(5),
+    npb(), pb(),
     ]
 
     # ════════════════════════════════
