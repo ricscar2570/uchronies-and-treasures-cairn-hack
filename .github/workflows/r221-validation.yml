@@ -1,0 +1,51 @@
+name: R2.2.1 Validation
+on:
+  push:
+    branches: [development/r221-corrective-20261007]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: chronocairn-r221-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned build dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-liberation
+          python -m pip install -r scripts/requirements.txt
+      - name: Reproduce frozen contamination diagnostic
+        run: |
+          python scripts/contamination_sim.py --runs 20000 --seed 42026 --output reports/r221-contamination-reproduction.json
+          python -c "import json; from pathlib import Path; assert json.loads(Path('reports/r221-contamination-reproduction.json').read_text()) == json.loads(Path('reports/r2-contamination.json').read_text())"
+      - name: Build canonical manual, fillable sheets and omnibus
+        run: |
+          python scripts/build-pdf.py
+          python scripts/build_sheets_r22.py
+          python scripts/build_omnibus_r221.py
+      - name: Run all regressions and full form roundtrips
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m unittest discover -s scripts -p 'test_*.py' -v 2>&1 | tee reports/r221-tests.txt
+          python scripts/check_r221.py
+      - name: Package exact source revision without font binaries
+        run: python scripts/package_r221.py --source-commit "$(git rev-parse HEAD)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CHRONOCAIRN-R221-Verified
+          path: |
+            CHRONOCAIRN_R2_2_1_Verified.zip
+            CHRONOCAIRN_OMNIBUS_R2_2_1.pdf
+            CHRONOCAIRN_Final_Complete.pdf
+            downloads/CHRONOCAIRN_R2_2_1_*.pdf
+            reports/r221-tests.txt
+            reports/r221-technical-check.json
+          retention-days: 90
