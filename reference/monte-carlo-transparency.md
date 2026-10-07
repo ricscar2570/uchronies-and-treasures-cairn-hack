@@ -79,7 +79,7 @@ No tactical choices, combat, Quirk-specific secondary effects, surgery, retireme
 
 ## Locate and Reproduce the Evidence
 
-**Edition:** CHRONOCAIRN R2.2, procedural consolidation, 6 October 2026. The unchanged contamination diagnostic comes from the verified **R2.1 source commit** below, run on 6 October 2026 with seed 42026 and 20,000 paths per profile. R2.2 adds no human sessions.
+**Edition:** CHRONOCAIRN R2.2.1, corrective consolidation, 7 October 2026. The unchanged contamination diagnostic comes from the verified **R2.1 source commit** below, run on 6 October 2026 with seed 42026 and 20,000 paths per profile. R2.2.1 adds no human sessions. The underlying R2.2 arithmetic and R2.1 contamination engine are unchanged.
 
 - [Repository](https://github.com/ricscar2570/uchronies-and-treasures-cairn-hack)
 - [Exact R2.1 diagnostic source](https://github.com/ricscar2570/uchronies-and-treasures-cairn-hack/tree/d4b13099c8b530b0d717396df72c5f41aa9e197b)
@@ -88,3 +88,5 @@ No tactical choices, combat, Quirk-specific secondary effects, surgery, retireme
 Source commit: `d4b13099c8b530b0d717396df72c5f41aa9e197b`. The game text declares **CC BY-SA 4.0**. The root `LICENSE` instead describes the site's **GPLv3 theme**; a separate, unambiguous grant for the diagnostic scripts has not been identified. Code-licensing clarification remains an authorial publication task. No new blanket license is invented here; third-party dependencies retain their own licenses. The delivery archive includes source hashes and its source-commit record. This records provenance, not commercial or human-play validation.
 
 The Scars clarification was checked against the [Cairn first-edition SRD](https://cairnrpg.com/first-edition/cairn-srd/): damage taken indexes the table. R2.2 explicitly states after-Armor damage and the cap at entry 12 rather than adding a random d12 selection.
+
+R2.2.1 records licensing scope and the pending authorial decision in [Licensing scope](https://github.com/ricscar2570/uchronies-and-treasures-cairn-hack/blob/development/r221-corrective-20261007/docs/LICENSING_SCOPE.md). Its correction and PDF-form checks are documented in [R2.2.1 checkpoint](https://github.com/ricscar2570/uchronies-and-treasures-cairn-hack/blob/development/r221-corrective-20261007/docs/R221_CHECKPOINT_2026-10-07.md). These checks are not native-speaker proofing, an accessibility certification, or testing in every PDF reader.

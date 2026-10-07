@@ -26,14 +26,19 @@ Cash does **not** automatically repay Debt. Certificates cannot directly pay ren
 
 At the start of each new week, settle the previous week in this exact order:
 
-1. **Income:** add base pay, previous mission pay, and side-gig income to Cash.
+1. **Income:** credit base pay, mission pay and side-gig income exactly once. Mission pay may arrive immediately or at weekly close. Record each dated receipt; at close, add only amounts not already credited to current Cash.
 2. **Costs:** roll the weekly unexpected expense, then pay it plus mandatory expenses from Cash.
 3. **Shortfall:** Cash stops at $0; any unpaid amount is added to Debt.
-4. **Repayment / clemency:** spend remaining Cash or eligible clemency to reduce Debt.
+4. **Repayment / clemency:** choose a repayment no greater than remaining Cash or Debt plus unpaid costs. Reject an excessive repayment; a zero floor does not authorize it. Then apply eligible clemency to the remaining principal. Clemency never becomes Cash.
 5. **Interest:** apply **5% once** to remaining Debt; round the new Debt **up to the nearest dollar**.
 6. **Pressure checks:** check Zhou thresholds, mission absence, and weekly triggers. Record closing Cash, Debt, and Certificates.
 
-`New Debt = ceil(1.05 x max(0, Old Debt + unpaid costs - repayments - clemency))`
+```text
+New Debt = ceil(1.05 x max(0,
+  Old Debt + unpaid costs - repayments - clemency))
+```
+
+A worksheet reconstructed from **opening Cash** lists every receipt during that week once in Income. This reconstructs the balance; it does not credit those receipts again to current Cash.
 
 ### Division Base Pay
 
@@ -100,6 +105,8 @@ Once every 4 weeks: Loyalty 5-6 reduces Debt by **$300**; Loyalty 7+ reduces it 
 ### The Black Market: Zhou's Economy
 
 Certificates are separate scrip. Earn them from Zhou jobs, artifacts, or intelligence; spend them on black-market goods and services. Cash-out is **$800 Cash per certificate**, +1 Corruption per cash-out transaction. Other Zhou deals use the Corruption cost stated by that deal.
+
+**Denomination:** Certificates are whole units only; fractional Certificates are not tracked. Agree a whole-Certificate price before a deal. For a smaller purchase, bundle goods or services at an agreed price, or pay the stated Cash price. Do not automatically round a dollar quote up to a Certificate or create unrecorded credit. Cash-out exchanges one or more whole Certificates in a single agreed transaction, at the rate above; its Corruption cost is per transaction, not per Certificate.
 
 ### What Happens When You Don't Pay
 

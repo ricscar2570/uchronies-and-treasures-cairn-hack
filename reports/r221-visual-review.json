@@ -1,0 +1,25 @@
+{
+  "edition": "R2.2.1",
+  "kind": "local development visual review",
+  "all_92_pages_rendered_with": "Poppler",
+  "all_pages_reviewed_as_contact_sheets": true,
+  "filled_forms_rendered_and_reviewed_with": [
+    "Poppler",
+    "PDFium"
+  ],
+  "filled_standalone_forms": 3,
+  "readable_samples": "accented Latin characters, numeric text, multiline notes",
+  "observed_blocking_overlap_or_missing_sample_appearance": false,
+  "not_claimed": [
+    "reader UI certification",
+    "PDF/UA",
+    "print-provider approval",
+    "native-speaker proofing"
+  ],
+  "manual_sha256": "ce124502a27823711f8c0496823aa1e53da6e76d7fe4125cc87237c7be8e9419",
+  "omnibus_sha256": "7d2acf68b22e61e4946709c9c960b297404a0518e641cf312e29d36c0231fd5d",
+  "baseline_omnibus_sha256": "f566688323077483e2a653dfab5fb30c395d8b10558e410490ce8e88b24c91af",
+  "baseline_minus_sign_present_in_source_and_render": true,
+  "baseline_bookmarks": 304,
+  "baseline_links": 72
+}

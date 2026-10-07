@@ -117,13 +117,13 @@ class ArtifactTests(unittest.TestCase):
     def test_printable_forms_have_expected_fields(self):
         import fitz
         for label,n in [('Character_Sheet',43),('Accounting_Sheet',109),('Warden_Mission_Sheet',10)]:
-            with fitz.open(ROOT/f'downloads/CHRONOCAIRN_R2_2_{label}.pdf') as doc:
+            with fitz.open(ROOT/f'downloads/CHRONOCAIRN_R2_2_1_{label}.pdf') as doc:
                 self.assertEqual(len(doc),1);widgets=list(doc[0].widgets());self.assertEqual(len(widgets),n)
                 self.assertEqual(len({w.field_name for w in widgets}),n)
                 for w in widgets:self.assertTrue(doc[0].rect.contains(w.rect),w.field_name)
     def test_form_fill_save_reopen(self):
         import fitz
-        path=ROOT/'downloads/CHRONOCAIRN_R2_2_Character_Sheet.pdf'
+        path=ROOT/'downloads/CHRONOCAIRN_R2_2_1_Character_Sheet.pdf'
         with tempfile.TemporaryDirectory() as tmp:
             with fitz.open(path) as doc:
                 page=doc[0]  # Keep the parent page alive while modifying the widget.

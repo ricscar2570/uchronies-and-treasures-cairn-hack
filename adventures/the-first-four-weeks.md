@@ -123,7 +123,7 @@ The final session is less action, more consequences.
 
 If anyone worked for Zhou before, she asks a second, bigger favor. The PC who said yes the first time is in a weak position: Zhou knows things. If nobody worked for Zhou, she raises the stakes to $3,000-$5,000. For a PC with $1,500 in debt and eviction imminent, that changes everything.
 
-**Zhou's job (if they accept):** Sabotage a Division convoy. Don't kill anyone, just delay it. Zhou wants to reach an Oculus fragment first. Corruption: +3. If discovered: fired from the Division (game over for that PC, unless they work for Zhou full-time).
+**Zhou's job (if they accept):** Sabotage a Division convoy. Don't kill anyone, just delay it. Zhou wants to reach an Oculus fragment first. Corruption: +3. If discovered: termination proceedings begin and Loyalty falls to 0-1; set the exact score from the established evidence. When dismissal takes effect, Division salary and institutional access end. This does not remove the PC from play: independent work, flight, a Raines contract, refugee allies or Zhou employment remain possible. Follow the consequences of the chosen route; none is compulsory.
 
 ### Scene 2: The Division Demands
 

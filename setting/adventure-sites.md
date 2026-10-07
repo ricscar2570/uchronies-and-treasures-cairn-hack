@@ -136,9 +136,13 @@ Four locations ready to explore. Each has a node map (rooms connected by passage
 | 11-14 | Transitional | Architecture shifts mid-corridor | STR save at each interface or d6 damage | Anti-rejection medicine cache (floor 12, 8 weeks supply) |
 | 15-20 | 2080 | Empty apartments, signs of hasty evacuation | 2 echoes patrol 16-17, structural instability on 19 | Electronics ($200), Division field notes (intel, +1 Loyalty if delivered to Hayes) |
 | 21-24 | 2080 (unstable) | Gravity anomalies, time running at variable speed | DEX save per floor or disoriented (lose 1 turn), 1 echo | Advanced temporal device (d4 WIL to use, see a target's past for 1 minute) |
-| 25-26 | Mixed (critical) | Corridors shift between eras every 10 minutes | Contamination check (forced, regardless of timer) | Oculus fragment shard (class-C, $2,000) |
+| 25-26 | Mixed (critical) | Corridors shift between eras every 10 minutes | Phase-interface discharge; see the named hazard below | Oculus fragment shard (class-C, $2,000) |
 | 27 (Suite 2701) | Frozen | Time is nearly stopped, light bends | Zhou's 3 mercenaries (see adventure), Oculus fragment (class-A) | THE objective |
-| Roof | 2080 | Open air, helicopter pad | Exposed to weather and echoes, final contamination check | Extraction point |
+| Roof | 2080 | Open air, helicopter pad | Weather and echoes. No automatic contamination check; use the Exposure Clock | Extraction point |
+
+**Phase-interface hazard (floors 25-26):** blue static and overlapping doorframes warn of a discharge. Crossing an active interface triggers one immediate check using the current zone; normal temporal protection applies. Wait for its quiet phase (10 minutes) or find another route to avoid it. This hazard is separate from the periodic clock.
+
+**Using this site with The Chicago Loop:** the floor-by-floor table expands the location; it does not add hidden checks to the introductory adventure. Use the phase-interface hazard only if included and announced before the party commits to that route. Waiting still advances actual exposure and the collapse deadline. If a periodic check falls exactly at extraction, resolve it before leaving.
 
 ---
 

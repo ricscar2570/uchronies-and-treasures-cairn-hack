@@ -1,0 +1,101 @@
+{
+  "edition": "R2.2.1",
+  "manual": {
+    "file": "CHRONOCAIRN_Final_Complete.pdf",
+    "pages": 89,
+    "a5": true,
+    "outline_entries": 299,
+    "chapter_bookmarks": 26,
+    "links": 59,
+    "outside_page": [],
+    "blank_body_pages": [
+      2
+    ],
+    "broken_internal_links": [],
+    "replacement_glyphs": [],
+    "forbidden_active_text": [],
+    "missing_anchors": [],
+    "sha256": "d14efb1f1ec3e0dfdb1bcc1e21ffe09bc345f1316a565eac2f9789a26b3f278f",
+    "source_hash_mismatches": [],
+    "pass": true,
+    "scope": "Page bounds, declared text anchors, imported navigation and all 26 source hashes. Not proof of complete semantic, accessibility or commercial readiness."
+  },
+  "omnibus": {
+    "pages": 92,
+    "a5_pages": 89,
+    "a4_pages": 3,
+    "bookmarks": 304,
+    "links": 72,
+    "fields": 162,
+    "broken_links": [],
+    "broken_bookmarks": [],
+    "out_of_page": [],
+    "forbidden_residues": [],
+    "formula_subtractions_present": true,
+    "lang": "en-US",
+    "tagged_pdf": false,
+    "sha256": "b1039bd585bb65d71d18f010e312f45e079dc6cc6ccc5ba469538ee72cb8eaca",
+    "manual_text_preserved_during_assembly": true
+  },
+  "roundtrips": [
+    {
+      "file": "CHRONOCAIRN_R2_2_1_Character_Sheet.pdf",
+      "fields": 43,
+      "all_values_roundtrip": true,
+      "reset_all_values": true,
+      "parsers": [
+        "MuPDF",
+        "pypdf"
+      ],
+      "samples_include": "accented Latin characters and multiline notes",
+      "filled_file": "CHRONOCAIRN_R2_2_1_Character_Sheet-all-filled.pdf",
+      "reset_file": "CHRONOCAIRN_R2_2_1_Character_Sheet-reset.pdf"
+    },
+    {
+      "file": "CHRONOCAIRN_R2_2_1_Accounting_Sheet.pdf",
+      "fields": 109,
+      "all_values_roundtrip": true,
+      "reset_all_values": true,
+      "parsers": [
+        "MuPDF",
+        "pypdf"
+      ],
+      "samples_include": "accented Latin characters and multiline notes",
+      "filled_file": "CHRONOCAIRN_R2_2_1_Accounting_Sheet-all-filled.pdf",
+      "reset_file": "CHRONOCAIRN_R2_2_1_Accounting_Sheet-reset.pdf"
+    },
+    {
+      "file": "CHRONOCAIRN_R2_2_1_Warden_Mission_Sheet.pdf",
+      "fields": 10,
+      "all_values_roundtrip": true,
+      "reset_all_values": true,
+      "parsers": [
+        "MuPDF",
+        "pypdf"
+      ],
+      "samples_include": "accented Latin characters and multiline notes",
+      "filled_file": "CHRONOCAIRN_R2_2_1_Warden_Mission_Sheet-all-filled.pdf",
+      "reset_file": "CHRONOCAIRN_R2_2_1_Warden_Mission_Sheet-reset.pdf"
+    },
+    {
+      "file": "CHRONOCAIRN_OMNIBUS_R2_2_1.pdf",
+      "fields": 162,
+      "all_values_roundtrip": true,
+      "reset_all_values": true,
+      "parsers": [
+        "MuPDF",
+        "pypdf"
+      ],
+      "samples_include": "accented Latin characters and multiline notes",
+      "filled_file": "CHRONOCAIRN_OMNIBUS_R2_2_1-all-filled.pdf",
+      "reset_file": "CHRONOCAIRN_OMNIBUS_R2_2_1-reset.pdf"
+    }
+  ],
+  "limits": [
+    "No manual Acrobat, Chromium viewer, Firefox, Preview or mobile execution",
+    "No native-speaker proofing or human playtests",
+    "No tagged-PDF / PDF-UA certification",
+    "No embedded accounting calculation or repayment validator in PDF widgets"
+  ],
+  "pass": true
+}

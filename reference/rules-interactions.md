@@ -20,6 +20,8 @@ nav_order: 6
 
 **Pay.** One field allowance and one band per completed field assignment. At Loyalty 7+, one successful band per week improves by one step, never above Exceptional. At Loyalty 9+, only base pay rises by 50%. No uplift to failure or a replacement bounty. Use pre-reward Loyalty for mission benefits and start-of-week status for payroll. Instability suspends special benefits, not ordinary wages.
 
+**Receipts and repayment.** Record mission pay on its actual receipt date, immediately or at weekly close; never credit it twice. A worksheet starting from opening Cash includes each receipt once as Income. Repayment cannot exceed available Cash or outstanding principal. Reject an invalid amount rather than reducing Debt with nonexistent funds. Certificates are whole units; agree bundle or Cash alternatives before smaller purchases.
+
 **Allegiances.** Raines is not Zhou. Every second Raines job costs -1 Loyalty; no automatic Corruption. Instability needs both trackers at least 3 and a difference no greater than 2. Its social disadvantage concerns risky saves with informed, involved factions. A third unstable close creates a crisis, not compulsory allegiance.
 
 **Reloads and replacement.** A loaded gun still fires with no spares. One spare costs $50; two spares use one slot, rounded up. A replacement PC starts with their own $500 Debt and normal starting Cash, not an inherited personal balance. Explicit team obligations remain recorded without silently assigning a new debtor.

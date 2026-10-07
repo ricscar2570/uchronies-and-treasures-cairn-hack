@@ -1,0 +1,52 @@
+{
+  "edition": "R2.2.1",
+  "pages": 92,
+  "a5_pages": 89,
+  "a4_pages": 3,
+  "fields": 162,
+  "bookmarks": 304,
+  "links": 72,
+  "navigation": [
+    [
+      "Complete chapter contents",
+      3
+    ],
+    [
+      "Rules and player guide",
+      4
+    ],
+    [
+      "Las Vegas and adventure sites",
+      33
+    ],
+    [
+      "Warden tools and guidance",
+      44
+    ],
+    [
+      "The Chicago Loop",
+      66
+    ],
+    [
+      "Ten Weeks in Vegas",
+      70
+    ],
+    [
+      "Quick references and appendices",
+      75
+    ],
+    [
+      "Character Sheet - fillable A4",
+      90
+    ],
+    [
+      "Accounting Sheet - fillable A4",
+      91
+    ],
+    [
+      "Warden Mission Sheet - fillable A4",
+      92
+    ]
+  ],
+  "sha256": "b1039bd585bb65d71d18f010e312f45e079dc6cc6ccc5ba469538ee72cb8eaca"
+}

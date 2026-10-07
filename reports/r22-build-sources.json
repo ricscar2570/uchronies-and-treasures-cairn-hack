@@ -1,5 +1,5 @@
 {
-  "edition": "R2.2",
+  "edition": "R2.2.1",
   "chapters": [
     {
       "path": "players-guide/overview-and-principles.md",
@@ -19,7 +19,7 @@
     {
       "path": "game-systems/economy.md",
       "layout": "Full",
-      "sha256": "090d9771c7ab6a1e97cd0ebedb05d2c74809ae5534ff2d21eedd09a3b90becb7"
+      "sha256": "b197dfaf4bd83ea6d72615e9be31da239331cf721d4a7d34b9ccf2565c1c69ca"
     },
     {
       "path": "game-systems/loyalty-corruption.md",
@@ -54,12 +54,12 @@
     {
       "path": "setting/adventure-sites.md",
       "layout": "Full",
-      "sha256": "798424cb4e35455e8b491916c6cbaeaece8d0392f86fe93b661dce7d0bbf45a6"
+      "sha256": "ea0593349fe1a4bc72301c3fc7bc05c0c510e9aa1b1739682bdfcd4844d24583"
     },
     {
       "path": "wardens-guide/running-the-game.md",
       "layout": "TwoCol",
-      "sha256": "2aeb3cd32b97efec7e9ed595df9014e73e36f4c7811e710f71f791dd93fae4b2"
+      "sha256": "dafa0c466f3b7da5e68488eff8a853bf0fc98b7f826ac28839d80719289cafe0"
     },
     {
       "path": "wardens-guide/creating-enemies.md",
@@ -94,7 +94,7 @@
     {
       "path": "adventures/the-first-four-weeks.md",
       "layout": "Full",
-      "sha256": "466fe19dfa9c21e0326a8d969c3dd37163feabada08fd119efc62efe6893f9cf"
+      "sha256": "2a7da05f205fe8bf86ae26921274623a1163f0645f0575852aae4ba357afac46"
     },
     {
       "path": "reference/character-creation-checklist.md",
@@ -104,12 +104,12 @@
     {
       "path": "reference/warden-cheat-sheet.md",
       "layout": "Full",
-      "sha256": "9d2c3cb37a695897e95a3c7d0dda9ec4d82b892eb4a5fe76d4e7a9a8ae6d209e"
+      "sha256": "6865b78577500eadc4ac24b32002baeda5c49616ab4ca4063d9c50169ad217b3"
     },
     {
       "path": "reference/hack-this-hack.md",
       "layout": "Full",
-      "sha256": "114be5bf397b47eca8a2668162556e5363d14315348c6a6f148bc1f925ca1889"
+      "sha256": "81098e2305b8bef7dbcc177fda8b2547b18c91528cffa94b94dfe2e31d6ed05a"
     },
     {
       "path": "wardens-guide/faq.md",
@@ -119,20 +119,20 @@
     {
       "path": "reference/rules-interactions.md",
       "layout": "Full",
-      "sha256": "905e0b83ea34c6d13fcbc80899987f7f0d4a1199e8dff687c9070547bd8a59f3"
+      "sha256": "fac4947d3c77c75a1cee7b24342db33687d4197c9d3e2002d63cd54f434e4eae"
     },
     {
       "path": "reference/character-sheet.md",
       "layout": "Full",
-      "sha256": "6d414d2340cbfd347e624c79b309f10fb1c7f1e4574bc5b36f1964d98b7294c8"
+      "sha256": "56386f8d2906c5e476001f1343948cb582c5b69134734e8fc479e26488a85464"
     },
     {
       "path": "reference/monte-carlo-transparency.md",
       "layout": "Full",
-      "sha256": "cef5520469edf8c63b96ff897775be3d9b32af6d8ddde0c1c48797c2684fbbef"
+      "sha256": "07ea6b91d9c405a2c49a8febaaa3b83e55452b08150c06e81c168e1b6e8fcff4"
     }
   ],
   "pdf": "CHRONOCAIRN_Final_Complete.pdf",
-  "pages": 88,
-  "pdf_sha256": "e0482c5b226ba5b8c5bd8a63b1902a1c39771d954ad6b2432d93298ce82a0623"
+  "pages": 89,
+  "pdf_sha256": "d14efb1f1ec3e0dfdb1bcc1e21ffe09bc345f1316a565eac2f9789a26b3f278f"
 }

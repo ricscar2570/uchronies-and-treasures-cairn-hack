@@ -13,7 +13,7 @@ nav_order: 4
 
 The game runs on three interlocking pressures:
 
-1. **A structural deficit**: the characters cannot survive on legitimate income alone. This forces real moral choices rather than optional ones.
+1. **A structural deficit**: legitimate income is tight and unreliable at the starting tier. Survival remains possible through strong performance, careful management and legitimate pressure valves; the competing faction offers a faster or more certain escape. Pressure creates meaningful choices, not compulsory corruption.
 2. **A slow corroding force**: something erodes the characters over time, creating a natural campaign timer and making every mission feel costly.
 3. **A competing power structure**: a second faction that offers shortcuts with escalating costs, positioned to fill the gap left by the structural deficit.
 
@@ -29,7 +29,9 @@ To move the system to any other setting, redefine these five elements. Everythin
 | **The corruptor** | Madame Zhou / certificates | Who offers the shortcut, what their currency is, what they want in return, at what cost |
 | **The corrosive force** | Temporal exposure / WIL damage | What force degrades the characters over time, which attribute it erodes, how it manifests visibly |
 | **The deficit** | $100 base-pay gap at Recruit tier | Which resource is structurally tight, what legitimate pressure valves exist, and why the corrupt shortcut is faster or more certain |
-| **The echo** | Temporal echo (hostile NPC) | What a character becomes when corruption or corrosion fully consumes them |
+| **The echo** | Temporal echo (hostile NPC) | What a character becomes when the corrosive force fully consumes them |
+
+In CHRONOCAIRN, becoming an echo means reaching WIL 0 through contamination or gaining a sixth Quirk. Corruption measures entanglement with Zhou; even Corruption 10 does not itself turn a character into an echo. Keep social compromise and physical corrosion separate when adapting the setting.
 
 ## What Does NOT Need to Change
 

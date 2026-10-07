@@ -1,13 +1,13 @@
 # Resume CHRONOCAIRN
 
-Read `docs/R22_CHECKPOINT_2026-10-06.md` and `docs/R22_CORRECTION_MATRIX.md` first.
+Current corrective line: **R2.2.1**, 7 October 2026.
+Read `docs/R221_CHECKPOINT_2026-10-07.md` and `docs/R221_CORRECTION_MATRIX.md`.
 
-- Base R2.1: `d4b13099c8b530b0d717396df72c5f41aa9e197b`.
-- R2.2: procedural consolidation implemented; 10 P0 + 10 P1, 9 P2 with code-license qualification; global editorial cut deferred.
-- 78 local regression tests pass. 240,000 contamination paths reproduce R2.1 exactly; no recalibration.
-- All 26 manual chapters use canonical Markdown, not embedded duplicates. PDF: 88 A5 pages; 299 bookmarks; three separate fillable A4 aids, 162 fields.
-- Human sessions added: 0. No final commercial, typography or human-pacing validation claimed.
-- Old `economy_sim.py` does not model R2.2 Loyalty benefits. Do not present its historical percentages as current validation.
-- Next R3.1: residual Quirk/medical/institutional interactions, authorial script licensing, human observations, then a coupled economy/faction/calendar model with declared assumptions.
-- Keep the development branch separate from `main` and the public latest PDF release until an explicit publication decision.
-- Exact delivered source commit is in `SOURCE_COMMIT.txt` in the verified archive. GitHub's actual workflow result is the authority for remote verification.
+- Base R2.2: `d2126ff54bf097bdba1085df7bfb8315c1952a71`.
+- Development branch: `development/r221-corrective-20261007`; do not update main/public latest automatically.
+- Full Omnibus: 89 A5 manual pages + three A4 sheets = 92 pages; 304 bookmarks, 162 fields.
+- 101 local regression tests; every field filled, saved, reopened and reset in standalone sheets and Omnibus.
+- Existing economy/contamination engines unchanged. New whole-Certificate and explicit Meridian hazard wording require usability playtests.
+- The alleged missing minus was present at the previous line end. Existing R2.2 navigation was also present.
+- Licensing scope disclosed, not newly granted. Native-speaker proofing, reader-specific manual checks and human playtests remain open.
+- Exact delivered source commit is in the archive's `SOURCE_COMMIT.txt`; remote CI status must be verified, not inferred.

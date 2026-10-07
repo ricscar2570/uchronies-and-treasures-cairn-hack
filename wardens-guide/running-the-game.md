@@ -41,15 +41,15 @@ Don't balance encounters to the party's strength. If players enter a Red Zone un
 
 "You see 8 armed mercenaries behind sandbags. They haven't noticed you yet. You could try to sneak past, create a distraction, or retreat. What do you do?" If after this warning they charge in, let the dice fall where they may.
 
-### Telegraph That Combat Is the Wrong Choice
+### Telegraph the Cost of Combat
 
-When you set up a fight the players are meant to avoid, the failure isn't that they lose the fight. The failure is that you let them walk into it thinking it was the intended path. Three signals, given before anyone rolls initiative, keep agency intact:
+When combat is disproportionately dangerous or expensive, make that cost visible before initiative. Give players the information they need to judge the risks and possible gains, without choosing their approach for them:
 
 - **Show the cost up front.** Name the odds and the clock out loud: how many enemies, what cover they hold, what's burning down while bullets fly. "Three veterans, behind a table, and the zone collapses in two hours" is information, not a threat.
-- **Make the enemy reluctant too.** Opponents who would rather deal than die signal that a non-violent exit exists. A mercenary who wants the prize and a clean getaway is an open door; a snarling brute is a wall.
+- **Show what the opponents want.** Make their motives and willingness to negotiate observable. A mercenary seeking the prize and a clean getaway may accept a deal; a committed attacker may not. Do not change their motives to steer the party toward a preferred solution.
 - **Recognize outcomes, not kill counts.** Successful negotiation or theft can earn the same performance band as armed recovery. A bloodless recovery with civilian safety can qualify as Exceptional when it meets the briefed criteria. Award one band, not an extra bonus; contacts and goodwill follow what the NPCs actually experienced.
 
-This is the same principle as *The Chicago Loop*'s climax: the firefight is the way the scene goes wrong, and the players should be able to see that before they commit.
+As in *The Chicago Loop*, a firefight is one possible escalation. Let its actual costs and advantages determine whether it was a mistake. Do not change opposition, rewards or clocks to vindicate a preferred plan.
 
 ### Give Them Information
 

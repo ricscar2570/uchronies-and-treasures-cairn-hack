@@ -7,7 +7,7 @@ nav_order: 1
 
 # Warden Cheat Sheet
 
-*All mechanical triggers in chronological session order. One page, behind the screen.*
+*Mechanical triggers in chronological play order. Keep this reference behind the screen.*
 
 ---
 
@@ -27,10 +27,10 @@ nav_order: 1
 
 **Combat:**
 
-- **Initiative:** Each PC makes DEX save. Fail = lose first turn. After round 1: PCs then enemies alternating
+- **Initiative:** Each PC makes an opening DEX save. Successful PCs take an opening turn. Then enemies act, followed by all PCs; continue alternating enemies and PCs. Failure delays the PC until after the first enemy turn; it does not remove that turn. Apply explicit ambush exceptions from the core rules.
 - **Attack:** Automatic hit. Roll weapon damage die, subtract target's Armor, apply to HP
 - **0 HP exact from positive HP:** use the single attack's damage after Armor as the Scar result, capped at 12; do not roll d12
-- **Below 0 HP:** Overflow goes to STR. Target makes STR save or suffers critical damage (incapacitated, dies in 1 hour without aid)
+- **Below 0 HP:** Overflow goes to STR. Target saves against the already reduced STR or suffers critical damage (incapacitated, dies in 1 hour without aid)
 - **STR 0 = death. DEX 0 = paralysis. WIL 0 = echo (if contamination) or catatonia**
 - **Impaired:** d4 damage (behind cover, restrained). **Enhanced:** d12 damage (ambush, helpless target)
 - **Multiple attackers same target:** Roll all dice, keep highest single result
@@ -62,7 +62,7 @@ nav_order: 1
 - UNSTABLE: each downtime week, roll d20 for suspicion event
 - After 3 consecutive unstable weekly closes: a faction crisis with stated costs; choosing neither remains possible. Social disadvantage applies only to risky saves with involved, informed factions
 
-**Mission pay:** one non-cumulative performance band, 30% administrative deduction, plus the $50 field allowance. Standard success pays $190 total; exceptional success $400. Use the R1 economy table for all other bands.
+**Mission pay:** one non-cumulative performance band, 30% administrative deduction, plus the $50 field allowance. Standard success pays $190 total; exceptional success $400. Use the current economy table for all other bands; credit each dated receipt once.
 
 **Loyalty pay:** 7+ improves one successful band per week; 9+ adds 50% to base pay only. Instability suspends these benefits. A loaded firearm can fire without spare reloads; 1 on the post-firefight die empties it, 2 marks low (a second low empties it), 3-6 leaves its state unchanged. Loading one spare is an action in danger; one spare costs $50.
 
@@ -81,11 +81,12 @@ nav_order: 1
 | Enhanced attack | d12 regardless of weapon |
 | Unarmed | d4 |
 | Max Armor | 3 |
-| HP recovery | Few minutes rest + water |
-| Attribute recovery | 1 week + medical care; WIL: d6 (d8 at Loyalty 7+) |
+| HP recovery | Brief rest + water; none while Deprived |
+| Ordinary attribute recovery | 1 week of rest with medical care; 3 days at Loyalty 7+; none while Deprived |
+| Contamination WIL recovery | Completed Division care: d6 after 1 week, or d8 after 3 days at Loyalty 7+; paid temporal therapy: d6 after 2 days |
 | Advantage save | Roll 2d20, keep lower |
 | Disadvantage save | Roll 2d20, keep higher |
-| Contamination (standard) | WIL save every 6 hours |
+| Periodic contamination | Yellow 8h / Orange 6h / Red 3h / Black 1h; carry the exposure fraction |
 | Quirk max | 5 (at 6th = echo) |
 | Recruit pay | $800/wk |
 | Fixed expenses | $900/wk |

@@ -272,7 +272,13 @@ def markdown_chapter(path, layout='Full'):
                 table = T(rows[0], rows[1:], table_widths(rows, width), full=layout=='Full')
                 _, height = table.wrap(width, PH-MT-MB)
                 # Keeps Speech result 10 with its table, but permits long rules tables to split.
-                out += [KeepTogether([table]) if height < (PH-MT-MB)*.55 else table, sp(2)]
+                if height < (PH-MT-MB)*.55:
+                    block = [table]
+                    if out and isinstance(out[-1], Paragraph) and hasattr(out[-1], '_bookmark_name'):
+                        block.insert(0, out.pop())
+                    out += [KeepTogether(block), sp(2)]
+                else:
+                    out += [table, sp(2)]
             continue
         if line.startswith('#'):
             flush(); level = min(2, max(0, len(line)-len(line.lstrip('#'))-base_level))
@@ -489,7 +495,7 @@ def make_cover_pdf():
     c.line(14*mm_pt, 24*mm_pt, PW-12*mm_pt, 24*mm_pt)
     c.setFont("San", 6.5); c.setFillColor(WHITE)
     c.drawCentredString(PW/2, 11*mm_pt, "Based on Cairn by Yochai Gal  |  CC BY-SA 4.0")
-    c.drawCentredString(PW/2, 7*mm_pt, "R2.2 - Procedural Consolidation - 6 October 2026")
+    c.drawCentredString(PW/2, 7*mm_pt, "R2.2.1 - Corrective Consolidation - 7 October 2026")
 
     c.showPage(); c.save()
     buf.seek(0)
@@ -502,8 +508,8 @@ def story():
     s = [NextPageTemplate('Blank'), pb(), p(''), NextPageTemplate('TOC'), pb()]
     title_style = ParagraphStyle('toc_page_title', fontName='SanB', fontSize=13,
         textColor=CRIMSON, spaceBefore=8, spaceAfter=6, leading=17)
-    s += [Paragraph('Contents', title_style), rule(), p('CHRONOCAIRN R2.2 - Time-Crime Horror Roleplaying'),
-          p('Riccardo Scaringi. Procedural consolidation, 6 October 2026. This development edition does not claim final human-play or commercial validation.'),
+    s += [Paragraph('Contents', title_style), rule(), p('CHRONOCAIRN R2.2.1 - Time-Crime Horror Roleplaying'),
+          p('Riccardo Scaringi. Corrective consolidation, 7 October 2026. This development edition does not claim final human-play or commercial validation.'),
           sp(3), TableOfContents()]
     for chapter in CHAPTER_CONFIG['chapters']:
         s += [NextPageTemplate(chapter['layout']), pb()]
@@ -528,11 +534,11 @@ def main():
     writer = PdfWriter()
     writer.append(PdfReader(str(intermediate)), import_outline=True)
     writer.pages[0].merge_page(PdfReader(make_cover_pdf()).pages[0])
-    writer.add_metadata({'/Title':'CHRONOCAIRN R2.2', '/Author':'Riccardo Scaringi',
-                         '/Subject':'Time-Crime Horror Roleplaying - Procedural Consolidation'})
+    writer.add_metadata({'/Title':'CHRONOCAIRN R2.2.1', '/Author':'Riccardo Scaringi',
+                         '/Subject':'Time-Crime Horror Roleplaying - Corrective Consolidation'})
     with target.open('wb') as handle: writer.write(handle)
     intermediate.unlink()
-    report = {'edition':'R2.2','chapters':[], 'pdf':target.name,
+    report = {'edition':'R2.2.1','chapters':[], 'pdf':target.name,
               'pages':len(writer.pages),'pdf_sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
     for chapter in CHAPTER_CONFIG['chapters']:
         path=ROOT/chapter['path']

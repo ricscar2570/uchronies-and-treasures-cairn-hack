@@ -39,3 +39,8 @@ __pycache__/
 *.pyc
 /CHRONOCAIRN_Complete.pdf
 /CHRONOCAIRN_Final_Complete.pdf
+
+# R2.2.1 generated digital collection and disposable form tests
+/CHRONOCAIRN_OMNIBUS_R2_2_1.pdf
+/reports/r221-form-samples/
+/CHRONOCAIRN_R2_2_1_Verified.zip

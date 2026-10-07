@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create three independent A4 printable/fillable R2.2 table aids."""
+"""Create three independent A4 printable/fillable R2.2.1 table aids."""
 from pathlib import Path
 import argparse, importlib.util, json
 from reportlab.pdfgen import canvas
@@ -14,10 +14,10 @@ W,H=A4; M=36; FW=W-2*M
 
 def sheet(path:Path, title:str):
     c=canvas.Canvas(str(path),pagesize=A4)
-    c.setTitle('CHRONOCAIRN R2.2 - '+title);c.setAuthor('Riccardo Scaringi')
+    c.setTitle('CHRONOCAIRN R2.2.1 - '+title);c.setAuthor('Riccardo Scaringi')
     c.setFillColor(skin.NAVY);c.setFont('SanB',17);c.drawString(M,H-39,'CHRONOCAIRN')
     c.setFont('San',10);c.drawString(M,H-57,title)
-    c.setFont('San',8);c.drawRightString(W-M,H-39,'R2.2 | Time-Crime Horror Roleplaying')
+    c.setFont('San',8);c.drawRightString(W-M,H-39,'R2.2.1 | Time-Crime Horror Roleplaying')
     c.setStrokeColor(skin.GOLD);c.line(M,H-69,W-M,H-69)
     return c
 
@@ -28,10 +28,15 @@ def text(c,x,y,t,size=8,bold=False):
 
 def field(c,name,label,x,y,w,h=23,multi=False,size=9):
     if label:text(c,x,y+h+4,label,7.2,True)
-    c.acroForm.textfield(name=name,tooltip=label or name,x=x,y=y,width=w,height=h,
+    tooltip=label or name.replace('_',' ')
+    if name.startswith('week_'):
+        _,row,col=name.split('_')
+        names=['week','opening Cash','opening Debt','Income','Costs','Unpaid costs','Repayment','Clemency','closing Cash','closing Debt']
+        tooltip=f'Row {row}: {names[int(col)]}'
+    c.acroForm.textfield(name=name,tooltip=tooltip,x=x,y=y,width=w,height=h,
         fontName='Helvetica',fontSize=size,borderWidth=.45,borderStyle='solid',
         fillColor=colors.white,borderColor=colors.HexColor('#A3ACB5'),textColor=colors.black,
-        forceBorder=True,fieldFlags='multiline' if multi else '')
+        forceBorder=True,fieldFlags='multiline' if multi else '', maxlen=2000 if multi else 120)
 
 
 def footer(c,t):
@@ -93,15 +98,17 @@ def accounting(path):
         y=560-row*27;x=M
         for col,w in enumerate(widths):
             field(c,f'week_{row+1}_{col}','',x+.5,y,w-1,25,size=7.5);x+=w
-    text(c,M,304,'End Cash = max(0, Start Cash + Income - Costs) - Repayment.',7.1)
-    text(c,M,292,'Unpaid = max(0, Costs - Start Cash - Income). Clemency is not Cash.',7.1)
-    text(c,M,280,'End Debt = round UP [1.05 x max(0, Start Debt + Unpaid - Repayment - Clemency)].',7.1)
-    text(c,M,267,'Do not count an already-paid mission receipt again at weekly close.',7.1,True)
+    text(c,M,306,'Available Cash = max(0, Start Cash + Income - Costs).',7.1)
+    text(c,M,296,'Unpaid = max(0, Costs - Start Cash - Income). Clemency is not Cash.',7.1)
+    text(c,M,286,'Require 0 <= Repayment <= min(Available Cash, Start Debt + Unpaid); reject excess.',7.1)
+    text(c,M,276,'End Cash = max(0, Available Cash - Repayment). Fields do not calculate automatically.',7.1)
+    text(c,M,266,'End Debt = round UP [1.05 x max(0, Start Debt + Unpaid - Repayment - Clemency)].',7.1)
+    text(c,M,254,'From opening Cash: list each dated receipt ONCE; do not credit it again at close.',7.1,True)
     field(c,'transactions','Transactions: Cash / Certificates separately; Raines jobs, information sales, costs and receipts',M,150,FW,92,True,8)
     field(c,'obligations','Named creditors, explicit team obligations, disputed claims and promises',M,75,FW-157,50,True,8)
     field(c,'closing_certificates','Closing Certificates',W-M-145,102,145,23)
-    text(c,W-M-145,88,'1 certificate -> $800 Cash;',6.7)
-    text(c,W-M-145,77,'+1 Corruption per cash-out.',6.7)
+    text(c,W-M-145,88,'Whole Certificates only;',6.7)
+    text(c,W-M-145,77,'1 = $800 Cash; +1 Corruption / cash-out.',6.7)
     footer(c,'One allowance + one performance band. Hero benefit multiplies base pay only. Debt never repays itself.')
 
 
@@ -126,7 +133,13 @@ def main():
     result=[]
     import fitz,hashlib
     for label,fn in products:
-        p=args.output_dir/f'CHRONOCAIRN_R2_2_{label}.pdf';fn(p)
+        p=args.output_dir/f'CHRONOCAIRN_R2_2_1_{label}.pdf';fn(p)
+        from pypdf import PdfReader,PdfWriter
+        from pypdf.generic import NameObject,TextStringObject
+        writer=PdfWriter(clone_from=str(p))
+        writer._root_object[NameObject('/Lang')]=TextStringObject('en-US')
+        for page in writer.pages:page[NameObject('/Tabs')]=NameObject('/R')
+        with p.open('wb') as handle:writer.write(handle)
         with fitz.open(p) as d: result.append({'file':p.name,'pages':len(d),'fields':sum(len(list(pg.widgets() or [])) for pg in d),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
     (ROOT/'reports/r22-sheets.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
 if __name__=='__main__':main()

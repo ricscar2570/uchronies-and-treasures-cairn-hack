@@ -1,5 +1,5 @@
 {
-  "edition": "R2.2",
+  "edition": "R2.2.1",
   "chapters": [
     {
       "path": "players-guide/overview-and-principles.md",
@@ -105,5 +105,7 @@
       "path": "reference/monte-carlo-transparency.md",
       "layout": "Full"
     }
-  ]
+  ],
+  "date": "7 October 2026",
+  "stage": "Corrective Consolidation"
 }
