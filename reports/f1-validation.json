@@ -1,0 +1,53 @@
+{
+  "checkpoint": "F1",
+  "date": "2026-10-07",
+  "source_commit": "7c688770942db6568815f0c781991f121ea46756",
+  "baseline_archive_entries_verified": 120,
+  "frozen_files_verified": 53,
+  "canonical_chapters_verified": 26,
+  "tests": {
+    "executed": 101,
+    "passed": 101,
+    "log_location": "Delivered author kit: SOLO_COORDINATORE/reports/f1-tests.txt",
+    "execution": "local Python 3.13.5; not a new remote F1 CI run"
+  },
+  "omnibus": {
+    "pages": 92,
+    "a5_pages": 89,
+    "a4_pages": 3,
+    "bookmarks": 304,
+    "links": 72,
+    "fields": 162,
+    "sha256": "b1039bd585bb65d71d18f010e312f45e079dc6cc6ccc5ba469538ee72cb8eaca"
+  },
+  "artifacts_byte_unchanged": true,
+  "field_roundtrips": {
+    "standalone_counts": [43, 109, 10],
+    "omnibus_count": 162,
+    "fill_save_reopen_reset": "PASS",
+    "parsers": ["MuPDF", "pypdf"]
+  },
+  "diagnostic_240000_paths": "inherited hash-frozen report, not rerun in F1",
+  "semantic_audit": "received audit reviewed; no new exhaustive semantic audit claimed",
+  "human_sessions_added": 0,
+  "manual_reader_sessions_added": 0,
+  "native_copyediting": "NOT_PERFORMED",
+  "license_decision": "OPEN",
+  "public_release_modified": false,
+  "rules_changed": false,
+  "support_pdfs": {
+    "protocol_pages": 10,
+    "coordinator_pages": 3,
+    "renderer": "Poppler",
+    "all_pages_visually_reviewed": true,
+    "no_text_outside_page": true,
+    "protocol_forms": "printable, not AcroForm"
+  },
+  "coverage_limits": [
+    "No human experience validation",
+    "No manual cross-reader execution",
+    "No PDF/UA or print approval",
+    "No new economic/faction coupled simulation"
+  ],
+  "pass_in_declared_technical_scope": true
+}
